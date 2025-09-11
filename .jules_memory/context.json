@@ -1,0 +1,440 @@
+{
+  "current_task": null,
+  "task_stack": [],
+  "active_files": [
+    {
+      "path": "/app/memory_tool.py",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/JULES_STATUS.md",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/JULES_CONTEXT.md",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/requierments.tkt",
+      "mod_time": "2025-09-08T21:20:34.576196"
+    },
+    {
+      "path": "/app/main.py",
+      "mod_time": "2025-09-08T21:20:34.576196"
+    },
+    {
+      "path": "/app/.git/HEAD",
+      "mod_time": "2025-09-09T12:27:19.066807"
+    },
+    {
+      "path": "/app/.git/shallow",
+      "mod_time": "2025-09-08T21:20:34.488196"
+    },
+    {
+      "path": "/app/.git/packed-refs",
+      "mod_time": "2025-09-08T21:20:34.572196"
+    },
+    {
+      "path": "/app/.git/index",
+      "mod_time": "2025-09-09T12:27:19.062806"
+    },
+    {
+      "path": "/app/.git/COMMIT_EDITMSG",
+      "mod_time": "2025-09-09T12:27:19.062806"
+    },
+    {
+      "path": "/app/.git/description",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/config",
+      "mod_time": "2025-09-08T21:20:34.572196"
+    },
+    {
+      "path": "/app/.git/ORIG_HEAD",
+      "mod_time": "2025-09-09T12:27:17.610680"
+    },
+    {
+      "path": "/app/.git/hooks/pre-push.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/prepare-commit-msg.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/post-update.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/fsmonitor-watchman.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/pre-rebase.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/applypatch-msg.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/commit-msg.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/sendemail-validate.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/pre-merge-commit.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/push-to-checkout.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/pre-applypatch.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/pre-receive.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/update.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/hooks/pre-commit.sample",
+      "mod_time": "2025-09-08T21:20:33.356196"
+    },
+    {
+      "path": "/app/.git/refs/remotes/origin/HEAD",
+      "mod_time": "2025-09-08T21:20:34.572196"
+    },
+    {
+      "path": "/app/.git/refs/heads/main",
+      "mod_time": "2025-09-08T21:20:34.572196"
+    },
+    {
+      "path": "/app/.git/objects/51/8430f4d0716f19ec2647682de4808d571fbe57",
+      "mod_time": "2025-09-09T12:21:30.350537"
+    },
+    {
+      "path": "/app/.git/objects/9d/cb654dd4f3ca371dfb100d68380cc9eb2709a9",
+      "mod_time": "2025-09-09T12:26:44.939761"
+    },
+    {
+      "path": "/app/.git/objects/9d/6db49800ec544d1f302619740638fc2b2906d5",
+      "mod_time": "2025-09-09T12:23:26.812229"
+    },
+    {
+      "path": "/app/.git/objects/b9/7c33a60af6e3ff533e637578d7c279802c4e74",
+      "mod_time": "2025-09-09T12:24:31.176794"
+    },
+    {
+      "path": "/app/.git/objects/d3/e3b3a0268e7e6afc8de7988a95805c3f0dcb2d",
+      "mod_time": "2025-09-09T12:24:42.965611"
+    },
+    {
+      "path": "/app/.git/objects/85/2d5dbb3fdea6dc484e0318e5ee31db2747e748",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/4d/ddbda8053e39a57031357253c5259fe6a0dd05",
+      "mod_time": "2025-09-09T12:24:43.173625"
+    },
+    {
+      "path": "/app/.git/objects/3f/ce569d95d113c7e9191f65f654f4edca5ae596",
+      "mod_time": "2025-09-09T12:27:19.062806"
+    },
+    {
+      "path": "/app/.git/objects/d7/6d99b92642965e52aa791d12255178ee18e962",
+      "mod_time": "2025-09-09T12:23:57.790453"
+    },
+    {
+      "path": "/app/.git/objects/cd/d9bc5ac1fc5db27899e08691d1d907e6d879ce",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/8a/4187a7797935216697335ead3a302101548e1c",
+      "mod_time": "2025-09-09T12:21:15.773462"
+    },
+    {
+      "path": "/app/.git/objects/a8/39892dfed02e50dd955e9c806dfb836f7c6fb9",
+      "mod_time": "2025-09-09T12:24:43.173625"
+    },
+    {
+      "path": "/app/.git/objects/20/9383bc3eb899a103f1196e7100144314993f3d",
+      "mod_time": "2025-09-09T12:21:37.067209"
+    },
+    {
+      "path": "/app/.git/objects/ff/b655d1bc8c483a66bd895b1ba1744b8d624662",
+      "mod_time": "2025-09-09T12:20:38.238915"
+    },
+    {
+      "path": "/app/.git/objects/7c/64d2855bd9eb1c93a2d422331b52ac98b14da1",
+      "mod_time": "2025-09-09T12:27:04.521528"
+    },
+    {
+      "path": "/app/.git/objects/09/c4dd24c03fdd5ae7ab9aceff1e394116940b59",
+      "mod_time": "2025-09-09T12:20:12.496962"
+    },
+    {
+      "path": "/app/.git/objects/f8/46815739f85cd8a152103d386a3f6d5a45670b",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/9e/26dfeeb6e641a33dae4961196235bdb965b21b",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/cf/81820284e906ee5436cb15401eacbcb711ce3d",
+      "mod_time": "2025-09-09T12:26:10.484499"
+    },
+    {
+      "path": "/app/.git/objects/0b/214fdda07d2191722e78821e9a4727757787fd",
+      "mod_time": "2025-09-09T12:26:11.984646"
+    },
+    {
+      "path": "/app/.git/objects/c8/506fa4f41b71d3d2fb5d11114777fa6469236b",
+      "mod_time": "2025-09-09T12:27:19.066807"
+    },
+    {
+      "path": "/app/.git/objects/a7/e80d348f4dcb5b717a9754e7241c39f162846b",
+      "mod_time": "2025-09-09T12:19:15.602736"
+    },
+    {
+      "path": "/app/.git/objects/1f/723758fb9b6e5d4273f166ce83dab1a37c8b90",
+      "mod_time": "2025-09-09T12:18:49.876740"
+    },
+    {
+      "path": "/app/.git/objects/8f/a23a6a615faa13121c0d6ecf3f9e9630882811",
+      "mod_time": "2025-09-09T12:24:53.662349"
+    },
+    {
+      "path": "/app/.git/objects/8f/d23248a67eb70b7f0722803a83c5f07e044302",
+      "mod_time": "2025-09-09T12:26:18.241253"
+    },
+    {
+      "path": "/app/.git/objects/8f/efb0e029ca2b8ea0f8656ff22382a372a80abe",
+      "mod_time": "2025-09-09T12:25:10.383497"
+    },
+    {
+      "path": "/app/.git/objects/bf/ec5cc984fa130f97b1d91529638b404d8182f6",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/40/b8e1f09fed57af81c417077fa0b7fdcccd5304",
+      "mod_time": "2025-09-09T12:19:25.743990"
+    },
+    {
+      "path": "/app/.git/objects/e7/36cef66a5efde7b26b1771b5bd0878cb03fe58",
+      "mod_time": "2025-09-09T12:24:18.239892"
+    },
+    {
+      "path": "/app/.git/objects/23/c289c3596ca1fa1fed3cd783e3f0845ac36480",
+      "mod_time": "2025-09-09T12:27:04.521528"
+    },
+    {
+      "path": "/app/.git/objects/6c/048c68caebbb4ded2760e045187c912cdf6ef7",
+      "mod_time": "2025-09-09T12:24:44.457714"
+    },
+    {
+      "path": "/app/.git/objects/42/958db97f393285c1974143adb7f64938797cb4",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/2c/d78c46cf2fc3585fd3a3db4a3c0444200a6330",
+      "mod_time": "2025-09-09T12:27:04.309510"
+    },
+    {
+      "path": "/app/.git/objects/e0/2f7fb30b31cae3b6ebc59367c9c37dc4316e1e",
+      "mod_time": "2025-09-09T12:26:06.852142"
+    },
+    {
+      "path": "/app/.git/objects/5b/c549593cdaabf0b0758458073aae6c0ba10e79",
+      "mod_time": "2025-09-09T12:26:31.734536"
+    },
+    {
+      "path": "/app/.git/objects/93/a76510f701ea72f42a6be3359df42e5e48f54d",
+      "mod_time": "2025-09-09T12:24:53.662349"
+    },
+    {
+      "path": "/app/.git/objects/75/20acf55215aa7cafec3553910823a80ba629c0",
+      "mod_time": "2025-09-09T12:23:25.524135"
+    },
+    {
+      "path": "/app/.git/objects/18/f9af9a33d5522b886b2369d7cf7c49b11f8b43",
+      "mod_time": "2025-09-09T12:24:08.251192"
+    },
+    {
+      "path": "/app/.git/objects/1a/7043adc28ec35018807d2b83b43b3b441dcedb",
+      "mod_time": "2025-09-09T12:26:10.696520"
+    },
+    {
+      "path": "/app/.git/objects/11/7f140db2f4678b21fd026fd976f964891d1737",
+      "mod_time": "2025-09-09T12:24:53.662349"
+    },
+    {
+      "path": "/app/.git/objects/06/c6fce0b9514ddd4baf41f9840530bf8425b70d",
+      "mod_time": "2025-09-09T12:20:00.847962"
+    },
+    {
+      "path": "/app/.git/objects/06/53b7f85cca1da1e461c35f626f7f86d7b4eb96",
+      "mod_time": "2025-09-09T12:26:10.696520"
+    },
+    {
+      "path": "/app/.git/objects/78/78991b269d463ea9938f9203fb9b205ec9518a",
+      "mod_time": "2025-09-09T12:20:55.556117"
+    },
+    {
+      "path": "/app/.git/objects/d1/b144898a35dad0125f646a1bc3b49314746aa9",
+      "mod_time": "2025-09-09T12:22:27.795712"
+    },
+    {
+      "path": "/app/.git/objects/69/d1e18245ab98badac0c77f5505ea55ddac1233",
+      "mod_time": "2025-09-09T12:19:47.826702"
+    },
+    {
+      "path": "/app/.git/objects/e6/6f336d04f5cd782a940fe541dc5d496c7f0020",
+      "mod_time": "2025-09-09T12:24:53.662349"
+    },
+    {
+      "path": "/app/.git/objects/aa/7ec0bda779dac3d4c3fd6983be14e5adea5915",
+      "mod_time": "2025-09-09T12:23:25.308119"
+    },
+    {
+      "path": "/app/.git/objects/ba/5cb35f747164a2e50048b54c4c32ede5cbc539",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/66/4d0d3343b6177932eaa33ccfb3fb4015a8e028",
+      "mod_time": "2025-09-09T12:23:25.528135"
+    },
+    {
+      "path": "/app/.git/objects/b3/6bf7bb2274b739b0b01c37f4cb2a745015657b",
+      "mod_time": "2025-09-09T12:23:46.249632"
+    },
+    {
+      "path": "/app/.git/objects/c7/f3ee3799859a55e5ea102c3662432a0261f2ab",
+      "mod_time": "2025-09-09T12:19:37.405535"
+    },
+    {
+      "path": "/app/.git/objects/10/b1d9cc307579e7b2b815f303bbc2349e9e7c8f",
+      "mod_time": "2025-09-09T12:20:26.422051"
+    },
+    {
+      "path": "/app/.git/objects/1b/c6a7fbe46e94e1b1e802659fdb71ab88f36177",
+      "mod_time": "2025-09-09T12:25:23.148371"
+    },
+    {
+      "path": "/app/.git/objects/5f/ebb0c37f5669488aee9f06a2b2d166759df2f5",
+      "mod_time": "2025-09-09T12:27:04.309510"
+    },
+    {
+      "path": "/app/.git/objects/e5/5f6b8fed9c9d31486d180e634a89ba5a9defeb",
+      "mod_time": "2025-09-09T12:23:35.972894"
+    },
+    {
+      "path": "/app/.git/objects/be/6eeb583cc2789f6f51d3f98e76d413899c6617",
+      "mod_time": "2025-09-09T12:18:43.908120"
+    },
+    {
+      "path": "/app/.git/objects/a5/f7f77cd28d79811902dc07e27b2da19f892b67",
+      "mod_time": "2025-09-09T12:24:50.962162"
+    },
+    {
+      "path": "/app/.git/objects/ed/2497856db06e76e3333d620cc3f4148d16b172",
+      "mod_time": "2025-09-09T12:27:18.858788"
+    },
+    {
+      "path": "/app/.git/objects/ed/71841a67e7963c74e3e89e535fbe44b3dd0270",
+      "mod_time": "2025-09-09T12:27:19.062806"
+    },
+    {
+      "path": "/app/.git/objects/d5/fff824abc69d4da7361ea8032718aa1e64f458",
+      "mod_time": "2025-09-09T12:23:21.867867"
+    },
+    {
+      "path": "/app/.git/objects/94/707aa2d34b5c883e6cbe60aaa6dd0bcb6db53b",
+      "mod_time": "2025-09-09T12:19:15.602736"
+    },
+    {
+      "path": "/app/.git/objects/dd/6098719d3cd77eac0f7549c64a57078f8ba930",
+      "mod_time": "2025-09-09T12:26:18.241253"
+    },
+    {
+      "path": "/app/.git/objects/pack/pack-fc6e8dcb8d825b8f42ef2cae8e64d63d9f1ad150.rev",
+      "mod_time": "2025-09-08T21:20:34.544196"
+    },
+    {
+      "path": "/app/.git/objects/pack/pack-fc6e8dcb8d825b8f42ef2cae8e64d63d9f1ad150.pack",
+      "mod_time": "2025-09-08T21:20:35.448196"
+    },
+    {
+      "path": "/app/.git/objects/pack/pack-fc6e8dcb8d825b8f42ef2cae8e64d63d9f1ad150.idx",
+      "mod_time": "2025-09-08T21:20:34.544196"
+    },
+    {
+      "path": "/app/.git/objects/6d/21ad616633740f84d9a36131b6cbc6b6858dd9",
+      "mod_time": "2025-09-09T12:27:04.309510"
+    },
+    {
+      "path": "/app/.git/objects/95/454f71980f7f3c0dece6606bdc180c2bf8b756",
+      "mod_time": "2025-09-09T12:27:04.525529"
+    },
+    {
+      "path": "/app/.git/logs/HEAD",
+      "mod_time": "2025-09-09T12:27:19.066807"
+    },
+    {
+      "path": "/app/.git/logs/refs/remotes/origin/HEAD",
+      "mod_time": "2025-09-08T21:20:34.572196"
+    },
+    {
+      "path": "/app/.git/logs/refs/heads/main",
+      "mod_time": "2025-09-08T21:20:34.572196"
+    },
+    {
+      "path": "/app/.git/info/exclude",
+      "mod_time": "2025-09-08T21:20:33.364196"
+    },
+    {
+      "path": "/app/.jules_memory/knowledge_base.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/.jules_memory/project_specifications.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/.jules_memory/system_state.json",
+      "mod_time": "2025-09-09T12:27:19.630856"
+    },
+    {
+      "path": "/app/.jules_memory/user_preferences.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/.jules_memory/commands_history.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/.jules_memory/activity_log.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/.jules_memory/automatic_logs.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    },
+    {
+      "path": "/app/.jules_memory/context.json",
+      "mod_time": "2025-09-09T12:27:18.450753"
+    }
+  ],
+  "recent_commands": [],
+  "last_updated": "2025-09-09T12:27:19.638541"
+}
