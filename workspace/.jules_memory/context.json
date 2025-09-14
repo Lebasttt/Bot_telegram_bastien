@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "data_type": "context",
+    "created_at": "2025-09-14T19:03:39.169886",
+    "last_modified": "2025-09-14T19:03:39.169888",
+    "compression_status": "raw",
+    "original_size": 129,
+    "version": "1.0"
+  },
+  "content": {
+    "current_task": null,
+    "task_stack": [],
+    "active_files": [],
+    "recent_commands": [],
+    "last_updated": "2025-09-14T19:03:39.169868"
+  }
+}

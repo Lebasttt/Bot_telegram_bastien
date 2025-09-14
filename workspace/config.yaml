@@ -1,0 +1,5 @@
+workspace_path: "/app/workspace"
+memory_dir: ".jules_memory"
+reminder_interval: 900
+inactivity_threshold: 1200
+auto_save_interval: 300

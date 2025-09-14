@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "data_type": "automatic_logs",
+    "created_at": "2025-09-14T19:03:39.171842",
+    "last_modified": "2025-09-14T19:03:39.171848",
+    "compression_status": "raw",
+    "original_size": 96,
+    "version": "1.0"
+  },
+  "content": {
+    "file_changes": [],
+    "system_events": [],
+    "contextual_observations": [],
+    "gentle_reminders": []
+  }
+}
