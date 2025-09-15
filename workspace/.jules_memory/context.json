@@ -1,17 +1,86 @@
 {
   "metadata": {
     "data_type": "context",
-    "created_at": "2025-09-14T19:03:39.169886",
-    "last_modified": "2025-09-14T19:03:39.169888",
+    "created_at": "2025-09-14T20:14:18.681829",
+    "last_modified": "2025-09-14T20:14:18.681831",
     "compression_status": "raw",
-    "original_size": 129,
+    "original_size": 1826,
     "version": "1.0"
   },
   "content": {
     "current_task": null,
     "task_stack": [],
-    "active_files": [],
+    "active_files": [
+      {
+        "path": "/app/workspace/config.yaml",
+        "mod_time": "2025-09-14T20:14:09.833173"
+      },
+      {
+        "path": "/app/workspace/jules_memory.py",
+        "mod_time": "2025-09-14T20:14:09.833173"
+      },
+      {
+        "path": "/app/workspace/jules_memory_fixed.py",
+        "mod_time": "2025-09-14T20:14:09.833173"
+      },
+      {
+        "path": "/app/workspace/RAPPORT_SESSION_2025-09-14.md",
+        "mod_time": "2025-09-14T20:14:09.833173"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/snapshots.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/jira_config.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/commands_history.json",
+        "mod_time": "2025-09-14T20:14:09.825175"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/context.json",
+        "mod_time": "2025-09-14T20:14:09.825175"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/code_index.json",
+        "mod_time": "2025-09-14T20:14:09.825175"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/impact_analysis.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/performance.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/user_preferences.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/activity_log.json",
+        "mod_time": "2025-09-14T20:14:09.825175"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/automatic_logs.json",
+        "mod_time": "2025-09-14T20:14:09.825175"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/project_specifications.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/system_state.json",
+        "mod_time": "2025-09-14T20:14:18.679162"
+      },
+      {
+        "path": "/app/workspace/.jules_memory/knowledge_base.json",
+        "mod_time": "2025-09-14T20:14:09.829174"
+      }
+    ],
     "recent_commands": [],
-    "last_updated": "2025-09-14T19:03:39.169868"
+    "last_updated": "2025-09-14T20:14:18.681820"
   }
 }

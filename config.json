@@ -1,0 +1,32 @@
+{
+  "LOG_FILE": "logs/ai_debug_log.ndjson",
+  "CRASH_FILE": "logs/ai_crash_report.zjson",
+  "PID_FILE": "logs/ai_debug.pid",
+  "SECRETS_SCAN_FILE": "logs/secrets_scan_report.json",
+  "DEPENDENCY_AUDIT_FILE": "logs/dependency_audit_report.json",
+  "MEMORY_INTEGRATION_FILE": "logs/memory_integration.json",
+  "SANDBOX_PATH": "/app",
+
+  "LOGGING": {
+    "LOG_LEVEL": "INFO",
+    "MAX_LOG_SIZE_MB": 10,
+    "BACKUP_COUNT": 5
+  },
+
+  "SECURITY": {
+    "ALLOWED_EXTENSIONS": [".py", ".js", ".json", ".txt", ".md", ".sh", ".yml", ".yaml"],
+    "SECRET_SCAN_PATTERNS": [
+      "[a-zA-Z0-9]{32,}",
+      "sk_live_[a-zA-Z0-9]{20,}",
+      "AKIA[0-9A-Z]{16}",
+      "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+      "-----BEGIN (RSA|EC|DSA|OPENSSH) PRIVATE KEY-----"
+    ]
+  },
+
+  "THRESHOLDS": {
+    "MEMORY_THRESHOLD": 85,
+    "CPU_THRESHOLD": 90,
+    "DISK_USAGE_THRESHOLD": 90
+  }
+}
