@@ -1,0 +1,1504 @@
+{
+  "timestamp": 1757950115.602464,
+  "system_info": {
+    "platform": "linux",
+    "python_version": "3.12.11 (main, Jul 29 2025, 18:21:07) [GCC 13.3.0]",
+    "hostname": "devbox",
+    "boot_time": 1757935955.0
+  },
+  "performance": {
+    "cpu_percent": 0.8,
+    "memory": {
+      "total": 8345743360,
+      "available": 7173152768,
+      "percent": 14.1,
+      "used": 860073984,
+      "free": 705601536,
+      "active": 928198656,
+      "inactive": 6266097664,
+      "buffers": 111763456,
+      "cached": 6668304384,
+      "shared": 598016,
+      "slab": 388923392
+    },
+    "disk_io": {
+      "read_count": 255930,
+      "write_count": 945857,
+      "read_bytes": 5776431104,
+      "write_bytes": 24344236032,
+      "read_time": 182248,
+      "write_time": 1523543,
+      "read_merged_count": 0,
+      "write_merged_count": 0,
+      "busy_time": 183628
+    },
+    "net_io": {
+      "bytes_sent": 262276769,
+      "bytes_recv": 4448083464,
+      "packets_sent": 248249,
+      "packets_recv": 380069,
+      "errin": 0,
+      "errout": 0,
+      "dropin": 154,
+      "dropout": 0
+    }
+  },
+  "processes": [
+    {
+      "cpu_percent": 0.0,
+      "name": "systemd",
+      "pid": 1,
+      "username": "root",
+      "memory_info": [
+        12713984,
+        22028288,
+        9699328,
+        45056,
+        0,
+        2678784,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kthreadd",
+      "pid": 2,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "pool_workqueue_release",
+      "pid": 3,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-rcu_g",
+      "pid": 4,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-rcu_p",
+      "pid": 5,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-slub_",
+      "pid": 6,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-netns",
+      "pid": 7,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/0:0H-events_highpri",
+      "pid": 9,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-mm_pe",
+      "pid": 12,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "rcu_tasks_kthread",
+      "pid": 13,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "rcu_tasks_trace_kthread",
+      "pid": 14,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "ksoftirqd/0",
+      "pid": 15,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "rcu_preempt",
+      "pid": 16,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "migration/0",
+      "pid": 17,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "cpuhp/0",
+      "pid": 18,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "cpuhp/1",
+      "pid": 19,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "migration/1",
+      "pid": 20,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "ksoftirqd/1",
+      "pid": 21,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/1:0H-kblockd",
+      "pid": 23,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "cpuhp/2",
+      "pid": 24,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "migration/2",
+      "pid": 25,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "ksoftirqd/2",
+      "pid": 26,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/2:0H",
+      "pid": 28,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "cpuhp/3",
+      "pid": 29,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "migration/3",
+      "pid": 30,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "ksoftirqd/3",
+      "pid": 31,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/3:0H-kblockd",
+      "pid": 33,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kdevtmpfs",
+      "pid": 34,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-inet_",
+      "pid": 35,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "oom_reaper",
+      "pid": 36,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-write",
+      "pid": 37,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kcompactd0",
+      "pid": 38,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "ksmd",
+      "pid": 39,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "khugepaged",
+      "pid": 40,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-crypt",
+      "pid": 41,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-kbloc",
+      "pid": 42,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/1:1-events",
+      "pid": 43,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/0:1H-kblockd",
+      "pid": 50,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kswapd0",
+      "pid": 81,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-kthro",
+      "pid": 84,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "irq/24-ACPI:Ged",
+      "pid": 89,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-acpi_",
+      "pid": 95,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-kstrp",
+      "pid": 178,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/3:1H-kblockd",
+      "pid": 399,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/1:1H-kblockd",
+      "pid": 402,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "jbd2/vdb-8",
+      "pid": 403,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/R-ext4-",
+      "pid": 404,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/2:1H-kblockd",
+      "pid": 423,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "systemd-journald",
+      "pid": 429,
+      "username": "root",
+      "memory_info": [
+        34340864,
+        68882432,
+        33161216,
+        114688,
+        0,
+        18083840,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/2:5-cgroup_destroy",
+      "pid": 456,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "systemd-udevd",
+      "pid": 780,
+      "username": "root",
+      "memory_info": [
+        5767168,
+        24535040,
+        4587520,
+        864256,
+        0,
+        958464,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/0:3-events_power_efficient",
+      "pid": 815,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "systemd-resolved",
+      "pid": 816,
+      "username": "systemd-resolve",
+      "memory_info": [
+        13369344,
+        21970944,
+        11141120,
+        360448,
+        0,
+        1839104,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 2.3,
+      "name": "systemd-timesyncd",
+      "pid": 817,
+      "username": "systemd-timesync",
+      "memory_info": [
+        8126464,
+        93208576,
+        7208960,
+        28672,
+        0,
+        9146368,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "dbus-daemon",
+      "pid": 829,
+      "username": "messagebus",
+      "memory_info": [
+        4849664,
+        10006528,
+        4194304,
+        151552,
+        0,
+        1024000,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "systemd-logind",
+      "pid": 838,
+      "username": "root",
+      "memory_info": [
+        8912896,
+        18460672,
+        7864320,
+        155648,
+        0,
+        774144,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "agetty",
+      "pid": 846,
+      "username": "root",
+      "memory_info": [
+        1966080,
+        6250496,
+        1966080,
+        32768,
+        0,
+        372736,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "agetty",
+      "pid": 853,
+      "username": "root",
+      "memory_info": [
+        2097152,
+        6295552,
+        1966080,
+        32768,
+        0,
+        372736,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "unattended-upgr",
+      "pid": 878,
+      "username": "root",
+      "memory_info": [
+        24084480,
+        113299456,
+        13631488,
+        3026944,
+        0,
+        20180992,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 887,
+      "username": "root",
+      "memory_info": [
+        8126464,
+        12308480,
+        7077888,
+        593920,
+        0,
+        860160,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "socat",
+      "pid": 896,
+      "username": "root",
+      "memory_info": [
+        3670016,
+        9510912,
+        3145728,
+        229376,
+        0,
+        667648,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "containerd",
+      "pid": 898,
+      "username": "root",
+      "memory_info": [
+        42463232,
+        1920942080,
+        29360128,
+        20295680,
+        0,
+        117100544,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "systemd",
+      "pid": 911,
+      "username": "jules",
+      "memory_info": [
+        11403264,
+        20574208,
+        9568256,
+        45056,
+        0,
+        1224704,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "(sd-pam)",
+      "pid": 912,
+      "username": "jules",
+      "memory_info": [
+        3592192,
+        21659648,
+        1835008,
+        86016,
+        0,
+        1122304,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "dockerd",
+      "pid": 935,
+      "username": "root",
+      "memory_info": [
+        78745600,
+        2021588992,
+        58327040,
+        32296960,
+        0,
+        131145728,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "tmux: server",
+      "pid": 1405,
+      "username": "jules",
+      "memory_info": [
+        5705728,
+        14065664,
+        3407872,
+        716800,
+        0,
+        2535424,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "polkitd",
+      "pid": 2305,
+      "username": "polkitd",
+      "memory_info": [
+        7864320,
+        315559936,
+        7208960,
+        65536,
+        0,
+        34897920,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/3:0-events_power_efficient",
+      "pid": 14654,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 9.4,
+      "name": "python",
+      "pid": 28957,
+      "username": "jules",
+      "memory_info": [
+        17866752,
+        486166528,
+        5767168,
+        4096,
+        0,
+        63750144,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 29776,
+      "username": "root",
+      "memory_info": [
+        10485760,
+        15089664,
+        8781824,
+        593920,
+        0,
+        1409024,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 29788,
+      "username": "jules",
+      "memory_info": [
+        7450624,
+        15458304,
+        5242880,
+        593920,
+        0,
+        1777664,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 35176,
+      "username": "jules",
+      "memory_info": [
+        169033728,
+        601653248,
+        61079552,
+        4096,
+        0,
+        431468544,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/1:2-events",
+      "pid": 35789,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "bash",
+      "pid": 35795,
+      "username": "jules",
+      "memory_info": [
+        8650752,
+        12386304,
+        3801088,
+        978944,
+        0,
+        4907008,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 37710,
+      "username": "root",
+      "memory_info": [
+        10485760,
+        15085568,
+        8781824,
+        593920,
+        0,
+        1404928,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 37722,
+      "username": "jules",
+      "memory_info": [
+        7245824,
+        15491072,
+        4980736,
+        593920,
+        0,
+        1810432,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 38221,
+      "username": "jules",
+      "memory_info": [
+        168280064,
+        601653248,
+        60424192,
+        4096,
+        0,
+        431468544,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 38997,
+      "username": "jules",
+      "memory_info": [
+        168910848,
+        601653248,
+        60948480,
+        4096,
+        0,
+        431468544,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 39776,
+      "username": "jules",
+      "memory_info": [
+        168415232,
+        601681920,
+        60424192,
+        4096,
+        0,
+        431497216,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 40249,
+      "username": "jules",
+      "memory_info": [
+        168681472,
+        601686016,
+        60686336,
+        4096,
+        0,
+        431501312,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 40887,
+      "username": "jules",
+      "memory_info": [
+        169205760,
+        601690112,
+        61210624,
+        4096,
+        0,
+        431505408,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 45320,
+      "username": "root",
+      "memory_info": [
+        10354688,
+        15212544,
+        8650752,
+        593920,
+        0,
+        1531904,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 45332,
+      "username": "jules",
+      "memory_info": [
+        7389184,
+        15622144,
+        5111808,
+        593920,
+        0,
+        1941504,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 45537,
+      "username": "root",
+      "memory_info": [
+        10354688,
+        15085568,
+        8650752,
+        593920,
+        0,
+        1404928,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 45549,
+      "username": "jules",
+      "memory_info": [
+        8093696,
+        16523264,
+        5111808,
+        593920,
+        0,
+        2842624,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/3:2-events_power_efficient",
+      "pid": 46673,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/u8:2-ext4-rsv-conversion",
+      "pid": 46683,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 52284,
+      "username": "root",
+      "memory_info": [
+        10354688,
+        15085568,
+        8781824,
+        593920,
+        0,
+        1404928,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "sshd",
+      "pid": 52296,
+      "username": "jules",
+      "memory_info": [
+        7696384,
+        15810560,
+        5111808,
+        593920,
+        0,
+        2129920,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/0:0-events_power_efficient",
+      "pid": 55088,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/u8:0-events_unbound",
+      "pid": 55761,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "python3",
+      "pid": 56062,
+      "username": "jules",
+      "memory_info": [
+        15990784,
+        23040000,
+        7864320,
+        4096,
+        0,
+        9822208,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/2:0-mm_percpu_wq",
+      "pid": 56699,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/u8:1-events_unbound",
+      "pid": 56700,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cpu_percent": 0.0,
+      "name": "kworker/u8:3-events_unbound",
+      "pid": 57432,
+      "username": "root",
+      "memory_info": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "network": [],
+  "filesystem": {
+    "partitions": [
+      {
+        "device": "/dev/root",
+        "mountpoint": "/rom",
+        "fstype": "squashfs",
+        "opts": "ro,relatime,errors=continue"
+      },
+      {
+        "device": "/dev/vdb",
+        "mountpoint": "/rom/overlay",
+        "fstype": "ext4",
+        "opts": "rw,relatime"
+      }
+    ],
+    "usage": {
+      "/rom": {
+        "total": 2273050624,
+        "used": 2273050624,
+        "free": 0,
+        "percent": 100.0
+      },
+      "/rom/overlay": {
+        "total": 20957446144,
+        "used": 12805820416,
+        "free": 7061106688,
+        "percent": 64.5
+      }
+    }
+  }
+}
