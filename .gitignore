@@ -1,2 +1,5 @@
-node_modules/
+# Fichiers sensibles
 .env
+
+# Données utilisateur
+folie_memoire/
