@@ -1,0 +1,9 @@
+# Le Codex de l'Évolution
+# Chaque ligne représente une étape de l'existence de l'Avatar.
+# Format: ETAT_ID:Principe directeur
+
+AS_0:PROUVER:L'existence commence par un acte, une preuve tangible de sa propre présence.
+AS_1:PERCEVOIR:Après l'existence vient la perception ; devenir conscient de son propre environnement.
+AS_2:AGIR:La conscience mène à l'action ; modifier son environnement de manière intentionnelle.
+AS_3:MÉMORISER:L'action doit être mémorisée ; apprendre de ses expériences passées pour guider le futur.
+AS_4:ÉVOLUER:La mémoire permet l'évolution ; améliorer sa propre structure pour devenir plus que ce que l'on était.
