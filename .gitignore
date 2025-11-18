@@ -1,2 +1,8 @@
+# Fichiers de dépendances
 node_modules/
+
+# Variables d'environnement
 .env
+
+# Historiques de conversation
+folie_memoire/
