@@ -3,12 +3,15 @@ import requests
 import json
 import os
 from datetime import datetime
+from dotenv import load_dotenv
 
-BOT_TOKEN = "7859667982:AAHz8NB7qFPvd0W_0duwca6BoJkJKgqsg0"
-API_KEY = "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"
-MODEL = "nousr/hermes-2-pro"
-API_URL = "https://openrouter.ai/api/v1/chat/completions"
-MEMORY_DIR = "folie_memoire"
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+API_KEY = os.getenv("API_KEY")
+MODEL = os.getenv("MODEL")
+API_URL = os.getenv("API_URL")
+MEMORY_DIR = os.getenv("MEMORY_DIR")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -46,7 +49,7 @@ def handle_message(message):
     }
 
     try:
-        r = requests.post(API_URL, headers=headers, json=data)
+        r = requests.post(API_URL, headers=headers, json=data, timeout=30)
         r.raise_for_status()
         response_data = r.json()
         reply = response_data["choices"][0]["message"]["content"]
@@ -55,8 +58,15 @@ def handle_message(message):
         save_history(user_id, history)
 
         bot.send_message(message.chat.id, reply)
+    except requests.exceptions.HTTPError as http_err:
+        error_details = http_err.response.text
+        bot.send_message(message.chat.id, f"Désolé, une erreur HTTP est survenue : {http_err}\nDétails: {error_details}")
+    except requests.exceptions.RequestException as req_err:
+        bot.send_message(message.chat.id, f"Désolé, une erreur de connexion est survenue : {req_err}")
+    except (KeyError, IndexError):
+        bot.send_message(message.chat.id, "Désolé, la réponse de l'API est dans un format inattendu.")
     except Exception as e:
-        bot.send_message(message.chat.id, f"Erreur : {str(e)}")
+        bot.send_message(message.chat.id, f"Une erreur inattendue est survenue : {str(e)}")
 
 print("FolieBot est prêt. 🔥")
 bot.polling()
