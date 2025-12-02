@@ -1,0 +1,5 @@
+Une fusée fonctionne sur le principe de l'action-réaction, énoncé par la troisième loi de Newton.
+Elle expulse des gaz à grande vitesse vers le bas, ce qui génère une poussée vers le haut.
+Les principaux composants d'une fusée sont le moteur, les réservoirs de carburant (ergols) et la charge utile.
+Les ergols les plus courants sont un mélange d'un comburant (comme l'oxygène liquide) et d'un combustible (comme l'hydrogène liquide).
+La vitesse de libération nécessaire pour échapper à l'attraction terrestre est d'environ 11,2 kilomètres par seconde.
