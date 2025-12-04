@@ -1,0 +1,17 @@
+FROM tensorflow/tensorflow:1.15.0-py3
+
+ENV LANG=C.UTF-8
+RUN mkdir /gpt-2
+WORKDIR /gpt-2
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
+
+COPY gpt2_tout_en_un.py .
+
+RUN python3 gpt2_tout_en_un.py download 124M
+RUN python3 gpt2_tout_en_un.py download 355M
+RUN python3 gpt2_tout_en_un.py download 774M
+RUN python3 gpt2_tout_en_un.py download 1558M
+
+# Commande par défaut pour lancer le mode interactif
+CMD ["python3", "gpt2_tout_en_un.py", "interact"]
