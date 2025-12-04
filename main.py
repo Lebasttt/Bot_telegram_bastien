@@ -3,12 +3,18 @@ import requests
 import json
 import os
 from datetime import datetime
+from dotenv import load_dotenv
 
-BOT_TOKEN = "7859667982:AAHz8NB7qFPvd0W_0duwca6BoJkJKgqsg0"
-API_KEY = "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"
+load_dotenv()
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+API_KEY = os.environ.get("API_KEY")
 MODEL = "nousr/hermes-2-pro"
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MEMORY_DIR = "folie_memoire"
+
+if not BOT_TOKEN or not API_KEY:
+    raise ValueError("Les variables d'environnement BOT_TOKEN et API_KEY doivent être définies.")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
