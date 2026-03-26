@@ -1,0 +1,34 @@
+dumpsys package | grep -i 'versionName' | head -3 → which  dumpsys | 1774563377.9544938
+getprop | grep -i 'version' | head -5 → which  getprop | 1774563389.3547654
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774563443.2313557
+getprop | grep -i 'version' | head -5 → which  getprop | 1774563457.8563359
+getprop | grep -v '\[]' | head -3 → which  getprop | 1774563488.216496
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774563535.3221793
+getprop | grep -i 'version' | head -5 → which  getprop | 1774563541.5329752
+getprop | grep -v '\[]' | head -3 → which  getprop | 1774563559.3311083
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774564000.9422436
+dumpsys package | grep -i 'versionName' | head -3 → which  dumpsys | 1774564067.8480208
+getprop | grep -v '\[]' | head -3 → which  getprop | 1774564103.0670478
+getprop | grep -i 'version' | head -5 → which  getprop | 1774564114.9637623
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774564118.0324216
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774564412.8940084
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774564421.6817355
+dumpsys package | grep -i 'versionName' | head -3 → which  dumpsys | 1774564442.8875425
+getprop | grep -i 'version' | head -5 → which  getprop | 1774564457.7951252
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774564484.141466
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774564499.4889438
+getprop | grep -v '\[]' | head -3 → which  getprop | 1774564510.9231467
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774564519.0003068
+getprop | grep -i 'version' | head -5 → which  getprop | 1774564537.0894353
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774564563.7707841
+getprop | grep -v '\[]' | head -3 → which  getprop | 1774564576.1974356
+dumpsys package | grep -i 'versionName' | head -3 → which  dumpsys | 1774564606.7499952
+dumpsys package | grep -i 'versionName' | head -3 → which  dumpsys | 1774564768.4598503
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774564801.2663586
+getprop | grep -i 'version' | head -5 → which  getprop | 1774564804.3292303
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774564821.5716434
+getprop | grep -i 'version' | head -5 → which  getprop | 1774564870.939302
+getprop | grep -i 'version' | head -5 → which  getprop | 1774565001.4939797
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' → which  dumpsys | 1774565020.2364004
+pm list packages | head -2 | cut -d: -f2 → which  pm | 1774565032.427485
+dumpsys package | grep -i 'versionName' | head -3 → which  dumpsys | 1774565291.4432452

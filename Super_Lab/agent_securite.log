@@ -1,0 +1,11 @@
+2026-03-26 22:27:36.763722: Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT
+
+2026-03-26 22:36:28.768650: Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT

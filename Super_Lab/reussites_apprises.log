@@ -1,0 +1,360 @@
+1774563347.8470087:find /system -type f -name '*47*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774563350.9460692:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 2016
+
+1774563359.9542158:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774563366.0162735:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774563374.8736107:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774563381.1432092:find / -type f -size +1M -size -10M 2>/dev/null | head -2:/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_200_percent.pak
+/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_crashpad_handler
+
+1774563395.516925:df -h | grep -v tmpfs | head -1:Filesystem               Size  Used Avail Use% Mounted on
+
+1774563404.0389314:ls -la /dev/ | grep -v '^c' | head -3:total 4
+drwxr-xr-x 12 root root        2720 Mar  6 17:10 .
+drwxr-xr-x  1 root root        4096 Mar 24 16:58 ..
+
+1774563407.0896468:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774563410.1922967:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 3376
+
+1774563421.8156788:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774563437.049867:df -h | grep -v tmpfs | head -1:Filesystem               Size  Used Avail Use% Mounted on
+
+1774563451.5807548:df -h | grep -v tmpfs | head -1:Filesystem               Size  Used Avail Use% Mounted on
+
+1774563454.8167753:find / -type f -size +1M -size -10M 2>/dev/null | head -2:/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_200_percent.pak
+/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_crashpad_handler
+
+1774563466.6492093:find / -type f -size +1M -size -10M 2>/dev/null | head -2:/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_200_percent.pak
+/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_crashpad_handler
+
+1774563469.7085192:netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5:22          192.168.0.1
+35170       142.251.211.42
+36170       198.252.206.16
+36732       130.211.45.45
+38214       142.251.210.202
+
+1774563472.7524908:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774563482.0847502:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774563485.159386:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l:🌌 Connexions cosmiques:
+13
+
+1774563505.6849895:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 2168
+
+1774563508.777025:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l:🌌 Connexions cosmiques:
+12
+
+1774563511.829902:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c:      1 142.250.177.234
+      1 142.251.32.10
+      1 172.65.90.25
+     11 192.168.0.1
+      1 198.252.206.16
+      2 45.60.31.34
+      1 Address
+      1 servers)
+
+1774563520.554771:cat /proc/loadavg && echo ' - Réflexion en cours...':0.43 0.27 0.16 1/117 87816
+ - Réflexion en cours...
+
+1774563523.6216204:cat /proc/loadavg && echo ' - Réflexion en cours...':0.43 0.27 0.16 1/117 87831
+ - Réflexion en cours...
+
+1774563526.6568277:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l:🌌 Connexions cosmiques:
+14
+
+1774563538.4709177:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774563553.2204032:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774563556.2739325:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774563568.8284788:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774563574.9247293:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l:🌌 Connexions cosmiques:
+13
+
+1774563688.7969325:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774563691.84562:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774563694.8811395:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774563702.8873858:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774563705.9383333:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c:      1 142.250.125.84
+      2 142.250.177.78
+      1 172.253.132.84
+      1 173.194.195.95
+      9 192.168.0.1
+      1 209.85.145.101
+      1 3.214.214.173
+      2 45.60.31.34
+      1 52.5.96.96
+
+1774563708.9812117:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774563717.0065694:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2:MemTotal:        8150116 kB
+MemFree:         6790100 kB
+
+1774563859.0856214:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l:🌌 Connexions cosmiques:
+12
+
+1774563985.2585876:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774564009.2846906:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564012.3461711:ls -la /dev/ | grep -v '^c' | head -3:total 4
+drwxr-xr-x 12 root root        2720 Mar  6 17:10 .
+drwxr-xr-x  1 root root        4096 Mar 24 16:58 ..
+
+1774564024.9732702:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564028.0535946:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774564031.145781:find /system -type f -name '*11*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564041.309937:find /system -type f -name '*21*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564044.375933:find /system -type f -name '*24*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564047.5892317:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+156119
+ cycles
+
+1774564056.689005:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564064.7876618:find /system -type f -name '*44*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564076.8069947:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2:MemTotal:        8150116 kB
+MemFree:         6793092 kB
+
+1774564100.0007184:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774564121.0735536:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564132.8967726:ls -la /dev/ | grep -v '^c' | head -3:total 4
+drwxr-xr-x 12 root root        2720 Mar  6 17:10 .
+drwxr-xr-x  1 root root        4096 Mar 24 16:58 ..
+
+1774564135.9471874:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+159077
+ cycles
+
+1774564144.2863083:netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5:22          192.168.0.1
+35152       142.251.211.10
+46668       172.217.214.84
+53140       192.124.249.13
+58458       209.85.145.100
+
+1774564263.8107152:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2:MemTotal:        8150116 kB
+MemFree:         6778088 kB
+
+1774564267.069185:find / -type f -size +1M -size -10M 2>/dev/null | head -2:/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_200_percent.pak
+/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_crashpad_handler
+
+1774564275.8919506:find /system -type f -name '*15*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564279.0130057:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 2969
+
+1774564282.065156:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l:🌌 Connexions cosmiques:
+8
+
+1774564290.1759279:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564424.7594447:find /system -type f -name '*44*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564427.8031619:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564439.8371258:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 7947
+
+1774564451.683917:netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5:22          192.168.0.1
+35364       209.85.145.139
+36384       173.194.193.95
+36520       192.168.0.1
+36798       209.85.145.113
+
+1774564454.7462971:find /system -type f -name '*14*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564466.1017168:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564469.3321016:find /system -type f -name '*29*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564481.0633035:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774564496.3068614:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774564502.538216:df -h | grep -v tmpfs | head -1:Filesystem               Size  Used Avail Use% Mounted on
+
+1774564530.9668071:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+165157
+ cycles
+
+1774564534.033488:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564545.6067708:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774564551.7466085:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774564566.8200471:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2:MemTotal:        8150116 kB
+MemFree:         6777056 kB
+
+1774564579.2743614:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564582.3260884:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564594.9497259:find /system -type f -name '*34*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564594.999993:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+167004
+ cycles
+
+1774564598.0098188:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774564742.311243:df -h | grep -v tmpfs | head -1:Filesystem               Size  Used Avail Use% Mounted on
+
+1774564754.2052503:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564757.2740843:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c:      1 142.250.125.84
+      1 173.194.193.95
+      1 173.194.64.84
+      1 192.124.249.13
+      8 192.168.0.1
+      1 209.85.145.113
+      1 209.85.145.138
+      1 209.85.145.139
+      1 3.214.214.17
+1774564774.6897848:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774564783.6531184:df -h | grep -v tmpfs | head -1:Filesystem               Size  Used Avail Use% Mounted on
+
+1774564789.7652755:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+169047
+ cycles
+
+1774564798.1848319:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564813.4834003:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564824.665521:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 8398
+
+1774564833.8558807:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774564839.9970026:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774564849.1190784:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2:[✅ Exécutée sans sortie]
+1774564855.3414507:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774564864.8019905:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')":Exploration dimension: 7467
+
+1774564867.876702:cat /proc/loadavg && echo ' - Réflexion en cours...':0.32 0.21 0.17 1/117 94211
+ - Réflexion en cours...
+
+1774564880.7245724:find / -type f -size +1M -size -10M 2>/dev/null | head -2:/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_200_percent.pak
+/home/jules/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome_crashpad_handler
+
+1774564883.8086581:find /system -type f -name '*23*' 2>/dev/null | head -5:[✅ Exécutée sans sortie]
+1774564897.382507:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+172604
+ cycles
+
+1774565004.564385:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774565014.0999305:cat /proc/cpuinfo | grep -i 'model':model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+model name	: Intel(R) Xeon(R) Processor @ 2.30GHz
+model		: 63
+mo
+1774565029.2418644:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]
+
+1774565164.8334267:ls -la /dev/ | grep -v '^c' | head -3:total 4
+drwxr-xr-x 12 root root        2720 Mar  6 17:10 .
+drwxr-xr-x  1 root root        4096 Mar 24 16:58 ..
+
+1774565174.5796974:find /system -name '*.so' 2>/dev/null | head -10:[✅ Exécutée sans sortie]
+1774565294.5039651:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles':💫 Énergie processeur:
+175157
+ cycles
+
+1774565307.7931738:cat /proc/loadavg && echo ' - Réflexion en cours...':0.17 0.13 0.15 1/115 95626
+ - Réflexion en cours...
+
+1774565310.859649:ps aux | tail -n +2 | head -3 | awk '{print $11}':/usr/sbin/init
+[kthreadd]
+[pool_workqueue_release]

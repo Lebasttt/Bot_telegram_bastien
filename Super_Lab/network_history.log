@@ -1,0 +1,2758 @@
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:15:44 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:44002       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:44798       209.85.145.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:45166       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:54840       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:55036       64.233.181.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:33594       74.125.132.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:15:50 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:44798       209.85.145.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:45166       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:54840       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:55036       64.233.181.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:33594       74.125.132.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:15:59 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:44798       209.85.145.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:45166       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:54840       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:55036       64.233.181.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:06 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:46908       140.82.114.5:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:44798       209.85.145.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:54840       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:14 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:46908       140.82.114.5:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:44798       209.85.145.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:21 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:46908       140.82.114.5:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:44798       209.85.145.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:29 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:46908       140.82.114.5:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60662       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:35 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49532       140.82.114.6:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:44 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:44614       74.125.69.95:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49532       140.82.114.6:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:50 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49532       140.82.114.6:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:16:58 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:59630       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:49532       140.82.114.6:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:08 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp       25      0 192.168.0.2:49532       140.82.114.6:443        CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:42222       142.251.34.234:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:17 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp       25      0 192.168.0.2:49532       140.82.114.6:443        CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:23 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp       25      0 192.168.0.2:49532       140.82.114.6:443        CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:31 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:49660       142.250.177.74:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:37 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:46 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:45028       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:17:52 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:38214       142.251.210.202:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:02 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:08 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35170       142.251.211.42:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36732       130.211.45.45:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:25 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:37126       142.251.32.10:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:31 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:47194       172.65.90.25:443        TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:37126       142.251.32.10:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:40 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:46 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:54620       142.250.177.234:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:18:55 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:40266       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:19:01 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:40266       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35074       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:19:13 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:40266       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35074       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:45810       185.199.110.133:443     ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:19:19 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45376       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:40266       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35074       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:45810       185.199.110.133:443     ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:19:28 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:40266       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35074       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:19:34 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:40266       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35074       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36170       198.252.206.16:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:20:38 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:39098       45.60.31.34:443         ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:44572       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:51670       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:46934       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:57748       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:43918       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:21:28 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:50468       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp       25      0 192.168.0.2:39098       45.60.31.34:443         CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:51670       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:44888       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:57748       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:21:34 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:50468       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp       25      0 192.168.0.2:39098       45.60.31.34:443         CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:51670       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:44888       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:57748       142.251.150.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:21:42 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:50468       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp       25      0 192.168.0.2:39098       45.60.31.34:443         CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:51670       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:44888       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:21:48 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:50468       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp       25      0 192.168.0.2:39098       45.60.31.34:443         CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:51670       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:44888       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:21:57 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp       25      0 192.168.0.2:39098       45.60.31.34:443         CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:36968       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35430       209.85.145.101:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:51670       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:33788       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:26:25 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:37170       142.250.177.78:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48504       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:26:34 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:37170       142.250.177.78:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48504       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:26:40 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:37170       142.250.177.78:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48504       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:53040       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:26:49 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48504       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:26:55 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48504       173.194.64.118:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:04 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:11 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:58222       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:21 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:45454       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:60140       3.214.214.173:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:27 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:60140       3.214.214.173:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:36 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50712       142.250.177.78:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:47 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49486       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:60140       3.214.214.173:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:27:56 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36122       185.199.108.133:443     ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:60140       3.214.214.173:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:11 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:60140       3.214.214.173:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:20 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:47670       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:26 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37462       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:44940       142.250.189.138:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:34 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:35152       142.251.211.10:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53140       192.124.249.13:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:41 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:35152       142.251.211.10:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53140       192.124.249.13:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:49 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:35152       142.251.211.10:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53140       192.124.249.13:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:28:55 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:40310       142.250.188.170:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:35152       142.251.211.10:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53140       192.124.249.13:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:29:04 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:35152       142.251.211.10:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:60456       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53140       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:31:07 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37732       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:57804       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:59880       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:38234       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:31:15 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37732       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:57804       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:59880       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:38234       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:31:22 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:37732       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:57804       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:59880       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:58458       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:38234       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:46668       172.217.214.84:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:31:30 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:59880       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:40372       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+tcp6       0      0 :::22                   :::*                    LISTEN      -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:33:32 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:54900       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:46044       142.250.188.174:443     TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:33:41 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:46044       142.250.188.174:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:33:47 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:46044       142.250.188.174:443     TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:33:56 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:02 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:49210       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:11 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:49210       192.168.0.1:53          TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:17 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:36384       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:35364       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:49210       192.168.0.1:53          TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:26 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:49210       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:32 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:41 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:47 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:48936       142.251.151.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:34:56 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:02 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:10 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:36520       192.168.0.1:53          TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:22 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:47160       173.194.194.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:30 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36798       209.85.145.113:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:37 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:36800       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:37266       185.199.108.133:443     ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:45 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:37266       185.199.108.133:443     ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:35:51 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48264       142.250.188.174:443     TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:00 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:35596       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48264       142.250.188.174:443     TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:06 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:48264       142.250.188.174:443     TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:16 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:22 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36310       142.250.125.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:35170       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:31 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+tcp6       0      0 :::22                   :::*                    LISTEN      -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:38 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+tcp        0      0 192.168.0.2:42982       74.125.69.95:443        TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:36:46 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:49506       173.194.206.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:43594       209.85.145.113:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:38702       142.250.125.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+tcp        0      0 192.168.0.2:42982       74.125.69.95:443        TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:05 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:36388       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35428       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:33896       192.124.249.13:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:43594       209.85.145.113:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      0 192.168.0.2:38702       142.250.125.84:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:14 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:36388       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35428       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:33896       192.124.249.13:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:43594       209.85.145.113:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      0 192.168.0.2:38702       142.250.125.84:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:20 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:36388       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35428       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:33896       192.124.249.13:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:43594       209.85.145.113:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      0 192.168.0.2:38702       142.250.125.84:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:28 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:33896       192.124.249.13:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:43594       209.85.145.113:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      0 192.168.0.2:38702       142.250.125.84:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:34 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:33896       192.124.249.13:443      TIME_WAIT   -
+tcp        1      0 192.168.0.2:43594       209.85.145.113:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      0 192.168.0.2:38702       142.250.125.84:443      CLOSE_WAIT  86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:43 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:49 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:39:58 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:56292       173.194.193.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:04 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:13 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:24 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:48822       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:33 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:41986       173.194.64.84:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:43746       209.85.145.139:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:55392       142.251.184.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:39 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:49 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:40:55 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:41:04 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36190       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:41:10 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:33366       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36190       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:42302       142.251.210.106:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0   1764 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:41:20 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36190       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:43952       142.251.152.119:443     TIME_WAIT   -
+tcp        1      1 192.168.0.2:43594       209.85.145.113:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        1      1 192.168.0.2:38702       142.250.125.84:443      LAST_ACK    -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:41:26 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36190       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:43952       142.251.152.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35034       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:41:37 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:36190       52.5.96.96:443          TIME_WAIT   -
+tcp        0      0 192.168.0.2:43952       142.251.152.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:41600       142.251.210.106:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:35034       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:43:24 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:54296       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:38548       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:49428       173.194.64.84:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50068       209.85.145.102:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53634       64.233.181.95:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:43:34 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:54296       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:38548       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:49428       173.194.64.84:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50068       209.85.145.102:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53634       64.233.181.95:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:43:40 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:54296       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:38548       209.85.145.100:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:49428       173.194.64.84:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:55976       209.85.145.138:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:50068       209.85.145.102:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53634       64.233.181.95:443       TIME_WAIT   -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:43:49 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:54296       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0     72 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:50068       209.85.145.102:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:53634       64.233.181.95:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+tcp        0      0 192.168.0.2:37418       173.194.64.118:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:58654       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:46:04 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:54296       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:40046       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:55484       142.251.157.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:49288       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:45000       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:50068       209.85.145.102:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:46:14 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:54296       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:40046       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:55484       142.251.157.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:49288       172.253.132.84:443      ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:45000       3.214.214.173:443       TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:50068       209.85.145.102:443      ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:48:14 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:49330       173.194.195.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:52876       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:44446       142.251.155.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:50652       142.251.155.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:43392       142.251.32.14:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:48:24 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:49330       173.194.195.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:52876       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:44446       142.251.155.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:56070       142.251.32.14:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:43392       142.251.32.14:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:56934       ESTABLISHED -
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+
+
+=== SURVEILLANCE RÉSEAU 2026-03-26 22:48:30 ===
+🔍 Connexions actives:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 192.168.0.2:22          192.168.0.1:33262       ESTABLISHED -
+tcp        0      0 192.168.0.2:49330       173.194.195.95:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:52876       192.124.249.13:443      TIME_WAIT   -
+tcp        0      0 192.168.0.2:44446       142.251.155.119:443     TIME_WAIT   -
+tcp        0      0 192.168.0.2:56414       185.199.111.133:443     ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:56070       142.251.32.14:443       ESTABLISHED 86805/python3
+tcp        0      0 192.168.0.2:22          192.168.0.1:40874       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:60352       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:41182       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:54310       ESTABLISHED -
+tcp        0      0 192.168.0.2:22          192.168.0.1:44720       ESTABLISHED -
+tcp        0      0 192.168.0.2:43392       142.251.32.14:443       ESTABLISHED 86805/python3
+
+🌐 Interfaces réseau:
+    inet 127.0.0.1/8 scope host lo
+    inet 192.168.0.2/24 brd 192.168.0.255 scope global eth0
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0

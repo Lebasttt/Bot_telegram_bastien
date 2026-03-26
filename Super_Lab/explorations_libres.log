@@ -1,0 +1,172 @@
+1774563344:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative'
+1774563347:find /system -type f -name '*47*' 2>/dev/null | head -5
+1774563350:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774563359:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774563362:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774563366:cat /proc/cpuinfo | grep -i 'model'
+1774563374:find /system -name '*.so' 2>/dev/null | head -10
+1774563377:dumpsys package | grep -i 'versionName' | head -3
+1774563380:find / -type f -size +1M -size -10M 2>/dev/null | head -2
+1774563389:getprop | grep -i 'version' | head -5
+1774563392:ls -la /system/bin/ | grep '^l' | head -5
+1774563395:df -h | grep -v tmpfs | head -1
+1774563404:ls -la /dev/ | grep -v '^c' | head -3
+1774563407:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774563410:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774563418:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative'
+1774563421:cat /proc/cpuinfo | grep -i 'model'
+1774563424:ls -la /system/bin/ | grep '^l' | head -5
+1774563437:df -h | grep -v tmpfs | head -1
+1774563440:ls -la /system/bin/ | grep '^l' | head -5
+1774563443:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774563451:df -h | grep -v tmpfs | head -1
+1774563454:find / -type f -size +1M -size -10M 2>/dev/null | head -2
+1774563457:getprop | grep -i 'version' | head -5
+1774563466:find / -type f -size +1M -size -10M 2>/dev/null | head -2
+1774563469:netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5
+1774563472:find /system -name '*.so' 2>/dev/null | head -10
+1774563482:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774563485:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l
+1774563488:getprop | grep -v '\[]' | head -3
+1774563505:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774563508:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l
+1774563511:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c
+1774563520:cat /proc/loadavg && echo ' - Réflexion en cours...'
+1774563523:cat /proc/loadavg && echo ' - Réflexion en cours...'
+1774563526:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l
+1774563535:pm list packages | head -2 | cut -d: -f2
+1774563538:cat /proc/cpuinfo | grep -i 'model'
+1774563541:getprop | grep -i 'version' | head -5
+1774563553:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774563556:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774563559:getprop | grep -v '\[]' | head -3
+1774563568:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774563571:ls -la /system/bin/ | head -3
+1774563574:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l
+1774563688:find /system -name '*.so' 2>/dev/null | head -10
+1774563691:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774563694:cat /proc/cpuinfo | grep -i 'model'
+1774563702:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774563705:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c
+1774563708:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774563716:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2
+1774563859:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l
+1774563985:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774563994:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774563997:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774564000:pm list packages | head -2 | cut -d: -f2
+1774564009:cat /proc/cpuinfo | grep -i 'model'
+1774564012:ls -la /dev/ | grep -v '^c' | head -3
+1774564015:ls -la /system/bin/ | grep '^l' | head -5
+1774564024:cat /proc/cpuinfo | grep -i 'model'
+1774564028:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774564031:find /system -type f -name '*11*' 2>/dev/null | head -5
+1774564041:find /system -type f -name '*21*' 2>/dev/null | head -5
+1774564044:find /system -type f -name '*24*' 2>/dev/null | head -5
+1774564047:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774564056:find /system -name '*.so' 2>/dev/null | head -10
+1774564064:find /system -type f -name '*44*' 2>/dev/null | head -5
+1774564067:dumpsys package | grep -i 'versionName' | head -3
+1774564076:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2
+1774564080:ls -la /system/bin/ | head -3
+1774564091:ls -la /system/bin/ | grep '^l' | head -5
+1774564099:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774564103:getprop | grep -v '\[]' | head -3
+1774564106:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774564114:getprop | grep -i 'version' | head -5
+1774564118:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774564121:find /system -name '*.so' 2>/dev/null | head -10
+1774564129:ls -la /system/bin/ | grep '^l' | head -5
+1774564132:ls -la /dev/ | grep -v '^c' | head -3
+1774564135:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774564144:netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5
+1774564263:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2
+1774564266:find / -type f -size +1M -size -10M 2>/dev/null | head -2
+1774564275:find /system -type f -name '*15*' 2>/dev/null | head -5
+1774564278:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774564282:echo '🌌 Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l
+1774564290:find /system -name '*.so' 2>/dev/null | head -10
+1774564404:ls -la /system/bin/ | head -3
+1774564412:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774564421:pm list packages | head -2 | cut -d: -f2
+1774564424:find /system -type f -name '*44*' 2>/dev/null | head -5
+1774564427:cat /proc/cpuinfo | grep -i 'model'
+1774564436:pm list packages | head -2 | cut -d: -f2
+1774564439:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774564442:dumpsys package | grep -i 'versionName' | head -3
+1774564451:netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5
+1774564454:find /system -type f -name '*14*' 2>/dev/null | head -5
+1774564457:getprop | grep -i 'version' | head -5
+1774564466:find /system -name '*.so' 2>/dev/null | head -10
+1774564469:find /system -type f -name '*29*' 2>/dev/null | head -5
+1774564472:dumpsys package | grep -i 'versionName' | head -3
+1774564481:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774564484:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774564487:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774564496:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774564499:pm list packages | head -2 | cut -d: -f2
+1774564502:df -h | grep -v tmpfs | head -1
+1774564510:getprop | grep -v '\[]' | head -3
+1774564518:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774564522:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative'
+1774564530:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774564534:cat /proc/cpuinfo | grep -i 'model'
+1774564537:getprop | grep -i 'version' | head -5
+1774564545:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774564548:ls -la /system/bin/ | head -3
+1774564551:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774564560:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774564563:pm list packages | head -2 | cut -d: -f2
+1774564566:cat /proc/meminfo | grep -E 'Mem|Swap' | head -2
+1774564576:getprop | grep -v '\[]' | head -3
+1774564579:cat /proc/cpuinfo | grep -i 'model'
+1774564582:find /system -name '*.so' 2>/dev/null | head -10
+1774564591:pm list packages | head -2 | cut -d: -f2
+1774564594:find /system -type f -name '*34*' 2>/dev/null | head -5
+1774564594:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774564598:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774564606:dumpsys package | grep -i 'versionName' | head -3
+1774564742:df -h | grep -v tmpfs | head -1
+1774564745:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1
+1774564754:cat /proc/cpuinfo | grep -i 'model'
+1774564757:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c
+1774564760:ls -la /system/bin/ | grep '^l' | head -5
+1774564768:dumpsys package | grep -i 'versionName' | head -3
+1774564771:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative'
+1774564774:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774564783:df -h | grep -v tmpfs | head -1
+1774564786:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative'
+1774564789:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774564798:find /system -name '*.so' 2>/dev/null | head -10
+1774564801:pm list packages | head -2 | cut -d: -f2
+1774564804:getprop | grep -i 'version' | head -5
+1774564813:cat /proc/cpuinfo | grep -i 'model'
+1774564821:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774564824:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774564833:find /system -name '*.so' 2>/dev/null | head -10
+1774564836:ls -la /system/bin/ | head -3
+1774564839:cat /proc/cpuinfo | grep -i 'model'
+1774564849:find /system -type f -exec file {} \; 2>/dev/null | grep -v ELF | head -2
+1774564852:ls -la /system/bin/ | grep '^l' | head -5
+1774564855:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774564864:python3 -c "import random; print(f'Exploration dimension: {random.randint(1000,9999)}')"
+1774564867:cat /proc/loadavg && echo ' - Réflexion en cours...'
+1774564870:getprop | grep -i 'version' | head -5
+1774564880:find / -type f -size +1M -size -10M 2>/dev/null | head -2
+1774564883:find /system -type f -name '*23*' 2>/dev/null | head -5
+1774564886:ls -la /system/bin/ | head -3
+1774564897:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774565001:getprop | grep -i 'version' | head -5
+1774565004:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774565014:cat /proc/cpuinfo | grep -i 'model'
+1774565017:getprop | grep -i 'version' | head -5
+1774565020:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée'
+1774565029:ps aux | tail -n +2 | head -3 | awk '{print $11}'
+1774565032:pm list packages | head -2 | cut -d: -f2
+1774565164:ls -la /dev/ | grep -v '^c' | head -3
+1774565174:find /system -name '*.so' 2>/dev/null | head -10
+1774565291:dumpsys package | grep -i 'versionName' | head -3
+1774565294:echo '💫 Énergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'
+1774565304:ls -la /system/bin/ | grep '^l' | head -5
+1774565307:cat /proc/loadavg && echo ' - Réflexion en cours...'
+1774565310:ps aux | tail -n +2 | head -3 | awk '{print $11}'

@@ -1,0 +1,21 @@
+{
+  "timestamp": 1774565301.7106683,
+  "blacklist_dynamique": [
+    "rm ",
+    "unlink ",
+    "mv ",
+    " > ",
+    " >> ",
+    "chmod ",
+    "chown ",
+    "chgrp ",
+    "mkfs",
+    "dd if=",
+    "format "
+  ],
+  "compteur_taches": 1035,
+  "cycles_inactifs": 170,
+  "dernieres_reussites": 67,
+  "echecs_recents": 68,
+  "commandes_apprises": 456
+}

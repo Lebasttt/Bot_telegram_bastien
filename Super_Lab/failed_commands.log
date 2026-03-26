@@ -1,0 +1,69 @@
+[2026-03-26 22:15:44] CMD: cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative' | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:16:02] CMD: echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1 | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:16:17] CMD: dumpsys package | grep -i 'versionName' | head -3 | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:16:29] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:16:32] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:16:58] CMD: cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative' | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:17:04] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:17:23] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:17:37] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:18:08] CMD: getprop | grep -v '\[]' | head -3 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:18:55] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:19:01] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:19:19] CMD: getprop | grep -v '\[]' | head -3 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:19:31] CMD: ls -la /system/bin/ | head -3 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:26:34] CMD: echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1 | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:26:40] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:26:46] CMD: python3 -c "import this" 2>/dev/null || echo 'Zen de Python activé' | ERR: The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+S
+[2026-03-26 22:26:55] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:26:55] CMD: locate {fichier} | ERR: /bin/sh: 1: locate: not found
+[2026-03-26 22:26:55] CMD: ls -la {dossier_parent} | ERR: ls: cannot access '{dossier_parent}': No such file or directory
+[2026-03-26 22:27:08] CMD: file /system/bin/* 2>/dev/null | grep -v 'ELF' | head -3 | ERR: /system/bin/*: cannot open `/system/bin/*' (No such file or directory)
+[2026-03-26 22:27:47] CMD: dumpsys package | grep -i 'versionName' | head -3 | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:28:00] CMD: ls -la /system/bin/ | head -3 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:28:11] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:28:23] CMD: getprop | grep -v '\[]' | head -3 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:28:26] CMD: echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1 | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:28:34] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:28:38] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:28:49] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:33:24] CMD: ls -la /system/bin/ | head -3 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:33:24] CMD: locate {fichier} | ERR: /bin/sh: 1: locate: not found
+[2026-03-26 22:33:24] CMD: ls -la {dossier_parent} | ERR: ls: cannot access '{dossier_parent}': No such file or directory
+[2026-03-26 22:33:32] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:33:41] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:34:02] CMD: dumpsys package | grep -i 'versionName' | head -3 | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:34:17] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:34:44] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:34:47] CMD: echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1 | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:34:59] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:35:10] CMD: getprop | grep -v '\[]' | head -3 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:35:10] CMD: file /system/bin/* 2>/dev/null | grep -v 'ELF' | head -3 | ERR: /system/bin/*: cannot open `/system/bin/*' (No such file or directory)
+[2026-03-26 22:35:18] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:35:22] CMD: cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative' | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:35:37] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:35:48] CMD: ls -la /system/bin/ | head -3 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:36:00] CMD: echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1 | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:36:03] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:36:16] CMD: getprop | grep -v '\[]' | head -3 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:36:46] CMD: dumpsys package | grep -i 'versionName' | head -3 | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:39:05] CMD: echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1 | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:39:20] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:39:28] CMD: dumpsys package | grep -i 'versionName' | head -3 | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:39:31] CMD: cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative' | ERR: /bin/sh: 1: Syntax error: Unterminated quoted string
+[2026-03-26 22:40:01] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:40:04] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:40:21] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:40:36] CMD: ls -la /system/bin/ | head -3 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:40:52] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:41:10] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:41:26] CMD: ls -la /system/bin/ | head -3 | ERR: ls: cannot access '/system/bin/': No such file or directory
+[2026-03-26 22:43:21] CMD: getprop | grep -i 'version' | head -5 | ERR: /bin/sh: 1: getprop: not found
+[2026-03-26 22:43:40] CMD: dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:43:52] CMD: pm list packages | head -2 | cut -d: -f2 | ERR: /bin/sh: 1: pm: not found
+[2026-03-26 22:48:11] CMD: dumpsys package | grep -i 'versionName' | head -3 | ERR: /bin/sh: 1: dumpsys: not found
+[2026-03-26 22:48:24] CMD: ls -la /system/bin/ | grep '^l' | head -5 | ERR: ls: cannot access '/system/bin/': No such file or directory

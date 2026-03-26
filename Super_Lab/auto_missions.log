@@ -1,0 +1,80 @@
+1774564813:find /system -type f -exec sha256sum {} \; 2>/dev/null | head -10
+1774564813:netstat -tunap | awk '{print $4,$5}' | sort | uniq -c | sort -nr | head -10
+1774564813:ps aux --sort=-start_time | head -8
+1774564813:cat /proc/sys/kernel/random/entropy_avail && dd if=/dev/random bs=1 count=1 2>/dev/null | xxd -p
+1774564813:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564813:netstat -tunap | grep -v '127.0.0.1' | head -10
+1774564813:find / -perm -4000 -type f 2>/dev/null | head -5
+1774564813:ps aux --sort=-%cpu | head -5
+1774564813:find /system -type f -name '*.conf' 2>/dev/null | head -5
+1774564821:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564821:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564830:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564830:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564833:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564833:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564836:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564836:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564836:ps aux --sort=-%mem | head -5 | awk '$6 < 102400'
+1774564845:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564845:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564849:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564849:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564849:ls -la /system/bin/ | head -8
+1774564852:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564852:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564861:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564861:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564861:ps aux --sort=-%mem | head -5 | awk '$6 < 102400'
+1774564864:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564864:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564867:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564867:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564877:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564877:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564880:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564880:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564883:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564883:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564883:ping -c 2 1.1.1.1 && dig google.com | head -5
+1774564894:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564894:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564897:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774564897:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774564897:ps aux --sort=-%mem | head -5 | awk '$6 < 102400'
+1774565001:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565001:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565011:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565011:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565011:ps aux --sort=-%mem | head -5 | awk '$6 < 102400'
+1774565014:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565014:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565017:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565017:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565017:netstat -tunap | grep -v '127.0.0.1' | head -10
+1774565017:find / -perm -4000 -type f 2>/dev/null | head -5
+1774565017:ps aux --sort=-%cpu | head -5
+1774565017:find /system -type f -name '*.conf' 2>/dev/null | head -5
+1774565026:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565026:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565029:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565029:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565032:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565032:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565032:netstat -tun | grep ESTABLISHED | wc -l
+1774565171:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565171:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565174:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565174:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565174:ls -la /system/bin/ | head -8
+1774565291:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565291:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565301:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565301:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565301:ps aux --sort=-%mem | head -5 | awk '$6 < 102400'
+1774565304:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565304:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565307:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565307:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3
+1774565316:netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head -5
+1774565316:echo '🧠 Concept émergent: bytes_uniq_sans' && find /system -name '*bytes*' -o -name '*uniq*' 2>/dev/null | head -3

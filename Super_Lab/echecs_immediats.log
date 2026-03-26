@@ -1,0 +1,122 @@
+1774563344.8003302:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative':/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774563362.9907568:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774563377.9444609:dumpsys package | grep -i 'versionName' | head -3:/bin/sh: 1: dumpsys: not found
+
+1774563389.3482409:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774563392.4887316:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774563418.7627873:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative':/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774563428.9901881:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774563440.1924675:ls -la /system/bin/ | grep '^l' | head -5:❌ COMMANDE EN PAUSE: Échec récent il y a 15s.
+1774563443.2248306:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774563457.8503163:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774563488.2074497:getprop | grep -v '\[]' | head -3:/bin/sh: 1: getprop: not found
+
+1774563535.3153641:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774563541.5233753:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774563559.3238752:getprop | grep -v '\[]' | head -3:/bin/sh: 1: getprop: not found
+
+1774563571.8859339:ls -la /system/bin/ | head -3:ls: cannot access '/system/bin/': No such file or directory
+
+1774563994.8441901:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774563997.895533:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:❌ COMMANDE EN PAUSE: Échec récent il y a 3s.
+1774564000.9348521:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774564015.5482845:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774564067.8413203:dumpsys package | grep -i 'versionName' | head -3:/bin/sh: 1: dumpsys: not found
+
+1774564087.9860716:ls -la /system/bin/ | head -3:ls: cannot access '/system/bin/': No such file or directory
+
+1774564091.0510867:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774564103.0602083:getprop | grep -v '\[]' | head -3:/bin/sh: 1: getprop: not found
+
+1774564106.1071663:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774564114.9571464:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774564118.0255435:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774564129.8315399:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774564409.8421912:ls -la /system/bin/ | head -3:ls: cannot access '/system/bin/': No such file or directory
+
+1774564412.8872845:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774564421.673269:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774564436.7363234:pm list packages | head -2 | cut -d: -f2:❌ COMMANDE EN PAUSE: Échec récent il y a 15s.
+1774564442.8809857:dumpsys package | grep -i 'versionName' | head -3:/bin/sh: 1: dumpsys: not found
+
+1774564457.7889795:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774564472.403592:dumpsys package | grep -i 'versionName' | head -3:❌ COMMANDE EN PAUSE: Échec récent il y a 29s.
+1774564484.1335762:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774564487.1872747:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774564499.4822955:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774564510.9154723:getprop | grep -v '\[]' | head -3:/bin/sh: 1: getprop: not found
+
+1774564518.993952:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774564522.042995:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative':/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774564537.083143:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774564548.6885347:ls -la /system/bin/ | head -3:ls: cannot access '/system/bin/': No such file or directory
+
+1774564560.5657175:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774564563.7642505:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774564576.190043:getprop | grep -v '\[]' | head -3:/bin/sh: 1: getprop: not found
+
+1774564591.7727647:pm list packages | head -2 | cut -d: -f2:❌ COMMANDE EN PAUSE: Échec récent il y a 28s.
+1774564606.7432601:dumpsys package | grep -i 'versionName' | head -3:/bin/sh: 1: dumpsys: not found
+
+1774564745.35797:echo '🎯 Point d'intérêt: ' && find /system/bin -type f -executable | head -1:/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774564760.3270955:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774564768.4523644:dumpsys package | grep -i 'versionName' | head -3:/bin/sh: 1: dumpsys: not found
+
+1774564771.544608:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative':/bin/sh: 1: Syntax error: Unterminated quoted string
+
+1774564786.7114859:cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie créative':❌ COMMANDE EN PAUSE: Échec récent il y a 15s.
+1774564801.2595656:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774564804.3229744:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774564821.5647416:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774564836.9338353:ls -la /system/bin/ | head -3:ls: cannot access '/system/bin/': No such file or directory
+
+1774564852.2763329:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory
+
+1774564870.9324303:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774564886.8737364:ls -la /system/bin/ | head -3:ls: cannot access '/system/bin/': No such file or directory
+
+1774565001.4870987:getprop | grep -i 'version' | head -5:/bin/sh: 1: getprop: not found
+
+1774565017.1651576:getprop | grep -i 'version' | head -5:❌ COMMANDE EN PAUSE: Échec récent il y a 15s.
+1774565020.229947:dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée':/bin/sh: 1: dumpsys: not found
+
+1774565032.4212177:pm list packages | head -2 | cut -d: -f2:/bin/sh: 1: pm: not found
+
+1774565291.436911:dumpsys package | grep -i 'versionName' | head -3:/bin/sh: 1: dumpsys: not found
+
+1774565304.7219365:ls -la /system/bin/ | grep '^l' | head -5:ls: cannot access '/system/bin/': No such file or directory

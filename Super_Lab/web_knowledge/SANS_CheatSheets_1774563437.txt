@@ -1,0 +1,30 @@
+Digital Forensics and Incident Response Training | SANS Institute
+Digital Forensics and Incident Response (DFIR) is essential to understand how intrusions occur, uncover malicious behavior, explain exactly “what happened”, and restore integrity across digital environments. DFIR combines cybersecurity, threat hunting, and investigative techniques to identify, analyze, respond to, and proactively hunt cyber threats and criminal activity.
+Investigate, Analyze, Respond, and Hunt Proactively, with Confidence
+DFIR is about more than just cyberattacks—it’s about uncovering the truth behind any digital incident. Whether you’re responding to a ransomware breach, investigating insider abuse, analyzing digital evidence in criminal cases, or even performing proactive compromise assessments, SANS Digital Forensics and Incident Response training, designed by real-world practitioners, equips professionals with the technical skills and an investigative mindset to follow the evidence wherever it leads.
+From intrusion response to deep-dive forensic analysis of systems, mobile devices, cloud, and memory, our curriculum balances the needs of both security operations and criminal investigations.
+Master evidence collection, timeline analysis, and media exploitation by extracting and analyzing hidden artifacts, reconstructing user activity, and uncovering critical evidence in investigations.
+Threat Hunting, Ransomware & Threat Intelligence
+Develop proactive techniques to uncover hidden threats, analyze ransomware tactics, and utilize intelligence to anticipate and counter cyber threats.
+Malware Analysis, Memory Forensics & Underground Investigations
+Examine malicious code, analyze volatile memory, and investigate cybercriminal activity to understand attacker techniques and enhance detection.
+SANS DFIR offers the ultimate in quality instruction and thoughtful curriculum development. I learned so much this week and can't wait to review and apply what I learned. I hope all my coworkers will get a chance to experience this quality of training.
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+24 CPEs / 24 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response
+36 CPEs / 36 Hours (Self-Paced)
+Digital Forensics and Incident Response, Artificial Intelligence

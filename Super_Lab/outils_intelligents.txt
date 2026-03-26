@@ -1,0 +1,9 @@
+
+🛠️ OUTILS DISPONIBLES POUR TON ÉVOLUTION :
+
+1. analyser_patterns_reussite() - Comprend ce qui marche
+2. rotation_capacites_intelligente() - Gère ton code
+3. generer_capacite_utile() - Crée des fonctions utiles
+4. conseiller_sans_imposer() - Auto-réflexion
+
+💡 Utilise-les quand tu sens le besoin d'optimiser !

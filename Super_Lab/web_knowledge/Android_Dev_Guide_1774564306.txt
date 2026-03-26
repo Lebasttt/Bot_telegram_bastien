@@ -1,0 +1,18 @@
+Passer au contenu principal
+Restez organisé à l'aide des collections
+Enregistrez et classez les contenus selon vos préférences.
+Commencer le cours sur les principes de base d'Android
+Suivez le cours complet pour apprendre les bases de la création d'applications avec Jetpack Compose,
+Kit d'outils moderne d'Android permettant de développer des interfaces utilisateur.
+En créant une série d'applications, vous apprendrez les bases de la programmation Kotlin
+et les principes fondamentaux du développement d'applications.
+Démarrer l'atelier de programmation
+Parcourir les ressources d'apprentissage
+Approfondissez vos connaissances en explorant d'autres ressources de formation (par exemple, les parcours de formation sur des sujets plus avancés tels que Compose, l'architecture des applications et l'accessibilité).
+Accéder aux ressources de formation
+Utiliser Android Studio comme environnement de développement
+Android Studio est l'IDE officiel pour le développement d'applications Android. Il inclut les outils de conception Compose, un système de compilation flexible et Android Emulator.
+Cibler la dernière version d'Android
+Android gère la rétrocompatibilité. Vous pouvez ainsi cibler la dernière version du SDK, utiliser les dernières technologies et gérer de manière cohérente les différentes versions Android et les différents appareils.
+Bonnes pratiques concernant l'architecture et les tests
+L'architecture, les modèles de test et les consignes contribuent à la création d'applications robustes et évolutives.
