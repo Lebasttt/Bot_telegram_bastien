@@ -1,0 +1,10 @@
+Passer au contenu principal
+Restez organisé à l'aide des collections
+Enregistrez et classez les contenus selon vos préférences.
+En plus des tests généraux de la plate-forme, exécutez des tests spécifiquement conçus pour détecter et diagnostiquer les failles de sécurité.
+En savoir plus sur les tests de sécurité
+Suivez les bonnes pratiques concernant la sécurité organisationnelle et opérationnelle, la confidentialité des utilisateurs et l'ensemble de l'écosystème Android.
+Accéder aux bonnes pratiques de sécurité
+Le contenu et les exemples de code de cette page sont soumis aux licences décrites dans la
+. Java et OpenJDK sont des marques ou des marques déposées d'Oracle et/ou de ses sociétés affiliées.
+Dernière mise à jour le 2024/12/22 (UTC).

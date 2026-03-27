@@ -1,0 +1,309 @@
+{
+  "commandes": {
+    "cat /sys/class/power_supply/battery/capacity 2>/dev/null": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "df /data 2>/dev/null | tail -1": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "cat /proc/meminfo": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "cat /sys/class/power_supply/battery/temp 2>/dev/null": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "cat /proc/sys/kernel/random/entropy_avail && echo ' bits d'entropie cr\u00e9ative'": {
+      "succes": 0,
+      "echecs": 4,
+      "executions": 4
+    },
+    "netstat -tunap 2>/dev/null | grep -v '127.0.0.1' | head -15": {
+      "succes": 115,
+      "echecs": 0,
+      "executions": 115
+    },
+    "ip addr show 2>/dev/null | grep 'inet '": {
+      "succes": 115,
+      "echecs": 0,
+      "executions": 115
+    },
+    "netstat -an | grep ESTABLISHED | wc -l": {
+      "succes": 171,
+      "echecs": 0,
+      "executions": 171
+    },
+    "cat /proc/loadavg": {
+      "succes": 171,
+      "echecs": 0,
+      "executions": 171
+    },
+    "find /system -type f -name '*47*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "python3 -c \"import random; print(f'Exploration dimension: {random.randint(1000,9999)}')\"": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "find / -perm -4000 -type f 2>/dev/null | head -5": {
+      "succes": 58,
+      "echecs": 0,
+      "executions": 58
+    },
+    "ps aux | grep -E '(ssh|nc|netcat|telnet)' | grep -v grep": {
+      "succes": 58,
+      "echecs": 0,
+      "executions": 58
+    },
+    "ping -c 2 8.8.8.8 2>/dev/null && echo 'R\u00c9SEAU_STABLE' || echo 'R\u00c9SEAU_INSTABLE'": {
+      "succes": 58,
+      "echecs": 0,
+      "executions": 58
+    },
+    "which curl wget nc netcat ssh python python3 2>/dev/null": {
+      "succes": 58,
+      "echecs": 0,
+      "executions": 58
+    },
+    "ps aux | tail -n +2 | head -3 | awk '{print $11}'": {
+      "succes": 13,
+      "echecs": 0,
+      "executions": 13
+    },
+    "echo '\ud83c\udfaf Point d'int\u00e9r\u00eat: ' && find /system/bin -type f -executable | head -1": {
+      "succes": 0,
+      "echecs": 6,
+      "executions": 6
+    },
+    "cat /proc/cpuinfo | grep -i 'model'": {
+      "succes": 13,
+      "echecs": 0,
+      "executions": 13
+    },
+    "find /system -name '*.so' 2>/dev/null | head -10": {
+      "succes": 11,
+      "echecs": 0,
+      "executions": 11
+    },
+    "dumpsys package | grep -i 'versionName' | head -3": {
+      "succes": 0,
+      "echecs": 6,
+      "executions": 6
+    },
+    "which  dumpsys": {
+      "succes": 13,
+      "echecs": 0,
+      "executions": 13
+    },
+    "find / -type f -size +1M -size -10M 2>/dev/null | head -2": {
+      "succes": 5,
+      "echecs": 0,
+      "executions": 5
+    },
+    "getprop | grep -i 'version' | head -5": {
+      "succes": 0,
+      "echecs": 9,
+      "executions": 9
+    },
+    "which  getprop": {
+      "succes": 14,
+      "echecs": 0,
+      "executions": 14
+    },
+    "ls -la /system/bin/ | grep '^l' | head -5": {
+      "succes": 0,
+      "echecs": 8,
+      "executions": 8
+    },
+    "df -h | grep -v tmpfs | head -1": {
+      "succes": 6,
+      "echecs": 0,
+      "executions": 6
+    },
+    "ls -la /dev/ | grep -v '^c' | head -3": {
+      "succes": 4,
+      "echecs": 0,
+      "executions": 4
+    },
+    "find /system -type f -exec file {} \\; 2>/dev/null | grep -v ELF | head -2": {
+      "succes": 10,
+      "echecs": 0,
+      "executions": 10
+    },
+    "ls -la /proc/device-tree/ 2>/dev/null | head -3": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find / -name {fichier} 2>/dev/null": {
+      "succes": 4,
+      "echecs": 0,
+      "executions": 4
+    },
+    "dumpsys activity | grep 'Proc #' | head -2 || echo '\ud83d\udcf1 Vie android d\u00e9tect\u00e9e'": {
+      "succes": 0,
+      "echecs": 7,
+      "executions": 7
+    },
+    "netstat -tun | grep ':' | cut -d: -f2 | sort -u | head -5": {
+      "succes": 3,
+      "echecs": 0,
+      "executions": 3
+    },
+    "echo '\ud83c\udf0c Connexions cosmiques: ' && netstat -an | grep ESTABLISHED | wc -l": {
+      "succes": 6,
+      "echecs": 0,
+      "executions": 6
+    },
+    "getprop | grep -v '\\[]' | head -3": {
+      "succes": 0,
+      "echecs": 5,
+      "executions": 5
+    },
+    "netstat -tun | awk '{print $5}' | cut -d: -f1 | sort | uniq -c": {
+      "succes": 3,
+      "echecs": 0,
+      "executions": 3
+    },
+    "cat /proc/loadavg && echo ' - R\u00e9flexion en cours...'": {
+      "succes": 4,
+      "echecs": 0,
+      "executions": 4
+    },
+    "pm list packages | head -2 | cut -d: -f2": {
+      "succes": 0,
+      "echecs": 7,
+      "executions": 7
+    },
+    "which  pm": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "ls -la /system/bin/ | head -3": {
+      "succes": 0,
+      "echecs": 6,
+      "executions": 6
+    },
+    "cat /proc/meminfo | grep -E 'Mem|Swap' | head -2": {
+      "succes": 4,
+      "echecs": 0,
+      "executions": 4
+    },
+    "python3 -c \"import this\" 2>/dev/null || echo 'Zen de Python activ\u00e9'": {
+      "succes": 0,
+      "echecs": 1,
+      "executions": 1
+    },
+    "locate {fichier}": {
+      "succes": 0,
+      "echecs": 2,
+      "executions": 2
+    },
+    "ls -la {dossier_parent}": {
+      "succes": 0,
+      "echecs": 2,
+      "executions": 2
+    },
+    "file /system/bin/* 2>/dev/null | grep -v 'ELF' | head -3": {
+      "succes": 0,
+      "echecs": 2,
+      "executions": 2
+    },
+    "find /system -type f -name '*11*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*21*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*24*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "echo '\ud83d\udcab \u00c9nergie processeur: ' && cat /proc/stat | head -1 | awk '{print $2+$3+$4}' && echo ' cycles'": {
+      "succes": 7,
+      "echecs": 0,
+      "executions": 7
+    },
+    "netstat -tun | grep -v '127.0.0.1' | head -5": {
+      "succes": 2,
+      "echecs": 0,
+      "executions": 2
+    },
+    "find /system -type f -name '*44*' 2>/dev/null | head -5": {
+      "succes": 2,
+      "echecs": 0,
+      "executions": 2
+    },
+    "find /system -name '*processes*' 2>/dev/null | head -2": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "cat /proc/net/route 2>/dev/null | head -3": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*15*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "python3 -c \"print('\ud83c\udfa8 Innovation: explore_processes')\"": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*14*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*29*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*34*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    },
+    "find /system -type f -name '*23*' 2>/dev/null | head -5": {
+      "succes": 1,
+      "echecs": 0,
+      "executions": 1
+    }
+  },
+  "capacites_auto": {
+    "auto_strategique_function": {
+      "succes": 58,
+      "echecs": 0,
+      "executions": 58,
+      "creee_le": 1774563356.8183508,
+      "purgee": false
+    }
+  },
+  "stats_globales": {
+    "total_executions": 1048,
+    "total_succes": 983,
+    "total_echecs": 65,
+    "dernier_nettoyage": 1774563338.56407
+  }
+}

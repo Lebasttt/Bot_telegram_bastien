@@ -1,0 +1,15 @@
+Stay organized with collections
+Save and categorize content based on your preferences.
+Start the Android Basics course
+Take the full course to learn the basics of creating apps with Jetpack Compose,
+Android's modern toolkit for developing user interfaces.
+As you create a series of apps, you’ll learn the basics of the Kotlin programming
+language and the fundamentals of app development.
+Go deep by exploring other training resources, such as learning pathways for
+more-advanced topics, including Compose, app architecture, and accessibility.
+Use Android Studio for development
+Android Studio is the official IDE for Android app development, featuring Compose design tools, flexible build system, and Android Emulator.
+Target the latest Android version
+Android handles backwards compatibility, so you can target the latest SDK version, use the latest technologies, and run consistently across Android versions and devices.
+Architecture and testing best practices
+Architecture, testing patterns, and guidance help you build solid, scalable apps.

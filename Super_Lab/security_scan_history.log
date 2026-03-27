@@ -1,0 +1,1279 @@
+
+=== SCAN SÉCURITÉ 2026-03-26 22:15:55 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.3  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+jules      86776  0.0  0.0   7740  3456 ?        Ss   22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+jules      86782  0.0  0.0   2896  1920 ?        S    22:15   0:00 inotifywait -e create,moved_to --include /stamp$ /run/devbox-session/default
+jules      86783  0.0  0.0   7740  2072 ?        S    22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:16:10 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+jules      86776  0.0  0.0   7740  3456 ?        Ss   22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+jules      86782  0.0  0.0   2896  1920 ?        S    22:15   0:00 inotifywait -e create,moved_to --include /stamp$ /run/devbox-session/default
+jules      86783  0.0  0.0   7740  2072 ?        S    22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:16:25 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+jules      86776  0.0  0.0   7740  3456 ?        Ss   22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+jules      86782  0.0  0.0   2896  1920 ?        S    22:15   0:00 inotifywait -e create,moved_to --include /stamp$ /run/devbox-session/default
+jules      86783  0.0  0.0   7740  2072 ?        S    22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:16:39 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+jules      86776  0.0  0.0   7740  3456 ?        Ss   22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+jules      86782  0.0  0.0   2896  1920 ?        S    22:15   0:00 inotifywait -e create,moved_to --include /stamp$ /run/devbox-session/default
+jules      86783  0.0  0.0   7740  2072 ?        S    22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:16:54 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+jules      86776  0.0  0.0   7740  3456 ?        Ss   22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+jules      86782  0.0  0.0   2896  1920 ?        S    22:15   0:00 inotifywait -e create,moved_to --include /stamp$ /run/devbox-session/default
+jules      86783  0.0  0.0   7740  2072 ?        S    22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:17:12 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+jules      86776  0.0  0.0   7740  3456 ?        Ss   22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+jules      86782  0.0  0.0   2896  1920 ?        S    22:15   0:00 inotifywait -e create,moved_to --include /stamp$ /run/devbox-session/default
+jules      86783  0.0  0.0   7740  2072 ?        S    22:15   0:00 bash -c echo "${BASHPID}"  RUN_ROOT_DIR=/run/devbox-session/default PANE_PID="1247"  # sleep 1  # enable this to mimic very slow command start. # set -x umask 0 sudo mkdir -m777 -p "${RUN_ROOT_DIR}"  coproc inw {     LC_ALL=C exec inotifywait -e create,moved_to --include '/stamp$' "${RUN_ROOT_DIR}" 2>&1 }  set -m (     # If the pane has exited, also end the wait.     if ps -p ${PANE_PID} > /dev/null; then       tail --pid "${PANE_PID}" -f /dev/null     fi     touch "${RUN_ROOT_DIR}/stamp" ) & pane_waiter=$!  echo "pane waiter is at $pane_waiter"  while IFS= read -r -u "${inw[0]}" line 2>/dev/null; do     if [ "$line" = "Watches established." ]; then         break     fi done if [ -e "${RUN_ROOT_DIR}/stamp" ]; then     echo "stamp found"     kill "$inw_PID" else     echo "waiting for stamp"     wait -n fi echo "done" kill -- "-$pane_waiter" || exit 0
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:17:27 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:17:42 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.1  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:17:57 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:00 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:18:16 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        R    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:18:36 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:18:51 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:19:09 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:19:24 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:19:38 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:20:44 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:21:38 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:21:52 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:01 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:26:30 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:02 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:26:45 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:02 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:27:00 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:02 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:27:17 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       53732  0.0  0.1  14188  9472 ?        Ss   19:23   0:00 sshd: swebot [priv]
+jules      53743  0.0  0.0  14640  6304 ?        S    19:23   0:03 sshd: swebot@notty
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:02 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:27:32 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:02 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:27:52 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:02 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:28:15 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:03 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:28:30 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:03 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:28:45 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:03 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:29:00 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:03 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:31:11 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:03 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:31:26 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:03 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:33:37 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:33:52 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:34:07 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:34:22 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:34:36 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:34:52 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:35:06 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:35:26 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:35:41 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:35:56 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:36:12 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:36:27 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:36:42 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:39:10 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:39:24 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:39:39 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:39:54 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:40:09 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:40:29 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:40:44 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:04 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:41:00 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:05 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:41:16 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.3  0.0  14588  6228 ?        S    22:10   0:05 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:41:33 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.3  0.0  14588  6228 ?        S    22:10   0:05 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:43:29 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:05 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:43:45 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:05 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:46:10 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:06 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:48:20 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:06 sshd: swebot@notty
+
+
+=== SCAN SÉCURITÉ 2026-03-26 22:48:35 ===
+📊 Processus réseau:
+root         874  0.0  0.0  12024  7936 ?        Ss   14:43   0:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       62604  0.0  0.1  14188  9472 ?        Ss   20:25   0:00 sshd: swebot [priv]
+jules      62615  0.1  0.0  14544  6432 ?        S    20:25   0:12 sshd: swebot@notty
+root       83999  0.0  0.1  14220  9344 ?        Ss   21:59   0:00 sshd: swebot [priv]
+jules      84010  0.0  0.0  14480  6296 ?        S    21:59   0:00 sshd: swebot@notty
+root       84158  0.0  0.1  14188  9600 ?        Ss   22:00   0:00 sshd: swebot [priv]
+jules      84169  0.0  0.0  14448  6176 ?        S    22:00   0:00 sshd: swebot@notty
+root       84303  0.0  0.1  14188  9472 ?        Ss   22:01   0:00 sshd: swebot [priv]
+jules      84314  0.0  0.0  14448  6304 ?        S    22:01   0:00 sshd: swebot@notty
+root       84400  0.0  0.1  14188  9600 ?        Ss   22:02   0:00 sshd: swebot [priv]
+jules      84411  0.0  0.0  14448  6176 ?        S    22:02   0:00 sshd: swebot@notty
+root       84525  0.0  0.1  14220  9344 ?        Ss   22:04   0:00 sshd: swebot [priv]
+jules      84536  0.0  0.0  14644  6168 ?        S    22:04   0:00 sshd: swebot@notty
+root       85459  0.0  0.1  14188  9472 ?        Ss   22:09   0:00 sshd: swebot [priv]
+jules      85470  0.0  0.0  14448  6304 ?        S    22:09   0:00 sshd: swebot@notty
+root       85564  0.0  0.1  14188  9344 ?        Ss   22:10   0:00 sshd: swebot [priv]
+jules      85575  0.2  0.0  14588  6228 ?        S    22:10   0:06 sshd: swebot@notty

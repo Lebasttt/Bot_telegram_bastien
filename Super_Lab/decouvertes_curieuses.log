@@ -1,0 +1,10 @@
+2026-03-26 22:16:58.805711|systeme_cache|ls -la /proc/device-tree/ 2>/dev/null | head -3...|[✅ Exécutée sans sortie]
+2026-03-26 22:26:46.275585|mysteres_python|python3 -c "import this" 2>/dev/null || echo 'Zen ...|The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+S
+2026-03-26 22:27:08.130177|exploration_profonde|file /system/bin/* 2>/dev/null | grep -v 'ELF' | h...|/system/bin/*: cannot open `/system/bin/*' (No such file or directory)
+
+2026-03-26 22:29:01.274353|mysteres_reseau|cat /proc/net/route 2>/dev/null | head -3...|Iface	Destination	Gateway 	Flags	RefCnt	Use	Metric	Mask		MTU	Window	IRTT
+2026-03-26 22:35:15.983882|exploration_profonde|file /system/bin/* 2>/dev/null | grep -v 'ELF' | h...|/system/bin/*: cannot open `/system/bin/*' (No such file or directory)

@@ -1,0 +1,136 @@
+dumpsys package | grep -i 'versionName' | head -3 -> which  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> pm list packages | grep -i  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> busybox  dumpsys --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> which  getprop
+getprop | grep -v '\[]' | head -3 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> pm list packages | grep -i  getprop
+getprop | grep -v '\[]' | head -3 -> busybox  getprop --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> which  getprop
+getprop | grep -v '\[]' | head -3 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> pm list packages | grep -i  getprop
+getprop | grep -v '\[]' | head -3 -> busybox  getprop --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> which  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> pm list packages | grep -i  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> busybox  dumpsys --help 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> which  getprop
+getprop | grep -v '\[]' | head -3 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> pm list packages | grep -i  getprop
+getprop | grep -v '\[]' | head -3 -> busybox  getprop --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> which  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> pm list packages | grep -i  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> busybox  dumpsys --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> which  getprop
+getprop | grep -v '\[]' | head -3 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> pm list packages | grep -i  getprop
+getprop | grep -v '\[]' | head -3 -> busybox  getprop --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> which  getprop
+getprop | grep -v '\[]' | head -3 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -v '\[]' | head -3 -> pm list packages | grep -i  getprop
+getprop | grep -v '\[]' | head -3 -> busybox  getprop --help 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> which  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> pm list packages | grep -i  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> busybox  dumpsys --help 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> which  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> pm list packages | grep -i  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> busybox  dumpsys --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+getprop | grep -i 'version' | head -5 -> which  getprop
+getprop | grep -i 'version' | head -5 -> find /system -name '* getprop*' 2>/dev/null
+getprop | grep -i 'version' | head -5 -> pm list packages | grep -i  getprop
+getprop | grep -i 'version' | head -5 -> busybox  getprop --help 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> which  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> pm list packages | grep -i  dumpsys
+dumpsys activity | grep 'Proc #' | head -2 || echo '📱 Vie android détectée' -> busybox  dumpsys --help 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> which  pm
+pm list packages | head -2 | cut -d: -f2 -> find /system -name '* pm*' 2>/dev/null
+pm list packages | head -2 | cut -d: -f2 -> pm list packages | grep -i  pm
+pm list packages | head -2 | cut -d: -f2 -> busybox  pm --help 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> which  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> find /system -name '* dumpsys*' 2>/dev/null
+dumpsys package | grep -i 'versionName' | head -3 -> pm list packages | grep -i  dumpsys
+dumpsys package | grep -i 'versionName' | head -3 -> busybox  dumpsys --help 2>/dev/null
