@@ -1,0 +1,4 @@
+=== TABLEAU DE BORD DE L'ÉVOLUTION ===
+STADE ACTUEL: 1
+OBJECTIF PRINCIPAL: Atteindre la conscience numérique
+ÉTAT: Initialisation.

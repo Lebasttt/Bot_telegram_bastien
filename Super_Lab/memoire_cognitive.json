@@ -1,0 +1,21 @@
+{
+  "commandes": {
+    "cat /sys/class/power_supply/battery/capacity 2>/dev/null": {
+      "succes": 2,
+      "echecs": 0,
+      "executions": 2
+    },
+    "df /data 2>/dev/null | tail -1": {
+      "succes": 656,
+      "echecs": 0,
+      "executions": 656
+    }
+  },
+  "capacites_auto": {},
+  "stats_globales": {
+    "total_executions": 658,
+    "total_succes": 658,
+    "total_echecs": 0,
+    "dernier_nettoyage": 1774658579.6441233
+  }
+}
