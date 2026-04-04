@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+reception_*.txt
+original_agent*.py
+archive_complete_reception.txt
+part_*.txt
+*.log
+Super_Lab/
+total_source.py
+cleaned_source.py
+modular_funcs_existing.txt
+original_funcs_all.txt
+funcs_missing_from_modules.txt
+structure.txt
