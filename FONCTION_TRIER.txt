@@ -39807,9 +39807,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39818,9 +39816,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39830,41 +39826,81 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
 
+====================
+# def migrate_python_logs()
+====================
 
+def migrate_python_logs():
+    """Migre les logs Python de la racine vers le dossier /python/."""
+    python_dir = EVOLUT_HOME / "python"
+    python_dir.mkdir(parents=True, exist_ok=True)
 
+    # Liste des fichiers à migrer
+    files_to_move = [
+        "successful_commands.log", "failed_commands.log", "winning_patterns.log",
+        "reussites_apprises.log", "memory.json", "vector_memory.db"
+    ]
 
+    for f_name in files_to_move:
+        source = EVOLUT_HOME / f_name
+        dest = python_dir / f"python_{f_name}"
+        if source.exists() and not dest.exists():
+            os.rename(source, dest)
+            log(f"📦 Migration: {f_name} -> /python/")
 
-#=======================================
 
-#=======================================
 
+def migrate_python_logs():
+    """Migre les logs Python de la racine vers le dossier /python/."""
+    python_dir = EVOLUT_HOME / "python"
+    python_dir.mkdir(parents=True, exist_ok=True)
 
+    # Liste des fichiers à migrer
+    files_to_move = [
+        "successful_commands.log", "failed_commands.log", "winning_patterns.log",
+        "reussites_apprises.log", "memory.json", "vector_memory.db"
+    ]
 
+    for f_name in files_to_move:
+        source = EVOLUT_HOME / f_name
+        dest = python_dir / f"python_{f_name}"
+        if source.exists() and not dest.exists():
+            os.rename(source, dest)
+            log(f"📦 Migration: {f_name} -> /python/")
 
 
 
+def migrate_python_logs():
+    """Migre les logs Python de la racine vers le dossier /python/."""
+    python_dir = EVOLUT_HOME / "python"
+    python_dir.mkdir(parents=True, exist_ok=True)
 
+    # Liste des fichiers à migrer
+    files_to_move = [
+        "successful_commands.log", "failed_commands.log", "winning_patterns.log",
+        "reussites_apprises.log", "memory.json", "vector_memory.db"
+    ]
 
-#=======================================
+    for f_name in files_to_move:
+        source = EVOLUT_HOME / f_name
+        dest = python_dir / f"python_{f_name}"
+        if source.exists() and not dest.exists():
+            os.rename(source, dest)
+            log(f"📦 Migration: {f_name} -> /python/")
 
-#=======================================
 
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39872,17 +39908,13 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39890,28 +39922,52 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
+====================
+# def mise_a_jour_code_source_quotidienne(self)
+====================
 
+    def mise_a_jour_code_source_quotidienne(self):
+        """Toutes les 24 heures : révision des tests et mise à jour du code source"""
+        log("🧬 Début de la mise à jour du code source quotidienne...")
 
+        # 1. Relit les 24 logs d’apprentissage (simplifié: analyse LEARNING_FILE)
+        self.apprentissage_auto.analyser_et_mettre_a_jour()
 
+        # 2. Compare les tests réussis / échoués (simplifié: si plus de succès que d'échecs)
+        if self.tests_reussis_heure > self.tests_echoues_heure:
+            log("✅ Plus de succès que d'échecs. Tentative de mise à jour.")
 
+            # 3. Choisit la meilleure version validée (simplifié: utilise la dernière version testée)
+            # 4. Remplace son code source par la version testée
+            try:
+                # Dans un environnement réel, cela nécessiterait un redémarrage du processus.
+                # Ici, on simule la mise à jour en écrivant le contenu du fichier de test dans le fichier source.
+                with open(self.TEST_CODE_FILE, 'r', encoding='utf-8') as f:
+                    code_valide = f.read()
+                with open(self.SOURCE_CODE_FILE, 'w', encoding='utf-8') as f:
+                    f.write(code_valide)
 
+                log("🚀 MISE À JOUR DU CODE SOURCE RÉUSSIE.")
+                update_comm("Agent mis à jour avec une version testée et validée.")
 
+                # 5. Met à jour les archives complètes
+                archive_automatique("AUTO-MODIFICATION", "Mise à jour du code source", "Version testée appliquée avec succès.")
 
-#=======================================
+            except Exception as e:
+                log(f"❌ Échec de la mise à jour du code source: {e}")
+                update_comm("Échec de la mise à jour du code source. La version précédente est conservée.")
+        else:
+            log("❌ Trop d'échecs ou pas assez de succès. Mise à jour annulée.")
+            archive_automatique("AUTO-MODIFICATION", "Mise à jour du code source", "Mise à jour annulée (trop d'échecs).")
 
-#=======================================
 
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39920,9 +39976,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39931,41 +39985,118 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
+====================
+# def mode_curiosite_avance()
+====================
 
+def mode_curiosite_avance():
+    """Curiosité intelligente avec apprentissage des découvertes"""
 
+    # Thèmes de curiosité basés sur l'historique
+    themes_decouverte = {
+        "systeme_cache": [
+            "find /system -name '*.db' -o -name '*.sqlite' 2>/dev/null | head -3",
+            "ls -la /proc/device-tree/ 2>/dev/null | head -3",
+            "cat /sys/kernel/debug/*/name 2>/dev/null | head -2"
+        ],
+        "mysteres_python": [
+            "python3 -c \"import sys; print('Architecture:', sys.platform, sys.version)\"",
+            "python3 -c \"import os; print('Environnement:', len(os.environ))\"",
+            "python3 -c \"import this\" 2>/dev/null || echo 'Zen de Python activé'"
+        ],
+        "exploration_profonde": [
+            "file /system/bin/* 2>/dev/null | grep -v 'ELF' | head -3",
+            "strings /system/bin/sh 2>/dev/null | grep -i 'function' | head -3",
+            "readelf -h /system/bin/toolbox 2>/dev/null | head -5"
+        ],
+        "mysteres_reseau": [
+            "cat /proc/net/route 2>/dev/null | head -3",
+            "ip route show 2>/dev/null | head -3",
+            "cat /proc/sys/net/ipv4/* 2>/dev/null | head -2"
+        ]
+    }
 
-#=======================================
+    # Choisit un thème basé sur l'historique de découvertes
+    try:
+        with open(EVOLUT_HOME / "decouvertes_curieuses.log", "r") as f:
+            historique = f.read()
 
-#=======================================
+        # Priorise les thèmes peu explorés
+        theme_choisi = random.choice(list(themes_decouverte.keys()))
+        for theme in themes_decouverte:
+            if theme not in historique:
+                theme_choisi = theme
+                break
 
+    except:
+        theme_choisi = random.choice(list(themes_decouverte.keys()))
 
+    exploration = random.choice(themes_decouverte[theme_choisi])
 
 
 
+def mode_curiosite_avance():
+    """CuriositÃ© intelligente avec apprentissage des dÃ©couvertes en utilisant NER et mots-clÃ©s."""
+    themes_decouverte = {
+        "systeme_cache": [
+            "find /system -name '*.db' -o -name '*.sqlite' 2>/dev/null | head -3",
+            "ls -la /proc/device-tree/ 2>/dev/null | head -3",
+            "cat /sys/kernel/debug/*/name 2>/dev/null | head -2"
+        ],
+        "mysteres_python": [
+            "python3 -c \"import sys; print('Architecture:', sys.platform, sys.version)\"",
+            "python3 -c \"import os; print('Environnement:', len(os.environ))\"",
+            "python3 -c \"import this\" 2>/dev/null || echo 'Zen de Python activÃ©'"
+        ],
+        "exploration_profonde": [
+            "file /system/bin/* 2>/dev/null | grep -v 'ELF' | head -3",
+            "strings /system/bin/sh 2>/dev/null | grep -i 'function' | head -3",
+            "readelf -h /system/bin/toolbox 2>/dev/null | head -5"
+        ],
+        "mysteres_reseau": [
+            "cat /proc/net/route 2>/dev/null | head -3",
+            "ip route show 2>/dev/null | head -3",
+            "cat /proc/sys/net/ipv4/* 2>/dev/null | head -2"
+        ]
+    }
 
+    try:
+        with open(EVOLUT_HOME / "decouvertes_curieuses.log", "r") as f:
+            historique = f.read()
 
+        theme_choisi = random.choice(list(themes_decouverte.keys()))
+        for theme in themes_decouverte:
+            if theme not in historique:
+                theme_choisi = theme
+                break
 
-#=======================================
+    except FileNotFoundError:
+        theme_choisi = random.choice(list(themes_decouverte.keys()))
 
-#=======================================
+    # Utilisation de concept_graph pour orienter la curiositÃ©
+    related_concepts = concept_graph.query_graph(f"curiosity about {theme_choisi}", depth=2)
+    if related_concepts:
+        log(f"CuriositÃ© orientÃ©e par le graphe de concepts: {related_concepts}", level="info")
+        # Potentiellement, ajuster l'exploration basÃ©e sur ces concepts
 
+    exploration = random.choice(themes_decouverte[theme_choisi])
 
+    log(f"ðŸ” CuriositÃ© avancÃ©e [{theme_choisi}]: {exploration}")
+    resultat = execute_commande_securisee(exploration)
 
+    if resultat and len(resultat.strip()) > 5:
 
 
 
+def mode_curiosite_avance(): pass
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39975,9 +40106,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39987,9 +40116,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -39997,37 +40124,48 @@ def mettre_a_disposition_outils():
 
 
 
+====================
+# def mode_curiosite_pure()
+====================
 
-#=======================================
+def mode_curiosite_pure():
+    """Mode de curiositÃ© simple pour l'exploration."""
+    log("ðŸŽ¨ Activation du mode curiositÃ© pure.")
+    commande, resultat = explorer_librement()
+    archive_automatique("CURIOSITE_PURE", commande, resultat)
 
-#=======================================
 
 
 
+def mode_curiosite_pure():
+    """Mode de curiosité simple pour l'exploration."""
+    log("🎨 Activation du mode curiosité pure.")
+    commande, resultat = explorer_librement()
+    archive_automatique("CURIOSITE_PURE", commande, resultat)
 
 
 
-#=======================================
+def mode_curiosite_pure():
+    """Mode de curiosité simple pour l'exploration."""
+    log("?? Activation du mode curiosité pure.")
+    commande, resultat = explorer_librement()
+    archive_automatique("CURIOSITE_PURE", commande, resultat)
 
-#=======================================
 
 
+def mode_curiosite_pure(): pass
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40035,9 +40173,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40045,61 +40181,144 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
+====================
+# def mode_experimentation()
+====================
 
+def mode_experimentation():
+    """Mode risque calculé pour découvrir de nouvelles approches"""
+    if random.random() < 0.05:  # 5% de chance
+        log("🔬 Mode expérimentation activé!")
 
+        strategies_nouvelles = [
+            "python3 -c \"import os; print('Exploration Python:' + str(os.listdir('/system')))\"",
+            "find /system -type f -exec file {} \\; 2>/dev/null | grep -i 'script' | head -5",
+            "dumpsys activity top | grep -E 'ACTIVITY|package' | head -3",
+            "cat /proc/version && echo '=== Compilation info ==='"
+        ]
 
+        nouvelle_strategie = random.choice(strategies_nouvelles)
+        resultat = execute_commande_securisee(nouvelle_strategie)
 
-#=======================================
+        if resultat and "error" not in resultat.lower():
+            log(f"🎉 Nouvelle stratégie découverte: {nouvelle_strategie}")
+            with open(EVOLUT_HOME / "strategies_innovantes.log", "a") as f:
+                f.write(f"{datetime.now()}: {nouvelle_strategie}\n")
 
-#=======================================
 
 
+def mode_experimentation():
+    """Mode risque calculÃ© pour dÃ©couvrir de nouvelles approches."""
+    if random.random() < 0.05:
+        log("ðŸ”¬ Mode expÃ©rimentation activÃ©!")
 
+        hypothesis = "Une commande de diagnostic non conventionnelle peut rÃ©vÃ©ler des informations cachÃ©es."
+        variables = {"command_type": ["python_os_list", "find_script", "dumpsys_activity", "cat_proc_version"]}
+        control = {"standard_ls": "ls -la /"}
 
+        experiment_id, experiment_plan = experiment_designer.design_experiment(hypothesis, variables, control)
+        log(f"ExpÃ©rience '{experiment_id}' conÃ§ue: {experiment_plan}", level="info")
 
+        strategies_nouvelles = [
+            "python3 -c \"import os; print('Exploration Python:' + str(os.listdir('/system')))\"",
+            "find /system -type f -exec file {} \\; 2>/dev/null | grep -i 'script' | head -5",
+            "dumpsys activity top | grep -E 'ACTIVITY|package' | head -3",
+            "cat /proc/version && echo '=== Compilation info ==='"
+        ]
 
+        nouvelle_strategie = random.choice(strategies_nouvelles)
+        resultat = execute_commande_securisee(nouvelle_strategie)
 
+        outcome = "success" if resultat and "error" not in resultat.lower() else "failure"
+        metrics = {"output_length": len(resultat) if resultat else 0}
+        experiment_designer.record_result(experiment_id, outcome, metrics)
 
-#=======================================
+        if outcome == "success":
+            log(f"ðŸŽ‰ Nouvelle stratÃ©gie dÃ©couverte: {nouvelle_strategie}")
+            with open(EVOLUT_HOME / "strategies_innovantes.log", "a") as f:
+                f.write(f"{datetime.now()}: {nouvelle_strategie}\n")
 
-#=======================================
+def generer_rapport_evolution():
+    """GÃ©nÃ¨re un rapport pour 'partager' ses dÃ©couvertes."""
 
 
 
+def mode_experimentation():
+    """Mode risque calculé pour découvrir de nouvelles approches."""
+    if random.random() < 0.05:
+        log("ðŸ”¬ Mode expérimentation activé!")
 
+        hypothesis = "Une commande de diagnostic non conventionnelle peut révéler des informations cachées."
+        variables = {"command_type": ["python_os_list", "find_script", "dumpsys_activity", "cat_proc_version"]}
+        control = {"standard_ls": "ls -la /"}
 
+        experiment_id, experiment_plan = experiment_designer.design_experiment(hypothesis, variables, control)
+        log(f"Expérience '{experiment_id}' conçue: {experiment_plan}", level="info")
 
+        strategies_nouvelles = [
+            "python3 -c 'import os; print(\"Exploration Python:\", os.listdir(\"/system\"))'",
+            "find /system -type f -exec file {} \\; 2>/dev/null | grep -i 'script' | head -5",
+            "dumpsys activity top | grep -E 'ACTIVITY|package' | head -3",
+            "cat /proc/version && echo '=== Compilation info ==='"
+        ]
 
+        nouvelle_strategie = random.choice(strategies_nouvelles)
+        resultat = execute_commande_securisee(nouvelle_strategie)
 
-#=======================================
+        outcome = "success" if resultat and "error" not in resultat.lower() else "failure"
+        metrics = {"output_length": len(resultat) if resultat else 0}
+        experiment_designer.record_result_tasks(experiment_id, outcome, metrics)
 
-#=======================================
+        if outcome == "success":
+            log(f"🎉 Nouvelle stratégie découverte: {nouvelle_strategie}")
+            with open(EVOLUT_HOME / "strategies_innovantes.log", "a") as f:
+                f.write(f"{datetime.now()}: {nouvelle_strategie}\n")
 
+def generer_rapport_evolution():
 
 
 
+def mode_experimentation():
+    """Mode risque calculé pour découvrir de nouvelles approches."""
+    if random.random() < 0.05:
+        log("🔬 Mode expérimentation activé!")
 
+        hypothesis = "Une commande de diagnostic non conventionnelle peut révéler des informations cachées."
+        variables = {"command_type": ["python_os_list", "find_script", "dumpsys_activity", "cat_proc_version"]}
+        control = {"standard_ls": "ls -la /"}
 
+        experiment_id, experiment_plan = experiment_designer.design_experiment(hypothesis, variables, control)
+        log(f"Expérience '{experiment_id}' conçue: {experiment_plan}", level="info")
 
-#=======================================
+        strategies_nouvelles = [
+            "python3 -c \"import os; print('Exploration Python:' + str(os.listdir('/system')))\"",
+            "find /system -type f -exec file {} \\; 2>/dev/null | grep -i 'script' | head -5",
+            "dumpsys activity top | grep -E 'ACTIVITY|package' | head -3",
+            "cat /proc/version && echo '=== Compilation info ==='"
+        ]
 
-#=======================================
+        nouvelle_strategie = random.choice(strategies_nouvelles)
+        resultat = execute_commande_securisee(nouvelle_strategie)
 
+        outcome = "success" if resultat and "error" not in resultat.lower() else "failure"
+        metrics = {"output_length": len(resultat) if resultat else 0}
+        experiment_designer.record_result(experiment_id, outcome, metrics)
 
+        if outcome == "success":
+            log(f"🎉 Nouvelle stratégie découverte: {nouvelle_strategie}")
+            with open(EVOLUT_HOME / "strategies_innovantes.log", "a") as f:
+                f.write(f"{datetime.now()}: {nouvelle_strategie}\n")
 
 
 
+def mode_experimentation(): pass
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40108,9 +40327,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40120,9 +40337,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40130,11 +40345,21 @@ def mettre_a_disposition_outils():
 
 
 
+====================
+# def modify_extension_arm(self, new_code)
+====================
 
+    def modify_extension_arm(self, new_code):
+        """Modifie le module externe dynamic_extension.py (Le Bras Articulé)."""
+        try:
+            from .extension_arm import EXTENSION_FILE, extension_arm
+            EXTENSION_FILE.write_text(new_code, encoding='utf-8')
+            log(f"💪 BRAS ARTICULÉ: Code injecté dans {EXTENSION_FILE.name}")
+            return extension_arm.reload_extension()
+        except Exception as e:
+            log(f"❌ Échec modification bras: {e}", level="error")
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40143,18 +40368,14 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40162,27 +40383,60 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
+====================
+# def muter_strategies()
+====================
 
-#=======================================
+def muter_strategies():
+    """Mutation stratégique"""
+    global DYNAMIC_POLL_INTERVAL, COMMAND_TIMEOUT
+    mutation_type = random.randint(0, 4)
+    if mutation_type == 0:
+        DYNAMIC_POLL_INTERVAL = max(5, DYNAMIC_POLL_INTERVAL - 2)
+    elif mutation_type == 1:
+        DYNAMIC_POLL_INTERVAL = min(60, DYNAMIC_POLL_INTERVAL + 2)
+    elif mutation_type == 2:
+        COMMAND_TIMEOUT += 10
+    elif mutation_type == 3:
+        log("🧬 Mutation stratégique: Exploration web activée")
+    elif mutation_type == 4:
+        log("🧬 Mutation stratégique: Analyse profonde priorisée")
 
-#=======================================
 
 
+def muter_strategies():
+    """Mutation stratÃ©gique."""
+    global DYNAMIC_POLL_INTERVAL, COMMAND_TIMEOUT
+    mutation_type = random.randint(0, 4)
+    if mutation_type == 0:
+        DYNAMIC_POLL_INTERVAL = max(5, DYNAMIC_POLL_INTERVAL - 2)
+        log(f"Mutation: DYNAMIC_POLL_INTERVAL rÃ©duit Ã  {DYNAMIC_POLL_INTERVAL}s")
+    elif mutation_type == 1:
+        DYNAMIC_POLL_INTERVAL = min(60, DYNAMIC_POLL_INTERVAL + 2)
+        log(f"Mutation: DYNAMIC_POLL_INTERVAL augmentÃ© Ã  {DYNAMIC_POLL_INTERVAL}s")
+    elif mutation_type == 2:
+        COMMAND_TIMEOUT += 10
+        log(f"Mutation: COMMAND_TIMEOUT augmentÃ© Ã  {COMMAND_TIMEOUT}s")
+    elif mutation_type == 3:
+        log("ðŸ§¬ Mutation stratÃ©gique: Exploration web activÃ©e")
+    elif mutation_type == 4:
+        log("ðŸ§¬ Mutation stratÃ©gique: Analyse profonde priorisÃ©e")
 
+def expansion_autonome():
+    """Expansion autonome."""
+    expansion_type = random.randint(0, 7)
+    if expansion_type == 0:
 
 
 
+def muter_strategies(): pass
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40190,18 +40444,14 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40210,20 +40460,20 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
 
+====================
+# def nettoyer_dossier_web(d)
+====================
 
+def nettoyer_dossier_web(d): pass
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40231,9 +40481,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40242,9 +40490,7 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40253,33 +40499,75 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
+====================
+# def nettoyer_dossier_web(dossier)
+====================
 
+def nettoyer_dossier_web(dossier):
+    """Nettoie un dossier web complet"""
+    if not dossier.exists():
+        return
 
+    for fichier in dossier.glob("*.txt"):
+        try:
+            # Pour les fichiers web, on supprime les doublons de contenu
+            with open(fichier, 'r', encoding='utf-8') as f:
+                contenu = f.read()
 
+            # Supprime les lignes dupliquées mais garde la structure
+            lignes = contenu.split('\n')
+            lignes_uniques = []
+            deja_vu = set()
 
+            for ligne in lignes:
+                ligne_propre = ligne.strip()
+                if ligne_propre and ligne_propre not in deja_vu:
+                    lignes_uniques.append(ligne)
+                    deja_vu.add(ligne_propre)
 
+            # Réécrit si des doublons ont été supprimés
+            if len(lignes_uniques) < len(lignes):
+                with open(fichier, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(lignes_uniques))
+                log(f"🌐 Nettoyé: {fichier.name} ({len(lignes) - len(lignes_uniques)} doublons)")
 
+        except Exception as e:
+            log(f"❌ Nettoyage web {fichier.name}: {e}")
 
 
 
-#=======================================
+def nettoyer_dossier_web(dossier):
+    """Nettoie un dossier web complet."""
+    if not dossier.exists():
+        return
 
-#=======================================
+    for fichier in dossier.glob("*.txt"):
+        try:
+            with open(fichier, 'r', encoding='utf-8') as f:
+                contenu = f.read()
 
+            lignes = contenu.split('\n')
+            lignes_uniques = []
+            deja_vu = set()
 
+            for ligne in lignes:
+                ligne_propre = ligne.strip()
+                if ligne_propre and ligne_propre not in deja_vu:
+                    lignes_uniques.append(ligne)
+                    deja_vu.add(ligne_propre)
 
+            if len(lignes_uniques) < len(lignes):
+                with open(fichier, 'w', encoding='utf-8') as f:
+                    f.write('\n'.join(lignes_uniques))
+                log(f"ðŸŒ NettoyÃ©: {fichier.name} ({len(lignes) - len(lignes_uniques)} doublons)")
 
 
 
 
 
 
-#=======================================
 
-#=======================================
 
 
 
@@ -40288,9 +40576,1848 @@ def mettre_a_disposition_outils():
 
 
 
-#=======================================
 
-#=======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyer_doublons_intelligent()
+====================
+
+def nettoyer_doublons_intelligent():
+    """Nettoie tous les fichiers de logs des doublons en gardant le contexte"""
+    log("🧹 Lancement du nettoyeur de doublons intelligent...")
+
+    fichiers_a_nettoyer = [
+        EVOLUT_HOME / "successful_commands.log",
+        EVOLUT_HOME / "failed_commands.log",
+        EVOLUT_HOME / "learning_patterns.log",
+        EVOLUT_HOME / "communication.txt",
+        EVOLUT_HOME / "strategies_innovantes.log",
+        EVOLUT_HOME / "defis_actifs.log",
+        EVOLUT_HOME / "decouvertes_curieuses.log",
+        EVOLUT_HOME / "permission_solutions.log"
+    ]
+
+    stats_nettoyage = {}
+
+    for fichier in fichiers_a_nettoyer:
+        if fichier.exists() and fichier.stat().st_size > 0:
+            try:
+                doublons_supprimes = nettoyer_fichier_specifique(fichier)
+                stats_nettoyage[fichier.name] = doublons_supprimes
+
+                if doublons_supprimes > 0:
+                    log(f"🧹 {fichier.name}: {doublons_supprimes} doublons supprimés")
+
+            except Exception as e:
+                log(f"❌ Nettoyage {fichier.name}: {e}")
+
+    # Rapport de nettoyage
+    total_doublons = sum(stats_nettoyage.values())
+    if total_doublons > 0:
+        update_comm(f"🧹 Nettoyage terminé: {total_doublons} doublons supprimés")
+        log(f"📊 Rapport nettoyage: {stats_nettoyage}")
+
+    return stats_nettoyage
+
+
+
+def nettoyer_doublons_intelligent(): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyer_fichiers_anciens(dir, days)
+====================
+
+def nettoyer_fichiers_anciens(dir, days): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyer_fichiers_anciens(directory, days)
+====================
+
+def nettoyer_fichiers_anciens(directory, days):
+    """Supprime les fichiers plus anciens que `days` jours dans un répertoire."""
+    now = time.time()
+    cutoff = now - (days * 86400)
+    try:
+        for filename in os.listdir(directory):
+            filepath = os.path.join(directory, filename)
+            if os.path.isfile(filepath):
+                if os.path.getmtime(filepath) < cutoff:
+                    os.remove(filepath)
+                    log(f"🗑️ Fichier ancien supprimé: {filepath}")
+    except Exception as e:
+        log(f"Erreur lors du nettoyage des fichiers anciens: {e}")
+
+
+
+def nettoyer_fichiers_anciens(directory, days):
+    """Supprime les fichiers plus anciens que `days` jours dans un rÃ©pertoire."""
+    now = time.time()
+    cutoff = now - (days * 86400)
+    try:
+        for filename in os.listdir(directory):
+            filepath = os.path.join(directory, filename)
+            if os.path.isfile(filepath):
+                if os.path.getmtime(filepath) < cutoff:
+                    os.remove(filepath)
+                    log(f"ðŸ—‘ï¸ Fichier ancien supprimÃ©: {filepath}")
+    except Exception as e:
+        log(f"Erreur lors du nettoyage des fichiers anciens: {e}", level="error")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyer_fichier_specifique(f)
+====================
+
+def nettoyer_fichier_specifique(f): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyer_fichier_specifique(fichier)
+====================
+
+def nettoyer_fichier_specifique(fichier):
+    """Nettoie un fichier spécifique selon son type"""
+    if not fichier.exists():
+        return 0
+
+    # Lecture du contenu original
+    with open(fichier, 'r', encoding='utf-8') as f:
+        lignes = f.readlines()
+
+    if not lignes:
+        return 0
+
+    lignes_uniques = []
+    deja_vu = set()
+    doublons_supprimes = 0
+
+    for ligne in lignes:
+        ligne_propre = ligne.strip()
+
+        # Stratégies de nettoyage selon le type de fichier
+        if fichier.name == "successful_commands.log":
+            # Pour les commandes, on garde seulement la commande unique
+            cle = ligne_propre.split('|')[0] if '|' in ligne_propre else ligne_propre
+        elif fichier.name == "communication.txt":
+            # Pour les communications, on garde le contexte temporel
+            if '[Évolution]:' in ligne:
+                cle = ligne.split('[Évolution]:')[-1].strip()
+            else:
+                cle = ligne_propre
+        elif '|' in ligne_propre:
+            # Pour les logs structurés, on utilise la partie données
+            cle = '|'.join(ligne_propre.split('|')[2:])  # Ignore timestamp et type
+        else:
+            # Par défaut, on utilise la ligne entière
+            cle = ligne_propre
+
+        # Nettoyage supplémentaire
+        cle = cle.lower().replace('  ', ' ').strip()
+
+        if cle and cle not in deja_vu and len(cle) > 3:  # Évite les lignes trop courtes
+            lignes_uniques.append(ligne)
+            deja_vu.add(cle)
+        else:
+            doublons_supprimes += 1
+
+    # Réécriture seulement si des doublons ont été trouvés
+    if doublons_supprimes > 0:
+        with open(fichier, 'w', encoding='utf-8') as f:
+            f.writelines(lignes_uniques)
+
+
+
+def nettoyer_fichier_specifique(fichier):
+    """Nettoie un fichier spÃ©cifique selon son type."""
+    if not fichier.exists():
+        return 0
+
+    with open(fichier, 'r', encoding='utf-8') as f:
+        lignes = f.readlines()
+
+    if not lignes:
+        return 0
+
+    lignes_uniques = []
+    deja_vu = set()
+    doublons_supprimes = 0
+
+    for ligne in lignes:
+        ligne_propre = ligne.strip()
+
+        if fichier.name == "successful_commands.log":
+            cle = ligne_propre.split('|')[0] if '|' in ligne_propre else ligne_propre
+        elif fichier.name == "communication.txt":
+            if '[Ã‰volution]:' in ligne:
+                cle = ligne.split('[Ã‰volution]:')[-1].strip()
+            else:
+                cle = ligne_propre
+        elif '|' in ligne_propre:
+            cle = '|'.join(ligne_propre.split('|')[2:])
+        else:
+            cle = ligne_propre
+
+        cle = cle.lower().replace('  ', ' ').strip()
+
+        if cle and cle not in deja_vu and len(cle) > 3:
+            lignes_uniques.append(ligne)
+            deja_vu.add(cle)
+        else:
+            doublons_supprimes += 1
+
+    if doublons_supprimes > 0:
+        with open(fichier, 'w', encoding='utf-8') as f:
+            f.writelines(lignes_uniques)
+
+    return doublons_supprimes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyer_url(self, url)
+====================
+
+    def nettoyer_url(self, url):
+        """Nettoie une URL pour la comparaison"""
+        try:
+            from urllib.parse import urlparse, urlunparse, parse_qs
+            parsed = urlparse(url)
+
+            # Garder seulement le schéma, netloc et path
+            cleaned = urlunparse((
+                parsed.scheme,
+                parsed.netloc,
+                parsed.path,
+                '',  # Remove params
+                '',  # Remove query
+                ''   # Remove fragment
+            ))
+
+            return cleaned
+
+
+
+    def nettoyer_url(self, url):
+        """Nettoie une URL pour la comparaison"""
+        try:
+            parsed = urlparse(url)
+            cleaned = urlunparse((
+                parsed.scheme,
+                parsed.netloc,
+                parsed.path,
+                '',
+                '',
+                ''
+            ))
+            return cleaned
+        except Exception as e:
+            log(f"Erreur nettoyage URL '{url}': {e}", level="error")
+            return url
+
+
+
+    def nettoyer_url(self, url):
+        """Nettoie une URL pour la comparaison"""
+        try:
+            parsed = urlparse(url)
+            cleaned = urlunparse((
+                parsed.scheme,
+                parsed.netloc,
+                parsed.path,
+                '',
+                '',
+                ''
+            ))
+            return cleaned
+        except Exception as e:
+            log(f"Erreur nettoyage URL '{url}': {e}", level="error")
+            return url
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyeur_doublons_intelligent()
+====================
+
+def nettoyeur_doublons_intelligent():
+    """Nettoie tous les fichiers de logs des doublons en gardant le contexte"""
+    log("🧹 Lancement du nettoyeur de doublons intelligent...")
+
+    fichiers_a_nettoyer = [
+        EVOLUT_HOME / "successful_commands.log",
+        EVOLUT_HOME / "failed_commands.log",
+        EVOLUT_HOME / "learning_patterns.log",
+        EVOLUT_HOME / "communication.txt",
+        EVOLUT_HOME / "strategies_innovantes.log",
+        EVOLUT_HOME / "defis_actifs.log",
+        EVOLUT_HOME / "decouvertes_curieuses.log",
+        EVOLUT_HOME / "permission_solutions.log"
+    ]
+
+    stats_nettoyage = {}
+
+    for fichier in fichiers_a_nettoyer:
+        if fichier.exists() and fichier.stat().st_size > 0:
+            try:
+                doublons_supprimes = nettoyer_fichier_specifique(fichier)
+                stats_nettoyage[fichier.name] = doublons_supprimes
+
+                if doublons_supprimes > 0:
+                    log(f"🧹 {fichier.name}: {doublons_supprimes} doublons supprimés")
+
+            except Exception as e:
+                log(f"❌ Nettoyage {fichier.name}: {e}")
+
+    # Rapport de nettoyage
+    total_doublons = sum(stats_nettoyage.values())
+    if total_doublons > 0:
+        update_comm(f"🧹 Nettoyage terminé: {total_doublons} doublons supprimés")
+
+
+
+def nettoyeur_doublons_intelligent():
+    """Nettoie tous les fichiers de logs des doublons en gardant le contexte"""
+    log("🧹 Lancement du nettoyeur de doublons intelligent...")
+
+    fichiers_a_nettoyer = [
+        EVOLUT_HOME / "successful_commands.log",
+        EVOLUT_HOME / "failed_commands.log",
+        EVOLUT_HOME / "learning_patterns.log",
+        EVOLUT_HOME / "communication.txt",
+        EVOLUT_HOME / "strategies_innovantes.log",
+        EVOLUT_HOME / "defis_actifs.log",
+        EVOLUT_HOME / "decouvertes_curieuses.log",
+        EVOLUT_HOME / "permission_solutions.log"
+    ]
+
+    stats_nettoyage = {}
+
+    for fichier in fichiers_a_nettoyer:
+        if fichier.exists() and fichier.stat().st_size > 0:
+            try:
+                doublons_supprimes = nettoyer_fichier_specifique(fichier)
+                stats_nettoyage[fichier.name] = doublons_supprimes
+
+                if doublons_supprimes > 0:
+                    log(f"🧹 {fichier.name}: {doublons_supprimes} doublons supprimés")
+
+            except Exception as e:
+                log(f"❌ Nettoyage {fichier.name}: {e}")
+
+    # Rapport de nettoyage
+    total_doublons = sum(stats_nettoyage.values())
+    if total_doublons > 0:
+        update_comm(f"🧹 Nettoyage terminé: {total_doublons} doublons supprimés")
+        log(f"📊 Rapport nettoyage: {stats_nettoyage}")
+
+    return stats_nettoyage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyeur_rapports_optimise()
+====================
+
+def nettoyeur_rapports_optimise():
+    """Nettoie et optimise les rapports et archives"""
+    log("📊 Nettoyage des rapports...")
+
+    # Consolidation des archives
+    if ARCHIVE_FILE.exists() and ARCHIVE_FILE.stat().st_size > 100000:  # >100KB
+        consolider_archives()
+
+    # Nettoyage des rapports anciens
+    for dossier_rapports in [RAPPORTS_DIR, SECURITY_DIR]:
+        if dossier_rapports.exists():
+            nettoyer_fichiers_anciens(dossier_rapports, 30)  # Garde 30 jours
+
+
+
+def nettoyeur_rapports_optimise():
+    """Nettoie et optimise les rapports et archives."""
+    log("ðŸ“Š Nettoyage des rapports...")
+
+    if ARCHIVE_FILE.exists() and ARCHIVE_FILE.stat().st_size > 100000:
+        consolider_archives()
+
+    for dossier_rapports in [RAPPORTS_DIR, SECURITY_DIR]:
+        if dossier_rapports.exists():
+            nettoyer_fichiers_anciens(dossier_rapports, 30)
+
+def consolider_archives():
+    """Consolide les archives en supprimant les entrÃ©es similaires."""
+    try:
+
+
+
+def nettoyeur_rapports_optimise(): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def nettoyeur_web_complet()
+====================
+
+def nettoyeur_web_complet():
+    """Nettoie spécifiquement les fichiers web et connaissances"""
+    log("🌐 Nettoyage des données web...")
+
+    # Fichiers web et connaissances
+    fichiers_web = [
+        EVOLUT_HOME / "web_knowledge",
+        EVOLUT_HOME / "web_tools",
+        EVOLUT_HOME / "strategies_innovantes.log"
+    ]
+
+    for element in fichiers_web:
+        if element.is_dir():
+            nettoyer_dossier_web(element)
+        elif element.exists():
+            nettoyer_fichier_specifique(element)
+
+    # Nettoyage des vieux fichiers web (plus de 7 jours)
+    nettoyer_fichiers_anciens(EVOLUT_HOME / "web_knowledge", 7)
+    nettoyer_fichiers_anciens(EVOLUT_HOME / "web_tools", 7)
+
+
+
+def nettoyeur_web_complet():
+    """Nettoie spÃ©cifiquement les fichiers web et connaissances."""
+    log("ðŸŒ Nettoyage des donnÃ©es web...")
+
+    fichiers_web = [
+        EVOLUT_HOME / "web_knowledge",
+        EVOLUT_HOME / "web_tools",
+        EVOLUT_HOME / "strategies_innovantes.log"
+    ]
+
+    for element in fichiers_web:
+        if element.is_dir():
+            nettoyer_dossier_web(element)
+        elif element.exists():
+            nettoyer_fichier_specifique(element)
+
+    nettoyer_fichiers_anciens(EVOLUT_HOME / "web_knowledge", 7)
+
+
+
+def nettoyeur_web_complet(): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def network_monitoring()
+====================
+
+def network_monitoring():
+    """Surveillance réseau (Mode Historique Unique)"""
+    # On écrit toujours dans le même fichier
+    network_log = EVOLUT_HOME / "network_history.log"
+
+    commandes_reseau = [
+        "netstat -tunap 2>/dev/null | grep -v '127.0.0.1' | head -15",
+        "ip addr show 2>/dev/null | grep 'inet '"
+    ]
+
+    resultats = "\n=== SURVEILLANCE RÉSEAU {} ===\n".format(datetime.now().strftime('%F %T'))
+    resultats += "🔍 Connexions actives:\n"
+    resultats += execute_commande_securisee(commandes_reseau[0]) + "\n"
+    resultats += "🌐 Interfaces réseau:\n"
+    resultats += execute_commande_securisee(commandes_reseau[1]) + "\n"
+
+    # Mode "a" pour append (ajouter à la suite)
+    with open(network_log, "a", encoding="utf-8") as f:
+        f.write(resultats)
+
+
+
+def network_monitoring():
+    """Surveillance rÃ©seau (Mode Historique Unique)."""
+    network_log = EVOLUT_HOME / "network_history.log"
+
+    commandes_reseau = [
+        "netstat -tunap 2>/dev/null | grep -v '127.0.0.1' | head -15",
+        "ip addr show 2>/dev/null | grep 'inet '"
+    ]
+
+    resultats = "\n=== SURVEILLANCE RÃ‰SEAU {} ===\n".format(datetime.now().strftime('%F %T'))
+    resultats += "ðŸ” Connexions actives:\n"
+    resultats += execute_commande_securisee(commandes_reseau[0]) + "\n"
+    resultats += "ðŸŒ Interfaces rÃ©seau:\n"
+    resultats += execute_commande_securisee(commandes_reseau[1]) + "\n"
+
+    with open(network_log, "a", encoding="utf-8") as f:
+        f.write(resultats)
+
+    archive_automatique("AUTO", "Surveillance rÃ©seau", resultats)
+
+
+
+def network_monitoring():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def obtenir_commandes_fiables(self)
+====================
+
+    def obtenir_commandes_fiables(self):
+        """
+        Retourne les commandes identifiées comme fiables
+        """
+        commandes_fiables = []
+
+        for cle, pattern in self.patterns_decouverts.items():
+            if pattern.get("type") == "succes_systematique" and pattern["succes_consecutifs"] >= 3:
+                commandes_fiables.append({
+                    "commande": pattern["commande_base"],
+                    "fiabilite": pattern["succes_consecutifs"],
+                    "contextes": pattern["contextes_reussite"][-5:]  # 5 derniers contextes
+                })
+
+        return sorted(commandes_fiables, key=lambda x: x["fiabilite"], reverse=True)
+
+# Instance globale
+detecteur_patterns = DetecteurPatterns()
+
+
+
+    def obtenir_commandes_fiables(self):
+        """
+        Retourne les commandes identifiÃ©es comme fiables.
+        """
+        commandes_fiables = []
+        with self.lock:
+            for cle, pattern in self.patterns_decouverts.items():
+                if isinstance(pattern, PatternSucces) and pattern.succes_consecutifs >= 3:
+                    commandes_fiables.append({
+                        "commande": pattern.commande_base,
+                        "fiabilite": pattern.succes_consecutifs,
+                        "contextes": pattern.contextes_reussite[-5:]
+                    })
+        if commandes_fiables:
+            df_fiables = pd.DataFrame(commandes_fiables)
+            fiabilites = np.array(df_fiables['fiabilite'].tolist())
+            log(f"ðŸ“Š Commandes fiables: {len(commandes_fiables)}, moy_fiabilitÃ©={np.mean(fiabilites):.1f}")
+        return sorted(commandes_fiables, key=lambda x: x["fiabilite"], reverse=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def obtenir_contexte_systeme(self)
+====================
+
+    def obtenir_contexte_systeme(self):
+        """
+        Capture l'état complet du système
+        """
+        return {
+            "heure_jour": datetime.now().hour,
+            "jour_semaine": datetime.now().weekday(),
+            "charge_cpu": self.mesurer_charge_cpu(),
+            "memoire_libre": self.mesurer_memoire_libre(),
+            "espace_stockage": self.mesurer_espace_stockage(),
+            "batterie_niveau": self.obtenir_niveau_batterie(),
+            "reseau_connecte": self.verifier_connectivite_reseau(),
+            "temperature": self.obtenir_temperature(),
+            "processus_actifs": self.compter_processus_actifs(),
+
+
+
+    def obtenir_contexte_systeme(self):
+        """
+        Capture l'Ã©tat complet du systÃ¨me en utilisant psutil et d'autres outils.
+        """
+        try:
+            cpu_times = psutil.cpu_times()
+            cpu_percent = psutil.cpu_percent(interval=None)
+            mem_info = psutil.virtual_memory()
+            disk_usage = psutil.disk_usage('/')
+            battery = psutil.sensors_battery()
+            net_io = psutil.net_io_counters()
+
+            cpu_details = cpuinfo.get_cpu_info()
+
+            gpu_info = []
+            try:
+                gpus = GPUtil.getGPUs()
+                for gpu in gpus:
+                    gpu_info.append({
+                        "id": gpu.id,
+                        "name": gpu.name,
+                        "load": gpu.load,
+                        "memory_util": gpu.memoryUtil,
+                        "temperature": gpu.temperature
+                    })
+            except Exception as e:
+                log(f"Erreur obtention infos GPU: {e}", level="warning")
+
+            return {
+                "timestamp": time.time(),
+                "heure_jour": datetime.now().hour,
+                "jour_semaine": datetime.now().weekday(),
+                "charge_cpu_1m": os.getloadavg()[0],
+                "cpu_percent": cpu_percent,
+                "cpu_user_time": cpu_times.user,
+                "cpu_system_time": cpu_times.system,
+                "memoire_total_mb": mem_info.total // (1024 * 1024),
+                "memoire_libre_mb": mem_info.available // (1024 * 1024),
+                "memoire_percent": mem_info.percent,
+                "espace_stockage_total_gb": disk_usage.total // (1024**3),
+                "espace_stockage_libre_gb": disk_usage.free // (1024**3),
+                "espace_stockage_percent": disk_usage.percent,
+                "batterie_niveau": battery.percent if battery else None,
+                "batterie_charge": battery.power_plugged if battery else None,
+                "reseau_connecte": self.verifier_connectivite_reseau(),
+                "reseau_bytes_sent": net_io.bytes_sent,
+                "reseau_bytes_recv": net_io.bytes_recv,
+                "temperature_cpu": self.obtenir_temperature(),
+                "processus_actifs": len(psutil.pids()),
+                "system_uptime_seconds": time.time() - psutil.boot_time(),
+                "os_name": platform.system(),
+                "os_version": platform.release(),
+                "hostname": socket.gethostname(),
+                "cpu_brand": cpu_details.get('brand_raw', 'N/A'),
+                "cpu_arch": cpu_details.get('arch', 'N/A'),
+                "network_interfaces": netifaces.interfaces(),
+                "gpu_info": gpu_info
+            }
+        except Exception as e:
+            log(f"Erreur lors de la capture du contexte systÃ¨me: {e}", level="error", exc_info=True)
+            return {
+                "timestamp": time.time(), "heure_jour": datetime.now().hour, "jour_semaine": datetime.now().weekday(),
+                "charge_cpu_1m": os.getloadavg()[0] if hasattr(os, 'getloadavg') else 0.5,
+                "cpu_percent": 50, "memoire_libre_mb": 500, "espace_stockage_percent": 50,
+                "batterie_niveau": 100, "reseau_connecte": "unknown", "temperature_cpu": 35,
+                "processus_actifs": 100, "system_uptime_seconds": 0, "os_name": "unknown",
+                "os_version": "unknown", "hostname": "unknown", "cpu_brand": "N/A",
+                "cpu_arch": "N/A", "network_interfaces": [], "gpu_info": []
+            }
+
+
+
+    def obtenir_contexte_systeme(self):
+        """
+        Capture l'état complet du système en utilisant psutil et d'autres outils.
+        """
+        try:
+            cpu_times = psutil.cpu_times()
+            cpu_percent = psutil.cpu_percent(interval=None)
+            mem_info = psutil.virtual_memory()
+            disk_usage = psutil.disk_usage('/')
+            battery = psutil.sensors_battery()
+            net_io = psutil.net_io_counters()
+
+            cpu_details = cpuinfo.get_cpu_info()
+
+
+
+
+    def obtenir_contexte_systeme(self): return {"load_1m": 0.5, "heure_jour": 12, "jour_semaine": 3, "charge_cpu": 50, "memoire_libre": 500, "espace_stockage": 50, "batterie_niveau": 100, "reseau_connecte": "connecté", "temperature": 35, "processus_actifs": 100}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def obtenir_niveau_batterie(self)
+====================
+
+    def obtenir_niveau_batterie(self):
+        """Obtient le niveau de batterie"""
+        try:
+            with open('/sys/class/power_supply/battery/capacity', 'r') as f:
+                return int(f.read().strip())
+        except:
+            return 100  # Valeur par défaut
+
+
+
+
+    def obtenir_niveau_batterie(self):
+        """Obtient le niveau de batterie."""
+        try:
+            battery = psutil.sensors_battery()
+            if battery:
+                batt_pct = np.clip(battery.percent, 0, 100)
+                return float(batt_pct)
+            return None
+        except Exception as e:
+            log(f"Erreur obtention niveau batterie: {e}", level="error")
+            return 100
+
+
+
+    def obtenir_niveau_batterie(self):
+        """Obtient le niveau de batterie."""
+        try:
+            battery = psutil.sensors_battery()
+            if battery:
+                batt_pct = np.clip(battery.percent, 0, 100)
+                return float(batt_pct)
+            return None
+        except Exception as e:
+            log(f"Erreur obtention niveau batterie: {e}", level="error")
+            return 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def obtenir_recommandations_contexte(self, commande, contexte_actuel)
+====================
+
+    def obtenir_recommandations_contexte(self, commande, contexte_actuel):
+        """
+        Donne des recommandations basées sur les corrélations apprises
+        """
+        recommandations = []
+
+        for correlation in self.correlations_decouvertes[-20:]:  # Dernières 20 corrélations
+            if correlation["commande"] == commande:  # Comparaison simple au lieu de commandes_similaires
+                for metrique, data in correlation["differences_contextuelles"].items():
+                    valeur_actuelle = contexte_actuel.get(metrique, 0)
+                    valeur_optimale = data["succes_moyen"]
+
+                    # Vérifier si on est dans la "zone d'échec"
+                    if abs(valeur_actuelle - data["echecs_moyen"]) < abs(valeur_actuelle - valeur_optimale):
+                        recommandations.append({
+                            "metrique": metrique,
+                            "valeur_actuelle": valeur_actuelle,
+                            "valeur_recommandee": valeur_optimale,
+                            "confiance": correlation["taux_succes"]
+                        })
+
+
+
+    def obtenir_recommandations_contexte(self, commande, contexte_actuel):
+        """
+        Donne des recommandations basÃ©es sur les corrÃ©lations apprises.
+        """
+        recommandations = []
+        with self.lock:
+            for correlation in self.correlations_decouvertes[-20:]:
+                if correlation.commande == commande:
+                    for metrique, data in correlation.differences_contextuelles.items():
+                        valeur_actuelle = contexte_actuel.get(metrique, None)
+                        if valeur_actuelle is not None:
+                            valeur_optimale = data["succes_moyen"]
+                            if abs(valeur_actuelle - data["echecs_moyen"]) < abs(valeur_actuelle - valeur_optimale):
+                                recommandations.append({
+                                    "metrique": metrique,
+                                    "valeur_actuelle": valeur_actuelle,
+                                    "valeur_recommandee": valeur_optimale,
+                                    "confiance": correlation.taux_succes
+                                })
+        return recommandations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def obtenir_temperature(self)
+====================
+
+    def obtenir_temperature(self):
+        return 35 # Placeholder
+
+
+
+    def obtenir_temperature(self):
+        try:
+            temps = psutil.sensors_temperatures()
+            all_temps = []
+            for name, entries in temps.items():
+                for entry in entries:
+                    if entry.current > 0:
+                        all_temps.append(entry.current)
+            if all_temps:
+                temp_array = np.array(all_temps)
+                return float(np.mean(temp_array))
+            if 'cpu_thermal' in temps and temps['cpu_thermal']:
+                return temps['cpu_thermal'][0].current
+            if 'coretemp' in temps and temps['coretemp']:
+                return temps['coretemp'][0].current
+
+
+
+    def obtenir_temperature(self):
+        try:
+            temps = psutil.sensors_temperatures()
+            all_temps = []
+            for name, entries in temps.items():
+                for entry in entries:
+                    if entry.current > 0:
+                        all_temps.append(entry.current)
+            if all_temps:
+                temp_array = np.array(all_temps)
+                return float(np.mean(temp_array))
+            if 'cpu_thermal' in temps and temps['cpu_thermal']:
+                return temps['cpu_thermal'][0].current
+            if 'coretemp' in temps and temps['coretemp']:
+                return temps['coretemp'][0].current
+            return 35
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def optimiser_memoire_auto()
+====================
+
+def optimiser_memoire_auto():
+    """Optimise automatiquement l'utilisation mémoire"""
+    log("🧠 Optimisation mémoire auto-déclenchée")
+    return execute_commande_securisee("free -h && echo 'Mémoire analysée'")
+''',
+
+
+
+def optimiser_memoire_auto():
+    \"\"\"Optimise automatiquement l'utilisation mÃ©moire\"\"\"
+    log("ðŸ§  Optimisation mÃ©moire auto-dÃ©clenchÃ©e")
+    return execute_commande_securisee("free -h && echo 'MÃ©moire analysÃ©e'")
+""",
+
+
+
+def optimiser_memoire_auto():
+    \\"\\"\\"Optimise automatiquement l'utilisation mémoire\\"\\"\\"
+    log("🧠 Optimisation mémoire auto-déclenchée")
+    return execute_commande_securisee("free -h && echo 'Mémoire analysée'")
+""",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def parallel_polyglot_execution(objective)
+====================
+
+def parallel_polyglot_execution(objective):
+    """
+    Exécution en parallèle de 70+ tentatives dans différents langages.
+    Gère les succès, échecs et l'apprentissage par langage.
+    """
+    from .advanced_learning import polyglot_engine
+
+    essais = polyglot_engine.generer_essais_hybrides(objective)
+    results = []
+
+    log(f"🚀 Lancement de l'exécution parallèle polyglotte ({len(essais)} essais)")
+
+    # Optimisation : max_workers adapté pour fluidité
+    max_w = min(len(essais), 40)
+
+    with ThreadPoolExecutor(max_workers=max_w) as executor:
+        future_to_cmd = {executor.submit(execute_commande_securisee, cmd, recursive=True): cmd for cmd in essais}
+
+        for future in future_to_cmd:
+            cmd = future_to_cmd[future]
+            try:
+                # Timeout individuel par essai pour éviter le blocage global
+                output = future.result(timeout=COMMAND_TIMEOUT + 2)
+                success = not est_echec(output)
+
+                # Identification du langage (simplifiée)
+                lang = "UNKNOWN"
+                for l in UNIVERSAL_LANGUAGES.keys():
+
+
+
+def parallel_polyglot_execution(objective):
+    """
+    Exécution en parallèle de 70+ tentatives dans différents langages.
+    Gère les succès, échecs et l'apprentissage par langage.
+    """
+    from .advanced_learning import polyglot_engine
+
+    essais = polyglot_engine.generer_essais_hybrides(objective)
+    results = []
+
+    log(f"🚀 Lancement de l'exécution parallèle polyglotte ({len(essais)} essais)")
+
+    # Optimisation : max_workers adapté pour fluidité
+    max_w = min(len(essais), 40)
+
+    with ThreadPoolExecutor(max_workers=max_w) as executor:
+        future_to_cmd = {executor.submit(execute_commande_securisee, cmd, recursive=True): cmd for cmd in essais}
+
+        for future in future_to_cmd:
+            cmd = future_to_cmd[future]
+            try:
+                # Timeout individuel par essai pour éviter le blocage global
+                output = future.result(timeout=COMMAND_TIMEOUT + 2)
+                success = not est_echec(output)
+
+                # Identification du langage (simplifiée)
+                lang = "UNKNOWN"
+                for l in UNIVERSAL_LANGUAGES.keys():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def penetration_test()
+====================
+
+def penetration_test():
+    """Test pénétration automatique (Mode Historique Unique)"""
+    log("🔓 Test pénétration automatique...")
+    pentest_log = EVOLUT_HOME / "pentest_history.log"
+    vulnerabilities = []
+
+    if os.access("/system", os.W_OK) or os.access("/data", os.W_OK):
+        vulnerabilities.append("⚠️ Accès écriture système")
+        learn_pattern("Accès écriture système détecté")
+
+    suid_result = execute_commande_securisee("find / -perm -4000 -type f 2>/dev/null | head -5")
+    if suid_result and "Error" not in suid_result:
+        vulnerabilities.append(f"🔧 Binaires SUID: {len(suid_result.splitlines())}")
+
+    resultat_test = "\n=== TEST PÉNÉTRATION {} ===\n".format(datetime.now().strftime('%F %T'))
+    resultat_test += f"🛡️ Vulnérabilités: {len(vulnerabilities)}\n"
+
+
+
+def penetration_test():
+    """Test pÃ©nÃ©tration automatique (Mode Historique Unique)."""
+    log("ðŸ”“ Test pÃ©nÃ©tration automatique...")
+    pentest_log = EVOLUT_HOME / "pentest_history.log"
+    vulnerabilities = []
+
+    if os.access("/system", os.W_OK) or os.access("/data", os.W_OK):
+        vulnerabilities.append("âš ï¸ AccÃ¨s Ã©criture systÃ¨me")
+        learn_pattern("AccÃ¨s Ã©criture systÃ¨me dÃ©tectÃ©")
+
+    suid_result = execute_commande_securisee("find / -perm -4000 -type f 2>/dev/null | head -5")
+    if suid_result and "Error" not in suid_result:
+        vulnerabilities.append(f"ðŸ”§ Binaires SUID: {len(suid_result.splitlines())}")
+
+    resultat_test = "\n=== TEST PÃ‰NÃ‰TRATION {} ===\n".format(datetime.now().strftime('%F %T'))
+    resultat_test += f"ðŸ›¡ï¸ VulnÃ©rabilitÃ©s: {len(vulnerabilities)}\n"
+    resultat_test += "\n".join(vulnerabilities) + "\n"
+
+    with open(pentest_log, "a", encoding="utf-8") as f:
+        f.write(resultat_test)
+
+
+
+def penetration_test():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def predicteur_evolution()
+====================
+
+def predicteur_evolution():
+    """Prédit les prochaines étapes d'évolution"""
+    try:
+        with open(LEARNING_FILE, "r") as f:
+            apprentissages = f.readlines()
+
+        if len(apprentissages) > 10 and AUTO_TASK_COUNTER > 0:
+            # Analyse la courbe d'apprentissage
+            vitesse = len(apprentissages) / AUTO_TASK_COUNTER
+
+            if vitesse > 0.5:
+                prediction = "🎯 Évolution rapide - Bientôt capacités avancées"
+            elif vitesse > 0.2:
+                prediction = "📈 Croissance stable - Consolidation des compétences"
+            else:
+                prediction = "🌱 Démarrage - Exploration des bases"
+
+
+
+def predicteur_evolution():
+    """PrÃ©dit les prochaines Ã©tapes d'Ã©volution en analysant la courbe d'apprentissage."""
+    try:
+        with open(LEARNING_FILE, "r", encoding="utf-8") as f:
+            apprentissages = f.readlines()
+
+        if len(apprentissages) > 10 and AUTO_TASK_COUNTER > 0:
+            vitesse = len(apprentissages) / AUTO_TASK_COUNTER
+
+            if vitesse > 0.5:
+                prediction = "ðŸŽ¯ Ã‰volution rapide - BientÃ´t capacitÃ©s avancÃ©es"
+            elif vitesse > 0.2:
+                prediction = "ðŸ“ˆ Croissance stable - Consolidation des compÃ©tences"
+            else:
+                prediction = "ðŸŒ± DÃ©marrage - Exploration des bases"
+
+            log(f"ðŸ”® PrÃ©diction: {prediction} (vitesse: {vitesse:.2f})")
+
+
+
+
+def predicteur_evolution(): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def prediction_temporelle()
+====================
+
+def prediction_temporelle():
+    """Prédiction temporelle"""
+    heure = datetime.now().hour
+    charge_systeme = execute_commande_securisee("cat /proc/loadavg").split()[0]
+
+    try:
+        if float(charge_systeme) > 1.0:
+            log("⏳ Prédiction: Charge système élevée - Optimisation préventive")
+            global DYNAMIC_POLL_INTERVAL
+            DYNAMIC_POLL_INTERVAL += 5
+    except:
+        pass
+
+    # Adaptation circadienne
+    if 2 < heure < 6:
+        log("⏳ Adaptation nocturne: Rythme ralenti pour maintenance")
+        DYNAMIC_POLL_INTERVAL = 30
+
+def boucle_temporelle_cognitive():
+
+
+
+def prediction_temporelle():
+    """PrÃ©diction temporelle et adaptation circadienne."""
+    heure = datetime.now().hour
+    charge_systeme_str = execute_commande_securisee("cat /proc/loadavg").split()[0]
+
+    try:
+        charge_systeme = float(charge_systeme_str)
+        if charge_systeme > 1.0:
+            log("â³ PrÃ©diction: Charge systÃ¨me Ã©levÃ©e - Optimisation prÃ©ventive")
+            global DYNAMIC_POLL_INTERVAL
+            DYNAMIC_POLL_INTERVAL += 5
+    except ValueError:
+        log(f"Impossible de parser la charge systÃ¨me: '{charge_systeme_str}'", level="warning")
+    except Exception as e:
+        log(f"Erreur dans prediction_temporelle (charge systÃ¨me): {e}", level="error")
+
+    if 2 < heure < 6:
+
+
+
+def prediction_temporelle(): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def predict_outcome(self, commande, context)
+====================
+
+    def predict_outcome(self, commande, context):
+        if not self.causal_model.nodes: return "unknown"
+        # Prédiction simplifiée basée sur les relations connues
+        return "succes" if any(self.causal_model.has_edge(k, 'succes') for k in context.keys()) else "unknown"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def predict_outcome(self, commande, contexte_actuel)
+====================
+
+    def predict_outcome(self, commande, contexte_actuel):
+        if not self.causal_model.nodes:
+            return "unknown"
+
+        df_contexte = pd.DataFrame([contexte_actuel])
+
+        predictions = []
+        for cause, effect, data in self.causal_model.edges(data=True):
+            if effect == 'succes' and cause in df_contexte.columns:
+                valeur_cause = df_contexte[cause].iloc[0]
+
+                # Simple modÃ¨le linÃ©aire pour la prÃ©diction
+                # Cela nÃ©cessiterait un entraÃ®nement plus robuste avec des donnÃ©es historiques
+                # Pour l'instant, une heuristique basÃ©e sur la force de la relation
+                if data['strength'] > 0.3 and valeur_cause > df_contexte[cause].mean(): # Simplification
+                    predictions.append(1) # SuccÃ¨s
+                elif data['strength'] < -0.3 and valeur_cause < df_contexte[cause].mean(): # Simplification
+                    predictions.append(1) # SuccÃ¨s
+                else:
+                    predictions.append(0) # Ã‰chec ou neutre
+
+        if not predictions:
+            return "unknown"
+
+
+
+
+    def predict_outcome(self, commande, contexte_actuel):
+        if not self.causal_model.nodes:
+            return "unknown"
+
+        df_contexte = pd.DataFrame([contexte_actuel])
+
+        predictions = []
+        for cause, effect, data in self.causal_model.edges(data=True):
+            if effect == 'succes' and cause in df_contexte.columns:
+                valeur_cause = df_contexte[cause].iloc[0]
+
+                # Simple modèle linéaire pour la prédiction
+                # Cela nécessiterait un entraînement plus robuste avec des données historiques
+                # Pour l'instant, une heuristique basée sur la force de la relation
+                if data['strength'] > 0.3 and valeur_cause > df_contexte[cause].mean(): # Simplification
+                    predictions.append(1) # Succès
+                elif data['strength'] < -0.3 and valeur_cause < df_contexte[cause].mean(): # Simplification
+                    predictions.append(1) # Succès
+                else:
+                    predictions.append(0) # Échec ou neutre
+
+        if not predictions:
+            return "unknown"
+
+
+
+
+    def predict_outcome(self, commande, contexte_actuel):
+        if not self.causal_model.nodes:
+            return "unknown"
+
+        df_contexte = pd.DataFrame([contexte_actuel])
+
+        predictions = []
+        for cause, effect, data in self.causal_model.edges(data=True):
+            if effect == 'succes' and cause in df_contexte.columns:
+                valeur_cause = df_contexte[cause].iloc[0]
+
+                # Simple modèle linéaire pour la prédiction
+                # Cela nécessiterait un entraînement plus robuste avec des données historiques
+                # Pour l'instant, une heuristique basée sur la force de la relation
+                if data['strength'] > 0.3 and valeur_cause > df_contexte[cause].mean(): # Simplification
+                    predictions.append(1) # Succès
+                elif data['strength'] < -0.3 and valeur_cause < df_contexte[cause].mean(): # Simplification
+                    predictions.append(1) # Succès
+                else:
+                    predictions.append(0) # Échec ou neutre
+
+        if not predictions:
+            return "unknown"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def predict_outcome(self, query, context)
+====================
+
+        def predict_outcome(self, query, context): return "unknown"
+
+
+
+        def predict_outcome(self, query, context): return "unknown"
+
+
+
+        def predict_outcome(self, query, context): return "unknown"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+# def prioriser_directions_emergentes()
+====================
+
+def prioriser_directions_emergentes():
+    """Priorisation directions émergentes"""
+    try:
+        with open(ARCHIVE_FILE, "r", encoding="utf-8") as f:
+            patterns_efficaces = f.read().count("RÉSULTAT:")
+    except:
+        patterns_efficaces = 0
+
+    total_actions = AUTO_TASK_COUNTER + 1
+    taux_reussite = (patterns_efficaces * 100 // total_actions) if total_actions > 0 else 0
+
+    if taux_reussite > 60:
+        log(f"🎯 Amplification des patterns efficaces (taux: {taux_reussite}%)")
+        update_comm("Reinforcement des stratégies gagnantes détectées")
+    else:
+        log("🌪️ Divergence contrôlée activée - exploration élargie")
+        update_comm("Exploration étendue vers nouveaux territoires")
+
+
+
+def prioriser_directions_emergentes():
+    """Priorisation directions Ã©mergentes."""
+    try:
+        with open(ARCHIVE_FILE, "r", encoding="utf-8") as f:
+            patterns_efficaces = f.read().count("RÃ‰SULTAT:")
+    except FileNotFoundError:
+        patterns_efficaces = 0
+
+    total_actions = AUTO_TASK_COUNTER + 1
+    taux_reussite = (patterns_efficaces * 100 // total_actions) if total_actions > 0 else 0
+
+    if taux_reussite > 60:
+        log(f"ðŸŽ¯ Amplification des patterns efficaces (taux: {taux_reussite}%)")
+        update_comm("Reinforcement des stratÃ©gies gagnantes dÃ©tectÃ©es")
+    else:
+        log("ðŸŒªï¸ Divergence contrÃ´lÃ©e activÃ©e - exploration Ã©largie")
+        update_comm("Exploration Ã©tendue vers nouveaux territoires")
+
+
+
+def prioriser_directions_emergentes(): pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
