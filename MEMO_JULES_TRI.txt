@@ -1,0 +1,39 @@
+# SUIVI DU TRI DES FONCTIONS - JULES
+
+## Séance du 2024-05-24 (Session 10)
+- Fonctions traitées cette fois-ci (10) :
+    1. def _scan_network(self)
+    2. def scan_permissions_dangereuses(self)
+    3. def scan_ports_suspects(self)
+    4. def scan_processus_malveillants(self)
+    5. def scan_rapide_securite(self)
+    6. def scan_reseau_suspect(self)
+    7. def scan_root_detection(self)
+    8. def scan_rootkits(self)
+    9. def scan_root_traces(self)
+    10. def scan_selinux_status(self)
+
+- Nombre restant : 56
+- Remarques :
+    - Beaucoup de variantes pour les fonctions de scan de sécurité (jusqu'à 17 variantes pour certaines).
+    - Respect strict des délimitations de blocs pour éviter d'inclure du code hors fonction.
+    - Utilisation d'un script de formatage pour garantir les 3/30 lignes vides.
+
+## Séance du 2024-05-24 (Session 9)
+- Fonctions traitées cette fois-ci (10) :
+    1. _save_model_to_db(self)
+    2. _save_pattern_to_db(self, pattern_key, pattern_data)
+    3. scan_apps_malveillantes(self)
+    4. scan_exploits_detectes(self)
+    5. scan_fichiers_caches(self)
+    6. scan_fichiers_executables_suspects(self)
+    7. scan_fichiers_sensibles(self)
+    8. scanner_complet_telephone(self)
+    9. scanner_et_rapporter(self)
+    10. scanner_securite_avance(self)
+
+- Nombre restant : 66
+- Remarques :
+    - Gestion de nombreuses variantes pour les fonctions de scan (jusqu'à 21).
+    - Formatage 3/30 lignes validé par script.
+    - Aucun doublon omis.
