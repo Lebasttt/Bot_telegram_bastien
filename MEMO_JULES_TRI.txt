@@ -1,0 +1,29 @@
+# SUIVI DU TRI DES FONCTIONS - JULES
+
+## Séance du 2024-05-24 (Session 11)
+- Fonctions traitées cette fois-ci (15) :
+    1. add_to_winning_patterns_ci(commande)
+    2. add_to_winning_patterns(cmd, context)
+    3. add_to_winning_patterns(commande)
+    4. ajouter_probleme(self, fichier, type_probleme, details, severite)
+    5. analyser_applications(self)
+    6. analyser_batterie(self)
+    7. analyser_contexte_systeme()
+    8. analyser_contexte_systeme(self)
+    9. analyser_correlation_commande_ci(self, commande, resultats_recentes)
+    10. analyser_correlation_commande(self, commande, historique)
+    11. analyser_correlation_commande(self, commande, resultats_recentes)
+    12. analyser_dangers_et_blacklister(self, content)
+    13. analyser_echecs_pour_patterns(self, content)
+    14. analyser_espace_stockage(self)
+    15. analyser_et_mettre_a_jour(self)
+
+- Nombre restant : 347
+- Remarques :
+    - Audit et correction de TOUTES_SIGNATURES.txt effectués avant de commencer.
+    - Respect strict des 3 lignes entre variantes et 30 lignes entre fonctions.
+    - Les fonctions sont ajoutées à la suite dans FONCTION_TRIER.txt.
+
+## Historique Sessions Précédentes
+- Session 10 : 10 fonctions (de _scan_network à scan_selinux_status).
+- Session 9 : 10 fonctions (de _save_model_to_db à scanner_securite_avance).
