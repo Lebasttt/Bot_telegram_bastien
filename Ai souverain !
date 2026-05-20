@@ -1,0 +1,871 @@
+# ================= CPU STRICT MODE (SINGLE SOURCE OF TRUTH) =================
+import os
+import torch
+
+CPU_CORES = os.cpu_count() or 4
+
+# Env CPU (UNE SEULE FOIS, PAS DE DOUBLONS)
+os.environ.update({
+    "CUDA_VISIBLE_DEVICES": "",
+    "TORCH_DEVICE": "cpu",
+    "OMP_NUM_THREADS": str(CPU_CORES),
+    "MKL_NUM_THREADS": str(CPU_CORES),
+    "TOKENIZERS_PARALLELISM": "true",
+    "PYTORCH_NUM_THREADS": str(CPU_CORES),
+})
+
+# Torch CPU lock
+torch.set_default_device("cpu")
+torch.set_num_threads(CPU_CORES)
+torch.set_num_interop_threads(max(1, CPU_CORES // 2))
+
+DEVICE = torch.device("cpu")
+MIXED_PRECISION = False
+
+# ================= CUDA HARD DISABLE (MINIMAL SAFE PATCH) =================
+if hasattr(torch, "cuda"):
+    torch.cuda.is_available = lambda: False
+    torch.cuda.device_count = lambda: 0
+    torch.cuda.get_device_name = lambda *args, **kwargs: "CPU_ONLY"
+
+    def _noop(*args, **kwargs): pass
+
+    torch.cuda.empty_cache = _noop
+    torch.cuda.synchronize = _noop
+    torch.cuda.memory_allocated = lambda *args, **kwargs: 0
+    torch.cuda.memory_reserved = lambda *args, **kwargs: 0
+
+# ================= CLEAN MEMORY =================
+def cpu_cleanup():
+    gc.collect()
+    for _ in range(2):
+        gc.collect()
+    libc = ctypes.CDLL("libc.so.6")
+    libc.malloc_trim(0)
+
+# ================= FAKE CUDA MANAGER (CPU) =================
+def cuda_manager():
+    pass
+
+# ================= CONFIGURATION =================
+HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # À remplacer
+
+MAX_SAMPLES_PAR_CYCLE = 200
+PAUSE_ENTRE_DOMAINES = 20
+TIMEOUT_SECONDS = 60
+QUALITY_GLOBAL_THRESHOLD = 0.7
+
+d_model = 256
+nhead = 8
+num_layers = 4
+batch_size = 4
+max_len = 512
+vocab_size_modele = None
+
+ACCUM_STEPS = 4
+LR = 3e-4
+CLIP_NORM = 0.5
+EVAL_EVERY = 500
+CKPT_EVERY = 1000
+
+PAUSE_APRES_TELECHARGEMENT = 3   # sera remplacé par PAUSE_ENTRE_DOMAINES dans le code
+PAUSE_APRES_ENTRAINEMENT = 10
+PAUSE_ENTRE_LECTURE_CYCLE2 = 15
+PAUSE_APRES_EXTINCTION = 20
+PAUSE_APRES_REQUETE = 20
+
+REQUETE_TOUS_LES_CYCLES = 3
+cycle_counter = 0
+global_step_counter = 0
+
+SCHEDULER_STEP_EVERY = 1
+
+DOMAIN_WEIGHTS = {
+    "code": 0.28, "science": 0.18, "math": 0.18,
+    "languages": 0.18, "literature": 0.08,
+    "history_philo": 0.05, "law": 0.03, "medicine": 0.03
+}
+
+QUALITY_THRESHOLDS = {
+    "code": 0.60, "science": 0.65, "math": 0.65,
+    "languages": 0.70, "literature": 0.55,
+    "history_philo": 0.55, "law": 0.70, "medicine": 0.70
+}
+
+LATEST_CHECKPOINT = "latest_checkpoint.pth"
+TOKENIZER_PATH = "tokenizer.json"
+
+# ================= LOGS =================
+import gc
+import psutil
+import time
+import random
+import hashlib
+import json
+import shutil
+import sys
+import math
+import numpy as np
+from datetime import datetime
+from collections import defaultdict, deque, Counter
+import ctypes
+from torch.utils.checkpoint import checkpoint
+import torch.nn as nn
+import torch.optim as optim
+
+log_filename = f"log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+log_file = open(log_filename, 'w', encoding='utf-8')
+
+class Tee:
+    def __init__(self, file, terminal):
+        self.file = file
+        self.terminal = terminal
+    def write(self, data):
+        self.terminal.write(data)
+        self.file.write(data)
+        self.file.flush()
+    def flush(self):
+        self.terminal.flush()
+        self.file.flush()
+
+sys.stdout = Tee(log_file, sys.stdout)
+print(f"=== DÉMARRAGE - {datetime.now()} ===")
+print(f"📁 Logs: {log_filename} | Device: {DEVICE}")
+
+# ================= WATCHDOG (sans GPU) =================
+class SystemWatchdog:
+    def __init__(self, window=20):
+        self.step_times = deque(maxlen=window)
+        self.loss_history = deque(maxlen=window)
+        self.last_check = time.time()
+        self.freeze_threshold = 8.0
+        self.stall_threshold = 10
+
+    def tick(self, loss=None):
+        now = time.time()
+        self.step_times.append(now)
+
+        if loss is not None:
+            self.loss_history.append(loss)
+
+        if len(self.step_times) >= 2:
+            delta = self.step_times[-1] - self.step_times[-2]
+            if delta > self.freeze_threshold:
+                print("⚠️ WATCHDOG: slow step détecté")
+
+        if len(self.loss_history) == self.loss_history.maxlen:
+            if np.std(self.loss_history) < 1e-3:
+                print("⚠️ WATCHDOG: stagnation loss détectée")
+
+    def gpu_check(self):
+        pass
+
+watchdog = SystemWatchdog()
+
+# ================= NETTOYEUR RAM =================
+def radical_ram_cleanup(etape="", pause_supplementaire=0):
+    if etape:
+        print(f"🧹 RAM cleanup: {etape}")
+    cpu_cleanup()
+    if pause_supplementaire > 0:
+        time.sleep(pause_supplementaire)
+    mem = psutil.virtual_memory()
+    print(f"   💾 RAM: {mem.used/1e9:.2f}/{mem.total/1e9:.2f} GB ({mem.percent}%)")
+    watchdog.gpu_check()
+
+# ================= MODÈLE TRANSFORMER (CPU) =================
+class TransformerSouverain(nn.Module):
+    def __init__(self, vocab_size, d_model=256, nhead=8, num_layers=4, max_len=512):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, d_model, padding_idx=0)
+        self.pos_encoding = nn.Parameter(torch.randn(1, max_len, d_model) * 0.02)
+        encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=nhead, batch_first=True, dropout=0.1)
+        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        self.fc_out = nn.Linear(d_model, vocab_size)
+        self.max_len = max_len
+        self.d_model = d_model
+        self.use_gradient_checkpointing = True
+        self.loss_ema = None
+
+    def forward(self, x):
+        seq_len = min(x.size(1), self.max_len)
+        x = x[:, :seq_len]
+        embed = self.embedding(x) * (self.d_model ** 0.5)
+        embed = embed + self.pos_encoding[:, :seq_len, :]
+        causal_mask = torch.triu(
+            torch.full((seq_len, seq_len), float("-inf"), device=x.device),
+            diagonal=1
+        )
+        padding_mask = (x == 0).bool()
+
+        if self.use_gradient_checkpointing and self.training:
+            out = checkpoint(
+                lambda e: self.transformer(
+                    e,
+                    src_mask=causal_mask,
+                    src_key_padding_mask=padding_mask
+                ),
+                embed,
+                use_reentrant=False
+            )
+        else:
+            out = self.transformer(
+                embed,
+                src_mask=causal_mask,
+                src_key_padding_mask=padding_mask
+            )
+        return self.fc_out(out)
+
+# ================= TOKENIZER BPE =================
+class BPETokenizer:
+    def __init__(self, vocab_size_target=10000):
+        self.vocab_size_target = vocab_size_target
+        self.tokenizer = None
+        self.pad_id = None
+        self.unk_id = None
+
+    def train(self, texts, max_len=512):
+        if len(texts) == 0:
+            raise ValueError("Tokenizer training set vide")
+        print(f"🔄 Entraînement du tokenizer BPE sur {len(texts)} textes...")
+        from tokenizers import Tokenizer
+        from tokenizers.models import BPE
+        from tokenizers.trainers import BpeTrainer
+        from tokenizers.pre_tokenizers import ByteLevel
+        self.tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
+        self.tokenizer.pre_tokenizer = ByteLevel()
+
+        trainer = BpeTrainer(
+            vocab_size=self.vocab_size_target,
+            special_tokens=["[PAD]", "[UNK]"],
+            min_frequency=2
+        )
+
+        self.tokenizer.train_from_iterator(texts, trainer)
+        self.pad_id = self.tokenizer.token_to_id("[PAD]")
+        self.unk_id = self.tokenizer.token_to_id("[UNK]")
+        assert self.pad_id is not None, "[PAD] token introuvable"
+        assert self.unk_id is not None, "[UNK] token introuvable"
+
+        self.max_len = max_len
+
+        self.tokenizer.save(TOKENIZER_PATH)
+        print(f"💾 Tokenizer sauvegardé: {TOKENIZER_PATH}")
+
+        print(f"✅ Tokenizer entraîné - Vocabulaire réel: {self.tokenizer.get_vocab_size()} tokens")
+        return self.tokenizer.get_vocab_size()
+
+    def load(self, path=TOKENIZER_PATH):
+        from tokenizers import Tokenizer
+        self.tokenizer = Tokenizer.from_file(path)
+        self.pad_id = self.tokenizer.token_to_id("[PAD]")
+        self.unk_id = self.tokenizer.token_to_id("[UNK]")
+        assert self.pad_id is not None, "[PAD] token introuvable"
+        assert self.unk_id is not None, "[UNK] token introuvable"
+        print(f"🔄 Tokenizer chargé: {path}")
+
+    def encode(self, text, max_len=512):
+        encoding = self.tokenizer.encode(text)
+        ids = encoding.ids[:max_len]
+        if len(ids) < max_len:
+            ids += [self.pad_id] * (max_len - len(ids))
+        return ids
+
+    def batch_encode(self, texts, max_len=512):
+        return torch.tensor([self.encode(t, max_len) for t in texts])
+
+    def decode(self, ids):
+        if isinstance(ids, torch.Tensor):
+            ids = ids.tolist()
+        return self.tokenizer.decode(ids)
+
+# ================= DÉDUPLICATION =================
+class MinHashDeduplicator:
+    def __init__(self, num_hashes=16):
+        self.num_hashes = num_hashes
+        self.seen_signatures = set()
+
+    def _hash_text(self, text):
+        normalized = " ".join(text.lower().strip().split())
+        normalized = normalized[:1000]
+        chunk_size = 100
+        chunks = [normalized[i:i+chunk_size] for i in range(0, len(normalized), chunk_size)]
+        signatures = []
+        for chunk in chunks[:8]:
+            h = hashlib.blake2b(chunk.encode(), digest_size=16).hexdigest()
+            signatures.append(h)
+        return tuple(signatures)
+
+    def is_duplicate(self, text):
+        sig = self._hash_text(text)
+        if sig in self.seen_signatures:
+            return True
+        self.seen_signatures.add(sig)
+        return False
+
+    def reset(self):
+        self.seen_signatures.clear()
+
+# ================= SCORING QUALITÉ =================
+def clamp(x, min_v=0.0, max_v=0.9):
+    return max(min(x, max_v), min_v)
+
+def quality_score(text, domain="languages"):
+    score = 0.0
+
+    if len(text) > 50:
+        score += 0.3
+    if any(p in text for p in ['.', '!', '?', ';', ':']):
+        score += 0.2
+
+    digit_ratio = sum(c.isdigit() for c in text) / max(len(text), 1)
+    if digit_ratio < 0.3:
+        score += 0.2
+
+    if len(text.split()) > 10:
+        score += 0.3
+
+    if domain == "code" and any(c in text for c in "={}[]();+-*/<>"):
+        score = min(score + 0.2, 1.0)
+
+    noise = 0.92 + 0.08 * random.random()
+    score = score * noise
+
+    return clamp(score, 0.0, 0.9)
+
+def is_quality_ok(text, domain):
+    thresh = QUALITY_THRESHOLDS.get(domain, QUALITY_GLOBAL_THRESHOLD)
+    return quality_score(text, domain) >= thresh
+
+# ================= DOMAIN SAMPLER =================
+class DomainSampler:
+    def __init__(self, weights, memory=20):
+        self.domains = list(weights.keys())
+        self.weights = np.array(list(weights.values()), dtype=np.float32)
+        self.recent = deque(maxlen=memory)
+
+    def sample(self):
+        candidates = [d for d in self.domains if d not in self.recent]
+        if not candidates:
+            candidates = self.domains
+        w = np.array([DOMAIN_WEIGHTS[d] for d in candidates], dtype=np.float32)
+        w = w / w.sum()
+        choice = random.choices(candidates, weights=w, k=1)[0]
+        self.recent.append(choice)
+        return choice
+
+# ================= GESTION DES OFFSETS =================
+OFFSET_FILE = "offsets.json"
+
+def save_offset(dataset_name, offset):
+    offsets = {}
+    if os.path.exists(OFFSET_FILE):
+        with open(OFFSET_FILE, 'r') as f:
+            offsets = json.load(f)
+    offsets[dataset_name] = offset
+    with open(OFFSET_FILE, 'w') as f:
+        json.dump(offsets, f, indent=2)
+
+def get_offset(dataset_name):
+    if os.path.exists(OFFSET_FILE):
+        with open(OFFSET_FILE, 'r') as f:
+            offsets = json.load(f)
+            return offsets.get(dataset_name, 0)
+    return 0
+
+# ================= STOCKAGE TEMPORAIRE =================
+TEMP_DIR = "temp_samples"
+
+def clear_temp_dir():
+    if os.path.exists(TEMP_DIR):
+        shutil.rmtree(TEMP_DIR)
+    os.makedirs(TEMP_DIR, exist_ok=True)
+
+def save_samples(domaine, samples):
+    domaine_dir = os.path.join(TEMP_DIR, domaine)
+    os.makedirs(domaine_dir, exist_ok=True)
+    filepath = os.path.join(domaine_dir, "samples.txt")
+    with open(filepath, 'w', encoding='utf-8') as f:
+        for sample in samples:
+            f.write(sample + "\n")
+
+def load_samples(domaine):
+    filepath = os.path.join(TEMP_DIR, domaine, "samples.txt")
+    if not os.path.exists(filepath):
+        return []
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return [line.strip() for line in f if line.strip()]
+
+# ================= STREAMING BATCH BUFFER =================
+class StreamingBatchBuffer:
+    def __init__(self, max_size=200):
+        self.buffer = deque(maxlen=max_size)
+
+    def add(self, x):
+        self.buffer.append(x)
+
+    def full(self):
+        return len(self.buffer) >= self.buffer.maxlen
+
+    def flush(self):
+        data = list(self.buffer)
+        self.buffer.clear()
+        return data
+
+# ================= SAUVEGARDE MODÈLE =================
+def sauvegarder_modele(model, optimizer, scheduler, scaler, cycle, epoch, suffixe=""):
+    filename = f"modele_souverain_cycle{cycle}_epoch{epoch}{suffixe}.pth"
+    torch.save({
+        "model_state": model.state_dict(),
+        "optimizer_state": optimizer.state_dict(),
+        "scheduler_state": scheduler.state_dict(),
+        "cycle": cycle,
+        "epoch": epoch,
+        "timestamp": str(datetime.now()),
+        "vocab_size_modele": vocab_size_modele,
+        "d_model": d_model,
+        "nhead": nhead,
+        "num_layers": num_layers,
+        "max_len": max_len,
+    }, filename)
+    torch.save({
+        "model_state": model.state_dict(),
+        "optimizer_state": optimizer.state_dict(),
+        "scheduler_state": scheduler.state_dict(),
+        "cycle": cycle,
+        "epoch": epoch,
+        "timestamp": str(datetime.now()),
+        "vocab_size_modele": vocab_size_modele,
+        "d_model": d_model,
+        "nhead": nhead,
+        "num_layers": num_layers,
+        "max_len": max_len,
+    }, LATEST_CHECKPOINT)
+    print(f"💾 Modèle sauvegardé: {filename} et {LATEST_CHECKPOINT}")
+    return filename
+
+def charger_modele(model, optimizer, scheduler, scaler, checkpoint_path):
+    if os.path.exists(checkpoint_path):
+        checkpoint = torch.load(checkpoint_path, map_location=DEVICE)
+        model.load_state_dict(checkpoint["model_state"])
+        optimizer.load_state_dict(checkpoint["optimizer_state"])
+        scheduler.load_state_dict(checkpoint["scheduler_state"])
+        print(f"🔄 Modèle chargé: {checkpoint_path}")
+        return checkpoint.get("cycle", 0), checkpoint.get("epoch", 0)
+    return 0, 0
+
+# ================= ENTRAÎNEMENT (version CPU) =================
+gpu_reset_steps = 0
+step_history = deque(maxlen=50)
+
+def entrainer_sur_samples(model, optimizer, samples, domaine, criterion, scheduler=None, scaler=None):
+    if not samples:
+        return 0.0
+
+    global global_step_counter
+    global gpu_reset_steps
+
+    model.train()
+    total_loss = 0
+    nb_batches = 0
+    optimizer.zero_grad(set_to_none=True)
+
+    accum_counter = 0
+
+    for i in range(0, len(samples), batch_size):
+        batch_texts = samples[i:i + batch_size]
+        batch_tokens = bpe_tokenizer.batch_encode(batch_texts, max_len).to(DEVICE)
+
+        x = batch_tokens[:, :-1]
+        y = batch_tokens[:, 1:]
+
+        output = model(x)
+        loss = criterion(output.reshape(-1, vocab_size_modele), y.reshape(-1))
+        loss_raw = loss.detach().float().item()
+
+        if torch.isnan(loss) or torch.isinf(loss):
+            print("⚠️ Loss NaN/Inf détectée")
+            optimizer.zero_grad(set_to_none=True)
+            continue
+
+        if not hasattr(model, "loss_ema"):
+            model.loss_ema = loss_raw
+        else:
+            model.loss_ema = 0.9 * model.loss_ema + 0.1 * loss_raw
+        watchdog.tick(model.loss_ema)
+
+        step_history.append(loss_raw)
+        if len(step_history) == step_history.maxlen:
+            if np.std(step_history) < 1e-4:
+                print("⚠️ STEP VALIDATOR: stagnation critique détectée")
+                optimizer.zero_grad(set_to_none=True)
+                cpu_cleanup()
+
+        loss.backward()
+
+        accum_counter += 1
+        if accum_counter % ACCUM_STEPS == 0:
+            torch.nn.utils.clip_grad_norm_(model.parameters(), CLIP_NORM)
+            optimizer.step()
+            optimizer.zero_grad(set_to_none=True)
+
+            global_step_counter += 1
+            if scheduler and global_step_counter % SCHEDULER_STEP_EVERY == 0:
+                scheduler.step()
+
+            gpu_reset_steps += 1
+            if gpu_reset_steps % 2000 == 0:
+                print("🔁 HARD RESET (cleanup)")
+                cpu_cleanup()
+                time.sleep(3)
+
+            watchdog.gpu_check()
+            cuda_manager()
+
+        total_loss += loss_raw
+        nb_batches += 1
+
+        del batch_tokens, x, y, output, loss, loss_raw
+        cpu_cleanup()
+
+    if accum_counter % ACCUM_STEPS != 0:
+        torch.nn.utils.clip_grad_norm_(model.parameters(), CLIP_NORM)
+        optimizer.step()
+        optimizer.zero_grad(set_to_none=True)
+        global_step_counter += 1
+        if scheduler and global_step_counter % SCHEDULER_STEP_EVERY == 0:
+            scheduler.step()
+        gpu_reset_steps += 1
+        if gpu_reset_steps % 2000 == 0:
+            print("🔁 HARD RESET (cleanup)")
+            cpu_cleanup()
+            time.sleep(3)
+
+    return total_loss / max(nb_batches, 1)
+
+# ================= REQUÊTE (CPU) =================
+def requete_modele(model, question, max_new=100, temperature=0.7):
+    model.eval()
+    input_ids = torch.tensor(bpe_tokenizer.encode(question)).unsqueeze(0).to(DEVICE)
+    generated_ids = input_ids[0].tolist()
+
+    token_history = Counter()
+    repeat_penalty = 1.2
+
+    for _ in range(max_new):
+        with torch.inference_mode():
+            logits = model(input_ids[:, -max_len:])[0, -1]
+            logits = logits / temperature
+            probs = torch.softmax(logits, dim=-1)
+            for t in token_history:
+                probs[t] /= repeat_penalty
+            next_id = torch.multinomial(probs, 1).item()
+
+        token_history[next_id] += 1
+
+        if next_id >= model.fc_out.out_features or next_id < 0:
+            break
+        if next_id == bpe_tokenizer.pad_id or token_history[next_id] > 5:
+            break
+
+        generated_ids.append(next_id)
+        new_input_ids = torch.tensor([generated_ids[-max_len:]]).to(DEVICE)
+        input_ids = new_input_ids
+
+    model.train()
+    return bpe_tokenizer.decode(generated_ids)
+
+# ================= LISTE DES DATASETS =================
+DATASETS = [
+    ("HuggingFaceFW/fineweb-2", "fra_Latn", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "spa_Latn", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "deu_Latn", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "ita_Latn", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "por_Latn", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "rus_Cyrl", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "cmn_Hani", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "jpn_Jpan", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "arb_Arab", "languages", "text"),
+    ("HuggingFaceFW/fineweb-2", "hin_Deva", "languages", "text"),
+    ("HPLT/HPLT2.0_cleaned", "eng_Latn", "languages", "text"),
+    ("HuggingFaceTB/dclm-edu", None, "languages", "text"),
+    ("allenai/c4", "multilingual", "languages", "text"),
+    ("bigcode/the-stack", None, "code", "content"),
+    ("codeparrot/github-code", None, "code", "code"),
+    ("togethercomputer/RedPajama-Data-1T", "github", "code", "text"),
+    ("pmc/open_access", None, "science", "text"),
+    ("HuggingFaceFW/finepdfs", None, "science", "text"),
+    ("PleIAs/French-Science-Commons", None, "science", "text"),
+    ("sentence-transformers/s2orc", None, "science", "abstract"),
+    ("allenai/cord19", "full_text", "science", "text"),
+    ("songlab/clinvar", "test", "medicine", "text"),
+    ("birgermoell/icd10-clinical-notes", None, "medicine", "text"),
+    ("PleIAs/CommonCorpus", None, "law", "text"),
+    ("PleIAs/open_government", None, "law", "text"),
+    ("kernelmachine/open-license-corpus", "ccby_law", "law", "text"),
+    ("louisbrulenaudet/legalkit", None, "law", "content"),
+    ("math-ai/AutoMathText", None, "math", "text"),
+    ("Vikhrmodels/physics_big", None, "science", "content"),
+    ("biglam/gutenberg-poetry-corpus", None, "literature", "poem"),
+    ("ruggsea/stanford-encyclopedia-of-philosophy_instruct", None, "history_philo", "text"),
+    ("merve/folk-mythology-tales", None, "literature", "text"),
+    ("HuggingFaceM4/FineVisionMax", None, "languages", "text"),
+    ("HuggingFaceTB/cosmopedia", None, "languages", "text"),
+]
+
+DATASETS_REQUETES = [
+    ("HuggingFaceH4/ultrachat_200k", None, "requete", "messages"),
+]
+
+# ================= PRÉPARATION INITIALE =================
+print(f"\n{'='*60}")
+print(f"🚀 DÉMARRAGE DE L'ENTRAÎNEMENT SOUVERAIN (CPU ONLY)")
+print(f"{'='*60}")
+print(f"📊 Domaines: {list(DOMAIN_WEIGHTS.keys())}")
+print(f"🔄 BOUCLE INFINIE - Arrêt manuel uniquement")
+print(f"📡 Requête tous les {REQUETE_TOUS_LES_CYCLES} cycles")
+print(f"{'='*60}\n")
+
+criterion = nn.CrossEntropyLoss(ignore_index=0)
+
+# Phase préparatoire : collecte de textes pour entraîner le tokenizer BPE
+print("📡 Phase préparatoire : collecte des textes pour le tokenizer...")
+from datasets import load_dataset
+from tokenizers import Tokenizer
+from tokenizers.models import BPE
+from tokenizers.trainers import BpeTrainer
+from tokenizers.pre_tokenizers import ByteLevel
+
+domain_map_temp = defaultdict(list)
+deduplicator_temp = MinHashDeduplicator()
+
+for name, config, domain, field in DATASETS:
+    print(f"  → {name} ({domain})...", flush=True)
+    if config:
+        ds = load_dataset(name, config, split="train", streaming=True, trust_remote_code=True, token=HF_TOKEN)
+    else:
+        ds = load_dataset(name, split="train", streaming=True, trust_remote_code=True, token=HF_TOKEN)
+
+    count = 0
+    for sample in ds:
+        if count >= 500:
+            break
+        text = sample.get(field) or sample.get("text") or sample.get("content") or sample.get("code") or str(sample)
+        if text and len(text) > 50:
+            if len(text) > 20000:
+                continue
+            if not deduplicator_temp.is_duplicate(text):
+                domain_map_temp[domain].append(text[:1000])
+                count += 1
+    del ds
+    gc.collect()
+    cpu_cleanup()
+
+all_texts_for_tokenizer = []
+for texts in domain_map_temp.values():
+    all_texts_for_tokenizer.extend(texts)
+
+bpe_tokenizer = BPETokenizer(vocab_size_target=10000)
+vocab_size_reel = bpe_tokenizer.train(all_texts_for_tokenizer, max_len=max_len)
+print(f"🎯 Vocabulaire BPE réel: {vocab_size_reel} tokens")
+
+vocab_size_modele = vocab_size_reel
+print(f"🎯 Vocabulaire du modèle fixé à: {vocab_size_modele} tokens")
+
+radical_ram_cleanup("tokenizer entraîné", 0)
+
+del domain_map_temp, deduplicator_temp
+gc.collect()
+
+# ================= BOUCLE PRINCIPALE INFINIE =================
+while True:
+    cycle_counter += 1
+    random.seed(cycle_counter * 1337)
+    np.random.seed(cycle_counter * 1337)
+
+    print(f"\n{'🔥'*30}")
+    print(f"CYCLE {cycle_counter}")
+    print(f"{'🔥'*30}\n")
+
+    # ================= PHASE 1 : TÉLÉCHARGEMENT + ENTRAÎNEMENT =================
+    print(f"📡 PHASE 1 - Téléchargement et entraînement")
+    print(f"{'-'*40}")
+
+    model = TransformerSouverain(vocab_size_modele, d_model, nhead, num_layers, max_len).to(DEVICE)
+    optimizer = optim.AdamW(model.parameters(), lr=LR, weight_decay=0.01)
+    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=1000)
+    scaler = None
+    deduplicator = MinHashDeduplicator()
+    clear_temp_dir()
+
+    start_cycle, start_epoch = charger_modele(model, optimizer, scheduler, scaler, LATEST_CHECKPOINT)
+    if start_cycle > 0:
+        print(f"🔄 Reprise depuis cycle {start_cycle}, epoch {start_epoch}")
+
+    epoch_counter = 0
+
+    for domaine in DOMAIN_WEIGHTS.keys():
+        print(f"\n  📂 Domaine: {domaine}")
+
+        batch_buffer = StreamingBatchBuffer(MAX_SAMPLES_PAR_CYCLE)
+        all_domain_samples = []
+
+        for name, config, dom, field in DATASETS:
+            if dom != domaine:
+                continue
+
+            print(f"    → {name}")
+
+            if config:
+                ds = load_dataset(name, config, split="train", streaming=True, trust_remote_code=True, token=HF_TOKEN)
+            else:
+                ds = load_dataset(name, split="train", streaming=True, trust_remote_code=True, token=HF_TOKEN)
+
+            count = 0
+            skipped_dup = 0
+            skipped_quality = 0
+            offset = get_offset(name)
+            ds = ds.skip(offset)
+
+            for idx, sample in enumerate(ds):
+                if count >= MAX_SAMPLES_PAR_CYCLE:
+                    break
+
+                text = sample.get(field) or sample.get("text") or sample.get("content") or sample.get("code") or str(sample)
+
+                if text and len(text) > 50:
+                    if len(text) > 20000:
+                        continue
+                    if deduplicator.is_duplicate(text):
+                        skipped_dup += 1
+                    elif not is_quality_ok(text, domaine):
+                        skipped_quality += 1
+                    else:
+                        batch_buffer.add(text[:2000])
+                        all_domain_samples.append(text[:2000])   # suppression de la limite à 2000
+                        count += 1
+
+                        if count % 50 == 0:
+                            save_offset(name, offset + count)
+
+                        if batch_buffer.full():
+                            samples_batch = batch_buffer.flush()
+                            loss = entrainer_sur_samples(model, optimizer, samples_batch, domaine, criterion, scheduler, scaler)
+                            print(f"    📉 batch loss: {loss:.4f}")
+                            radical_ram_cleanup("batch flush", 0)
+
+                if (idx + 1) % 100 == 0:
+                    radical_ram_cleanup(f"streaming {name}", 0)
+
+            new_offset = offset + count
+            save_offset(name, new_offset)
+
+            if len(batch_buffer.buffer) > 0:
+                samples_batch = batch_buffer.flush()
+                loss = entrainer_sur_samples(model, optimizer, samples_batch, domaine, criterion, scheduler, scaler)
+                print(f"    📉 final batch loss: {loss:.4f}")
+
+            print(f"      ✅ {len(all_domain_samples)} samples | dup:{skipped_dup} lowq:{skipped_quality}")
+
+            del ds
+            gc.collect()
+            cpu_cleanup()
+
+        if all_domain_samples:
+            save_samples(domaine, all_domain_samples)
+            radical_ram_cleanup(f"téléchargement {domaine}", PAUSE_ENTRE_DOMAINES)
+
+    print(f"\n✅ CYCLE {cycle_counter} - PHASE 1 terminée")
+
+    # ================= PHASE 2 : RELECTURE + ENTRAÎNEMENT =================
+    print(f"\n📖 PHASE 2 - Relecture des samples (2ème époque)")
+    print(f"{'-'*40}")
+
+    for domaine in DOMAIN_WEIGHTS.keys():
+        samples = load_samples(domaine)
+        if samples:
+            print(f"  📂 Domaine: {domaine} - {len(samples)} samples relus")
+            random.shuffle(samples)
+
+            radical_ram_cleanup(f"relecture {domaine}", PAUSE_ENTRE_LECTURE_CYCLE2)
+
+            loss = entrainer_sur_samples(model, optimizer, samples, domaine, criterion, scheduler, scaler)
+            print(f"    📉 Loss: {loss:.4f}")
+
+    print(f"\n✅ CYCLE {cycle_counter} - PHASE 2 terminée")
+    epoch_counter += 1
+
+    # ================= PHASE 3 : SUPPRESSION + EXTINCTION =================
+    print(f"\n🗑️ PHASE 3 - Nettoyage et extinction")
+    print(f"{'-'*40}")
+
+    clear_temp_dir()
+    sauvegarder_modele(model, optimizer, scheduler, scaler, cycle_counter, epoch_counter, "")
+
+    del model
+    del optimizer
+    del scheduler
+    del scaler
+    gc.collect()
+    cpu_cleanup()
+
+    radical_ram_cleanup("avant pause extinction", PAUSE_APRES_EXTINCTION)
+
+    # ================= PHASE 4 : REQUÊTE (tous les N cycles) =================
+    if cycle_counter % REQUETE_TOUS_LES_CYCLES == 0:
+        print(f"\n💬 PHASE 4 - REQUÊTE (cycle {cycle_counter})")
+        print(f"{'-'*40}")
+
+        model = TransformerSouverain(vocab_size_modele, d_model, nhead, num_layers, max_len).to(DEVICE)
+        optimizer = optim.AdamW(model.parameters(), lr=LR, weight_decay=0.01)
+        scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=1000)
+        scaler = None
+        dernier_cycle, derniere_epoch = charger_modele(model, optimizer, scheduler, scaler, LATEST_CHECKPOINT)
+
+        for nom, config, dom, field in DATASETS_REQUETES:
+            if config:
+                ds = load_dataset(nom, config, split="train", streaming=True, trust_remote_code=True, token=HF_TOKEN)
+            else:
+                ds = load_dataset(nom, split="train", streaming=True, trust_remote_code=True, token=HF_TOKEN)
+
+            for i, sample in enumerate(ds):
+                if i >= 5:
+                    break
+
+                question = sample.get(field) or sample.get("text") or str(sample)
+                if question and len(question) > 10:
+                    question = question[:200]
+                    print(f"\n  ❓ Question: {question[:80]}...")
+                    with torch.inference_mode():
+                        reponse = requete_modele(model, question)
+                    print(f"  💬 Réponse: {reponse[:150]}...")
+
+                    radical_ram_cleanup(f"requête {i+1}", 0)
+
+            del ds
+            gc.collect()
+
+        sauvegarder_modele(model, optimizer, scheduler, scaler, cycle_counter, 0, "_apres_requete")
+
+        del model
+        del optimizer
+        del scheduler
+        del scaler
+        gc.collect()
+        radical_ram_cleanup("après requête", PAUSE_APRES_REQUETE)
+
+    cuda_manager()
+    print(f"\n✅ CYCLE {cycle_counter} COMPLET")
+    print(f"⏸️ Pause avant cycle suivant...\n")
+    time.sleep(5)
+
+# ================= FIN =================
+log_file.close()
+
+
+
+mask=causal_mask  # au lieu de src_mask
+
+
+if model.loss_ema is None:  # au lieu de if not hasattr
+    model.loss_ema = loss_raw
