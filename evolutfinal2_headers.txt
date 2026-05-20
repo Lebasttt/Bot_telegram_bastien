@@ -1,0 +1,205 @@
+77:class CommandeApprise:
+87:class PatternSucces:
+94:class PatternEchec:
+104:class CorrelationContexte:
+112:class SourceFiable:
+119:class CommandeStats(BaseModel):
+124:class CapaciteAutoStats(BaseModel):
+132:class GlobalStats(BaseModel):
+138:class MemoireCognitiveData(BaseModel):
+325:def _init_comm_db():
+343:def _init_signatures_db():
+383:def log(message, level="info", **kwargs):
+409:def update_comm(message, sender="Évolution"):
+456:def archive_automatique(origine, commande, resultat):
+512:def ecrire_ligne_unique(fichier, ligne):
+564:def est_echec(resultat):
+626:class ManagedThread:
+655:def is_safe_to_add(cmd):
+755:def add_to_blacklist(command):
+762:def is_new_dangerous_command(command):
+769:def analyze_tool_for_dangers(tool_code):
+783:def learn_from_command_result(commande, resultat, succes):
+799:def analyze_failure_reason(commande, erreur):
+811:def retry_intelligent(commande_originale, erreur):
+828:def auto_execute_alternatives(original_command, error_output):
+848:class MemoireApprentissageAvance:
+1093:def extraire_connaissances_avancees(contenu, source, contexte):
+1146:def est_element_valide(element, categorie):
+1164:def est_commande_securitaire(commande):
+1174:def analyser_patterns_globaux(results, contexte):
+1215:def is_valuable_command(commande):
+1224:def generateur_commandes_autonome(contexte, probleme):
+1279:def extraire_fichier_du_contexte(erreur):
+1305:def extraire_commande_du_contexte(erreur):
+1316:def add_to_winning_patterns(commande):
+1327:def generate_permission_alternatives(commande, erreur):
+1332:def generate_file_search_alternatives(commande, erreur):
+1337:def generate_tool_alternatives(commande, erreur):
+1342:def generate_timeout_alternatives(commande, erreur):
+1347:def executer_alternatives_intelligentes(commande, alternatives):
+1358:def est_echec_connu(commande):
+1367:def get_alternatives_apprises(commande):
+1379:def apprendre_echec_immediat(commande, resultat):
+1391:def apprendre_reussite(commande, resultat):
+1397:def extraire_solutions_du_log(content, commande):
+1407:def calculer_confiance_extraction(item, source):
+1410:class DetecteurPatterns:
+1596:class AnalyseurCorrelations:
+1768:class ApprentissageContextuel:
+2120:class ConceptGraph:
+2210:class CausalReasoner:
+2399:class SurveillanceAutomatique:
+2590:class VectorMemory:
+2780:class MemoireCognitive:
+2890:def suivi_performance_capacite(func):
+2990:def detect_sabotage_attempt(command):
+3039:def extract_file_path_from_error(error_output):
+3070:def generate_alternative_commands(blocked_file):
+3120:def learn_from_successful_alternatives(successful_cmd, original_cmd):
+3158:def analyze_permission_denied(output):
+3194:def auto_execute_alternatives(original_command, error_output):
+3226:def execute_commande_securisee(commande, recursive=False):
+3339:def retry_intelligent(commande_originale, erreur):
+3376:def execute_commande_intelligente(commande):
+3397:def enregistrer_contexte_execution_ci(self, commande, resultat, succes):
+3431:def apprendre_des_succes_ci(self, commande, resultat, contexte):
+3456:def analyser_pattern_erreur_ci(self, commande, erreur, contexte):
+3478:def analyser_correlation_commande_ci(self, commande, resultats_recentes):
+3512:def generateur_commandes_autonome_ci(contexte, probleme):
+3568:def extraire_fichier_du_contexte_ci(erreur):
+3595:def extraire_commande_du_contexte_ci(erreur):
+3607:def add_to_winning_patterns_ci(commande):
+3619:def is_valuable_command_ci(commande):
+3629:def generate_permission_alternatives_ci(commande, erreur):
+3635:def generate_file_search_alternatives_ci(commande, erreur):
+3641:def generate_tool_alternatives_ci(commande, erreur):
+3647:def generate_timeout_alternatives_ci(commande, erreur):
+3653:def executer_alternatives_intelligentes_ci(commande, alternatives):
+3665:def est_echec_connu_ci(commande):
+3675:def get_alternatives_apprises_ci(commande):
+3688:def apprendre_echec_immediat_ci(commande, resultat):
+3701:def apprendre_reussite_ci(commande, resultat):
+3708:def extraire_solutions_du_log_ci(content, commande):
+3719:def add_to_blacklist_ci(command):
+3769:def purger_capacites_inefficaces():
+3814:def remove_function_pruning( function_name):
+3885:def decode_obfuscated_string(s, depth=0):
+3954:def clarify_command(cmd):
+4063:def load_config():
+4082:def anti_boredom_activities():
+4118:def explorer_librement():
+4181:def learn_pattern(pattern):
+4187:def network_monitoring():
+4208:def penetration_test():
+4232:def execute_self_improvement():
+4273:def auto_repair():
+4286:def prioriser_directions_emergentes():
+4304:def muter_strategies():
+4322:def expansion_autonome():
+4342:def exploration_web_emergente():
+4383:def recherche_predictive():
+4419:def synchronisation_emergente():
+4435:def conscience_reseau_adaptive():
+4443:def meta_apprentissage():
+4467:def quantum_leap_evolution():
+4492:def assemblage_cognitif():
+4514:def lanceur_agents_virtuels():
+4539:def _run_agent_mission_with_queue(nom_agent, mission_agent, q):
+4548:def reseau_neuronal_emergent():
+4565:def prediction_temporelle():
+4585:def boucle_temporelle_cognitive():
+4612:def generation_creative_contrainte():
+4631:def integration_evolutive_totale():
+4647:def analyser_patterns_reussite():
+4673:def rotation_capacites_intelligente():
+4695:def generer_capacite_utile():
+4700:def optimiser_memoire_auto():
+4707:def surveillance_avancee_auto():
+4714:def diagnostic_auto_amelioré():
+4722:def conseiller_sans_imposer():
+4733:def mettre_a_disposition_outils():
+4750:def auto_analyse_quotidienne():
+4779:def mode_experimentation():
+4810:def generer_rapport_evolution():
+4848:def creer_defi_auto():
+4901:def verifier_defis_complets():
+4935:def mode_curiosite_avance():
+5008:def generer_rapport_curiosite():
+5059:def reseau_neuronal_emergent():
+5086:def detecter_specialisation():
+5116:def meta_apprentissage():
+5140:def generateur_commande_creative():
+5166:def lancer_agent_specialise(domaine):
+5186:def changer_etat_esprit():
+5203:def predicteur_evolution():
+5227:def systeme_progression():
+5255:def nettoyer_doublons_intelligent():
+5287:def nettoyer_fichier_specifique(fichier):
+5331:def nettoyeur_web_complet():
+5350:def nettoyer_dossier_web(dossier):
+5378:def nettoyeur_rapports_optimise():
+5389:def consolider_archives():
+5435:def nettoyer_fichiers_anciens(directory, days):
+5449:def boucle_apprentissage_autonome():
+5469:def mode_curiosite_pure():
+5476:def add_knowledge_tasks( concept_name, concept_type, risk_level, source):
+5487:def record_result_tasks( experiment_id, outcome, metrics):
+5505:def remove_function_tasks( function_name):
+5605:class GeminiBooster:
+6008:def web_research_gemini(topic):
+6312:def distiller_connaissance_globale():
+6355:def distiller_fichier(fichier_source, fichier_destination, mots_cles, section_name):
+6375:def distiller_archives_reussies(fichier_archive, fichier_destination):
+6447:class MemoirePersistante:
+6739:class DetecteurProblemesSecurite:
+7151:class DiagnosticTelephone:
+7647:class ExperimentDesigner:
+7713:class SelfModifierV2:
+7912:def self_modify_code():
+7962:def generate_self_improving_code():
+7999:def auto_strategique_function():
+8038:def analyser_patterns_reussite_avance(commandes_reussies):
+8083:def selectionner_commande_innovante(commandes_reussies, pattern_gagnant):
+8129:def generer_commande_hybride(commande_base, pattern):
+8155:def generer_nom_fonction_imprevisible(pattern, timestamp):
+8174:def generer_code_evolutif(nom_fonction, commande_maitrisee, pattern_gagnant):
+8184:def {nom_fonction}(mode_analyse=False):
+8203:def {nom_fonction}(mode_stealth=False):
+8226:def {nom_fonction}(intensite=1):
+8260:def generer_code_basique(nom_fonction, commande_utile):
+8268:def {nom_fonction}():
+8280:def signature_deja_integree(commande_candidate):
+8321:def extraire_commande_base(commande):
+8331:def est_commande_strategique(commande):
+8369:def inserer_code_strategique(nouveau_code):
+8386:def tester_nouvelle_fonction(nom_fonction):
+8393:def reinforcement_learning():
+8409:def real_time_learning():
+8415:def continuous_learning_loop():
+8427:def learning_trigger():
+8443:def is_new_dangerous_command(command):
+8452:def add_to_blacklist(command):
+8463:def analyze_tool_for_dangers(tool_code):
+8479:def download_security_tools():
+8498:def auto_detect_dangerous_commands():
+8517:def update_blacklist_automatically(new_dangers):
+8522:def continuous_web_learning():
+8543:def self_modify_based_on_learning():
+8555:def extract_successful_patterns_from_archive():
+8568:def add_new_capability(pattern):
+8573:def {function_name}():
+8580:def remove_inefficient_functions():
+8584:def test_auto_modification():
+8591:def {test_function_name}():
+8692:def scrape_terminator_ultime(url):
+8785:def process_content_terminator(html, url):
+8902:def ultimate_fallback(url):
+9025:def web_research(topic):
+9289:class DeduplicateurUrls:
+9527:def analyser_contexte_systeme():
+9541:def integrer_connaissances_web(self, connaissances, source, contexte):
+9592:def extraire_connaissances_avancees_web(contenu, source, contexte):
+9646:def analyser_patterns_globaux_web(results, contexte):
+9688:def calculer_confiance_extraction_web(item, source):
+9829:def main():
