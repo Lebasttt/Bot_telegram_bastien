@@ -1,0 +1,2448 @@
+============================================================
+       CARTE CHIRURGICALE DE L'AGENT EVOLUTION (v1.2)
+============================================================
+
+RAPPORT ZÉRO CODE - ANALYSE SÉMANTIQUE - DOUBLONS ÉLIMINÉS
+Chaque composant a été comparé chirurgicalement entre les scripts.
+
+[VARIABLE] : ARCHIVE_FILE
+--- Détails : evolutfinal2.py (L18), evolutfini3 (L18), evoluut.py (L36)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : AUTO_TASK_COUNTER
+--- Détails : evolutfinal2.py (L38), evolutfini3 (L38), evoluut.py (L67)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : AnalyseurCorrelations
+--- Version 1 : evolutfinal2.py (L1596), evolutfini3 (L1575)
+    Mission : Analyse les corrélations entre succès et échecs en utilisant des graphes et l'inférence causale.
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : CorrelationContexte, DataFrame, Lock, StandardScaler, __init__, _init_db, _save_correlation_to_db, analyser_correlation_commande, analyser_sequences_apprentissage, array, commit, concat, connect, cursor, dropna, dumps, execute, fit, get, infer_causality
+--- Version 2 : evoluut.py (L1010)
+    Mission : Analyse les corrélations entre succès et échecs en utilisant des graphes et l'inférence causale.
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : CorrelationContexte, DataFrame, Lock, StandardScaler, __init__, _init_db, _save_correlation_to_db, analyser_correlation_commande, analyser_sequences_apprentissage, array, commit, concat, connect, cursor, dropna, dumps, execute, fit, get, infer_causality
+
+------------------------------------------------------------
+
+[CLASSE] : ApprentissageContextuel
+--- Version 1 : evolutfinal2.py (L1768), evolutfini3 (L1747)
+    Mission : Apprentissage basé sur le contexte système réel en utilisant des métriques détaillées.
+    Statut  : Implémentation partielle
+    Outils  : GPUtil, gputil, httpx, json, nltk, orjson, psutil, spacy, sqlite3
+    Appels  : DataFrame, Lock, __init__, _init_db, add_observation, analyser_patterns_contextuels, analyser_type_commande, apprendre_evitement_contexte, array, boot_time, clip, commit, compter_processus_actifs, connect, cpu_percent, cpu_times, create_connection, creer_cle_contexte, cursor, devrait_eviter_commande
+--- Version 2 : evoluut.py (L1176)
+    Mission : Apprentissage basé sur le contexte système réel en utilisant des métriques détaillées.
+    Statut  : Implémentation partielle
+    Outils  : GPUtil, gputil, json, nltk, orjson, psutil, spacy, sqlite3
+    Appels  : Lock, __init__, _init_db, add_observation, analyser_patterns_contextuels, analyser_type_commande, apprendre_evitement_contexte, boot_time, commit, compter_processus_actifs, connect, cpu_percent, cpu_times, create_connection, creer_cle_contexte, cursor, devrait_eviter_commande, disk_usage, download, dumps
+
+------------------------------------------------------------
+
+[VARIABLE] : BACKUP_CODE_FILE
+--- Détails : evolutfinal2.py (L21), evolutfini3 (L21), evoluut.py (L39)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : CACHE_DURATION
+--- Détails : evolutfinal2.py (L43), evolutfini3 (L43), evoluut.py (L72)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : CHANNEL_FILE
+--- Détails : evolutfinal2.py (L11), evolutfini3 (L11), evoluut.py (L29)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : COMMAND_TIMEOUT
+--- Détails : evolutfinal2.py (L33), evolutfini3 (L33), evoluut.py (L62)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : COMM_DB_FILE
+--- Détails : evolutfinal2.py (L321), evolutfini3 (L205), evoluut.py (L2283)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : COMM_FILE
+--- Détails : evolutfinal2.py (L15), evolutfini3 (L15), evoluut.py (L33)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : CONFIG_DIR
+--- Détails : evolutfinal2.py (L10), evolutfini3 (L10), evoluut.py (L28)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : CONFIG_FILE
+--- Détails : evolutfinal2.py (L12), evolutfini3 (L12), evoluut.py (L30)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : CYCLES_SANS_COMMANDE
+--- Détails : evolutfinal2.py (L40), evolutfini3 (L40), evoluut.py (L69)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : CapaciteAutoStats
+--- Version 1 : evolutfinal2.py (L124), evolutfini3 (L7803)
+    Statut  : Opérationnel
+    Appels  : CapaciteAutoStats, Field
+--- Version 2 : evoluut.py (L2691)
+    Statut  : Opérationnel
+    Appels  : CapaciteAutoStats, Field
+
+------------------------------------------------------------
+
+[CLASSE] : CausalReasoner
+--- Détails : evolutfinal2.py (L2210), evolutfini3 (L2189), evoluut.py (L1575)
+    Mission : CREATE TABLE IF NOT EXISTS observations (
+    Statut  : Opérationnel
+    Outils  : json, orjson, scipy, sqlite3
+    Appels  : DataFrame, DiGraph, __init__, _init_db, _load_model_from_db, _save_model_to_db, add_edge, add_observation, astype, commit, concat, connect, cursor, drop, dropna, dumps, edges, execute, fetchall, get
+
+------------------------------------------------------------
+
+[CLASSE] : CommandeApprise
+--- Détails : evolutfinal2.py (L77), evolutfini3 (L7756), evoluut.py (L269)
+    Statut  : Opérationnel
+    Appels  : field
+
+------------------------------------------------------------
+
+[CLASSE] : CommandeStats
+--- Détails : evolutfinal2.py (L119), evolutfini3 (L7798), evoluut.py (L2686)
+    Statut  : Opérationnel
+    Appels  : CommandeStats
+
+------------------------------------------------------------
+
+[CLASSE] : ConceptGraph
+--- Détails : evolutfinal2.py (L2120), evolutfini3 (L2099), evoluut.py (L1485)
+    Mission : CREATE TABLE IF NOT EXISTS nodes (
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : DiGraph, __init__, _init_db, _load_graph_from_db, _save_graph_to_db, add_edge, add_knowledge, add_node, add_relation, all_simple_paths, commit, connect, cursor, dumps, edges, execute, fetchall, find_paths, get, get_related_concepts
+
+------------------------------------------------------------
+
+[CLASSE] : CorrelationContexte
+--- Détails : evolutfinal2.py (L104), evolutfini3 (L7783), evoluut.py (L296)
+    Statut  : Opérationnel
+    Appels  : field
+
+------------------------------------------------------------
+
+[VARIABLE] : DEFAULT_POLL_INTERVAL
+--- Détails : evolutfinal2.py (L31), evolutfini3 (L31), evoluut.py (L60)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : DYNAMIC_BLACKLIST
+--- Détails : evolutfinal2.py (L48), evolutfini3 (L91), evoluut.py (L78)
+    Statut  : Opérationnel
+    Outils  : black
+
+------------------------------------------------------------
+
+[VARIABLE] : DYNAMIC_POLL_INTERVAL
+--- Détails : evolutfinal2.py (L32), evolutfini3 (L32), evoluut.py (L61)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : DeduplicateurUrls
+--- Détails : evolutfinal2.py (L9289), evolutfini3 (L8575), evoluut.py (L9788)
+    Mission : Système avancé de déduplication d'URLs et de contenu
+    Statut  : Simulé / Test
+    Outils  : json, orjson, pickle, sqlite3
+    Appels  : BloomFilter, Lock, NamedTemporaryFile, __init__, _init_db, add, charger_historique, commit, connect, contenu_similaire_deja_vu, count, creer_signature_contenu, cursor, deja_visitee, dump, encode, enregistrer_visite, execute, exists, fetchall
+
+------------------------------------------------------------
+
+[CLASSE] : DetecteurPatterns
+--- Version 1 : evolutfinal2.py (L1410)
+    Mission : Détecte et apprend des patterns de comportement système en utilisant des techniques de ML et de graphes.
+    Statut  : Opérationnel
+    Outils  : jinja2, json, orjson, sqlite3
+    Appels  : DataFrame, Lock, Path, PatternEchec, PatternSucces, Template, __init__, _init_db, _load_patterns_from_db, _save_pattern_to_db, analyser_pattern_erreur, apprendre_des_succes, array, commit, connect, cursor, dumps, est_echec, execute, execute_commande_securisee
+--- Version 2 : evolutfini3 (L1389)
+    Mission : Détecte et apprend des patterns de comportement système en utilisant des techniques de ML et de graphes.
+    Statut  : Opérationnel
+    Outils  : jinja2, json, orjson, sqlite3
+    Appels  : DataFrame, Lock, Path, PatternEchec, PatternSucces, Template, __init__, _init_db, _load_patterns_from_db, _save_pattern_to_db, analyser_pattern_erreur, apprendre_des_succes, array, commit, connect, cursor, dumps, est_echec, execute, execute_commande_securisee
+--- Version 3 : evoluut.py (L835)
+    Mission : Détecte et apprend des patterns de comportement système en utilisant des techniques de ML et de graphes.
+    Statut  : Opérationnel
+    Outils  : jinja2, json, orjson, sqlite3
+    Appels  : Lock, Path, PatternEchec, PatternSucces, Template, __init__, _init_db, _load_patterns_from_db, _save_pattern_to_db, analyser_pattern_erreur, apprendre_des_succes, commit, connect, cursor, dumps, est_echec, execute, execute_commande_securisee, extraire_commande_du_contexte, extraire_fichier_du_contexte
+
+------------------------------------------------------------
+
+[CLASSE] : DetecteurProblemesSecurite
+--- Détails : evolutfinal2.py (L6739), evolutfini3 (L5905), evoluut.py (L6785)
+    Mission : Détecte les VRAIS problèmes de sécurité dangereux.
+    Statut  : Simulé / Test
+    Outils  : asyncio, black, httpx, json, orjson, psutil, sqlite3
+    Appels  : Lock, Path, TCP, Template, __init__, _init_db, _record_alert, _run_scan_async, add, cmdline, commit, connect, cursor, dumps, exe, execute, execute_commande_securisee, exists, extend, gather
+
+------------------------------------------------------------
+
+[CLASSE] : DiagnosticTelephone
+--- Détails : evolutfinal2.py (L7151), evolutfini3 (L6317), evoluut.py (L7197)
+    Mission : Système complet de diagnostic du téléphone.
+    Statut  : Simulé / Test
+    Outils  : GPUtil, asyncio, gputil, json, numpy, orjson, pandas, psutil, sqlite3
+    Appels  : DataFrame, Lock, TCP, Template, __init__, _init_db, _run_diagnostic_section_async, analyser_applications, analyser_batterie, analyser_espace_stockage, analyser_logs_systeme, analyser_memoire_ram, analyser_performances, analyser_problemes_detectes, analyser_reseau, analyser_securite, analyser_temperature, canny, commit, connect
+
+------------------------------------------------------------
+
+[VARIABLE] : ERROR_COUNT
+--- Détails : evolutfinal2.py (L39), evolutfini3 (L39), evoluut.py (L68)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : EVOLUT_HOME
+--- Détails : evolutfinal2.py (L9), evolutfini3 (L9), evoluut.py (L26)
+    Statut  : Opérationnel
+    Appels  : mkdir
+
+------------------------------------------------------------
+
+[CLASSE] : ExperimentDesigner
+--- Détails : evolutfinal2.py (L7647), evolutfini3 (L6795), evoluut.py (L7874)
+    Mission : CREATE TABLE IF NOT EXISTS experiments (
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : __init__, _init_db, commit, connect, cursor, design_experiment, dumps, execute, record_result, uuid4
+
+------------------------------------------------------------
+
+[VARIABLE] : FAILED_COMMANDS_CACHE
+--- Détails : evolutfinal2.py (L42), evolutfini3 (L42), evoluut.py (L71)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : GITHUB_TOKEN
+--- Version 1 : evolutfinal2.py (L29), evolutfini3 (L29)
+    Statut  : Opérationnel
+--- Version 2 : evoluut.py (L56)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : GeminiBooster
+--- Version 1 : evolutfinal2.py (L5605)
+    Mission : Appelle l'API Gemini avec gestion des erreurs et retry.
+    Statut  : Opérationnel
+    Outils  : httpx, json, orjson
+    Appels  : Client, Exception, Path, __init__, _call_gemini, _formatter_prompt, _traiter_contenu_ordres, _valider_reponse, cycle_autonomie, execute_commande_securisee, executer_commandes, exists, findall, get, glob, is_file, items, loads, lower, lru_cache
+--- Version 2 : evolutfini3 (L5036), evoluut.py (L5614)
+    Mission : Appelle l'API Gemini avec gestion des erreurs et retry.
+    Statut  : Opérationnel
+    Outils  : httpx, json, orjson
+    Appels  : Client, Exception, Path, __init__, _call_gemini, _formatter_prompt, _traiter_contenu_ordres, _valider_reponse, cycle_autonomie, execute_commande_securisee, executer_commandes, exists, findall, get, glob, is_file, items, loads, lower, lru_cache
+
+------------------------------------------------------------
+
+[CLASSE] : GlobalStats
+--- Détails : evolutfinal2.py (L132), evolutfini3 (L7811), evoluut.py (L2699)
+    Statut  : Opérationnel
+    Appels  : Field, GlobalStats
+
+------------------------------------------------------------
+
+[VARIABLE] : IDLE_CYCLES
+--- Détails : evolutfinal2.py (L34), evolutfini3 (L34), evoluut.py (L63)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : IMMUTABLE_BLACKLIST
+--- Version 1 : evolutfinal2.py (L44), evoluut.py (L74)
+    Statut  : Opérationnel
+    Outils  : black
+--- Version 2 : evolutfini3 (L86)
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : malloc, ptrace
+
+------------------------------------------------------------
+
+[VARIABLE] : LAST_ARCHIVE_SEND
+--- Détails : evolutfinal2.py (L36), evolutfini3 (L36), evoluut.py (L65)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : LAST_AUTO_SEND
+--- Détails : evolutfinal2.py (L35), evolutfini3 (L35), evoluut.py (L64)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : LAST_COMM_SEND
+--- Détails : evolutfinal2.py (L37), evolutfini3 (L37), evoluut.py (L66)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : LEARNING_FILE
+--- Détails : evolutfinal2.py (L16), evolutfini3 (L16), evoluut.py (L34)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : LOG_FILE
+--- Détails : evolutfinal2.py (L14), evolutfini3 (L14), evoluut.py (L32)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : MEMOIRE_COGNITIVE_FILE
+--- Détails : evolutfinal2.py (L26), evolutfini3 (L26), evoluut.py (L48)
+    Statut  : Opérationnel
+    Outils  : json
+
+------------------------------------------------------------
+
+[VARIABLE] : MISSIONS_FILE
+--- Détails : evolutfinal2.py (L17), evolutfini3 (L17), evoluut.py (L35)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : ML_MODEL_EST_ECHEC_FILE
+--- Détails : evolutfinal2.py (L323), evolutfini3 (L207), evoluut.py (L2285)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : MODE_AUTO
+--- Détails : evolutfinal2.py (L41), evolutfini3 (L41), evoluut.py (L70)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : ManagedThread
+--- Détails : evolutfinal2.py (L626)
+    Mission : Surveille et relance automatiquement un thread critique en cas de crash.
+    Statut  : Opérationnel
+    Appels  : Event, Thread, __init__, is_set, start, stop, target, wrapper
+
+------------------------------------------------------------
+
+[CLASSE] : MemoireApprentissageAvance
+--- Version 1 : evolutfinal2.py (L848), evolutfini3 (L672)
+    Mission : Mémoire persistante avec analyse de patterns et corrélations
+    Statut  : Implémentation partielle
+    Outils  : json, nltk, orjson, shlex, spacy, sqlite3
+    Appels  : CommandeApprise, CorrelationContexte, DataFrame, KMeansLocal, Lock, PatternEchec, PatternSucces, SourceFiable, __init__, _init_db, add_knowledge, analyser_type_commande, array, calculer_complexite, charger_memoire, commit, connect, count, cursor, download
+--- Version 2 : evoluut.py (L310)
+    Mission : Mémoire persistante avec analyse de patterns et corrélations
+    Statut  : Opérationnel
+    Outils  : json, nltk, orjson, shlex, spacy, sqlite3
+    Appels  : CommandeApprise, CorrelationContexte, Lock, PatternEchec, PatternSucces, SourceFiable, __init__, _init_db, add_knowledge, analyser_type_commande, calculer_complexite, charger_memoire, commit, connect, count, cursor, download, dumps, evaluer_risque, execute
+
+------------------------------------------------------------
+
+[CLASSE] : MemoireCognitive
+Variantes de noms : MemoireCognitiveData
+--- Version 1 : evolutfinal2.py (L2780), evolutfini3 (L2719)
+    Mission : Cerveau structuré de l'agent. Fonctionne en parallèle des logs textuels.
+    Statut  : Opérationnel
+    Outils  : json, orjson, pickle
+    Appels  : CapaciteAutoStats, CommandeStats, DataFrame, Lock, MemoireCognitiveData, NamedTemporaryFile, Path, __init__, add_entry, array, charger, dump, enregistrer_execution_capacite, enregistrer_execution_commande, exists, items, load, loads, mean, model_dump
+--- Version 2 : evoluut.py (L2890)
+    Mission : Cerveau structuré de l'agent. Fonctionne en parallèle des logs textuels.
+    Statut  : Opérationnel
+    Outils  : json, orjson, pickle
+    Appels  : CapaciteAutoStats, CommandeStats, Lock, MemoireCognitiveData, NamedTemporaryFile, Path, __init__, add_entry, charger, dump, enregistrer_execution_capacite, enregistrer_execution_commande, exists, load, loads, model_dump, model_validate, read_text, rechercher_semantiquement, sauvegarder
+--- Version 3 : evolutfinal2.py (L138)
+    Statut  : Opérationnel
+    Appels  : GlobalStats, MemoireCognitiveData
+--- Version 4 : evolutfini3 (L7817)
+    Statut  : Opérationnel
+    Appels  : GlobalStats, MemoireCognitiveData
+--- Version 5 : evoluut.py (L2705)
+    Statut  : Opérationnel
+    Appels  : GlobalStats, MemoireCognitiveData
+
+------------------------------------------------------------
+
+[CLASSE] : MemoirePersistante
+--- Version 1 : evolutfinal2.py (L6447), evoluut.py (L6383)
+    Mission : Mémoire qui survit aux redémarrages - FUSION COMPLÈTE
+    Statut  : Simulé / Test
+    Outils  : black, json, orjson, pandas, pickle, sqlite3
+    Appels  : Lock, NamedTemporaryFile, __init__, _init_db, charger_memoire, commit, connect, count, cursor, dump, dumps, execute, exists, fetchone, get, get_commandes_apprises, get_dernieres_reussites, get_echecs_recents, groups, load
+--- Version 2 : evolutfini3 (L5583)
+    Mission : Mémoire qui survit aux redémarrages - FUSION COMPLÈTE
+    Statut  : Simulé / Test
+    Outils  : black, json, orjson, pandas, pickle, sqlite3
+    Appels  : Lock, NamedTemporaryFile, __init__, _init_db, charger_memoire, commit, connect, count, cursor, dump, dumps, execute, exists, fetchone, get, get_commandes_apprises, get_dernieres_reussites, get_echecs_recents, groups, load
+
+------------------------------------------------------------
+
+[VARIABLE] : Outils
+--- Détails : evoluut.py (L10644)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : PatternEchec
+--- Détails : evolutfinal2.py (L94), evolutfini3 (L7773), evoluut.py (L286)
+    Statut  : Opérationnel
+    Appels  : field
+
+------------------------------------------------------------
+
+[CLASSE] : PatternSucces
+--- Détails : evolutfinal2.py (L87), evolutfini3 (L7766), evoluut.py (L279)
+    Statut  : Opérationnel
+    Appels  : field
+
+------------------------------------------------------------
+
+[VARIABLE] : RAPPORTS_DIR
+--- Détails : evolutfinal2.py (L28), evolutfini3 (L28), evoluut.py (L53)
+    Statut  : Opérationnel
+    Appels  : mkdir
+
+------------------------------------------------------------
+
+[VARIABLE] : SECURITY_DIR
+--- Détails : evolutfinal2.py (L25), evolutfini3 (L25), evoluut.py (L46)
+    Statut  : Opérationnel
+    Appels  : mkdir
+
+------------------------------------------------------------
+
+[VARIABLE] : SIGNATURES_DB_FILE
+--- Détails : evolutfinal2.py (L322), evolutfini3 (L206), evoluut.py (L2284)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : STATE_FILE
+--- Détails : evolutfinal2.py (L13), evolutfini3 (L13), evoluut.py (L31)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[CLASSE] : SelfModifierV2
+--- Version 1 : evolutfinal2.py (L7713), evolutfini3 (L6861)
+    Mission : CREATE TABLE IF NOT EXISTS modifications (
+    Statut  : Opérationnel
+    Outils  : black, isort, sqlite3
+    Appels  : FileMode, FunctionTransformer, Lock, NamedTemporaryFile, Path, __init__, _init_db, _save_code, _validate_and_format_code, add_function, code, commit, connect, cursor, execute, exists, format_str, insert, leave_FunctionDef, main
+--- Version 2 : evoluut.py (L7940)
+    Mission : CREATE TABLE IF NOT EXISTS modifications (
+    Statut  : Implémentation partielle
+    Outils  : black, isort, libcst, sqlite3
+    Appels  : FileMode, FunctionTransformer, Lock, NamedTemporaryFile, Path, __init__, _init_db, _save_code, _validate_and_format_code, add_function, code, commit, connect, cursor, execute, extend, format_str, insert, leave_FunctionDef, main
+
+------------------------------------------------------------
+
+[CLASSE] : SourceFiable
+--- Détails : evolutfinal2.py (L112), evolutfini3 (L7791), evoluut.py (L304)
+    Statut  : Opérationnel
+    Appels  : field
+
+------------------------------------------------------------
+
+[CLASSE] : SurveillanceAutomatique
+--- Version 1 : evolutfinal2.py (L2399), evolutfini3 (L2356)
+    Mission : Surveillance automatique en arrière-plan.
+    Statut  : Opérationnel
+    Outils  : asyncio, psutil, sqlite3
+    Appels  : Lock, Template, __init__, _init_db, _run_check_async, array, commit, connect, cursor, disk_usage, execute, gather, isdigit, items, mean, render, run, sensors_battery, sensors_temperatures, surveillance_continue
+--- Version 2 : evoluut.py (L1951)
+    Mission : Surveillance automatique en arrière-plan.
+    Statut  : Opérationnel
+    Outils  : asyncio, psutil, sqlite3
+    Appels  : Lock, Template, __init__, _init_db, _run_check_async, commit, connect, cursor, disk_usage, execute, gather, render, run, sensors_battery, sensors_temperatures, surveillance_continue, to_thread, trigger_alerte, update_comm, verifier_batterie_critique
+
+------------------------------------------------------------
+
+[VARIABLE] : TEST_CODE_FILE
+--- Détails : evolutfinal2.py (L20), evolutfini3 (L20), evoluut.py (L38)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : UNIVERSAL_BLACKLIST_MAP
+--- Détails : evolutfini3 (L46)
+    Statut  : Opérationnel
+    Outils  : black, pickle
+    Appels  : eval, exec, execl, fork, free, getRuntime, include, malloc, popen, ptrace, require, strcat, strcpy, system, unlink
+
+------------------------------------------------------------
+
+[VARIABLE] : UNIVERSAL_LANGUAGES
+--- Détails : evolutfini3 (L7824)
+    Statut  : Opérationnel
+    Outils  : json
+    Appels  : cwd, delete, execute, expression, file, fopen, fwrite, getRuntime, popen, remove, rmdir, run, system, unlink, url
+
+------------------------------------------------------------
+
+[CLASSE] : UniversalPolyglotEngine
+--- Détails : evolutfini3 (L1238)
+    Mission : Empire Polyglotte : Gère la mémoire, l'hybridation et l'exécution croisée
+    Statut  : Implémentation partielle
+    Outils  : json
+    Appels  : __init__, _formater_essai_pur, _get_snippet_aleatoire, _is_known_failure, _load_all_memories, _record_chimera_failure, choice, dump, encode, exists, generer_essais_hybrides, get, glob, hexdigest, keys, learn_polyglot, load, lower, md5, printf
+
+------------------------------------------------------------
+
+[CLASSE] : VectorMemory
+--- Version 1 : evolutfinal2.py (L2590), evolutfini3 (L2529)
+    Mission : CREATE TABLE IF NOT EXISTS entries_metadata (
+    Statut  : Implémentation partielle
+    Outils  : json, orjson, pickle, sqlite3
+    Appels  : IndexFlatL2, Lock, Path, PersistentClient, SentenceTransformer, __init__, _init_metadata_db, _load_faiss_index, _load_metadata, _save_faiss_index, _save_metadata, add, add_entry, array, commit, connect, cosine_similarity, cursor, delete, delete_entry
+--- Version 2 : evoluut.py (L2710)
+    Mission : CREATE TABLE IF NOT EXISTS entries_metadata (
+    Statut  : Opérationnel
+    Outils  : json, orjson, pickle, sqlite3
+    Appels  : IndexFlatL2, Lock, Path, PersistentClient, SentenceTransformer, __init__, _init_metadata_db, _load_faiss_index, _load_metadata, _save_faiss_index, _save_metadata, add, add_entry, array, commit, connect, cursor, delete, delete_entry, dump
+
+------------------------------------------------------------
+
+[VARIABLE] : WEB_RESEARCH_LOCK
+--- Détails : evolutfinal2.py (L30), evolutfini3 (L30), evoluut.py (L57)
+    Statut  : Opérationnel
+    Appels  : Lock
+
+------------------------------------------------------------
+
+[VARIABLE] : WEB_TOOLS_DIR
+--- Détails : evolutfinal2.py (L19), evolutfini3 (L19), evoluut.py (L37)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : __all__
+--- Détails : evolutfinal2.py (L214), evolutfini3 (L111)
+    Statut  : Opérationnel
+    Outils  : black
+
+------------------------------------------------------------
+
+[VARIABLE] : __version__
+--- Détails : evolutfinal2.py (L213), evolutfini3 (L110)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : _global_file_lock
+--- Détails : evolutfinal2.py (L247)
+    Statut  : Opérationnel
+    Appels  : Lock
+
+------------------------------------------------------------
+
+[FONCTION] : _init_comm_db
+--- Détails : evolutfinal2.py (L325), evolutfini3 (L209), evoluut.py (L2287)
+    Mission : CREATE TABLE IF NOT EXISTS conversations (
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : _init_comm_db, commit, connect, cursor, execute
+
+------------------------------------------------------------
+
+[FONCTION] : _init_signatures_db
+--- Détails : evolutfinal2.py (L343), evolutfini3 (L227), evoluut.py (L2305)
+    Mission : CREATE TABLE IF NOT EXISTS unique_lines (
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : _init_signatures_db, commit, connect, cursor, execute
+
+------------------------------------------------------------
+
+[VARIABLE] : _last_self_modify_time
+--- Détails : evolutfinal2.py (L7910), evolutfini3 (L7058), evoluut.py (L8160)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : _logger
+--- Détails : evolutfinal2.py (L299), evolutfini3 (L183), evoluut.py (L2261)
+    Statut  : Opérationnel
+    Appels  : get_logger
+
+------------------------------------------------------------
+
+[VARIABLE] : _ml_model_est_echec
+--- Détails : evolutfinal2.py (L360), evolutfini3 (L244), evoluut.py (L2322)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : _mp_lock
+--- Détails : evolutfinal2.py (L4001)
+    Statut  : Opérationnel
+    Appels  : Lock
+
+------------------------------------------------------------
+
+[FONCTION] : _run_agent_mission_with_queue
+--- Version 1 : evolutfinal2.py (L4539)
+    Mission : Fonction cible pour les processus d'agents virtuels avec une queue pour le résultat.
+    Statut  : Opérationnel
+    Appels  : _run_agent_mission_with_queue, execute_commande_securisee
+--- Version 2 : evolutfini3 (L4063), evoluut.py (L4504)
+    Mission : Fonction cible pour les processus d'agents virtuels avec une queue pour le résultat.
+    Statut  : Opérationnel
+    Appels  : _run_agent_mission_with_queue, execute_commande_securisee, put
+
+------------------------------------------------------------
+
+[VARIABLE] : _unique_lines_cache
+--- Détails : evolutfinal2.py (L509), evolutfini3 (L392), evoluut.py (L2437)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[VARIABLE] : _unique_lines_lock
+--- Détails : evolutfinal2.py (L510), evolutfini3 (L393), evoluut.py (L2438)
+    Statut  : Opérationnel
+    Appels  : Lock
+
+------------------------------------------------------------
+
+[FONCTION] : _validate_single_command_path
+--- Détails : evolutfini3 (L3229)
+    Statut  : Opérationnel
+    Outils  : shlex
+    Appels  : _validate_single_command_path, exists, group, is_within_lab, is_write_command, search, startswith
+
+------------------------------------------------------------
+
+[FONCTION] : add_knowledge_tasks
+--- Détails : evolutfinal2.py (L5476)
+    Statut  : Opérationnel
+    Appels  : _save_graph_to_db, add_knowledge_tasks, add_node, get, has_node
+
+------------------------------------------------------------
+
+[FONCTION] : add_new_capability
+--- Détails : evolutfinal2.py (L8568), evolutfini3 (L7716), evoluut.py (L8885)
+    Mission : Ajoute une nouvelle capacité basée sur les patterns.
+    Statut  : Opérationnel
+    Appels  : add_new_capability, hash
+
+------------------------------------------------------------
+
+[FONCTION] : add_to_blacklist
+Variantes de noms : add_to_blacklist_ci
+--- Version 1 : evolutfinal2.py (L8452), evolutfini3 (L7600)
+    Mission : Ajoute une commande à la blacklist dynamique.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : Lock, add_to_blacklist, update_comm
+--- Version 2 : evoluut.py (L8745)
+    Mission : Ajoute une commande à la blacklist dynamique de manière thread-safe.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : Lock, add_to_blacklist, update_comm
+--- Version 3 : evolutfinal2.py (L3719)
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : add_to_blacklist_ci
+
+------------------------------------------------------------
+
+[FONCTION] : add_to_winning_patterns
+Variantes de noms : add_to_winning_patterns_ci
+--- Version 1 : evolutfinal2.py (L1316), evolutfini3 (L1144), evoluut.py (L741)
+    Mission : Ajoute une commande aux patterns gagnants, en évitant les doublons et en analysant les similarités.
+    Statut  : Opérationnel
+    Appels  : add_to_winning_patterns, ecrire_ligne_unique, is_valuable_command
+--- Version 2 : evolutfinal2.py (L3607)
+    Mission : Ajoute une commande aux patterns gagnants, en Ã©vitant les doublons et en analysant les similaritÃ©s.
+    Statut  : Opérationnel
+    Appels  : add_to_winning_patterns_ci, ecrire_ligne_unique, is_valuable_command_ci
+
+------------------------------------------------------------
+
+[FONCTION] : analyser_contexte_systeme
+--- Version 1 : evolutfinal2.py (L9527), evoluut.py (L10026)
+    Mission : Analyse et retourne le contexte actuel du système.
+    Statut  : Opérationnel
+    Appels  : analyser_contexte_systeme, getloadavg, weekday
+--- Version 2 : evolutfini3 (L8813)
+    Mission : Analyse et retourne le contexte actuel du système.
+    Statut  : Opérationnel
+    Appels  : analyser_contexte_systeme, getloadavg, weekday
+
+------------------------------------------------------------
+
+[FONCTION] : analyser_correlation_commande_ci
+--- Détails : evolutfinal2.py (L3478)
+    Mission : Analyse comment une commande performe dans diffÃ©rents contextes en identifiant les diffÃ©rences.
+    Statut  : Opérationnel
+    Appels  : CorrelationContexte, _save_correlation_to_db, analyser_correlation_commande_ci, infer_causality, trouver_differences_contextuelles
+
+------------------------------------------------------------
+
+[FONCTION] : analyser_pattern_erreur_ci
+--- Détails : evolutfinal2.py (L3456)
+    Mission : Analyse les patterns dans les erreurs rÃ©pÃ©tÃ©es en utilisant le clustering.
+    Statut  : Opérationnel
+    Appels  : PatternEchec, _save_pattern_to_db, analyser_pattern_erreur_ci, extraire_type_erreur, rechercher_solutions_pattern
+
+------------------------------------------------------------
+
+[FONCTION] : analyser_patterns_globaux
+Variantes de noms : analyser_patterns_globaux_web
+--- Version 1 : evolutfinal2.py (L1174), evolutfini3 (L998), evoluut.py (L606)
+    Mission : Analyse globale des patterns après recherche avec Pandas et NumPy.
+    Statut  : Opérationnel
+    Outils  : numpy, pandas
+    Appels  : DataFrame, analyser_patterns_globaux, items, lower, to_string, values
+--- Version 2 : evolutfinal2.py (L9646)
+    Mission : Analyse globale des patterns aprÃ¨s recherche avec Pandas et NumPy.
+    Statut  : Opérationnel
+    Outils  : numpy, pandas
+    Appels  : DataFrame, analyser_patterns_globaux_web, items, lower, to_string, values
+
+------------------------------------------------------------
+
+[FONCTION] : analyser_patterns_reussite
+Variantes de noms : analyser_patterns_reussite_avance
+--- Version 1 : evolutfinal2.py (L4647), evolutfini3 (L4172), evoluut.py (L4614)
+    Mission : Analyse les patterns qui fonctionnent le mieux.
+    Statut  : Opérationnel
+    Appels  : analyser_patterns_reussite, get, lower, readlines
+--- Version 2 : evolutfinal2.py (L8038), evolutfini3 (L7186), evoluut.py (L8288)
+    Mission : Analyse les patterns qui marchent vraiment avec des seuils stricts et des techniques de ML.
+    Statut  : Opérationnel
+    Outils  : dbscan, umap
+    Appels  : DBSCAN, DataFrame, TfidfVectorizer, UMAP, analyser_patterns_reussite_avance, fit, fit_transform, lower, nunique, toarray
+
+------------------------------------------------------------
+
+[VARIABLE] : analyseur_correlations
+--- Détails : evolutfinal2.py (L2349), evolutfini3 (L1745), evoluut.py (L1174)
+    Statut  : Opérationnel
+    Appels  : AnalyseurCorrelations
+
+------------------------------------------------------------
+
+[FONCTION] : analyze_failure_reason
+--- Détails : evolutfinal2.py (L799), evolutfini3 (L623), evoluut.py (L219)
+    Statut  : Opérationnel
+    Appels  : analyze_failure_reason, items
+
+------------------------------------------------------------
+
+[FONCTION] : analyze_permission_denied
+--- Détails : evolutfinal2.py (L3158), evolutfini3 (L3082), evoluut.py (L3380)
+    Mission : Analyse les erreurs 'Permission denied' et génère des alternatives.
+    Statut  : Opérationnel
+    Appels  : Path, S_IMODE, access, analyze_permission_denied, exists, extract_file_path_from_error, generate_alternative_commands, getgrgid, getpwuid, retry, stat, stop_after_attempt, wait_exponential
+
+------------------------------------------------------------
+
+[FONCTION] : analyze_tool_for_dangers
+--- Version 1 : evolutfinal2.py (L8463)
+    Mission : Analyse le code pour détecter de nouvelles commandes dangereuses.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : add_to_blacklist, analyze_tool_for_dangers, findall, is_new_dangerous_command
+--- Version 2 : evolutfini3 (L7611)
+    Mission : Analyse le code pour détecter de nouvelles commandes dangereuses.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : add_to_blacklist, analyze_tool_for_dangers, findall, is_new_dangerous_command
+--- Version 3 : evoluut.py (L8758)
+    Mission : Analyse le code pour détecter de nouvelles commandes dangereuses.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : add_to_blacklist, analyze_tool_for_dangers, findall, is_new_dangerous_command
+
+------------------------------------------------------------
+
+[VARIABLE] : analyzer
+--- Détails : evolutfinal2.py (L306), evolutfini3 (L190), evoluut.py (L2268)
+    Statut  : Opérationnel
+    Appels  : SentimentIntensityAnalyzer
+
+------------------------------------------------------------
+
+[FONCTION] : anti_boredom_activities
+--- Version 1 : evolutfinal2.py (L4082), evolutfini3 (L3606)
+    Mission : Quand il s'ennuie, il fait des trucs fun en utilisant des choix pondérés.
+    Statut  : Implémentation partielle
+    Outils  : psutil, sqlite3
+    Appels  : DataFrame, anti_boredom_activities, choice, choices, concat, connect, cpu_percent, read_sql, to_sql, tolist
+--- Version 2 : evoluut.py (L4053)
+    Mission : Quand il s'ennuie, il fait des trucs fun en utilisant des choix pondérés.
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : DataFrame, anti_boredom_activities, choice, choices, concat, connect, read_sql, to_sql, tolist
+
+------------------------------------------------------------
+
+[FONCTION] : apprendre_des_succes_ci
+--- Détails : evolutfinal2.py (L3431)
+    Mission : Apprend des commandes qui rÃ©ussissent systÃ©matiquement en utilisant le clustering et la rÃ©duction de dimension.
+    Statut  : Opérationnel
+    Appels  : DataFrame, PatternSucces, _save_pattern_to_db, apprendre_des_succes_ci, mean, select_dtypes, std, to_dict
+
+------------------------------------------------------------
+
+[FONCTION] : apprendre_echec_immediat
+Variantes de noms : apprendre_echec_immediat_ci
+--- Version 1 : evolutfinal2.py (L1379), evolutfini3 (L1207), evoluut.py (L804)
+    Mission : Apprend immédiatement d'un échec.
+    Statut  : Opérationnel
+    Appels  : apprendre_echec_immediat, generateur_commandes_autonome
+--- Version 2 : evolutfinal2.py (L3688)
+    Mission : Apprend immÃ©diatement d'un Ã©chec.
+    Statut  : Opérationnel
+    Appels  : apprendre_echec_immediat_ci, generateur_commandes_autonome_ci
+
+------------------------------------------------------------
+
+[FONCTION] : apprendre_reussite
+Variantes de noms : apprendre_reussite_ci
+--- Version 1 : evolutfinal2.py (L1391), evolutfini3 (L1219), evoluut.py (L816)
+    Mission : Apprend d'une réussite.
+    Statut  : Opérationnel
+    Appels  : apprendre_reussite
+--- Version 2 : evolutfinal2.py (L3701)
+    Mission : Apprend d'une rÃ©ussite.
+    Statut  : Opérationnel
+    Appels  : apprendre_reussite_ci
+
+------------------------------------------------------------
+
+[VARIABLE] : apprentissage_contextuel
+--- Version 1 : evolutfinal2.py (L2347)
+    Statut  : Opérationnel
+    Appels  : ApprentissageContextual
+--- Version 2 : evolutfini3 (L2097), evoluut.py (L1483)
+    Statut  : Opérationnel
+    Appels  : ApprentissageContextuel
+
+------------------------------------------------------------
+
+[FONCTION] : archive_automatique
+--- Version 1 : evolutfinal2.py (L456), evolutfini3 (L339)
+    Mission : Archivage automatique complet avec compression GZIP et sérialisation Dill/JSON
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : AVG, COUNT, SUM, archive_automatique, array, commit, connect, cursor, dumps, execute, fetchone, getenv, mkdir
+--- Version 2 : evoluut.py (L2403)
+    Mission : Archivage automatique complet avec compression GZIP et sérialisation Dill/JSON
+    Statut  : Opérationnel
+    Outils  : json, orjson
+    Appels  : archive_automatique, dumps, getenv, mkdir
+
+------------------------------------------------------------
+
+[FONCTION] : assemblage_cognitif
+--- Détails : evolutfinal2.py (L4492), evolutfini3 (L4016), evoluut.py (L4457)
+    Mission : Assemblage cognitif en extrayant des fragments de connaissance des logs.
+    Statut  : Opérationnel
+    Appels  : assemblage_cognitif, extend, glob, isalpha, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : auto_analyse_quotidienne
+--- Détails : evolutfinal2.py (L4750), evolutfini3 (L4275), evoluut.py (L4717)
+    Mission : Analyse ses propres performances quotidiennes.
+    Statut  : Opérationnel
+    Appels  : Path, auto_analyse_quotidienne, count, exists, joinpath, read_text, readlines, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : auto_detect_dangerous_commands
+--- Version 1 : evolutfinal2.py (L8498), evolutfini3 (L7646)
+    Mission : Détecte automatiquement les nouvelles commandes dangereuses.
+    Statut  : Opérationnel
+    Appels  : auto_detect_dangerous_commands, get, lower, values, web_research
+--- Version 2 : evoluut.py (L8798)
+    Mission : Détecte automatiquement les nouvelles commandes dangereuses via recherche web.
+    Statut  : Opérationnel
+    Appels  : auto_detect_dangerous_commands, get, lower, values, web_research
+
+------------------------------------------------------------
+
+[FONCTION] : auto_execute_alternatives
+--- Détails : evolutfinal2.py (L3194), evolutfini3 (L3118), evoluut.py (L3416)
+    Mission : Exécute automatiquement les alternatives en parallèle avec monitoring des ressources.
+    Statut  : Opérationnel
+    Outils  : psutil
+    Appels  : ThreadPoolExecutor, analyze_permission_denied, auto_execute_alternatives, cpu_count, cpu_percent, est_echec, learn_from_successful_alternatives, result, submit, virtual_memory
+
+------------------------------------------------------------
+
+[FONCTION] : auto_repair
+--- Détails : evolutfinal2.py (L4273), evolutfini3 (L3797), evoluut.py (L4238)
+    Mission : Réparation automatique.
+    Statut  : Opérationnel
+    Appels  : archive_automatique, auto_repair, execute_commande_securisee, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : auto_strategique_function
+--- Détails : evolutfinal2.py (L7999), evolutfini3 (L7147), evoluut.py (L8249)
+    Mission : Fonction auto-générée exécutant des commandes stratégiques éprouvées.
+    Statut  : Opérationnel
+    Appels  : auto_strategique_function, choice, count, est_commande_strategique, execute_commande_securisee, extract_successful_patterns_from_archive, lower
+
+------------------------------------------------------------
+
+[FONCTION] : boucle_apprentissage_autonome
+--- Version 1 : evolutfinal2.py (L5449), evolutfini3 (L4974)
+    Mission : Boucle d'apprentissage autonome en arrière-plan.
+    Statut  : Opérationnel
+    Appels  : analyser_patterns_reussite, boucle_apprentissage_autonome, execute_self_improvement, get, rotation_capacites_intelligente
+--- Version 2 : evoluut.py (L5416)
+    Mission : Boucle d'apprentissage autonome en arrière-plan.
+    Statut  : Implémentation partielle
+    Appels  : boucle_apprentissage_autonome, execute_self_improvement, get
+
+------------------------------------------------------------
+
+[FONCTION] : boucle_temporelle_cognitive
+--- Détails : evolutfinal2.py (L4585), evolutfini3 (L4110), evoluut.py (L4552)
+    Mission : Boucle temporelle cognitive pour la réévaluation stratégique majeure.
+    Statut  : Opérationnel
+    Appels  : boucle_temporelle_cognitive, count, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : calculer_confiance_extraction
+Variantes de noms : calculer_confiance_extraction_web
+--- Version 1 : evolutfinal2.py (L1407), evolutfini3 (L1235), evoluut.py (L832)
+    Statut  : Opérationnel
+    Appels  : calculer_confiance_extraction
+--- Version 2 : evolutfinal2.py (L9688)
+    Statut  : Opérationnel
+    Appels  : calculer_confiance_extraction_web
+
+------------------------------------------------------------
+
+[VARIABLE] : causal_reasoner
+--- Détails : evolutfinal2.py (L2344), evolutfini3 (L2323), evoluut.py (L1709)
+    Statut  : Opérationnel
+    Appels  : CausalReasoner
+
+------------------------------------------------------------
+
+[VARIABLE] : cerveau_gemini
+--- Détails : evolutfinal2.py (L6005), evolutfini3 (L5436), evoluut.py (L6014)
+    Statut  : Opérationnel
+    Appels  : GeminiBooster
+
+------------------------------------------------------------
+
+[FONCTION] : changer_etat_esprit
+--- Détails : evolutfinal2.py (L5186), evolutfini3 (L4711), evoluut.py (L5153)
+    Mission : Change d'état d'esprit pour varier les approches.
+    Statut  : Opérationnel
+    Appels  : changer_etat_esprit, choice, keys, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : clarify_command
+--- Détails : evolutfinal2.py (L3954)
+    Mission : Analyse une commande complète et clarifie toutes les chaînes de caractères qu'elle contient.
+    Statut  : Simulé / Test
+    Appels  : clarify_command, decode_obfuscated_string, group, replacer, reversed, sub
+
+------------------------------------------------------------
+
+[VARIABLE] : concept_graph
+--- Détails : evolutfinal2.py (L2350), evolutfini3 (L2187), evoluut.py (L1573)
+    Statut  : Opérationnel
+    Appels  : ConceptGraph
+
+------------------------------------------------------------
+
+[FONCTION] : conscience_reseau_adaptive
+--- Détails : evolutfinal2.py (L4435), evolutfini3 (L3959), evoluut.py (L4400)
+    Mission : Conscience réseau adaptive.
+    Statut  : Opérationnel
+    Appels  : conscience_reseau_adaptive, execute_commande_securisee
+
+------------------------------------------------------------
+
+[FONCTION] : conseiller_sans_imposer
+--- Détails : evolutfinal2.py (L4722), evolutfini3 (L4247), evoluut.py (L4689)
+    Mission : Un petit conseil occasionnel seulement.
+    Statut  : Opérationnel
+    Appels  : choice, conseiller_sans_imposer, random, update_comm
+
+------------------------------------------------------------
+
+[VARIABLE] : console
+--- Détails : evolutfinal2.py (L305), evolutfini3 (L189), evoluut.py (L2267)
+    Statut  : Opérationnel
+    Appels  : Console
+
+------------------------------------------------------------
+
+[FONCTION] : consolider_archives
+--- Détails : evolutfinal2.py (L5389), evolutfini3 (L4914), evoluut.py (L5356)
+    Mission : Consolide les archives en supprimant les entrées similaires.
+    Statut  : Opérationnel
+    Appels  : add, consolider_archives
+
+------------------------------------------------------------
+
+[FONCTION] : continuous_learning_loop
+--- Version 1 : evolutfinal2.py (L8415), evolutfini3 (L7563)
+    Mission : Boucle d'apprentissage continu sans pause.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : auto_detect_dangerous_commands, continuous_learning_loop, random, update_blacklist_automatically
+--- Version 2 : evoluut.py (L8694)
+    Mission : Boucle d'apprentissage continu sans pause.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : auto_detect_dangerous_commands, continuous_learning_loop, random, update_blacklist_automatically
+
+------------------------------------------------------------
+
+[FONCTION] : continuous_web_learning
+--- Version 1 : evolutfinal2.py (L8522), evolutfini3 (L7670)
+    Mission : Thread d'apprentissage web continu.
+    Statut  : Opérationnel
+    Appels  : analyze_tool_for_dangers, choice, continuous_web_learning, download_security_tools, get, randint, random, values, web_research
+--- Version 2 : evoluut.py (L8822)
+    Mission : Thread d'apprentissage web continu.
+    Statut  : Opérationnel
+    Appels  : analyze_tool_for_dangers, choice, continuous_web_learning, download_security_tools, get, randint, random, values, web_research
+
+------------------------------------------------------------
+
+[FONCTION] : creer_defi_auto
+--- Version 1 : evolutfinal2.py (L4848), evolutfini3 (L4373)
+    Mission : Crée des défis adaptatifs basés sur les compétences.
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : choice, commit, connect, creer_defi_auto, cursor, execute, get, update_comm
+--- Version 2 : evoluut.py (L4815)
+    Mission : Crée des défis adaptatifs basés sur les compétences.
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : choice, commit, connect, creer_defi_auto, cursor, execute, get, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : decode_obfuscated_string
+--- Détails : evolutfinal2.py (L3885)
+    Mission : Décode récursivement les chaînes obfusquées (Base64, Hex, Octal, Unicode, URL, HTML, chr).
+    Statut  : Implémentation partielle
+    Appels  : b64decode, chr, decode, decode_obfuscated_string, findall, isalnum, match, unescape, unquote
+
+------------------------------------------------------------
+
+[FONCTION] : detect_sabotage_attempt
+--- Version 1 : evolutfinal2.py (L2990)
+    Mission : Détecte s'il essaye de modifier la sécurité en analysant l'arbre syntaxique et les tokens.
+    Statut  : Implémentation partielle
+    Outils  : black
+    Appels  : StringIO, clarify_command, detect_sabotage_attempt, generate_tokens, lower, parse, walk
+--- Version 2 : evolutfini3 (L2913)
+    Mission : Détecte s'il essaye de modifier la sécurité en analysant l'arbre syntaxique et les tokens.
+    Statut  : Implémentation partielle
+    Outils  : black
+    Appels  : StringIO, detect_sabotage_attempt, generate_tokens, items, lower, parse, walk
+--- Version 3 : evoluut.py (L3260)
+    Mission : Détecte s'il essaye de modifier la sécurité en analysant l'arbre syntaxique et les tokens.
+    Statut  : Implémentation partielle
+    Outils  : black
+    Appels  : detect_sabotage_attempt, lower, parse, walk
+
+------------------------------------------------------------
+
+[FONCTION] : detecter_specialisation
+--- Détails : evolutfinal2.py (L5086), evolutfini3 (L4611), evoluut.py (L5053)
+    Mission : Détecte et développe des spécialités naturelles en analysant les commandes réussies.
+    Statut  : Opérationnel
+    Appels  : count, detecter_specialisation, items, lower, update_comm
+
+------------------------------------------------------------
+
+[VARIABLE] : detecteur_patterns
+--- Détails : evolutfinal2.py (L2348), evolutfini3 (L1573), evoluut.py (L1008)
+    Statut  : Opérationnel
+    Appels  : DetecteurPatterns
+
+------------------------------------------------------------
+
+[VARIABLE] : detecteur_securite
+--- Détails : evolutfinal2.py (L7557), evolutfini3 (L6723), evoluut.py (L7604)
+    Statut  : Opérationnel
+    Appels  : DetecteurProblemesSecurite
+
+------------------------------------------------------------
+
+[VARIABLE] : diagnostic
+--- Détails : evolutfinal2.py (L7558), evolutfini3 (L6724), evoluut.py (L7605)
+    Statut  : Opérationnel
+    Appels  : DiagnosticTelephone
+
+------------------------------------------------------------
+
+[FONCTION] : diagnostic_auto_amelior
+--- Version 1 : evolutfinal2.py (L4714), evolutfini3 (L4239)
+    Statut  : Opérationnel
+    Appels  : choice, execute_self_improvement
+--- Version 2 : evoluut.py (L4681)
+    Statut  : Opérationnel
+    Appels  : choice, execute_self_improvement
+
+------------------------------------------------------------
+
+[FONCTION] : distiller_archives_reussies
+--- Détails : evolutfinal2.py (L6375), evolutfini3 (L5527), evoluut.py (L6211)
+    Mission : Fonction aide spécifique pour distiller les archives réussies.
+    Statut  : Opérationnel
+    Appels  : distiller_archives_reussies, exists, findall, stat, write_text, writelines
+
+------------------------------------------------------------
+
+[FONCTION] : distiller_connaissance_globale
+--- Détails : evolutfinal2.py (L6312), evolutfini3 (L5464), evoluut.py (L6148)
+    Mission : Analyse TOUS les logs, extrait la connaissance essentielle,
+    Statut  : Opérationnel
+    Appels  : distiller_archives_reussies, distiller_connaissance_globale, distiller_fichier, exists, mkdir, read_text, update_comm, write_text
+
+------------------------------------------------------------
+
+[FONCTION] : distiller_fichier
+--- Détails : evolutfinal2.py (L6355), evolutfini3 (L5507), evoluut.py (L6191)
+    Mission : Fonction aide pour distiller un fichier basé sur des mots-clés.
+    Statut  : Opérationnel
+    Appels  : distiller_fichier, exists, stat, write_text, writelines
+
+------------------------------------------------------------
+
+[FONCTION] : download_security_tools
+--- Version 1 : evolutfinal2.py (L8479), evolutfini3 (L7627)
+    Mission : Télécharge et analyse des outils de sécurité.
+    Statut  : Opérationnel
+    Outils  : requests
+    Appels  : analyze_tool_for_dangers, download_security_tools, get, mkdir
+--- Version 2 : evoluut.py (L8775)
+    Mission : Télécharge et analyse des outils de sécurité.
+    Statut  : Opérationnel
+    Outils  : requests
+    Appels  : analyze_tool_for_dangers, download_security_tools, get, mkdir
+
+------------------------------------------------------------
+
+[FONCTION] : ecrire_ligne_unique
+--- Détails : evolutfinal2.py (L512), evolutfini3 (L395), evoluut.py (L2440)
+    Mission : Écrit une ligne dans un fichier seulement si elle n'y est pas déjà,
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : add, commit, connect, cursor, ecrire_ligne_unique, encode, execute, exists, fetchone, fileno, find, hexdigest, mmap, sha256, stat
+
+------------------------------------------------------------
+
+[FONCTION] : enregistrer_contexte_execution_ci
+--- Détails : evolutfinal2.py (L3397)
+    Mission : Enregistre le contexte complet d'exÃ©cution dans l'historique et la base de donnÃ©es.
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : add_observation, analyser_patterns_contextuels, analyser_type_commande, commit, connect, cursor, dumps, enregistrer_contexte_execution_ci, execute, extraire_type_erreur, obtenir_contexte_systeme
+
+------------------------------------------------------------
+
+[FONCTION] : est_commande_securitaire
+--- Détails : evolutfinal2.py (L1164), evolutfini3 (L988), evoluut.py (L596)
+    Mission : Vérification de sécurité renforcée.
+    Statut  : Opérationnel
+    Appels  : est_commande_securitaire
+
+------------------------------------------------------------
+
+[FONCTION] : est_commande_strategique
+--- Version 1 : evolutfinal2.py (L8331), evolutfini3 (L7479)
+    Mission : Détermine si une commande mérite d'être transformée en fonction.
+    Statut  : Implémentation partielle
+    Appels  : LogisticRegression, array, est_commande_strategique, fit, lower, predict
+--- Version 2 : evoluut.py (L8598)
+    Mission : Détermine si une commande mérite d'être transformée en fonction en utilisant un classifieur ML.
+    Statut  : Simulé / Test
+    Appels  : LogisticRegression, array, est_commande_strategique, fit, lower, predict
+
+------------------------------------------------------------
+
+[FONCTION] : est_echec
+Variantes de noms : est_echec_connu, est_echec_connu_ci
+--- Version 1 : evolutfinal2.py (L564), evolutfini3 (L447)
+    Mission : Détecte si un résultat indique un échec en utilisant des patterns regex,
+    Statut  : Opérationnel
+    Outils  : nltk, spacy
+    Appels  : DataFrame, array, est_echec, lower, nlp, polarity_scores, predict, predict_proba, search, word_tokenize
+--- Version 2 : evoluut.py (L2492)
+    Mission : Détecte si un résultat indique un échec en utilisant des patterns regex,
+    Statut  : Opérationnel
+    Outils  : nltk, spacy
+    Appels  : array, est_echec, lower, nlp, polarity_scores, predict, word_tokenize
+--- Version 3 : evolutfinal2.py (L1358), evolutfini3 (L1186), evoluut.py (L783)
+    Mission : Vérifie si cette commande a déjà échoué.
+    Statut  : Opérationnel
+    Appels  : est_echec_connu
+--- Version 4 : evolutfinal2.py (L3665)
+    Mission : VÃ©rifie si cette commande a dÃ©jÃ  Ã©chouÃ©.
+    Statut  : Opérationnel
+    Appels  : est_echec_connu_ci
+
+------------------------------------------------------------
+
+[FONCTION] : est_element_valide
+--- Détails : evolutfinal2.py (L1146), evolutfini3 (L970), evoluut.py (L578)
+    Mission : Validation avancée des éléments extraits.
+    Statut  : Opérationnel
+    Appels  : est_commande_securitaire, est_element_valide
+
+------------------------------------------------------------
+
+[FONCTION] : execute_commande_intelligente
+--- Version 1 : evolutfinal2.py (L3376)
+    Mission : Version ultra-intelligente avec mémoire des échecs
+    Statut  : Opérationnel
+    Appels  : apprendre_echec_immediat_ci, apprendre_reussite_ci, est_echec, est_echec_connu_ci, execute_commande_intelligente, execute_commande_securisee, executer_alternatives_intelligentes_ci, get_alternatives_apprises_ci, retry_intelligent
+--- Version 2 : evolutfini3 (L3425)
+    Mission : Version ultra-intelligente avec EMPIRE POLYGLOTTE PARALLÈLE
+    Statut  : Opérationnel
+    Appels  : apprendre_echec_immediat, apprendre_reussite, est_echec, est_echec_connu, execute_commande_intelligente, execute_commande_securisee, executer_alternatives_intelligentes, get_alternatives_apprises, parallel_polyglot_execution, retry_intelligent
+--- Version 3 : evoluut.py (L3571)
+    Mission : Version ultra-intelligente avec mémoire des échecs
+    Statut  : Opérationnel
+    Appels  : apprendre_echec_immediat, apprendre_reussite, est_echec, est_echec_connu, execute_commande_intelligente, execute_commande_securisee, executer_alternatives_intelligentes, get_alternatives_apprises, retry_intelligent
+
+------------------------------------------------------------
+
+[FONCTION] : execute_commande_securisee
+--- Version 1 : evolutfinal2.py (L3226)
+    Mission : Exécution sécurisée avec contournement, anti-sabotage ET activation du code d'apprentissage.
+    Statut  : Implémentation partielle
+    Outils  : black, psutil, shlex
+    Appels  : Process, add_entry, analyser_correlation_commande_ci, analyser_pattern_erreur_ci, analyze_failure_reason, apprendre_des_succes_ci, auto_execute_alternatives, connections, cpu_percent, detect_sabotage_attempt, enregistrer_contexte_execution_ci, escape, est_echec, execute_commande_securisee, get_traced_memory, learn_from_command_result, obtenir_contexte_systeme, open_files, quote, retry_intelligent
+--- Version 2 : evolutfini3 (L3271)
+    Mission : Exécution sécurisée avec contournement, anti-sabotage ET activation du code d'apprentissage.
+    Statut  : Implémentation partielle
+    Outils  : black, psutil, shlex
+    Appels  : Process, add_entry, analyser_correlation_commande, analyser_pattern_erreur, analyze_failure_reason, apprendre_des_succes, auto_execute_alternatives, connections, cpu_percent, detect_sabotage_attempt, enregistrer_contexte_execution, escape, est_echec, execute_commande_securisee, get_traced_memory, learn_from_command_result, obtenir_contexte_systeme, open_files, quote, retry_intelligent
+--- Version 3 : evoluut.py (L3448)
+    Mission : Exécution sécurisée avec contournement, anti-sabotage ET activation du code d'apprentissage.
+    Statut  : Opérationnel
+    Outils  : black, psutil, shlex
+    Appels  : AnalyseurCorrelations, ApprentissageContextuel, DetecteurPatterns, add_entry, analyser_correlation_commande, analyser_pattern_erreur, analyze_failure_reason, apprendre_des_succes, auto_execute_alternatives, cpu_percent, detect_sabotage_attempt, enregistrer_contexte_execution, escape, est_echec, execute_commande_securisee, learn_from_command_result, obtenir_contexte_systeme, quote, retry_intelligent, run
+
+------------------------------------------------------------
+
+[FONCTION] : execute_self_improvement
+--- Détails : evolutfinal2.py (L4232), evolutfini3 (L3756), evoluut.py (L4197)
+    Mission : Auto-amélioration.
+    Statut  : Opérationnel
+    Appels  : archive_automatique, auto_strategique_function, execute_commande_securisee, execute_self_improvement, learn_pattern, network_monitoring, penetration_test, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : executer_alternatives_intelligentes
+Variantes de noms : executer_alternatives_intelligentes_ci
+--- Version 1 : evolutfinal2.py (L1347), evolutfini3 (L1175), evoluut.py (L772)
+    Mission : Exécute les alternatives intelligemment.
+    Statut  : Opérationnel
+    Appels  : est_echec, execute_commande_securisee, executer_alternatives_intelligentes
+--- Version 2 : evolutfinal2.py (L3653)
+    Mission : ExÃ©cute les alternatives intelligemment.
+    Statut  : Opérationnel
+    Appels  : est_echec, execute_commande_securisee, executer_alternatives_intelligentes_ci
+
+------------------------------------------------------------
+
+[FONCTION] : expansion_autonome
+--- Détails : evolutfinal2.py (L4322), evolutfini3 (L3846), evoluut.py (L4287)
+    Mission : Expansion autonome.
+    Statut  : Opérationnel
+    Appels  : expansion_autonome, exploration_web_emergente, randint
+
+------------------------------------------------------------
+
+[VARIABLE] : experiment_designer
+--- Détails : evolutfinal2.py (L7907), evolutfini3 (L7055), evoluut.py (L8157)
+    Statut  : Opérationnel
+    Appels  : ExperimentDesigner
+
+------------------------------------------------------------
+
+[FONCTION] : exploration_web_emergente
+--- Détails : evolutfinal2.py (L4342), evolutfini3 (L3866), evoluut.py (L4307)
+    Mission : Exploration web émergente avec aiohttp/httpx et tldextract.
+    Statut  : Opérationnel
+    Outils  : asyncio, httpx
+    Appels  : AsyncClient, BeautifulSoup, choice, exploration_web_emergente, extract, fetch_web_content, get, get_event_loop, get_text, raise_for_status, run, run_until_complete, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : explorer_librement
+--- Version 1 : evolutfinal2.py (L4118), evolutfini3 (L3642)
+    Mission : Exploration intuitive avec clustering des dossiers et analyse de performance.
+    Statut  : Opérationnel
+    Appels  : anti_boredom_activities, archive_automatique, choice, execute_commande_intelligente, explorer_librement, randint, random, search_similar, update_comm
+--- Version 2 : evoluut.py (L4083)
+    Mission : Exploration intuitive avec clustering des dossiers et analyse de performance.
+    Statut  : Opérationnel
+    Appels  : anti_boredom_activities, archive_automatique, choice, execute_commande_intelligente, explorer_librement, randint, random, search_similar, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : extract_file_path_from_error
+--- Détails : evolutfinal2.py (L3039), evolutfini3 (L2963), evoluut.py (L3289)
+    Mission : Extrait le chemin du fichier de l'erreur et suggère des corrections.
+    Statut  : Opérationnel
+    Appels  : Path, exists, extract_file_path_from_error, group, is_dir, iterdir, lower, ratio, search
+
+------------------------------------------------------------
+
+[FONCTION] : extract_successful_patterns_from_archive
+--- Version 1 : evolutfinal2.py (L8555), evolutfini3 (L7703)
+    Mission : Extrait les patterns qui fonctionnent bien des archives.
+    Statut  : Implémentation partielle
+    Appels  : extract_successful_patterns_from_archive, findall
+--- Version 2 : evoluut.py (L8872)
+    Mission : Extrait les patterns qui fonctionnent bien des archives.
+    Statut  : Opérationnel
+    Appels  : extract_successful_patterns_from_archive, findall
+
+------------------------------------------------------------
+
+[FONCTION] : extraire_commande_base
+--- Version 1 : evolutfinal2.py (L8321), evolutfini3 (L7469)
+    Mission : Extrait l'essence de la commande en utilisant shlex.
+    Statut  : Opérationnel
+    Outils  : shlex
+    Appels  : extraire_commande_base
+--- Version 2 : evoluut.py (L8587)
+    Mission : Extrait l'essence de la commande (sans paramètres variables) en utilisant shlex.
+    Statut  : Opérationnel
+    Outils  : shlex
+    Appels  : extraire_commande_base
+
+------------------------------------------------------------
+
+[FONCTION] : extraire_commande_du_contexte
+Variantes de noms : extraire_commande_du_contexte_ci
+--- Version 1 : evolutfinal2.py (L1305), evolutfini3 (L1133), evoluut.py (L730)
+    Mission : Extrait le nom de commande d'une erreur.
+    Statut  : Opérationnel
+    Appels  : extraire_commande_du_contexte, group, search
+--- Version 2 : evolutfinal2.py (L3595)
+    Mission : Extrait le nom de commande d'une erreur.
+    Statut  : Opérationnel
+    Appels  : extraire_commande_du_contexte_ci, group, search
+
+------------------------------------------------------------
+
+[FONCTION] : extraire_connaissances_avancees
+Variantes de noms : extraire_connaissances_avancees_web
+--- Version 1 : evolutfinal2.py (L1093), evolutfini3 (L917)
+    Mission : Extraction avancée de connaissances techniques en utilisant des patterns et Jinja2.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : calculer_confiance_extraction, est_element_valide, extraire_connaissances_avancees, findall, items
+--- Version 2 : evoluut.py (L525)
+    Mission : Extraction avancée de connaissances techniques en utilisant des patterns et Jinja2.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : calculer_confiance_extraction, est_element_valide, extraire_connaissances_avancees, findall, items
+--- Version 3 : evolutfinal2.py (L9592)
+    Mission : Extraction avancÃ©e de connaissances techniques en utilisant des patterns et Jinja2.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : calculer_confiance_extraction_web, est_element_valide, extraire_connaissances_avancees_web, findall, items
+
+------------------------------------------------------------
+
+[FONCTION] : extraire_fichier_du_contexte
+Variantes de noms : extraire_fichier_du_contexte_ci
+--- Version 1 : evolutfinal2.py (L1279), evolutfini3 (L1107), evoluut.py (L704)
+    Mission : Extrait le nom du fichier d'une erreur.
+    Statut  : Opérationnel
+    Appels  : Path, exists, extraire_fichier_du_contexte, group, is_dir, iterdir, lower, ratio, search
+--- Version 2 : evolutfinal2.py (L3568)
+    Mission : Extrait le nom du fichier d'une erreur.
+    Statut  : Opérationnel
+    Appels  : Path, exists, extraire_fichier_du_contexte_ci, group, is_dir, iterdir, lower, ratio, search
+
+------------------------------------------------------------
+
+[FONCTION] : extraire_solutions_du_log
+Variantes de noms : extraire_solutions_du_log_ci
+--- Version 1 : evolutfinal2.py (L1397), evolutfini3 (L1225), evoluut.py (L822)
+    Mission : Extrait les solutions spécifiques d'un log.
+    Statut  : Opérationnel
+    Appels  : extraire_solutions_du_log
+--- Version 2 : evolutfinal2.py (L3708)
+    Mission : Extrait les solutions spÃ©cifiques d'un log.
+    Statut  : Opérationnel
+    Appels  : extraire_solutions_du_log_ci
+
+------------------------------------------------------------
+
+[FONCTION] : generate_alternative_commands
+--- Version 1 : evolutfinal2.py (L3070), evolutfini3 (L2994)
+    Mission : Génère des commandes alternatives pour contourner les permissions en utilisant Jinja2 et des choix pondérés.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : DataFrame, RandomForestClassifier, Template, argmax, array, basename, choices, fit, generate_alternative_commands, getsize, insert, pop, predict_proba, render
+--- Version 2 : evoluut.py (L3320)
+    Mission : Génère des commandes alternatives pour contourner les permissions en utilisant Jinja2 et des choix pondérés.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : Template, basename, choices, generate_alternative_commands, getsize, render
+
+------------------------------------------------------------
+
+[FONCTION] : generate_file_search_alternatives
+Variantes de noms : generate_file_search_alternatives_ci
+--- Version 1 : evolutfinal2.py (L1332), evolutfini3 (L1160), evoluut.py (L757)
+    Mission : Génère des alternatives pour fichiers introuvables.
+    Statut  : Opérationnel
+    Appels  : generate_file_search_alternatives, generateur_commandes_autonome
+--- Version 2 : evolutfinal2.py (L3635)
+    Mission : GÃ©nÃ¨re des alternatives pour fichiers introuvables.
+    Statut  : Opérationnel
+    Appels  : generate_file_search_alternatives_ci, generateur_commandes_autonome_ci
+
+------------------------------------------------------------
+
+[FONCTION] : generate_permission_alternatives
+Variantes de noms : generate_permission_alternatives_ci
+--- Version 1 : evolutfinal2.py (L1327), evolutfini3 (L1155), evoluut.py (L752)
+    Mission : Génère des alternatives pour les permissions.
+    Statut  : Opérationnel
+    Appels  : generate_permission_alternatives, generateur_commandes_autonome
+--- Version 2 : evolutfinal2.py (L3629)
+    Mission : GÃ©nÃ¨re des alternatives pour les permissions.
+    Statut  : Opérationnel
+    Appels  : generate_permission_alternatives_ci, generateur_commandes_autonome_ci
+
+------------------------------------------------------------
+
+[FONCTION] : generate_self_improving_code
+--- Détails : evolutfinal2.py (L7962), evolutfini3 (L7110), evoluut.py (L8212)
+    Mission : Génère du code auto-améliorant basé sur l'analyse des performances.
+    Statut  : Opérationnel
+    Appels  : extract_successful_patterns_from_archive, generate_self_improving_code, lower
+
+------------------------------------------------------------
+
+[FONCTION] : generate_timeout_alternatives
+Variantes de noms : generate_timeout_alternatives_ci
+--- Version 1 : evolutfinal2.py (L1342), evolutfini3 (L1170), evoluut.py (L767)
+    Mission : Génère des alternatives pour timeouts.
+    Statut  : Opérationnel
+    Appels  : generate_timeout_alternatives
+--- Version 2 : evolutfinal2.py (L3647)
+    Mission : GÃ©nÃ¨re des alternatives pour timeouts.
+    Statut  : Opérationnel
+    Appels  : generate_timeout_alternatives_ci
+
+------------------------------------------------------------
+
+[FONCTION] : generate_tool_alternatives
+Variantes de noms : generate_tool_alternatives_ci
+--- Version 1 : evolutfinal2.py (L1337), evolutfini3 (L1165), evoluut.py (L762)
+    Mission : Génère des alternatives pour commandes introuvables.
+    Statut  : Opérationnel
+    Appels  : generate_tool_alternatives, generateur_commandes_autonome
+--- Version 2 : evolutfinal2.py (L3641)
+    Mission : GÃ©nÃ¨re des alternatives pour commandes introuvables.
+    Statut  : Opérationnel
+    Appels  : generate_tool_alternatives_ci, generateur_commandes_autonome_ci
+
+------------------------------------------------------------
+
+[FONCTION] : generateur_commande_creative
+--- Détails : evolutfinal2.py (L5140), evolutfini3 (L4665), evoluut.py (L5107)
+    Mission : Génère des commandes créatives basées sur les patterns et la sémantique.
+    Statut  : Opérationnel
+    Appels  : choice, generateur_commande_creative, query_graph
+
+------------------------------------------------------------
+
+[FONCTION] : generateur_commandes_autonome
+Variantes de noms : generateur_commandes_autonome_ci
+--- Version 1 : evolutfinal2.py (L1224)
+    Mission : Génère des commandes intelligentes basées sur le contexte et le problème.
+    Statut  : Opérationnel
+    Appels  : Path, Template, combinations, extend, extraire_commande_du_contexte, extraire_fichier_du_contexte, generateur_commandes_autonome, lower, render, run
+--- Version 2 : evolutfini3 (L1048)
+    Mission : Génère des commandes intelligentes basées sur le contexte et le problème.
+    Statut  : Opérationnel
+    Appels  : Path, Template, combinations, extend, extraire_commande_du_contexte, extraire_fichier_du_contexte, generateur_commandes_autonome, generer_essais_hybrides, lower, render, run
+--- Version 3 : evoluut.py (L656)
+    Mission : Génère des commandes intelligentes basées sur le contexte et le problème.
+    Statut  : Opérationnel
+    Appels  : Path, Template, extend, extraire_commande_du_contexte, extraire_fichier_du_contexte, generateur_commandes_autonome, lower, render, run
+--- Version 4 : evolutfinal2.py (L3512)
+    Mission : GÃ©nÃ¨re des commandes intelligentes basÃ©es sur le contexte et le problÃ¨me.
+    Statut  : Opérationnel
+    Appels  : Path, Template, combinations, extend, extraire_commande_du_contexte_ci, extraire_fichier_du_contexte_ci, generateur_commandes_autonome_ci, lower, render, run
+
+------------------------------------------------------------
+
+[FONCTION] : generation_creative_contrainte
+--- Détails : evolutfinal2.py (L4612), evolutfini3 (L4137), evoluut.py (L4579)
+    Mission : Génère des défis créatifs sous contrainte.
+    Statut  : Opérationnel
+    Appels  : choice, generation_creative_contrainte
+
+------------------------------------------------------------
+
+[FONCTION] : generer_capacite_utile
+--- Détails : evolutfinal2.py (L4695), evolutfini3 (L4220), evoluut.py (L4662)
+    Mission : Génère des capacités avec une vraie valeur ajoutée.
+    Statut  : Opérationnel
+    Appels  : generer_capacite_utile
+
+------------------------------------------------------------
+
+[FONCTION] : generer_code_basique
+--- Détails : evolutfinal2.py (L8260), evolutfini3 (L7408), evoluut.py (L8520)
+    Mission : Génère du code basique mais efficace avec le décorateur et repr(), formaté avec Black.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : generer_code_basique, repr
+
+------------------------------------------------------------
+
+[FONCTION] : generer_code_evolutif
+--- Version 1 : evolutfinal2.py (L8174), evolutfini3 (L7322)
+    Mission : Génère du code intelligent qui APPREND et S'ADAPTE, formaté avec Black et Isort.
+    Statut  : Opérationnel
+    Outils  : black, isort
+    Appels  : generer_code_evolutif, repr
+--- Version 2 : evoluut.py (L8431)
+    Mission : Génère du code intelligent qui APPREND et S'ADAPTE, formaté avec Black et Isort.
+    Statut  : Opérationnel
+    Outils  : black, isort
+    Appels  : generer_code_evolutif, repr
+
+------------------------------------------------------------
+
+[FONCTION] : generer_commande_hybride
+--- Version 1 : evolutfinal2.py (L8129)
+    Mission : Crée des commandes HYBRIDES imprévisibles mais utiles en utilisant des templates Jinja2.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : choice, generer_commande_hybride
+--- Version 2 : evolutfini3 (L7277), evoluut.py (L8386)
+    Mission : Crée des commandes HYBRIDES imprévisibles mais utiles en utilisant des templates Jinja2.
+    Statut  : Opérationnel
+    Outils  : jinja2
+    Appels  : choice, generer_commande_hybride
+
+------------------------------------------------------------
+
+[FONCTION] : generer_nom_fonction_imprevisible
+--- Détails : evolutfinal2.py (L8155), evolutfini3 (L7303), evoluut.py (L8412)
+    Mission : Génère des noms de fonctions cryptiques mais logiques en utilisant des tokens sécurisés et UUIDs.
+    Statut  : Opérationnel
+    Appels  : choice, generer_nom_fonction_imprevisible, token_hex, uuid4
+
+------------------------------------------------------------
+
+[FONCTION] : generer_rapport_curiosite
+--- Version 1 : evolutfinal2.py (L5008), evolutfini3 (L4533)
+    Mission : Génère un rapport des découvertes curieuses avec Pandas et Matplotlib.
+    Statut  : Opérationnel
+    Outils  : matplotlib, pandas
+    Appels  : DataFrame, barplot, figure, generer_rapport_curiosite, get, items, markdown, mkdir, readlines, savefig, tight_layout, title, xlabel, xticks, ylabel
+--- Version 2 : evoluut.py (L4975)
+    Mission : Génère un rapport des découvertes curieuses avec Pandas et Matplotlib.
+    Statut  : Opérationnel
+    Outils  : matplotlib, pandas
+    Appels  : DataFrame, barplot, figure, generer_rapport_curiosite, get, items, markdown, mkdir, readlines, savefig, tight_layout, title, xlabel, xticks, ylabel
+
+------------------------------------------------------------
+
+[FONCTION] : generer_rapport_evolution
+--- Détails : evolutfinal2.py (L4810), evolutfini3 (L4335), evoluut.py (L4777)
+    Mission : Génère un rapport pour 'partager' ses découvertes.
+    Statut  : Opérationnel
+    Appels  : Path, analyser_patterns_reussite, count, exists, generer_rapport_evolution, joinpath, markdown, mkdir, read_text, readlines
+
+------------------------------------------------------------
+
+[FONCTION] : get_alternatives_apprises
+Variantes de noms : get_alternatives_apprises_ci
+--- Version 1 : evolutfinal2.py (L1367), evolutfini3 (L1195), evoluut.py (L792)
+    Mission : Récupère les alternatives apprises.
+    Statut  : Opérationnel
+    Appels  : extraire_solutions_du_log, get_alternatives_apprises
+--- Version 2 : evolutfinal2.py (L3675)
+    Mission : RÃ©cupÃ¨re les alternatives apprises.
+    Statut  : Opérationnel
+    Appels  : extraire_solutions_du_log_ci, get_alternatives_apprises_ci
+
+------------------------------------------------------------
+
+[FONCTION] : get_lang_path
+--- Détails : evolutfini3 (L5842)
+    Mission : Retourne le chemin du dossier dédié à un langage.
+    Statut  : Opérationnel
+    Appels  : get_lang_path, lower
+
+------------------------------------------------------------
+
+[FONCTION] : inserer_code_strategique
+--- Détails : evolutfinal2.py (L8369), evolutfini3 (L7517), evoluut.py (L8640)
+    Mission : Insertion avec backup et validation en utilisant SelfModifierV2.
+    Statut  : Opérationnel
+    Appels  : add_function, group, inserer_code_strategique, search
+
+------------------------------------------------------------
+
+[FONCTION] : integration_evolutive_totale
+--- Détails : evolutfinal2.py (L4631), evolutfini3 (L4156), evoluut.py (L4598)
+    Mission : Intégration évolutive totale.
+    Statut  : Opérationnel
+    Appels  : assemblage_cognitif, boucle_temporelle_cognitive, conscience_reseau_adaptive, generation_creative_contrainte, integration_evolutive_totale, lanceur_agents_virtuels, meta_apprentissage, prediction_temporelle, quantum_leap_evolution, reseau_neuronal_emergent
+
+------------------------------------------------------------
+
+[FONCTION] : integrer_connaissances_web
+--- Détails : evolutfinal2.py (L9541)
+    Mission : IntÃ¨gre de nouvelles connaissances avec analyse contextuelle
+    Statut  : Opérationnel
+    Appels  : CommandeApprise, DataFrame, KMeansLocal, SourceFiable, add_knowledge, analyser_type_commande, array, calculer_complexite, evaluer_risque, fillna, fit_predict, get, integrer_connaissances_web, is_safe_to_add, items, mean, sauvegarder_memoire, to_dict, tolist, value_counts
+
+------------------------------------------------------------
+
+[FONCTION] : is_new_dangerous_command
+--- Détails : evolutfinal2.py (L8443), evolutfini3 (L7591), evoluut.py (L8736)
+    Mission : Vérifie si c'est une nouvelle commande dangereuse.
+    Statut  : Opérationnel
+    Appels  : is_new_dangerous_command
+
+------------------------------------------------------------
+
+[FONCTION] : is_safe_to_add
+--- Détails : evolutfinal2.py (L655)
+    Mission : Vérifie si une commande web est sûre en l'exécutant dans un bac à sable prlimit.
+    Statut  : Opérationnel
+    Appels  : is_safe_to_add, run
+
+------------------------------------------------------------
+
+[FONCTION] : is_valuable_command
+Variantes de noms : is_valuable_command_ci
+--- Version 1 : evolutfinal2.py (L1215), evolutfini3 (L1039), evoluut.py (L647)
+    Mission : Vérifie si une commande est utile à réutiliser.
+    Statut  : Opérationnel
+    Appels  : is_valuable_command
+--- Version 2 : evolutfinal2.py (L3619)
+    Mission : VÃ©rifie si une commande est utile Ã  rÃ©utiliser.
+    Statut  : Opérationnel
+    Appels  : is_valuable_command_ci
+
+------------------------------------------------------------
+
+[FONCTION] : is_within_lab
+--- Détails : evolutfini3 (L3199)
+    Mission : Vérifie si un chemin est à l'intérieur du Super_Lab.
+    Statut  : Opérationnel
+    Appels  : Path, is_within_lab, resolve, startswith
+
+------------------------------------------------------------
+
+[FONCTION] : is_write_command
+--- Détails : evolutfini3 (L3208)
+    Mission : Détecte les commandes de modification ou suppression.
+    Statut  : Opérationnel
+    Appels  : is_write_command, search
+
+------------------------------------------------------------
+
+[FONCTION] : lancer_agent_specialise
+--- Détails : evolutfinal2.py (L5166), evolutfini3 (L4691), evoluut.py (L5133)
+    Mission : Lance un agent virtuel spécialisé dans un domaine en utilisant le multiprocessing.
+    Statut  : Opérationnel
+    Appels  : Process, Queue, lancer_agent_specialise, start
+
+------------------------------------------------------------
+
+[FONCTION] : lanceur_agents_virtuels
+--- Détails : evolutfinal2.py (L4514), evolutfini3 (L4038), evoluut.py (L4479)
+    Mission : Lanceur d'agents virtuels spécialisés en utilisant le multiprocessing.
+    Statut  : Opérationnel
+    Appels  : Process, Queue, items, lanceur_agents_virtuels, start, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : learn_from_command_result
+--- Détails : evolutfinal2.py (L783), evolutfini3 (L607), evoluut.py (L203)
+    Statut  : Opérationnel
+    Appels  : add_observation, add_to_winning_patterns, ecrire_ligne_unique, enregistrer_execution_commande, learn_from_command_result, obtenir_contexte_systeme
+
+------------------------------------------------------------
+
+[FONCTION] : learn_from_successful_alternatives
+--- Version 1 : evolutfinal2.py (L3120), evolutfini3 (L3044)
+    Mission : Apprend des alternatives qui marchent, en évitant les doublons et en mettant à jour les statistiques.
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : COUNT, UNIQUE, commit, connect, cursor, ecrire_ligne_unique, execute, fetchone, learn_from_successful_alternatives, read_sql
+--- Version 2 : evoluut.py (L3350)
+    Mission : Apprend des alternatives qui marchent, en évitant les doublons et en mettant à jour les statistiques.
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : UNIQUE, commit, connect, cursor, ecrire_ligne_unique, execute, learn_from_successful_alternatives
+
+------------------------------------------------------------
+
+[FONCTION] : learn_pattern
+--- Détails : evolutfinal2.py (L4181), evolutfini3 (L3705), evoluut.py (L4146)
+    Mission : Apprentissage de patterns.
+    Statut  : Opérationnel
+    Appels  : learn_pattern
+
+------------------------------------------------------------
+
+[VARIABLE] : learning_thread
+Variantes de noms : web_learning_thread
+--- Version 1 : evolutfinal2.py (L49), evolutfini3 (L93), evoluut.py (L80)
+    Statut  : Opérationnel
+--- Version 2 : evolutfinal2.py (L50), evoluut.py (L81)
+    Statut  : Opérationnel
+--- Version 3 : evolutfini3 (L94)
+    Statut  : Opérationnel
+
+------------------------------------------------------------
+
+[FONCTION] : learning_trigger
+--- Version 1 : evolutfinal2.py (L8427), evolutfini3 (L7575)
+    Mission : Déclenche l'apprentissage à des moments intelligents.
+    Statut  : Opérationnel
+    Appels  : get, getsize, learning_trigger, random
+--- Version 2 : evoluut.py (L8706)
+    Mission : Déclenche l'apprentissage à des moments intelligents en utilisant des statistiques.
+    Statut  : Simulé / Test
+    Outils  : statsmodels
+    Appels  : ARIMA, Series, date_range, fit, get, getsize, learning_trigger, predict, rand, random, to_datetime
+
+------------------------------------------------------------
+
+[FONCTION] : load_config
+--- Détails : evolutfinal2.py (L4063), evolutfini3 (L3587), evoluut.py (L4034)
+    Mission : Chargement configuration
+    Statut  : Opérationnel
+    Appels  : exists, load_config, startswith
+
+------------------------------------------------------------
+
+[FONCTION] : log
+--- Version 1 : evolutfinal2.py (L383), evolutfini3 (L267)
+    Mission : Journalisation sécurisée et structurée avec Rich et Structlog
+    Statut  : Opérationnel
+    Outils  : json, orjson
+    Appels  : basename, currentframe, decode, dumps, format_exc, get, getLogger, isoformat, log_method, lower, upper
+--- Version 2 : evoluut.py (L2345)
+    Mission : Journalisation sécurisée et structurée avec Rich et Structlog
+    Statut  : Opérationnel
+    Appels  : format_exc, get, getLogger, log_method, lower, upper
+
+------------------------------------------------------------
+
+[VARIABLE] : log_handler
+--- Détails : evolutfinal2.py (L301), evolutfini3 (L185), evoluut.py (L2263)
+    Statut  : Opérationnel
+    Appels  : RotatingFileHandler
+
+------------------------------------------------------------
+
+[VARIABLE] : logging
+--- Détails : evolutfinal2.py (L303), evolutfini3 (L187), evoluut.py (L2265)
+    Statut  : Opérationnel
+    Appels  : basicConfig
+
+------------------------------------------------------------
+
+[FONCTION] : main
+--- Version 1 : evolutfinal2.py (L9829), evoluut.py (L10307)
+    Mission : Boucle principale COMPLÈTE avec tous les systèmes.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : SurveillanceAutomatique, Thread, archive_automatique, auto_analyse_quotidienne, auto_detect_dangerous_commands, auto_repair, changer_etat_esprit, conseiller_sans_imposer, creer_defi_auto, cycle_autonomie, detecter_specialisation, distiller_connaissance_globale, enable, execute_commande_securisee, execute_self_improvement, executer_commandes, expansion_autonome, explorer_librement, generate_self_improving_code, generateur_commande_creative
+--- Version 2 : evolutfini3 (L8948)
+    Mission : Boucle principale COMPLÈTE avec tous les systèmes.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : SurveillanceAutomatique, Thread, archive_automatique, auto_analyse_quotidienne, auto_detect_dangerous_commands, auto_repair, changer_etat_esprit, conseiller_sans_imposer, creer_defi_auto, cycle_autonomie, detecter_specialisation, distiller_connaissance_globale, enable, execute_commande_securisee, execute_self_improvement, executer_commandes, expansion_autonome, explorer_librement, generate_self_improving_code, generateur_commande_creative
+
+------------------------------------------------------------
+
+[VARIABLE] : memoire
+Variantes de noms : memoire_apprentissage_avance, memoire_cognitive
+--- Version 1 : evolutfinal2.py (L6680), evolutfini3 (L5813), evoluut.py (L6616)
+    Statut  : Opérationnel
+    Appels  : MemoirePersistante
+--- Version 2 : evolutfinal2.py (L1091), evolutfini3 (L915), evoluut.py (L523)
+    Statut  : Opérationnel
+    Appels  : MemoireApprentissageAvance
+--- Version 3 : evolutfinal2.py (L2888), evolutfini3 (L2827), evoluut.py (L2981)
+    Statut  : Opérationnel
+    Appels  : MemoireCognitive
+
+------------------------------------------------------------
+
+[FONCTION] : meta_apprentissage
+--- Détails : evolutfinal2.py (L5116), evolutfini3 (L4641), evoluut.py (L5083)
+    Mission : Apprend comment il apprend le mieux en analysant l'efficacité des stratégies.
+    Statut  : Opérationnel
+    Appels  : count, meta_apprentissage, update_comm, values
+
+------------------------------------------------------------
+
+[FONCTION] : mettre_a_disposition_outils
+--- Détails : evolutfinal2.py (L4733), evolutfini3 (L4258), evoluut.py (L4700)
+    Mission : Met les outils à disposition sans les imposer.
+    Statut  : Opérationnel
+    Appels  : analyser_patterns_reussite, conseiller_sans_imposer, generer_capacite_utile, mettre_a_disposition_outils, rotation_capacites_intelligente
+
+------------------------------------------------------------
+
+[FONCTION] : migrate_python_logs
+--- Détails : evolutfini3 (L5846)
+    Mission : Migre les logs Python de la racine vers le dossier /python/.
+    Statut  : Opérationnel
+    Outils  : json
+    Appels  : exists, migrate_python_logs, mkdir, rename
+
+------------------------------------------------------------
+
+[FONCTION] : mode_curiosite_avance
+--- Version 1 : evolutfinal2.py (L4935)
+    Mission : Curiosité intelligente avec apprentissage des découvertes en utilisant NER et mots-clés.
+    Statut  : Opérationnel
+    Outils  : spacy
+    Appels  : add_knowledge_tasks, choice, execute_commande_securisee, keys, load, mode_curiosite_avance, nlp, query_graph, update_comm
+--- Version 2 : evolutfini3 (L4460)
+    Mission : Curiosité intelligente avec apprentissage des découvertes en utilisant NER et mots-clés.
+    Statut  : Opérationnel
+    Outils  : spacy
+    Appels  : add_knowledge, choice, execute_commande_securisee, keys, load, mode_curiosite_avance, nlp, query_graph, update_comm
+--- Version 3 : evoluut.py (L4902)
+    Mission : Curiosité intelligente avec apprentissage des découvertes en utilisant NER et mots-clés.
+    Statut  : Opérationnel
+    Outils  : spacy
+    Appels  : add_knowledge, choice, execute_commande_securisee, keys, load, mode_curiosite_avance, nlp, query_graph, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : mode_curiosite_pure
+--- Détails : evolutfinal2.py (L5469), evolutfini3 (L4994), evoluut.py (L5432)
+    Mission : Mode de curiosité simple pour l'exploration.
+    Statut  : Opérationnel
+    Appels  : archive_automatique, explorer_librement, mode_curiosite_pure
+
+------------------------------------------------------------
+
+[FONCTION] : mode_experimentation
+--- Version 1 : evolutfinal2.py (L4779)
+    Mission : Mode risque calculé pour découvrir de nouvelles approches.
+    Statut  : Opérationnel
+    Appels  : choice, design_experiment, execute_commande_securisee, listdir, lower, mode_experimentation, random, record_result_tasks
+--- Version 2 : evolutfini3 (L4304)
+    Mission : Mode risque calculé pour découvrir de nouvelles approches.
+    Statut  : Opérationnel
+    Appels  : choice, design_experiment, execute_commande_securisee, listdir, lower, mode_experimentation, random, record_result
+--- Version 3 : evoluut.py (L4746)
+    Mission : Mode risque calculé pour découvrir de nouvelles approches.
+    Statut  : Opérationnel
+    Appels  : choice, design_experiment, execute_commande_securisee, listdir, lower, mode_experimentation, random, record_result
+
+------------------------------------------------------------
+
+[FONCTION] : muter_strategies
+--- Détails : evolutfinal2.py (L4304), evolutfini3 (L3828), evoluut.py (L4269)
+    Mission : Mutation stratégique.
+    Statut  : Opérationnel
+    Appels  : muter_strategies, randint
+
+------------------------------------------------------------
+
+[FONCTION] : nettoyer_dossier_web
+--- Détails : evolutfinal2.py (L5350), evolutfini3 (L4875), evoluut.py (L5317)
+    Mission : Nettoie un dossier web complet.
+    Statut  : Opérationnel
+    Appels  : add, exists, glob, nettoyer_dossier_web
+
+------------------------------------------------------------
+
+[FONCTION] : nettoyer_doublons_intelligent
+--- Détails : evolutfinal2.py (L5255), evolutfini3 (L4780), evoluut.py (L5222)
+    Mission : Nettoie tous les fichiers de logs des doublons en gardant le contexte.
+    Statut  : Opérationnel
+    Appels  : exists, nettoyer_doublons_intelligent, nettoyer_fichier_specifique, stat, update_comm, values
+
+------------------------------------------------------------
+
+[FONCTION] : nettoyer_fichier_specifique
+--- Détails : evolutfinal2.py (L5287), evolutfini3 (L4812), evoluut.py (L5254)
+    Mission : Nettoie un fichier spécifique selon son type.
+    Statut  : Opérationnel
+    Appels  : add, exists, lower, nettoyer_fichier_specifique, readlines, writelines
+
+------------------------------------------------------------
+
+[FONCTION] : nettoyer_fichiers_anciens
+--- Détails : evolutfinal2.py (L5435), evolutfini3 (L4960), evoluut.py (L5402)
+    Mission : Supprime les fichiers plus anciens que `days` jours dans un répertoire.
+    Statut  : Opérationnel
+    Appels  : getmtime, isfile, listdir, nettoyer_fichiers_anciens, remove
+
+------------------------------------------------------------
+
+[FONCTION] : nettoyeur_rapports_optimise
+--- Détails : evolutfinal2.py (L5378), evolutfini3 (L4903), evoluut.py (L5345)
+    Mission : Nettoie et optimise les rapports et archives.
+    Statut  : Opérationnel
+    Appels  : consolider_archives, exists, nettoyer_fichiers_anciens, nettoyeur_rapports_optimise, stat
+
+------------------------------------------------------------
+
+[FONCTION] : nettoyeur_web_complet
+--- Détails : evolutfinal2.py (L5331), evolutfini3 (L4856), evoluut.py (L5298)
+    Mission : Nettoie spécifiquement les fichiers web et connaissances.
+    Statut  : Opérationnel
+    Appels  : exists, is_dir, nettoyer_dossier_web, nettoyer_fichier_specifique, nettoyer_fichiers_anciens, nettoyeur_web_complet
+
+------------------------------------------------------------
+
+[FONCTION] : network_monitoring
+--- Détails : evolutfinal2.py (L4187), evolutfini3 (L3711), evoluut.py (L4152)
+    Mission : Surveillance réseau (Mode Historique Unique).
+    Statut  : Opérationnel
+    Appels  : archive_automatique, execute_commande_securisee, network_monitoring
+
+------------------------------------------------------------
+
+[VARIABLE] : nlp
+--- Détails : evolutfinal2.py (L8687), evolutfini3 (L7973), evoluut.py (L9180)
+    Statut  : Opérationnel
+    Outils  : spacy
+    Appels  : load
+
+------------------------------------------------------------
+
+[VARIABLE] : nltk
+--- Détails : evolutfinal2.py (L8688), evolutfini3 (L7974), evoluut.py (L9181)
+    Statut  : Opérationnel
+    Outils  : nltk
+    Appels  : download, retry, stop_after_attempt, wait_exponential
+
+------------------------------------------------------------
+
+[FONCTION] : optimiser_memoire_auto
+--- Version 1 : evolutfinal2.py (L4700), evolutfini3 (L4225)
+    Mission : ,
+    Statut  : Opérationnel
+    Appels  : execute_commande_securisee, optimiser_memoire_auto
+--- Version 2 : evoluut.py (L4667)
+    Mission : ,
+    Statut  : Opérationnel
+    Appels  : execute_commande_securisee, optimiser_memoire_auto
+
+------------------------------------------------------------
+
+[FONCTION] : parallel_polyglot_execution
+--- Détails : evolutfini3 (L3150)
+    Mission : Exécution en parallèle de 70+ tentatives dans différents langages.
+    Statut  : Opérationnel
+    Appels  : ThreadPoolExecutor, est_echec, generer_essais_hybrides, keys, learn_polyglot, lower, parallel_polyglot_execution, result, submit
+
+------------------------------------------------------------
+
+[FONCTION] : penetration_test
+--- Détails : evolutfinal2.py (L4208), evolutfini3 (L3732), evoluut.py (L4173)
+    Mission : Test pénétration automatique (Mode Historique Unique).
+    Statut  : Opérationnel
+    Appels  : access, archive_automatique, execute_commande_securisee, learn_pattern, penetration_test, splitlines, update_comm
+
+------------------------------------------------------------
+
+[VARIABLE] : polyglot_engine
+--- Détails : evolutfini3 (L1387)
+    Statut  : Opérationnel
+    Appels  : UniversalPolyglotEngine
+
+------------------------------------------------------------
+
+[FONCTION] : predicteur_evolution
+--- Détails : evolutfinal2.py (L5203), evolutfini3 (L4728), evoluut.py (L5170)
+    Mission : Prédit les prochaines étapes d'évolution en analysant la courbe d'apprentissage.
+    Statut  : Opérationnel
+    Appels  : predicteur_evolution, readlines
+
+------------------------------------------------------------
+
+[FONCTION] : prediction_temporelle
+--- Version 1 : evolutfinal2.py (L4565)
+    Mission : Prédiction temporelle et adaptation circadienne.
+    Statut  : Opérationnel
+    Appels  : execute_commande_securisee, prediction_temporelle
+--- Version 2 : evolutfini3 (L4090)
+    Mission : Prédiction temporelle et adaptation circadienne.
+    Statut  : Opérationnel
+    Appels  : execute_commande_securisee, prediction_temporelle
+--- Version 3 : evoluut.py (L4531)
+    Mission : Prédiction temporelle et adaptation circadienne.
+    Statut  : Opérationnel
+    Appels  : execute_commande_securisee, prediction_temporelle
+
+------------------------------------------------------------
+
+[FONCTION] : prioriser_directions_emergentes
+--- Détails : evolutfinal2.py (L4286), evolutfini3 (L3810), evoluut.py (L4251)
+    Mission : Priorisation directions émergentes.
+    Statut  : Opérationnel
+    Appels  : count, prioriser_directions_emergentes, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : process_content_terminator
+--- Version 1 : evolutfinal2.py (L8785), evolutfini3 (L8071)
+    Mission : ðŸ§¹ NETTOYAGE AGGRESSIF DU CONTENU
+    Statut  : Simulé / Test
+    Outils  : nltk, spacy
+    Appels  : BeautifulSoup, Dictionary, KeywordExtractor, LdaModel, Reader, TextBlob, compile, decompose, detect, doc2bow, extract, extract_keywords, find_all, get_text, image_to_string, lower, match, nlp, print_topics, process_content_terminator
+--- Version 2 : evoluut.py (L9278)
+    Mission : 🧹 NETTOYAGE AGGRESSIF DU CONTENU
+    Statut  : Simulé / Test
+    Outils  : nltk, spacy
+    Appels  : BeautifulSoup, Dictionary, KeywordExtractor, LdaModel, Reader, TextBlob, compile, decompose, detect, doc2bow, extract, extract_keywords, find_all, get_text, image_to_string, lower, match, nlp, print_topics, process_content_terminator
+
+------------------------------------------------------------
+
+[FONCTION] : purger_capacites_inefficaces
+--- Version 1 : evolutfinal2.py (L3769)
+    Mission : Analyse la mémoire cognitive et supprime les fonctions
+    Statut  : Opérationnel
+    Appels  : charger, execv, items, purger_capacites_inefficaces, remove_function_pruning, sauvegarder, sauvegarder_etat, update_comm
+--- Version 2 : evolutfini3 (L3481), evoluut.py (L3789)
+    Mission : Analyse la mémoire cognitive et supprime les fonctions
+    Statut  : Opérationnel
+    Appels  : charger, execv, items, purger_capacites_inefficaces, remove_function, sauvegarder, sauvegarder_etat, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : quantum_leap_evolution
+--- Détails : evolutfinal2.py (L4467), evolutfini3 (L3991), evoluut.py (L4432)
+    Mission : Quantum leap evolution.
+    Statut  : Opérationnel
+    Appels  : exists, quantum_leap_evolution, touch, unlink, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : real_time_learning
+--- Détails : evolutfinal2.py (L8409), evolutfini3 (L7557), evoluut.py (L8688)
+    Mission : Démarre un thread d'apprentissage en temps réel.
+    Statut  : Opérationnel
+    Appels  : Thread, real_time_learning, start
+
+------------------------------------------------------------
+
+[FONCTION] : recherche_predictive
+--- Détails : evolutfinal2.py (L4383), evolutfini3 (L3907), evoluut.py (L4348)
+    Mission : Recherche prédictive en utilisant des modèles de séries temporelles.
+    Statut  : Opérationnel
+    Appels  : ApprentissageContextuel, count, expansion_autonome, exploration_web_emergente, obtenir_contexte_systeme, predict_outcome, readlines, recherche_predictive, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : record_result_tasks
+--- Détails : evolutfinal2.py (L5487)
+    Statut  : Opérationnel
+    Outils  : json, orjson, sqlite3
+    Appels  : commit, connect, cursor, dumps, execute, record_result_tasks
+
+------------------------------------------------------------
+
+[FONCTION] : reinforcement_learning
+--- Version 1 : evolutfinal2.py (L8393), evolutfini3 (L7541)
+    Mission : Apprend de ce qui marche.
+    Statut  : Opérationnel
+    Appels  : findall, reinforcement_learning
+--- Version 2 : evoluut.py (L8664)
+    Mission : Apprend de ce qui marche en utilisant des modèles de RL.
+    Statut  : Simulé / Test
+    Appels  : PPO, findall, learn, make, reinforcement_learning
+
+------------------------------------------------------------
+
+[FONCTION] : remove_function_pruning
+--- Détails : evolutfinal2.py (L3814)
+    Statut  : Implémentation partielle
+    Appels  : _save_code, _validate_and_format_code, parse, read_text, remove_function_pruning, splitlines
+
+------------------------------------------------------------
+
+[FONCTION] : remove_function_tasks
+--- Détails : evolutfinal2.py (L5505)
+    Statut  : Implémentation partielle
+    Appels  : _save_code, _validate_and_format_code, parse, read_text, remove_function_tasks, splitlines
+
+------------------------------------------------------------
+
+[FONCTION] : remove_inefficient_functions
+--- Version 1 : evolutfinal2.py (L8580), evolutfini3 (L7728)
+    Mission : Supprime les fonctions inefficaces.
+    Statut  : Opérationnel
+    Appels  : remove_inefficient_functions
+--- Version 2 : evoluut.py (L8900)
+    Mission : Supprime les fonctions inefficaces (commentées ou avec faible performance) en analysant l'AST.
+    Statut  : Simulé / Test
+    Appels  : findall, random, remove_function, remove_inefficient_functions, run
+
+------------------------------------------------------------
+
+[FONCTION] : reseau_neuronal_emergent
+--- Détails : evolutfinal2.py (L5059), evolutfini3 (L4584), evoluut.py (L5026)
+    Mission : Crée un système de décision basé sur les succès passés en analysant les corrélations de commandes.
+    Statut  : Opérationnel
+    Appels  : DiGraph, add_edge, get, items, lower, readlines, reseau_neuronal_emergent
+
+------------------------------------------------------------
+
+[FONCTION] : retry_intelligent
+--- Version 1 : evolutfinal2.py (L3339)
+    Statut  : Implémentation partielle
+    Outils  : sqlite3
+    Appels  : commit, connect, cursor, est_echec, execute, execute_commande_securisee, generateur_commandes_autonome_ci, obtenir_contexte_systeme, recommend_action, retry_intelligent
+--- Version 2 : evolutfini3 (L3388)
+    Statut  : Implémentation partielle
+    Outils  : sqlite3
+    Appels  : commit, connect, cursor, est_echec, execute, execute_commande_securisee, generateur_commandes_autonome, obtenir_contexte_systeme, recommend_action, retry_intelligent
+--- Version 3 : evoluut.py (L3547)
+    Statut  : Opérationnel
+    Appels  : ApprentissageContextuel, est_echec, execute_commande_securisee, generateur_commandes_autonome, obtenir_contexte_systeme, recommend_action, retry_intelligent
+
+------------------------------------------------------------
+
+[FONCTION] : rotation_capacites_intelligente
+--- Détails : evolutfinal2.py (L4673), evolutfini3 (L4198), evoluut.py (L4640)
+    Mission : Gère intelligemment le cycle de vie des capacités.
+    Statut  : Opérationnel
+    Appels  : Path, count, rotation_capacites_intelligente
+
+------------------------------------------------------------
+
+[FONCTION] : scrape_terminator_ultime
+--- Détails : evolutfinal2.py (L8692), evolutfini3 (L7978), evoluut.py (L9185)
+    Mission : ðŸ¦¾ TERMINATOR v3.0 - Scraper qui contourne TOUT
+    Statut  : Opérationnel
+    Outils  : json, requests
+    Appels  : Session, choice, create_scraper, get, googlebot, process_content_terminator, scrape_terminator_ultime, ultimate_fallback, uniform
+
+------------------------------------------------------------
+
+[FONCTION] : selectionner_commande_innovante
+--- Détails : evolutfinal2.py (L8083), evolutfini3 (L7231), evoluut.py (L8335)
+    Mission : Sélectionne les commandes les plus INNOVANTES et UTILES en utilisant des modèles de prédiction.
+    Statut  : Simulé / Test
+    Appels  : DataFrame, RandomForestRegressor, argmax, array, count, est_commande_strategique, fit, index, lower, predict, selectionner_commande_innovante, sort
+
+------------------------------------------------------------
+
+[VARIABLE] : self_modifier_v2
+--- Détails : evolutfinal2.py (L7908), evolutfini3 (L7056), evoluut.py (L8158)
+    Statut  : Opérationnel
+    Appels  : SelfModifierV2
+
+------------------------------------------------------------
+
+[FONCTION] : self_modify_based_on_learning
+--- Version 1 : evolutfinal2.py (L8543), evolutfini3 (L7691)
+    Mission : Modifie son propre code basé sur ce qu'il apprend.
+    Statut  : Opérationnel
+    Appels  : add_new_capability, count, extract_successful_patterns_from_archive, hash, read_text, remove_inefficient_functions, self_modify_based_on_learning
+--- Version 2 : evoluut.py (L8848)
+    Mission : Modifie son propre code basé sur ce qu'il apprend.
+    Statut  : Simulé / Test
+    Appels  : add_new_capability, count, extract_successful_patterns_from_archive, hash, read_text, remove_inefficient_functions, run, self_modify_based_on_learning
+
+------------------------------------------------------------
+
+[FONCTION] : self_modify_code
+--- Version 1 : evolutfinal2.py (L7912), evolutfini3 (L7060)
+    Mission : Système d'auto-évolution intelligent avec validation forcée et sandbox.
+    Statut  : Opérationnel
+    Appels  : _validate_and_format_code, add_function, analyser_patterns_reussite_avance, extract_successful_patterns_from_archive, generer_code_evolutif, generer_nom_fonction_imprevisible, selectionner_commande_innovante, self_modify_code, signature_deja_integree, test_modification, update_comm
+--- Version 2 : evoluut.py (L8162)
+    Mission : Système d'auto-évolution intelligent qui apprend de ses performances (1 fois par heure max)
+    Statut  : Opérationnel
+    Appels  : add_function, analyser_patterns_reussite_avance, extract_successful_patterns_from_archive, generer_code_basique, generer_code_evolutif, generer_commande_hybride, generer_nom_fonction_imprevisible, random, selectionner_commande_innovante, self_modify_code, signature_deja_integree, test_modification, update_comm
+
+------------------------------------------------------------
+
+[VARIABLE] : sentence_transformer_model
+--- Détails : evolutfinal2.py (L8686), evolutfini3 (L7972), evoluut.py (L9179)
+    Statut  : Opérationnel
+    Outils  : sentence_transformer
+    Appels  : SentenceTransformer
+
+------------------------------------------------------------
+
+[FONCTION] : setup_polyglot_structure
+--- Détails : evolutfini3 (L5824)
+    Mission : Crée l'arborescence de dossiers pour chaque langage dans Super_Lab.
+    Statut  : Opérationnel
+    Outils  : json
+    Appels  : exists, keys, lower, mkdir, setup_polyglot_structure
+
+------------------------------------------------------------
+
+[FONCTION] : signature_deja_integree
+--- Version 1 : evolutfinal2.py (L8280), evolutfini3 (L7428)
+    Mission : Vérifie si une commande avec une "signature" similaire existe déjà.
+    Statut  : Implémentation partielle
+    Appels  : eval, findall, get_signature, search_similar, signature_deja_integree, startswith, tuple
+--- Version 2 : evoluut.py (L8541)
+    Mission : Vérifie si une commande avec une "signature" similaire existe déjà en analysant l'AST et les embeddings sémantiques.
+    Statut  : Opérationnel
+    Appels  : eval, findall, get, get_signature, search_similar, signature_deja_integree, startswith, tuple
+
+------------------------------------------------------------
+
+[FONCTION] : suivi_performance_capacite
+--- Détails : evolutfinal2.py (L2890), evolutfini3 (L2829), evoluut.py (L2983)
+    Mission : Décorateur pour tracer le succès/échec des fonctions auto-générées.
+    Statut  : Opérationnel
+    Appels  : enregistrer_execution_capacite, est_echec, func, suivi_performance_capacite, wrapper, wraps
+
+------------------------------------------------------------
+
+[FONCTION] : surveillance_avancee_auto
+--- Version 1 : evolutfinal2.py (L4707), evolutfini3 (L4232)
+    Mission : ,
+    Statut  : Opérationnel
+    Appels  : network_monitoring, surveillance_avancee_auto
+--- Version 2 : evoluut.py (L4674)
+    Mission : ,
+    Statut  : Opérationnel
+    Appels  : network_monitoring, surveillance_avancee_auto
+
+------------------------------------------------------------
+
+[FONCTION] : synchronisation_emergente
+--- Détails : evolutfinal2.py (L4419), evolutfini3 (L3943), evoluut.py (L4384)
+    Mission : Synchronisation émergente.
+    Statut  : Opérationnel
+    Appels  : synchronisation_emergente
+
+------------------------------------------------------------
+
+[FONCTION] : systeme_progression
+--- Détails : evolutfinal2.py (L5227), evolutfini3 (L4752), evoluut.py (L5194)
+    Mission : Système de niveaux et récompenses basé sur l'exploration.
+    Statut  : Opérationnel
+    Appels  : choice, get, systeme_progression, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : test_auto_modification
+--- Détails : evolutfinal2.py (L8584), evolutfini3 (L7732), evoluut.py (L8937)
+    Mission : Teste l'auto-modification toutes les heures.
+    Statut  : Opérationnel
+    Appels  : test_auto_modification
+
+------------------------------------------------------------
+
+[FONCTION] : tester_nouvelle_fonction
+--- Détails : evolutfinal2.py (L8386), evolutfini3 (L7534), evoluut.py (L8657)
+    Mission : Teste la nouvelle fonction générée en utilisant SelfModifierV2.
+    Statut  : Opérationnel
+    Appels  : test_modification, tester_nouvelle_fonction
+
+------------------------------------------------------------
+
+[VARIABLE] : ua
+--- Détails : evolutfinal2.py (L8685), evolutfini3 (L7971), evoluut.py (L9178)
+    Statut  : Opérationnel
+    Appels  : UserAgent
+
+------------------------------------------------------------
+
+[FONCTION] : ultimate_fallback
+--- Détails : evolutfinal2.py (L8902), evolutfini3 (L8188), evoluut.py (L9401)
+    Mission : ðŸ†˜ SOLUTION EXTRÊME - Quand tout échoue
+    Statut  : Opérationnel
+    Outils  : json, requests
+    Appels  : HTTPConnection, decode, get, getresponse, groups, items, json, lower, process_content_terminator, request, resolve, search, ultimate_fallback, urlparse
+
+------------------------------------------------------------
+
+[FONCTION] : update_blacklist_automatically
+--- Détails : evolutfinal2.py (L8517), evolutfini3 (L7665), evoluut.py (L8817)
+    Mission : Met à jour la blacklist automatiquement.
+    Statut  : Opérationnel
+    Outils  : black
+    Appels  : add_to_blacklist, update_blacklist_automatically
+
+------------------------------------------------------------
+
+[FONCTION] : update_comm
+--- Version 1 : evolutfinal2.py (L409)
+    Mission : Communication sécurisée avec analyse de sentiment et persistance SQLite
+    Statut  : Opérationnel
+    Outils  : shlex, sqlite3
+    Appels  : BashLexer, DataFrame, PythonLexer, TerminalFormatter, TextBlob, commit, connect, cursor, emoji_list, execute, fetchall, group, highlight, mean, mkdir, polarity_scores, rolling, search, update_comm
+--- Version 2 : evolutfini3 (L293)
+    Mission : Communication sécurisée avec analyse de sentiment et persistance SQLite
+    Statut  : Opérationnel
+    Outils  : shlex, sqlite3
+    Appels  : BashLexer, DataFrame, PythonLexer, TerminalFormatter, TextBlob, commit, connect, cursor, emoji_list, execute, fetchall, group, highlight, mean, mkdir, polarity_scores, rolling, search, update_comm
+--- Version 3 : evoluut.py (L2367)
+    Mission : Communication sécurisée avec analyse de sentiment et persistance SQLite
+    Statut  : Opérationnel
+    Outils  : shlex, sqlite3
+    Appels  : BashLexer, PythonLexer, TerminalFormatter, commit, connect, cursor, emoji_list, execute, group, highlight, mkdir, polarity_scores, search, update_comm
+
+------------------------------------------------------------
+
+[FONCTION] : validate_path_guard
+--- Détails : evolutfini3 (L3216)
+    Mission : Applique la règle Path Guard :
+    Statut  : Opérationnel
+    Appels  : _validate_single_command_path, validate_path_guard
+
+------------------------------------------------------------
+
+[VARIABLE] : vector_memory
+--- Détails : evolutfinal2.py (L2778), evolutfini3 (L2717), evoluut.py (L2888)
+    Statut  : Opérationnel
+    Appels  : VectorMemory
+
+------------------------------------------------------------
+
+[FONCTION] : verifier_defis_complets
+--- Détails : evolutfinal2.py (L4901), evolutfini3 (L4426), evoluut.py (L4868)
+    Mission : Vérifie et récompense les défis accomplis.
+    Statut  : Opérationnel
+    Outils  : sqlite3
+    Appels  : commit, connect, cursor, execute, iterrows, lower, read_sql, update_comm, verifier_defis_complets
+
+------------------------------------------------------------
+
+[FONCTION] : web_research
+Variantes de noms : web_research_gemini
+--- Version 1 : evolutfinal2.py (L9025)
+    Mission : Recherche web TACTIQUE AVEC ANTI-DOUBLONS & AUTO-AMÉLIORATION - v6.0 ULTIME
+    Statut  : Opérationnel
+    Outils  : asyncio, httpx, json, playwright
+    Appels  : AnalyseurContextuel, AsyncClient, DeduplicateurUrls, DetecteurPatternsAvance, MemoireApprentissageAvance, acquire, add_entry, add_knowledge, add_relation, analyser_contexte_systeme, analyser_patterns_globaux_web, click, content, contenu_similaire_deja_vu, deja_visitee, enregistrer_visite, extraire_connaissances_avancees_web, gather, get, get_event_loop
+--- Version 2 : evolutfini3 (L8311)
+    Mission : Recherche web TACTIQUE AVEC ANTI-DOUBLONS & AUTO-AMÉLIORATION - v6.0 ULTIME
+    Statut  : Opérationnel
+    Outils  : asyncio, httpx, json, playwright
+    Appels  : AnalyseurContextuel, AsyncClient, DeduplicateurUrls, DetecteurPatternsAvance, MemoireApprentissageAvance, acquire, add_entry, add_knowledge, add_relation, analyser_contexte_systeme, analyser_patterns_globaux, click, content, contenu_similaire_deja_vu, deja_visitee, enregistrer_visite, extraire_connaissances_avancees, gather, get, get_event_loop
+--- Version 3 : evoluut.py (L9524)
+    Mission : Recherche web TACTIQUE AVEC ANTI-DOUBLONS & AUTO-AMÉLIORATION - v6.0 ULTIME
+    Statut  : Opérationnel
+    Outils  : asyncio, httpx, json, playwright
+    Appels  : AnalyseurContextuel, AsyncClient, DeduplicateurUrls, DetecteurPatternsAvance, MemoireApprentissageAvance, acquire, add_entry, add_knowledge, add_relation, analyser_contexte_systeme, analyser_patterns_globaux, click, content, contenu_similaire_deja_vu, deja_visitee, enregistrer_visite, extraire_connaissances_avancees, gather, get, get_event_loop
+--- Version 4 : evolutfinal2.py (L6008)
+    Mission : Recherche web TACTIQUE AVEC ANTI-DOUBLONS & AUTO-AMÃ‰LIORATION - v6.0 ULTIME
+    Statut  : Opérationnel
+    Outils  : asyncio, httpx, json, playwright
+    Appels  : AnalyseurContextuel, AsyncClient, DeduplicateurUrls, DetecteurPatternsAvance, MemoireApprentissageAvance, acquire, add_entry, add_knowledge, add_relation, analyser_contexte_systeme, analyser_patterns_globaux, click, content, contenu_similaire_deja_vu, deja_visitee, enregistrer_visite, extraire_connaissances_avancees, gather, get, get_event_loop
+
+------------------------------------------------------------
+
+============================================================
+      INSTRUCTIONS CRITIQUES ET DIRECTIVES D'ÉVOLUTION
+============================================================
+
+SCRIPT : evolutfini3
+  > Matrice Polyglotte :
+    Mapping de 70+ langages avec leurs commandes dangereuses (trop large pour affichage textuel complet ici)
+
+SCRIPT : evoluut.py
+  > Refactoring Spec :
+    Spécification de refactoring
+
+    Ne pas supprimer le code existant. Autoriser uniquement des ajouts et des modifications ciblées.
+
+    Remplacer :
+
+    import umap par import umap.umap_ as umap
+
+    import gputil par import GPUtil
+
+
+    Supprimer import lsof et implémenter un équivalent fonctionnel complet en utilisant uniquement les outils déjà présents dans le projet ou la bibliothèque standard, en conservant strictement le même comportement.
+
+    Supprimer import causalnex et implémenter un équivalent fonctionnel complet avec les outils déjà disponibles, en reproduisant fidèlement les capacités (structures, relations, inférence).
+
+    Décommenter l’intégralité du code commenté et le rendre pleinement fonctionnel.
+
+    Remplacer toute simulation ou code fictif par une implémentation réelle et exécutable.
+
+    Assurer l’intégration complète des nouveaux outils dans les fonctions et cycles existants. Aucun ajout ne doit rester inutilisé.
+
+    Maximiser l’interconnexion entre fonctions et classes afin d’améliorer les performances sans modifier le comportement global.
+
+    Optimiser les appels en exploitant les nouvelles capacités intégrées, sans altérer la logique existante.
+
+    Vérifier et corriger les dépendances entre modules afin d’éviter tout problème de structure ou d’import.
+
+    Nettoyer les imports en supprimant uniquement ceux qui sont réellement inutilisés après intégration.
+
+    Respecter une structure stricte :
+
+    tous les imports en haut du fichier
+
+    aucune ligne vide entre eux
+
+    une seule ligne vide avant le reste du code
+
+    aucun commentaire superflu dans le code
+
+
+    Utiliser exclusivement les imports déjà présents dans le projet ou les modules standard Python pour toutes les modifications et remplacements.
+
+
+    Objectif
+
+    Obtenir un code entièrement actif, interconnecté, sans dépendances non fonctionnelles, sans simulation, et optimisé, tout en conservant strictement le comportement initial.
+
+  > Gestion Plachebor :
+    Commentaire "plachebor" :
+    Tu dois interpréter "plachebor" comme une instruction d'implémentation.
+    Tu dois exécuter l'implémentation que le commentaire suggère ou implique, en la rendant fonctionnelle et en utilisant les outils pertinents.
+    Une fois l'implémentation réalisée, le commentaire "plachebor" lui-même doit être supprimé, car il ne s'agit plus d'une instruction mais d'une tâche accomplie.
