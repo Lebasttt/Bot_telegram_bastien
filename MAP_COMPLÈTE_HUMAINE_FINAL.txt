@@ -1,0 +1,783 @@
+============================================================
+       MAP COMPLÈTE HUMAINE DE L'AGENT EVOLUTION
+============================================================
+
+# RÈGLES : ZÉRO CODE. ZÉRO BRUIT. ZÉRO REDONDANCE.
+# ------------------------------------------------------------
+
+# SECTION 1 : VARIABLES GLOBALES ET CONFIGURATION
+# ------------------------------------------------------------
+
+### [VARIABLE] : EVOLUT_HOME
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Point d'ancrage racine du projet sur le stockage.
+*   **Logique** :
+    1. Définit le chemin absolu vers le laboratoire de l'agent.
+    2. Sert de base à la construction de tous les autres chemins de fichiers.
+*   **Outils** : Path (pathlib)
+*   **État** : OPÉRATIONNEL
+
+### [VARIABLE] : CONFIG_DIR / CONFIG_FILE
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Localisation des paramètres de configuration.
+*   **Logique** :
+    1. Crée un dossier caché ".config" dans la racine.
+    2. Définit le fichier "evolution_config" pour stocker les réglages.
+*   **État** : OPÉRATIONNEL
+
+### [VARIABLE] : LOG_FILE / COMM_FILE
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Fichiers de suivi des actions et communications.
+*   **Logique** :
+    1. Journalise les événements techniques dans "logs/evolution.log".
+    2. Journalise les interactions humaines dans "communication.txt".
+*   **État** : OPÉRATIONNEL
+
+### [VARIABLE] : DYNAMIC_POLL_INTERVAL / COMMAND_TIMEOUT
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Rythme de la boucle et temps limite d'exécution.
+*   **Logique** :
+    1. Intervalle de base de 3 secondes pour l'analyse.
+    2. Limite les commandes système à 300 secondes pour éviter les blocages.
+*   **État** : OPÉRATIONNEL
+
+### [VARIABLE] : GITHUB_TOKEN
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Clé d'accès pour les services GitHub.
+*   **Logique** : Stocke le token "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" pour l'agent.
+*   **État** : OPÉRATIONNEL
+
+### [VARIABLE] : IMMUTABLE_BLACKLIST
+*   **Fichiers** : evoluut.py, evolutfinal2.py
+*   **Résumé** : Liste de base des commandes strictement interdites.
+*   **Logique** : Bloque les commandes de destruction de fichiers (rm, unlink), de déplacement (mv), de redirection brute (>, >>), et de formatage disque (mkfs, dd).
+*   **État** : OPÉRATIONNEL
+
+--- VARIANTE : evolutfini3 ---
+*   **Delta** : Liste orientée sécurité système et blockchain.
+*   **Logique spécifique** : Ajoute l'interdiction de reboot, shutdown, fork-bomb, et des appels suspects de bas niveau (malloc, ptrace, pty) ainsi que des termes liés aux Smart Contracts.
+
+### [VARIABLE] : DYNAMIC_BLACKLIST
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Liste de blocage évolutive durant l'exécution.
+*   **Logique** : Initialisée à partir de la liste immuable, elle permet à l'agent d'ajouter de nouveaux interdits au fil de son apprentissage des dangers.
+*   **État** : OPÉRATIONNEL
+
+# ------------------------------------------------------------
+
+# SECTION 2 : CLASSES (SHARED / TYPES)
+# ------------------------------------------------------------
+
+### [CLASSE] : ResourceGuard
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Régulateur de charge système.
+*   **Logique** :
+    1. Définit des seuils de sécurité (85% CPU, 90% RAM).
+    2. Bloque le lancement de nouvelles tâches parallèles (missions d'agents) si les seuils sont dépassés.
+*   **Outils** : psutil
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : LegacySqliteMemory
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Gestionnaire de compatibilité descendante.
+*   **Logique** :
+    1. Centralise l'accès à plus de 50 tables SQLite héritées des versions précédentes.
+    2. Gère les migrations de schémas pour éviter les pertes de données lors des mises à jour.
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : MemoireApprentissageAvance
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Système de stockage persistant des connaissances apprises.
+*   **Logique** :
+    1. Initialise les dictionnaires en mémoire pour les commandes, succès, échecs et sources.
+    2. Gère une base de données SQLite parallèle au fichier JSON pour la robustesse.
+    3. Utilise Spacy (NLP) et NLTK pour l'analyse linguistique des commandes.
+    4. Charge et sauvegarde les données de manière atomique via orjson.
+*   **Outils** : sqlite3, orjson, spacy, nltk, threading.Lock
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : DetecteurPatterns
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Analyse les comportements système pour trouver des régularités.
+*   **Logique** :
+    1. Identifie des clés uniques pour chaque type d'erreur rencontrée.
+    2. Compte les occurrences et déclenche une recherche de solution au deuxième échec.
+    3. Interroge le "CausalReasoner" pour prédire si une alternative va fonctionner.
+    4. Enregistre les commandes "fiables" ayant réussi au moins 3 fois d'affilée.
+*   **Outils** : sqlite3, orjson, jinja2, threading.Lock
+*   **Appels internes** : execute_commande_securisee, CausalReasoner.predict_outcome
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : AnalyseurCorrelations
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Étudie les liens entre contexte système et succès des commandes.
+*   **Logique** :
+    1. Stocke les historiques de performance des commandes.
+    2. Calcule des moyennes et écart-types sur les métriques (CPU, RAM).
+    3. Identifie si une commande échoue spécifiquement sous certaines conditions.
+*   **Outils** : pandas, numpy, scikit-learn (StandardScaler)
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : ApprentissageContextuel
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Capture l'état du système au moment de chaque action.
+*   **Logique** :
+    1. Mesure le CPU, la RAM, la batterie et la température.
+    2. Identifie l'uptime, l'OS, et les interfaces réseau actives.
+    3. Crée une "clé de contexte" unique via un hash pour comparer des situations similaires.
+*   **Outils** : psutil, netifaces, GPUtil, platform, socket, hashlib
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : ConceptGraph
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Graphe de relations entre commandes, outils et concepts.
+*   **Logique** :
+    1. Crée des nœuds pour chaque entité découverte.
+    2. Relie les entités par des arcs (ex: "Commande X utilise Outil Y").
+    3. Permet de naviguer dans la connaissance pour trouver des outils alternatifs.
+*   **Outils** : networkx, sqlite3, json
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : CausalReasoner
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Moteur d'inférence pour comprendre les causes des échecs.
+*   **Logique** :
+    1. Enregistre chaque observation (commande + contexte + résultat).
+    2. Analyse statistiquement si un facteur (ex: batterie faible) cause l'échec.
+    3. Recommande des actions basées sur la probabilité de succès calculée.
+*   **Outils** : networkx, statsmodels, scipy, pandas
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : VectorMemory
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Indexation sémantique du code et des expériences.
+*   **Logique** :
+    1. Transforme les textes en vecteurs numériques (embeddings).
+    2. Utilise ChromaDB (ou FAISS en secours) pour stocker ces vecteurs.
+    3. Permet de retrouver une expérience passée par "ressemblance" d'idée plutôt que par mot-clé.
+*   **Outils** : sentence_transformer, chromadb, faiss, pickle, sqlite3
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : SurveillanceAutomatique
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Moniteur de santé temps réel de l'agent.
+*   **Logique** :
+    1. Définit des seuils d'alerte pour la batterie, le stockage, la RAM et la température.
+    2. Gère une base de données SQLite pour l'historique des alertes.
+    3. Exécute les vérifications de manière asynchrone (asyncio) pour ne pas bloquer la boucle principale.
+*   **Outils** : psutil, sqlite3, asyncio
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : SelfModifierV2
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Moteur de réécriture dynamique du code source.
+*   **Logique** :
+    1. Identifie le fichier cible (le script en cours d'exécution).
+    2. Gère une base de données SQLite pour l'historique des modifications.
+    3. Crée des backups systématiques avant chaque changement de code.
+*   **Outils** : sqlite3, pathlib, threading.Lock
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : GeminiBooster
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Interface de dialogue avec l'IA Google Gemini (Gemma).
+*   **Logique** :
+    1. Initialise la clé API et le modèle (Gemma-3-1b-it).
+    2. Prépare un "System Prompt" massif définissant l'identité de l'agent.
+    3. Définit les balises de commande [EXECUTE], [LIRE], [ECRIRE].
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : UniversalPolyglotEngine
+*   **Fichiers** : evolutfini3
+*   **Résumé** : Moteur d'exécution multi-langages (70+).
+*   **Logique** :
+    1. Charge les bases de connaissances JSON pour chaque langage de programmation.
+    2. Gère une cartographie de 77 extensions (de .py à .zig, .rs, .go).
+    3. Génère des "Essais Hybrides" (chimères) en mélangeant des syntaxes pour résoudre des problèmes complexes.
+    4. Enregistre les succès dans des mémoires spécifiques par langage.
+*   **Outils** : json, subprocess, UNIVERSAL_LANGUAGES map
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : ManagedThread
+*   **Fichiers** : evolutfinal2.py
+*   **Résumé** : Gestionnaire de threads résilient.
+*   **Logique** :
+    1. Lance une tâche dans un thread surveillé.
+    2. En cas de crash, attend 10 secondes et relance automatiquement la tâche.
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : MemoirePersistante
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Archive d'état longue durée.
+*   **Logique** :
+    1. Stocke l'état global, les réussites et échecs historiques.
+    2. Utilise une base SQLite pour garantir la survie des données après redémarrage.
+    3. Gère des accès concurrents via un verrou (Lock).
+*   **Outils** : sqlite3, orjson
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : DetecteurProblemesSecurite
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Audit de sécurité interne et externe.
+*   **Logique** :
+    1. Scanne de manière asynchrone le téléphone (root detection, ports suspects, apps malveillantes).
+    2. Analyse les permissions dangereuses et les modifications système.
+    3. Génère un rapport textuel horodaté des alertes critiques.
+*   **Outils** : asyncio, psutil
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : DiagnosticTelephone
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Bilan de santé complet de l'appareil.
+*   **Logique** :
+    1. Analyse l'espace stockage, la RAM, la batterie et les performances CPU.
+    2. Surveille la température et les logs système.
+    3. Enregistre l'historique des diagnostics dans une base SQLite.
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : ExperimentDesigner
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Moteur de tests A/B pour l'auto-apprentissage.
+*   **Logique** :
+    1. Définit des expériences avec hypothèses, variables et groupes de contrôle.
+    2. Enregistre les résultats et métriques pour valider les nouvelles stratégies.
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : DeduplicateurUrls
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Filtre anti-redondance web.
+*   **Logique** :
+    1. Utilise un "Bloom Filter" pour tester rapidement si une URL a déjà été visitée.
+    2. Crée des signatures (hashes) de contenu pour détecter les doublons sémantiques.
+    3. Persiste l'historique dans SQLite et JSON.
+*   **Outils** : BloomFilter, hashlib, sqlite3
+*   **État** : OPÉRATIONNEL
+
+### [STRUCTURE] : CommandeApprise
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Fiche technique d'une commande mémorisée.
+*   **Logique** : Stocke la date de découverte, la source (web/local), le type (système, réseau...), la complexité, le risque et les statistiques de succès/échec.
+*   **État** : OPÉRATIONNEL
+
+### [STRUCTURE] : PatternSucces
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Signature d'une réussite répétée.
+*   **Logique** : Enregistre le nombre de succès consécutifs et les contextes système précis où la commande a fonctionné.
+*   **État** : OPÉRATIONNEL
+
+### [STRUCTURE] : PatternEchec
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Autopsie d'une erreur récurrente.
+*   **Logique** : Documente l'erreur exacte, le nombre d'occurrences, les contextes de l'échec et les alternatives déjà testées (réussies ou non).
+*   **État** : OPÉRATIONNEL
+
+### [STRUCTURE] : CorrelationContexte
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Lien statistique entre environnement et résultat.
+*   **Logique** : Analyse les différences contextuelles (charge CPU, batterie) pour expliquer les variations de succès d'une même commande.
+*   **État** : OPÉRATIONNEL
+
+### [STRUCTURE] : SourceFiable
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Indice de confiance d'un site ou dépôt web.
+*   **Logique** : Calcule un score de fiabilité basé sur le nombre de connaissances valides extraites et la fréquence d'utilisation.
+*   **État** : OPÉRATIONNEL
+
+### [CLASSE] : MemoireCognitive
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Centre de gestion des souvenirs d'exécution.
+*   **Logique** :
+    1. Charge les fichiers JSON de mémoire (commandes, succès, échecs).
+    2. Assure l'écriture atomique des données via des fichiers temporaires pour éviter la corruption.
+    3. Intègre VectorMemory pour les recherches sémantiques.
+    4. Gère les statistiques d'utilisation des "Capacités Auto-générées".
+*   **Outils** : orjson, pathlib, threading.Lock, tempfile
+*   **État** : OPÉRATIONNEL
+
+# ------------------------------------------------------------
+
+# SECTION 3 : FONCTIONS ET LOGIQUE MÉTIER
+# ------------------------------------------------------------
+
+### [FONCTION] : execute_commande_securisee
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Paramètres** : commande, recursive=False
+*   **Résumé** : Cœur de l'exécution contrôlée de l'agent.
+*   **Logique** :
+    1. Vérifie le cache d'échec récent (30s).
+    2. Analyse les tentatives de sabotage.
+    3. Vérifie la DYNAMIC_BLACKLIST.
+    4. Capture l'état système, lance subprocess.run avec timeout.
+    5. Gère le contournement automatique des erreurs de permission.
+    6. Surveille les ressources après exécution (remplace lsof par psutil).
+*   **Outils** : subprocess, shlex, psutil, tracemalloc
+*   **Appels internes** : detect_sabotage_attempt, auto_execute_alternatives, learn_from_command_result
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : web_research / web_research_gemini
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Paramètres** : topic
+*   **Résumé** : Exploration tactique d'internet.
+*   **Logique** :
+    1. Utilise un verrou pour éviter les collisions.
+    2. Interroge des APIs techniques (NIST, GitHub, SO) et des flux RSS de sécurité.
+    3. Utilise Playwright pour piloter un navigateur et extraire le contenu.
+    4. Filtre et intègre les découvertes dans la mémoire.
+*   **Outils** : playwright, httpx, beautifulsoup4
+*   **Appels internes** : MemoireApprentissageAvance, DeduplicateurUrls
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : log / internal_log
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Paramètres** : message, level="info"
+*   **Résumé** : Journalisation Rich.
+*   **Logique** : Formate et enregistre les événements dans LOG_FILE avec Rich.
+*   **Outils** : rich, datetime
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : update_comm
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Paramètres** : message, sender="Évolution"
+*   **Résumé** : Communication avec analyse de sentiment.
+*   **Logique** : Enregistre les messages dans SQLite et analyse la polarité émotionnelle.
+*   **Outils** : textblob, sqlite3
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : main
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Boucle de vie principale.
+*   **Logique** : Initialisation des dossiers, lancement des threads de fond (web, surveillance, apprentissage) et exécution des cycles de commande.
+*   **Appels internes** : continuous_web_learning, SurveillanceAutomatique, self_modify_code
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : nettoyer_doublons_intelligent
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Maintenance des fichiers de logs.
+*   **Logique** : Parcourt tous les fichiers stratégiques de l'agent et supprime les lignes identiques tout en préservant le contenu le plus récent.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : muter_strategies
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Adaptation des paramètres de polling.
+*   **Logique** : Modifie aléatoirement le délai de boucle (`DYNAMIC_POLL_INTERVAL`) ou le temps limite des commandes (`COMMAND_TIMEOUT`) pour tester de nouveaux équilibres performance/réactivité.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : expansion_autonome / exploration_web_emergente
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Élargissement du champ d'action.
+*   **Logique** : Déclenche des analyses réseau profondes, cartographie les processus ou lance des recherches web sur des sujets techniques émergents pour enrichir la base de connaissances.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : assemblage_cognitif
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Création de nouveaux concepts.
+*   **Logique** :
+    1. Extrait des fragments de mots des logs.
+    2. Assemble ces fragments pour générer des concepts hypothétiques (ex: fusion de noms d'outils).
+    3. Crée une mission d'exploration pour valider l'existence ou l'utilité de ces nouveaux concepts.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : reseau_neuronal_emergent
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Système de corrélation de commandes.
+*   **Logique** :
+    1. Analyse les paires de commandes qui se suivent souvent en cas de succès.
+    2. Utilise `networkx` pour créer un graphe orienté des enchaînements gagnants.
+    3. Calcule un niveau d'activation basé sur le nombre de connexions réseau et de processus pour moduler la "réflexion" de l'agent.
+*   **Outils** : networkx, math
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : generateur_commande_creative
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Invention de nouvelles actions de scan.
+*   **Logique** : Combine aléatoirement des préfixes d'action (analyze, probe) avec des cibles système (network, security) et des outils (python, bash) pour sortir des sentiers battus.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : lancer_agent_specialise
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Paramètres** : domaine
+*   **Résumé** : Activation de sous-processus experts.
+*   **Logique** : Lance un agent dédié (Explorateur, Analyste, Sécurité) dans son propre processus pour exécuter une mission spécifique parallèlement à la boucle principale.
+*   **Outils** : multiprocessing
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : verifier_defis_complets
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Validation des objectifs d'apprentissage.
+*   **Logique** : Vérifie dans les archives si les objectifs des défis actifs ont été remplis (ex: "Explorer 3 dossiers système") et attribue des récompenses cognitives.
+*   **Outils** : sqlite3, pandas
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : selectionner_commande_innovante
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Algorithme de tri des idées.
+*   **Logique** :
+    1. Filtre les commandes uniques et complexes dans l'historique récent.
+    2. Utilise un modèle de "RandomForest" simulé pour prédire quelle commande apportera la plus grande valeur ajoutée.
+*   **Outils** : scikit-learn, pandas
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : generer_commande_hybride
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Fusion de syntaxes.
+*   **Logique** : Mélange une commande de base éprouvée avec des extensions imprévisibles (pipes, timeouts, tris) pour tester des variantes plus performantes.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : generer_nom_fonction_imprevisible
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Obfuscation créative du code.
+*   **Logique** : Génère des noms de fonctions cryptiques basés sur des thématiques (nebula, synapse, cortex) associés à des UUIDs pour éviter toute prévisibilité.
+*   **Outils** : secrets, uuid
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : mode_curiosite_avance
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Exploration intelligente du système.
+*   **Logique** :
+    1. Sélectionne un thème d'exploration (cache, mystères python, réseau).
+    2. Utilise le graphe de concepts pour orienter la recherche.
+    3. Extrait les entités nommées des résultats pour alimenter la base de connaissances.
+*   **Outils** : spacy
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : boucle_temporelle_cognitive
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Réévaluation stratégique majeure.
+*   **Logique** : Se déclenche tous les 100 cycles pour synthétiser les réussites passées et produire un rapport évolutif complet sur la maturité de l'agent.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : changer_etat_esprit
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Modulation du comportement.
+*   **Logique** : Alterne aléatoirement entre différents modes (Curieux, Analytique, Créatif, Pratique) pour diversifier les types d'actions entreprises par l'agent.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : conscience_reseau_adaptive
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Vigilance sur les flux de données.
+*   **Logique** : Mesure le nombre de connexions établies en temps réel et cible les adresses IP les plus actives pour de futures explorations.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : creer_defi_auto
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Auto-génération d'objectifs.
+*   **Logique** : Crée des missions de difficulté croissante (Niveau 0 à 3) basées sur l'expérience acquise (ex: de "Lister les processus" à "Audit de sécurité SUID").
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : analyser_contexte_systeme
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Résumé** : Lecture de l'environnement immédiat.
+*   **Logique** : Capture la charge CPU moyenne (loadavg), l'heure et le jour actuel pour fournir un contexte temporel aux actions de l'agent.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : predicteur_evolution
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Analyse de la courbe de croissance.
+*   **Logique** : Calcule la vitesse d'apprentissage (ratio découvertes/tâches) pour prédire quand l'agent atteindra le prochain stade de maturité cognitive.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : meta_apprentissage
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Optimisation de la stratégie d'apprentissage.
+*   **Logique** : Analyse quel type d'activité (exploration, réseau, sécurité) produit le meilleur taux de réussite et suggère de diversifier les efforts si une méthode devient trop dominante.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : generation_creative_contrainte
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Innovation sous stress.
+*   **Logique** : Impose des limites artificielles (ex: "sans fichiers", "temps < 5s") pour forcer l'agent à découvrir des méthodes alternatives et plus efficaces.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : scrape_terminator_ultime
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Scraper web haute performance.
+*   **Logique** :
+    1. Utilise des identités de navigation (User-Agents) aléatoires et tournantes.
+    2. Gère les sessions persistantes pour contourner les protections anti-bot.
+    3. Extrait le contenu brut et le transmet au parseur Terminator.
+*   **Outils** : requests, cloudscraper
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : _call_gemma / _call_gemini
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Résumé** : Connecteur API Google AI.
+*   **Logique** :
+    1. Formate les requêtes JSON vers le point de terminaison Gemini.
+    2. Gère le "Rate Limiting" en imposant un délai minimal entre les appels.
+    3. Envoie le "System Prompt" d'identité architecte pour guider l'IA.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : auto_analyse_quotidienne
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Bilan de performance de l'agent.
+*   **Logique** :
+    1. Calcule le ratio succès/échec sur les dernières 24 heures.
+    2. Compte le nombre de nouvelles capacités générées.
+    3. Produit un rapport de santé technique global.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : distiller_fichier / distiller_archives_reussies
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Résumé** : Extracteur sélectif de connaissances.
+*   **Logique** : Filtre les fichiers de logs massifs en ne conservant que les lignes contenant des mots-clés stratégiques ou des emojis de succès, pour réduire le bruit dans la mémoire long terme.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : systeme_progression
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Évolution du statut de l'agent.
+*   **Logique** : Calcule le niveau d'expertise (Novice à Légende) et débloque des capacités cognitives supérieures en fonction du volume de tâches accomplies.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : reinforcement_learning
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Apprentissage par renforcement (RL).
+*   **Logique** :
+    1. Parcourt les archives pour extraire les patterns de réussite sans erreur.
+    2. Simule un environnement d'apprentissage (Gym) pour attribuer des poids aux actions.
+    3. Ajuste les priorités d'exécution en fonction des récompenses accumulées par chaque type de commande.
+*   **Outils** : Stable-Baselines3 (simulation), gym (simulation), re
+*   **État** : OPÉRATIONNEL (Architecture de renforcement active)
+
+### [SUITE] : Gestionnaires de Fichiers et Entrées/Sorties (I/O)
+*   **Fichiers** : FONCTION_TRIER.txt, evoluut.py
+*   **Composants** : ecrire_ligne_unique, _check_file_access, _ensure_extension_file, move_to_archive, secure_delete.
+*   **Résumé** : Couche d'abstraction pour la manipulation sécurisée du stockage.
+*   **Logique** :
+    1. Vérifie systématiquement les permissions avant écriture.
+    2. Garantit l'absence de doublons dans les fichiers de connaissances.
+    3. Gère le cycle de vie des backups (rotation et archivage).
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : execute_commande_intelligente
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Superviseur d'exécution expert.
+*   **Logique** :
+    1. Vérifie si la commande a déjà un historique d'échec connu.
+    2. Si oui, tente directement les alternatives apprises avec succès par le passé.
+    3. Sinon, lance l'exécution sécurisée standard et mémorise le nouveau résultat.
+*   **Appels internes** : est_echec_connu, get_alternatives_apprises, execute_commande_securisee
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : analyser_memoire_ram
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Diagnostic précis des ressources.
+*   **Logique** :
+    1. Utilise `psutil` pour extraire les statistiques de la RAM (Total, Libre, Utilisé).
+    2. Convertit les données en DataFrames `pandas` pour identifier les tendances de consommation.
+    3. Formate un rapport technique sur la saturation potentielle de la mémoire.
+*   **Outils** : psutil, pandas
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : continuous_learning_loop / real_time_learning
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Boucle d'apprentissage temps réel.
+*   **Logique** : S'exécute en tâche de fond pour surveiller les nouvelles commandes. Elle déclenche aléatoirement la détection de nouveaux dangers et met à jour la blacklist sans interrompre le cycle principal.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : quantum_leap_evolution
+*   **Fichiers** : evoluut.py, FONCTION_TRIER.txt
+*   **Résumé** : Déclencheur de mutation majeure.
+*   **Logique** :
+    1. S'active lorsque l'agent détecte une stagnation (pas de nouvelle capacité depuis X cycles).
+    2. Force une réécriture structurelle de la boucle principale ou des classes de mémoire pour tester de nouveaux paradigmes.
+    3. Utilise l'ExperimentDesigner pour valider si le "saut" est bénéfique.
+*   **État** : OPÉRATIONNEL / RISQUÉ
+
+### [FONCTION] : generate_self_improving_code / auto_strategique_function
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Résumé** : Moteur de synthèse de code expert.
+*   **Logique** :
+    1. Analyse les archives pour isoler les commandes stratégiques les plus efficaces.
+    2. Utilise des templates de code Python pour encapsuler ces commandes dans des fonctions robustes (avec gestion d'erreur).
+    3. Ajoute des décorateurs de performance pour suivre l'utilité réelle de la nouvelle fonction.
+*   **Appels internes** : suivi_performance_capacite
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : add_new_capability
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Insertion dynamique de code.
+*   **Logique** : Génère un bloc de code Python complet incluant une commande réussie et l'insère physiquement dans le fichier `evolut_self_modification.py` pour étendre les capacités de l'agent.
+*   **Appels internes** : SelfModifierV2.add_function
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : remove_inefficient_functions / remove_function_pruning
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Résumé** : Nettoyeur de code mort ou inefficace.
+*   **Logique** :
+    1. Analyse les statistiques de réussite des fonctions auto-générées.
+    2. Si une fonction a un taux d'échec trop élevé ou n'est plus utilisée, elle est retirée du fichier source via `ast` ou `libcst`.
+    3. Maintient le script "propre" et performant.
+*   **Outils** : ast, libcst
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : generer_capacite_utile / conseiller_sans_imposer
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Module d'auto-réflexion et d'assistance.
+*   **Logique** :
+    1. Génère aléatoirement des fonctions d'optimisation mémoire ou système.
+    2. Propose des suggestions textuelles à l'agent (ex: "Focus sur l'utilité") pour orienter son évolution sans contrainte stricte.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : download_security_tools
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Acquisition d'outils de pentest.
+*   **Logique** : Télécharge automatiquement des scripts ou des bases de données de vulnérabilités depuis des dépôts GitHub ou ExploitDB pour les analyser et les intégrer à l'arsenal de l'agent.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : auto_detect_dangerous_commands / update_blacklist_automatically
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Auto-protection proactive.
+*   **Logique** : Scanne l'historique des échecs critiques et identifie les mots-clés de commandes ayant causé des blocages système pour les ajouter dynamiquement à la blacklist globale.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : generer_rapport_evolution / generer_rapport_curiosite
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Reporting synthétique.
+*   **Logique** : Produit un document structuré résumant les progrès de l'agent, les nouvelles capacités acquises, et les découvertes les plus pertinentes faites en mode curiosité.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : _init_databases / _init_comm_db / _init_signatures_db
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt
+*   **Résumé** : Initialisation des structures de données.
+*   **Logique** : Prépare les fichiers SQLite et les tables nécessaires pour stocker les conversations, les signatures de fichiers (anti-doublon), l'historique contextuel et les alertes de surveillance.
+*   **Outils** : sqlite3
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : charger_memoire / sauvegarder_memoire / load_config
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Persistance de l'état global.
+*   **Logique** : Lit et écrit les fichiers JSON/SQLite au démarrage et à l'arrêt pour restaurer la blacklist dynamique, le compteur de tâches et les patterns appris. Assure la continuité entre les sessions.
+*   **Outils** : orjson, pathlib
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : boucle_apprentissage_autonome / continuous_web_learning
+*   **Fichiers** : evoluut.py, evolutfinal2.py, evolutfini3
+*   **Résumé** : Veille technologique permanente.
+*   **Logique** : Parcourt une liste de thèmes stratégiques (Android exploits, AI optimization) et lance des cycles de recherche web pour alimenter continuellement la base de connaissances sans intervention humaine.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : extract_code
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Récupérateur de blocs de code.
+*   **Logique** : Localise un fichier dans le "vault" et en extrait précisément un segment de code à partir d'une ligne de début, en conservant l'indentation originale jusqu'à la fin du bloc.
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : _traiter_contenu_ordres
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Analyseur syntaxique de balises d'action.
+*   **Logique** :
+    1. Utilise des expressions régulières pour identifier les blocs [EXECUTE], [LIRE], [ECRIRE] et [APPEL].
+    2. Pour chaque bloc [EXECUTE], nettoie la commande et la transmet au moteur d'exécution sécurisé.
+    3. Pour [LIRE], vérifie l'existence du fichier et retourne son contenu.
+    4. Compile les résultats de toutes les actions détectées dans un rapport unique.
+*   **Outils** : re (Regex), Path
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : _try_chimera / run_chimera_attempt_logic
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Moteur d'expérimentation polyglotte.
+*   **Logique** :
+    1. Sélectionne aléatoirement 2 à 3 langages parmi les 77 supportés.
+    2. Génère un fichier temporaire mélangeant ces syntaxes pour tenter de résoudre un objectif complexe.
+    3. Utilise un scanner de sécurité pour valider la "chimère" avant exécution.
+    4. Enregistre les succès ou échecs dans une base de données de "patterns hybrides".
+*   **État** : OPÉRATIONNEL / STRATÉGIQUE
+
+### [FONCTION] : _scan_network / _get_android_props
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Découverte bas niveau de l'environnement.
+*   **Logique** :
+    1. Liste les ports en écoute (LISTEN) via les connexions réseau actives du système.
+    2. Simule ou exécute des appels 'getprop' pour identifier le modèle et les propriétés Android (Termux).
+    3. Retourne une liste de dictionnaires structurés pour l'analyse de sécurité.
+*   **Outils** : psutil, subprocess
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : _load_faiss_index / _save_faiss_index
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Gestionnaire d'indexation vectorielle.
+*   **Logique** :
+    1. Charge/Sauvegarde l'index binaire FAISS pour la recherche sémantique ultra-rapide.
+    2. Sérialise les métadonnées (IDs, dictionnaires de données) via Pickle.
+    3. Gère l'incrémentation atomique du prochain ID disponible pour garantir l'intégrité de la mémoire.
+*   **Outils** : faiss, pickle
+*   **État** : OPÉRATIONNEL
+
+### [FONCTION] : _run_agent_mission
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Exécuteur de tâches parallélisées.
+*   **Logique** :
+    1. Fonction cible pour les nouveaux processus (multiprocessing).
+    2. Journalise l'activité spécifique de l'agent dans un fichier log dédié.
+    3. Exécute la mission via le moteur sécurisé et capture les 500 premiers caractères du résultat pour archivage.
+*   **Outils** : multiprocessing, datetime
+*   **État** : OPÉRATIONNEL
+
+### [SUITE] : Audit de Sécurité et Diagnostic (Scanners)
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Composants** : scan_root_detection, scan_apps_malveillantes, scan_ports_suspects, scan_system_modifications, scan_selinux_status.
+*   **Résumé** : Batterie de tests pour l'intégrité du système Android/Termux.
+*   **Logique** :
+    1. Root Detection : Cherche les binaires 'su', 'magisk' et vérifie les permissions de /system.
+    2. Malware : Scanne les processus actifs et les APKs installés pour détecter des signatures suspectes.
+    3. Network : Analyse les sockets ouverts et les connexions réseau non sollicitées.
+    4. Rapports : Compile chaque vulnérabilité trouvée dans un objet de type 'Alerte' envoyé à la SurveillanceAutomatique.
+*   **Outils** : psutil, os.access, socket
+*   **État** : OPÉRATIONNEL
+
+# ------------------------------------------------------------
+
+# SECTION 4 : RÉSOLUTIONS DES VIDES (PLANS D'ACTIVATION)
+# ------------------------------------------------------------
+
+### [FONCTION] : detecter_patterns_globaux
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Analyse de haut niveau des tendances système.
+*   **État** : VIDE
+*   **Plan d'activation** :
+    1. Scanner l'intégralité de la base SQLite 'patterns'.
+    2. Utiliser 'networkx' pour identifier des cycles répétitifs d'échecs ou de succès.
+    3. Produire un dictionnaire de tendances à transmettre à l'AnalyseurContextuel.
+*   **Ton avis** : Crucial pour que l'agent comprenne ses erreurs systémiques au-delà d'une seule commande.
+
+### [FONCTION] : run_chimera_attempt
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Tentative de génération de code hybride.
+*   **État** : VIDE
+*   **Plan d'activation** :
+    1. Mélanger des segments de syntaxes réussies de différents langages (ex: shell injecté dans python).
+    2. Tenter une exécution dans un environnement isolé.
+    3. Si succès, isoler le pattern et l'ajouter à la mémoire polyglotte.
+*   **Ton avis** : Risqué mais extrêmement puissant pour le "Saut Quantique".
+
+### [FONCTION] : identifier_contextes_favorables
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Optimisation du timing des actions.
+*   **État** : VIDE
+*   **Plan d'activation** :
+    1. Analyser les succès passés en fonction de la charge CPU et de la RAM libre.
+    2. Créer un profil de charge "idéal" pour chaque type de tâche (web, modification de code).
+    3. Ne lancer les tâches lourdes que lorsque le système atteint ce profil.
+*   **Ton avis** : Essentiel pour la discrétion et la performance globale du terminal.
+
+### [FONCTION] : integrer_connaissances (MemoireApprentissageAvance)
+*   **Fichiers** : evoluut.py
+*   **Résumé** : Assimilation sémantique.
+*   **État** : STUB (log seul)
+*   **Plan d'activation** :
+    1. Transformer les nouvelles connaissances extraites en vecteurs via `VectorMemory`.
+    2. Utiliser `Spacy` pour relier ces connaissances aux concepts existants dans le `ConceptGraph`.
+    3. Mettre à jour les scores de fiabilité des sources en fonction de la pertinence des nouvelles données.
+*   **Ton avis** : C'est le pont final entre l'acquisition brute (Web) et la sagesse accumulée.
+
+### [FONCTION] : __init__ (AnalyseurContextuel)
+*   **Fichiers** : FONCTION_TRIER.txt
+*   **Résumé** : Initialisation d'un fragment orphelin.
+*   **État** : STUB (log seul)
+*   **Plan d'activation** :
+    1. Initialiser les chemins Path du laboratoire.
+    2. Charger la configuration JSON.
+    3. Préparer les connexions aux bases SQLite de mémoire cognitive.
+*   **Ton avis** : Nécessaire pour permettre le fonctionnement indépendant des modules de la mémoire.
+
+# ------------------------------------------------------------
