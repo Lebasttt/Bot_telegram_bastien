@@ -1,0 +1,69 @@
+# ============================================================
+#       MEMOIRE DE TRAVAIL - MISSION CHIRURGICALE v7.1
+# ============================================================
+
+# RÈGLES IMMUABLES (GRAVÉES DANS LE MARBRE) :
+# ------------------------------------------------------------
+# 1.  ZÉRO SCRIPT DE TRI : L'analyse est 100% intellectuelle. Pas d'automatisation.
+# 2.  ZÉRO CODE : Aucun bloc de code Python dans le rapport final.
+# 3.  ZÉRO BRUIT : Suppression totale des numéros de lignes (ex: L7541).
+# 4.  ZÉRO REDONDANCE : Si une variante est identique au pilier, on n'écrit RIEN.
+# 5.  ZÉRO MASQUAGE : On laisse les tokens, clés et données brutes tels quels.
+# 6.  ZÉRO INITIATIVE : Pas d'optimisation, pas de jugement, juste les faits.
+# 7.  ORDRE NATUREL : Config -> Classes -> Fonctions (Flux logique du script).
+# 8.  FORMAT D'ENTRÉE : Nom, Fichier, Résumé (<15 mots), Logique (1,2,3), Outils, État.
+# 9.  PILIER + DELTAS : Une description complète pour le pilier, seuls les écarts pour les autres.
+# 10. SEGMENTATION OBLIGATOIRE : Toute tâche > 2000 lignes = Segment distinct.
+
+# ============================================================
+# COMPRÉHENSION DE LA TÂCHE :
+# ------------------------------------------------------------
+# Produire une cartographie textuelle exhaustive des 4 fichiers sources :
+# evoluut.py, evolutfinal2.py, evolutfini3, FONCTION_TRIER.txt.
+# Phase 1 : Faire un inventaire brut de chaque composant pour ne rien rater.
+# Phase 2 : Analyser le fond et rédiger la logique métier sans code.
+# Le but est de permettre au client de choisir les morceaux pour le montage final.
+
+# ============================================================
+# TABLEAU DE BORD D'EXÉCUTION :
+# ------------------------------------------------------------
+
+# --- PHASE 1 : EXTRACTION BRUTE (INVENTAIRE) ---
+# [EN COURS] Inventaire evoluut.py (Segment A1 : L1 -> L3000)
+# [A FAIRE] Inventaire evoluut.py (Segment A2 : L3001 -> L6000)
+# [A FAIRE] Inventaire evoluut.py (Segment A3 : L6001 -> Fin)
+# [A FAIRE] Inventaire evolutfinal2.py (Segment B1 : L1 -> L5000)
+# [A FAIRE] Inventaire evolutfinal2.py (Segment B2 : L5001 -> Fin)
+# [A FAIRE] Inventaire evolutfini3 (Segment C1 : L1 -> L5000)
+# [A FAIRE] Inventaire evolutfini3 (Segment C2 : L5001 -> Fin)
+# [A FAIRE] Inventaire FONCTION_TRIER.txt (Segment D1 : L1 -> L10000)
+# [A FAIRE] Inventaire FONCTION_TRIER.txt (Segment D2 : L10001 -> L20000)
+# [A FAIRE] Inventaire FONCTION_TRIER.txt (Segment D3 : L20001 -> L30000)
+# [A FAIRE] Inventaire FONCTION_TRIER.txt (Segment D4 : L30001 -> L40000)
+# [A FAIRE] Inventaire FONCTION_TRIER.txt (Segment D5 : L40001 -> Fin)
+
+# --- PHASE 2 : ANALYSE ET RÉDACTION PAR BLOCS ---
+# [A FAIRE] Rédaction Bloc : CONFIGURATION & VARIABLES GLOBALES
+# [A FAIRE] Rédaction Bloc : CLASSES DE BASE ET TYPES (Shared)
+# [A FAIRE] Rédaction Bloc : LOGIQUE IA & APPRENTISSAGE
+# [A FAIRE] Rédaction Bloc : RECHERCHE WEB & GEMINI
+# [A FAIRE] Rédaction Bloc : SÉCURITÉ & ANTI-SABOTAGE
+# [A FAIRE] Rédaction Bloc : SYSTÈME, SURVEILLANCE & MAINTENANCE
+# [A FAIRE] Rédaction Bloc : AUTO-MODIFICATION & ÉVOLUTION
+
+# --- PHASE 3 : CAS PARTICULIERS ---
+# [A FAIRE] Rédaction des Plans d'Activation pour fonctions vides/stubs.
+# [A FAIRE] Regroupement des Alias certains et marquage des doutes (============).
+
+# --- PHASE 4 : CONTRÔLE QUALITÉ FINAL ---
+# [A FAIRE] Vérification croisée (Inventaire vs Rapport).
+# [A FAIRE] Correction orthographe et encodage (Zéro Mojibake).
+
+# ============================================================
+# JOURNAL D'APPRENTISSAGE :
+# ------------------------------------------------------------
+# - 23/05 - 13h40 : Création de la mémoire v7.1. J'ai compris que l'automatisation
+#   par script m'éloigne de la qualité chirurgicale attendue. Je passe en mode
+#   "Ingénieur Humain" : lecture directe, compréhension, traduction.
+# - Règle apprise : Ne jamais masquer un token ou juger de l'utilité d'une fonction.
+# - Stratégie : Utiliser 'sed' pour lire les segments sans charger tout le fichier.

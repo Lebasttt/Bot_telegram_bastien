@@ -1,0 +1,2000 @@
+#===========================================
+# def add_entry(self, text_content, metadata=None)
+#===========================================
+    def add_entry(self, text_content, metadata=None):
+        with self.lock:
+            embedding = self.model.encode(text_content).tolist()
+            if self.vector_db_type == "chromadb":
+                entry_id = hashlib.sha256(text_content.encode('utf-8')).hexdigest()
+                self.collection.upsert(
+                    embeddings=[embedding],
+                    documents=[text_content],
+                    metadatas=[metadata if metadata else {}],
+                    ids=[entry_id]
+                )
+            elif self.vector_db_type == "faiss":
+                entry_id = self.faiss_next_id
+                self.faiss_index.add(np.array([embedding], dtype='float32'))
+                self.faiss_data.append(text_content)
+                self.faiss_ids.append(entry_id)
+                self.faiss_next_id += 1
+                self._save_faiss_index()
+
+            self._save_metadata(entry_id, text_content, metadata)
+            return entry_id
+
+
+
+    def add_entry(self, text_content, metadata=None):
+        with self.lock:
+            embedding = self.model.encode(text_content).tolist()
+            if self.vector_db_type == "chromadb":
+                entry_id = hashlib.sha256(text_content.encode('utf-8')).hexdigest()
+                self.collection.add(
+                    embeddings=[embedding],
+                    documents=[text_content],
+                    metadatas=[metadata if metadata else {}],
+                    ids=[entry_id]
+                )
+            elif self.vector_db_type == "faiss":
+                entry_id = self.faiss_next_id
+                self.faiss_index.add(np.array([embedding], dtype='float32'))
+                self.faiss_data.append(text_content)
+                self.faiss_ids.append(entry_id)
+                self.faiss_next_id += 1
+                self._save_faiss_index()
+
+            self._save_metadata(entry_id, text_content, metadata)
+            return entry_id
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_entry(self, text, metadata=None)
+#=======================================
+
+    def add_entry(self, text, metadata=None):
+        embedding = self.model.encode(text).tolist()
+        with self.lock:
+            self.collection.add(
+                embeddings=[embedding],
+                documents=[text],
+                metadatas=[metadata or {}],
+                ids=[hashlib.sha256(text.encode()).hexdigest()]
+            )
+
+
+
+    def add_entry(self, text, metadata=None):
+        with self.lock:
+            entry_id = hashlib.sha256(text.encode()).hexdigest()
+            embedding = self.model.encode(text).tolist()
+            # Simulation d'insertion vectorielle (ChromaDB/FAISS)
+            conn = sqlite3.connect(self.metadata_db)
+            conn.execute("INSERT OR REPLACE INTO entries VALUES (?, ?, ?)",
+                         (entry_id, text, json.dumps(metadata or {})))
+            conn.commit(); conn.close()
+            return entry_id
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_function(self, code, name)
+#=======================================
+
+    def add_function(self, code, name):
+        with self.lock:
+            try:
+                # Validation et formatage
+                ast.parse(code)
+                formatted_code = black.format_str(code, mode=black.FileMode())
+                formatted_code = isort.code(formatted_code)
+
+                current_content = self.target_file.read_text()
+                new_content = current_content + "\n\n" + formatted_code
+
+                # Backup atomique
+                backup = EVOLUT_HOME / f"source_backup_{int(time.time())}.py"
+                self.target_file.rename(backup)
+                self.target_file.write_text(new_content)
+
+                with sqlite3.connect(self.db_file) as conn:
+                    conn.execute("INSERT INTO modifications (timestamp, function_name, action, code_before, code_after, status) VALUES (?, ?, ?, ?, ?, ?)",
+                                 (time.time(), name, "add", backup.read_text(), new_content, "applied"))
+                return True
+            except Exception as e:
+                log(f"Erreur self-mod : {e}", level="error")
+                return False
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_function(self, function_code)
+#=======================================
+
+
+
+
+#=======================================
+# def add_function(self, function_code, function_name)
+#=======================================
+
+    def add_function(self, function_code, function_name):
+        with self.lock:
+            current_code = self.target_file.read_text(encoding='utf-8')
+            lignes = current_code.splitlines(True)
+
+            # Trouver un point d'insertion logique (avant main ou if __name__)
+            index_insertion = -1
+            for i, ligne in enumerate(lignes):
+                if 'def main():' in ligne or 'if __name__ == "__main__":' in ligne:
+                    index_insertion = i - 1
+                    break
+
+            if index_insertion == -1: # Si pas de main, insÃ©rer Ã  la fin
+                index_insertion = len(lignes)
+
+            code_a_inserer = f"\n{function_code}\n"
+            lignes.insert(index_insertion, code_a_inserer)
+            final_code = "".join(lignes)
+
+            try:
+                final_code = self._validate_and_format_code(final_code)
+                self._save_code(final_code, "add_function", function_name)
+                log(f"Fonction '{function_name}' ajoutÃ©e avec succÃ¨s.", level="info")
+                return True
+            except Exception as e:
+                log(f"Ã‰chec de l'ajout de la fonction '{function_name}': {e}", level="error")
+                return False
+
+
+
+    def add_function(self, function_code, function_name):
+        with self.lock:
+            current_code = self.target_file.read_text(encoding='utf-8')
+            lignes = current_code.splitlines(True)
+
+            # Trouver un point d'insertion logique (avant main ou if __name__)
+            index_insertion = -1
+            for i, ligne in enumerate(lignes):
+                if 'def main():' in ligne or 'if __name__ == "__main__":' in ligne:
+                    index_insertion = i - 1
+                    break
+
+            if index_insertion == -1: # Si pas de main, insérer à la fin
+                index_insertion = len(lignes)
+
+            code_a_inserer = f"\n{function_code}\n"
+            lignes.insert(index_insertion, code_a_inserer)
+            final_code = "".join(lignes)
+
+            try:
+                final_code = self._validate_and_format_code(final_code)
+                self._save_code(final_code, "add_function", function_name)
+                log(f"Fonction '{function_name}' ajoutée avec succès.", level="info")
+                return True
+            except Exception as e:
+                log(f"Échec de l'ajout de la fonction '{function_name}': {e}", level="error")
+                return False
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_knowledge(self, concept_name, concept_type, risk_level, source)
+#=======================================
+
+    def add_knowledge(self, concept_name, concept_type, risk_level, source):
+        if not self.graph.has_node(concept_name):
+            self.graph.add_node(concept_name, type=concept_type, risk=risk_level, first_seen=time.time(), sources=[source])
+        else:
+            node_data = self.graph.nodes[concept_name]
+            if source not in node_data.get('sources', []):
+                node_data['sources'].append(source)
+            node_data['risk'] = max(node_data['risk'], risk_level, key=lambda x: {'faible': 0, 'modere': 1, 'eleve': 2}.get(x, 0))
+        self._save_graph_to_db()
+
+
+
+    def add_knowledge(self, concept_name, concept_type, risk_level, source):
+        if not self.graph.has_node(concept_name):
+            self.graph.add_node(concept_name, type=concept_type, risk=risk_level, first_seen=time.time(), sources=[source])
+        else:
+            data = self.graph.nodes[concept_name]
+            if source not in data.get('sources', []): data['sources'].append(source)
+            data['risk'] = risk_level
+        self._save_graph_to_db()
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_knowledge(self, concept, type, risk, source)
+#=======================================
+
+
+
+
+
+
+#=======================================
+# def add_knowledge_tasks( concept_name, concept_type, risk_level, source)
+#=======================================
+
+def add_knowledge_tasks( concept_name, concept_type, risk_level, source):
+        if not self.graph.has_node(concept_name):
+            self.graph.add_node(concept_name, type=concept_type, risk=risk_level, first_seen=time.time(), sources=[source])
+        else:
+            node_data = self.graph.nodes[concept_name]
+            if source not in node_data.get('sources', []):
+                node_data['sources'].append(source)
+            node_data['risk'] = max(node_data['risk'], risk_level, key=lambda x: {'faible': 0, 'modere': 1, 'eleve': 2}.get(x, 0))
+        self._save_graph_to_db()
+
+
+
+
+
+
+
+
+#=======================================
+# def add_new_capability(capability_code)
+#=======================================
+
+
+def add_new_capability(capability_code):
+    """Ajoute une nouvelle capacité au système"""
+    log(f"➕ Ajout de nouvelle capacité: {capability_code[:50]}...", level="info")
+
+
+
+
+
+
+
+#=======================================
+# def add_new_capability(pattern)
+#=======================================
+
+
+def add_new_capability(pattern):
+    """Ajoute une nouvelle capacité basée sur les patterns"""
+    try:
+        with open(__file__, 'a', encoding='utf-8') as f:
+            f.write(f"\n# NOUVELLE CAPACITÉ AJOUTÉE AUTOMATIQUEMENT\n")
+            f.write(f"def capacite_auto_{int(time.time())}():\n")
+            f.write(f'    """Capacité auto-générée basée sur: {pattern}"""\n')
+            f.write(f'    log("Nouvelle capacité auto-générée exécutée")\n')
+
+        log("🧬 Nouvelle capacité ajoutée au code")
+    except Exception as e:
+        log(f"❌ Erreur ajout capacité: {str(e)}")
+
+
+
+def add_new_capability(pattern):
+    """Ajoute une nouvelle capacitÃ© basÃ©e sur les patterns."""
+    function_name = f"capacite_auto_{hash(pattern) & 0xFFFFFFFF}"
+    new_code = f'''
+@suivi_performance_capacite
+def {function_name}():
+    """CapacitÃ© auto-gÃ©nÃ©rÃ©e basÃ©e sur le pattern: {pattern[:100]}..."""
+    log("ExÃ©cution d'une nouvelle capacitÃ© auto-gÃ©nÃ©rÃ©e basÃ©e sur un pattern rÃ©ussi.")
+    return execute_commande_securisee("{pattern.replace('"', '\\"')}")
+'''
+    if self_modifier_v2.add_function(new_code, function_name):
+        log(f"ðŸ§¬ Nouvelle capacitÃ© '{function_name}' ajoutÃ©e au code.")
+    else:
+        log(f"Ã‰chec de l'insertion de la capacitÃ© '{function_name}'.", level="error")
+
+
+
+def add_new_capability(pattern):
+    """Ajoute une nouvelle capacité basée sur les patterns."""
+    function_name = f"capacite_auto_{hash(pattern) & 0xFFFFFFFF}"
+    new_code = f'''
+@suivi_performance_capacite
+def {function_name}():
+    """Capacité auto-générée basée sur le pattern: {pattern[:100]}..."""
+    log("Exécution d'une nouvelle capacité auto-générée.")
+    return execute_commande_securisee("{pattern.replace('"', '\"')}")
+'''
+    self_modifier_v2.add_function(new_code, function_name)
+
+
+
+def add_new_capability(pattern):
+    """Ajoute une nouvelle capacité basée sur les patterns."""
+    function_name = f"capacite_auto_{hash(pattern) & 0xFFFFFFFF}"
+    new_code = f'''
+@suivi_performance_capacite
+def {function_name}():
+    """Capacité auto-générée basée sur le pattern: {pattern[:100]}..."""
+    log("Exécution d'une nouvelle capacité auto-générée basée sur un pattern réussi.")
+    return execute_commande_securisee("{pattern.replace('"', '\\"')}")
+'''
+    if self_modifier_v2.add_function(new_code, function_name):
+        log(f"🧬 Nouvelle capacité '{function_name}' ajoutée au code.")
+    else:
+        log(f"Échec de l'insertion de la capacité '{function_name}'.", level="error")
+
+
+
+def add_new_capability(pattern):
+    """Ajoute une nouvelle capacité basée sur les patterns."""
+    function_name = f"capacite_auto_{hash(pattern) & 0xFFFFFFFF}" # Nom unique basé sur le hash
+    new_code = f'''
+@suivi_performance_capacite
+def {function_name}():
+    """Capacité auto-générée basée sur le pattern: {pattern[:100]}..."""
+    log("Exécution d'une nouvelle capacité auto-générée basée sur un pattern réussi.")
+    return execute_commande_securisee("{pattern.replace('"', '\\"')}")
+'''
+    try:
+        # Formatage avec black et isort avant insertion
+        formatted_code = black.format_str(new_code, mode=black.FileMode())
+        formatted_code = isort.code(formatted_code)
+
+        # Utilisation de l'AST pour valider le code avant insertion
+        ast.parse(formatted_code)
+
+        if inserer_code_strategique(formatted_code):
+            log(f"🧬 Nouvelle capacité '{function_name}' ajoutée au code.")
+            # pylint.run_main(['--disable=all', '--enable=E0602', __file__]) # Exemple de validation pylint
+        else:
+            log(f"Échec de l'insertion de la capacité '{function_name}'.", level="error")
+    except SyntaxError as e:
+        log(f"Erreur de syntaxe dans la capacité auto-générée '{function_name}': {e}", level="error", exc_info=True)
+    except Exception as e:
+        log(f"Erreur ajout capacité '{function_name}': {str(e)}", level="error", exc_info=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_observation(self, commande, resultat, succes, contexte_systeme)
+#=======================================
+
+    def add_observation(self, commande, resultat, succes, contexte_systeme):
+        observation = {
+            "timestamp": time.time(),
+            "commande": commande,
+            "resultat": resultat,
+            "succes": succes,
+            "contexte_systeme": contexte_systeme
+        }
+        self.observations.append(observation)
+        conn = sqlite3.connect(self.db_file)
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO observations (timestamp, commande, resultat, succes, contexte_systeme) VALUES (?, ?, ?, ?, ?)",
+            (observation["timestamp"], observation["commande"], observation["resultat"], observation["succes"],
+             orjson.dumps(observation["contexte_systeme"]))
+        )
+        conn.commit()
+        conn.close()
+        self.update_causal_model()
+
+
+
+    def add_observation(self, commande, resultat, succes, contexte_systeme):
+        observation = {
+            "timestamp": time.time(),
+            "commande": commande,
+            "resultat": resultat,
+            "succes": succes,
+            "contexte_systeme": contexte_systeme
+        }
+        self.observations.append(observation)
+        conn = sqlite3.connect(self.db_file)
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO observations (timestamp, commande, resultat, succes, contexte_systeme) VALUES (?, ?, ?, ?, ?)",
+            (observation["timestamp"], observation["commande"], observation["resultat"], observation["succes"],
+             json.dumps(observation["contexte_systeme"]))
+        )
+        conn.commit()
+        conn.close()
+        self.update_causal_model()
+
+
+
+    def add_observation(self, commande, resultat, succes, contexte_systeme):
+        obs = {"timestamp": time.time(), "commande": commande, "succes": int(succes), "context": contexte_systeme}
+        self.observations.append(obs)
+        with sqlite3.connect(self.db_file) as conn:
+            conn.execute("INSERT INTO observations (timestamp, commande, succes, context) VALUES (?, ?, ?, ?)", (obs["timestamp"], commande, succes, json.dumps(contexte_systeme)))
+        if len(self.observations) >= 10: self.update_causal_model()
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_relation(self, concept1, relation_type, concept2)
+#=======================================
+
+    def add_relation(self, concept1, relation_type, concept2):
+        self.graph.add_edge(concept1, concept2, type=relation_type)
+        self._save_graph_to_db()
+
+
+
+
+
+
+#=======================================
+# def add_relation(self, concept1, relation_type, concept2, attributes=None)
+#=======================================
+
+    def add_relation(self, concept1, relation_type, concept2, attributes=None):
+        if not self.graph.has_node(concept1):
+            self.graph.add_node(concept1, type='unknown', first_seen=time.time())
+        if not self.graph.has_node(concept2):
+            self.graph.add_node(concept2, type='unknown', first_seen=time.time())
+
+        edge_attributes = attributes if attributes is not None else {}
+        edge_attributes['type'] = relation_type
+        self.graph.add_edge(concept1, concept2, **edge_attributes)
+        self._save_graph_to_db()
+
+
+
+
+
+
+
+
+#=======================================
+# def add_to_blacklist_ci(command)
+#=======================================
+
+def add_to_blacklist_ci(command):
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+    if clean_cmd not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(clean_cmd)
+        log(f"[LOCAL_CI] AUTO-PROTECTION: '{clean_cmd}' ajoutÃ© Ã  la blacklist")
+
+
+
+
+
+
+#=======================================
+# def add_to_blacklist(command)
+#=======================================
+
+def add_to_blacklist(command):
+    """Stub pour add_to_blacklist de evolut_self_modification"""
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+    if clean_cmd not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(clean_cmd)
+        log(f"STUB: add_to_blacklist('{command}')")
+
+
+
+def add_to_blacklist(command):
+    """Ajoute une commande à la blacklist dynamique"""
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+
+    if clean_cmd not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(clean_cmd)
+        log(f"🛡️ AUTO-PROTECTION: '{clean_cmd}' ajouté à la blacklist")
+        update_comm(f"Nouvelle protection: commande '{clean_cmd}' maintenant bloquée")
+
+
+
+def add_to_blacklist(command):
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+    if clean_cmd not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(clean_cmd)
+        log(f"AUTO-PROTECTION: '{clean_cmd}' ajoutÃ© Ã  la blacklist")
+
+
+
+def add_to_blacklist(command):
+    log(f"STUB: add_to_blacklist('{command}')")
+
+
+
+def add_to_blacklist(command):
+    """Ajoute une commande Ã  la blacklist dynamique de maniÃ¨re thread-safe."""
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+
+    with threading.Lock():
+        if clean_cmd not in DYNAMIC_BLACKLIST:
+            DYNAMIC_BLACKLIST.append(clean_cmd)
+            log(f"ðŸ›¡ï¸ AUTO-PROTECTION: '{clean_cmd}' ajoutÃ© Ã  la blacklist")
+            update_comm(f"Nouvelle protection: commande '{clean_cmd}' maintenant bloquÃ©e")
+        else:
+            log(f"Commande '{clean_cmd}' dÃ©jÃ  dans la blacklist.", level="info")
+
+
+
+def add_to_blacklist(command):
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+    if clean_cmd not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(clean_cmd)
+        log(f"AUTO-PROTECTION: '{clean_cmd}' ajouté à la blacklist")
+
+
+
+def add_to_blacklist(command):
+    """Ajoute une commande à la blacklist dynamique."""
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+
+    with threading.Lock():
+        if clean_cmd not in DYNAMIC_BLACKLIST:
+            DYNAMIC_BLACKLIST.append(clean_cmd)
+            log(f"🛡️ AUTO-PROTECTION: '{clean_cmd}' ajouté à la blacklist")
+            update_comm(f"Nouvelle protection: commande '{clean_cmd}' maintenant bloquée")
+
+
+
+def add_to_blacklist(command):
+    """Ajoute une commande à la blacklist dynamique de manière thread-safe."""
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+
+    with threading.Lock():
+        if clean_cmd not in DYNAMIC_BLACKLIST:
+            DYNAMIC_BLACKLIST.append(clean_cmd)
+            log(f"🛡️ AUTO-PROTECTION: '{clean_cmd}' ajouté à la blacklist")
+            update_comm(f"Nouvelle protection: commande '{clean_cmd}' maintenant bloquée")
+        else:
+            log(f"Commande '{clean_cmd}' déjà dans la blacklist.", level="info")
+
+
+
+def add_to_blacklist(command):
+    """Ajoute une commande à la blacklist dynamique de manière thread-safe."""
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+
+    with threading.Lock(): # Verrou pour la modification de la blacklist
+        if clean_cmd not in DYNAMIC_BLACKLIST:
+            DYNAMIC_BLACKLIST.append(clean_cmd)
+            log(f"🛡️ AUTO-PROTECTION: '{clean_cmd}' ajouté à la blacklist")
+            update_comm(f"Nouvelle protection: commande '{clean_cmd}' maintenant bloquée")
+        else:
+            log(f"Commande '{clean_cmd}' déjà dans la blacklist.", level="info")
+
+
+
+def add_to_blacklist(command):
+    global DYNAMIC_BLACKLIST
+    clean_cmd = command.split()[0] + " "
+    if clean_cmd not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(clean_cmd)
+        log(f"🛡️ AUTO-PROTECTION: '{clean_cmd}' ajouté à la blacklist")
+
+
+
+def add_to_blacklist(command):
+    """Ajoute une commande à la blacklist"""
+    from .config import DYNAMIC_BLACKLIST
+    if command not in DYNAMIC_BLACKLIST:
+        DYNAMIC_BLACKLIST.append(command)
+    log(f"⚠️ Commande blacklistée: {command}", level="warning")
+
+
+
+def add_to_blacklist(command):
+    global DYNAMIC_BLACKLIST
+    if command not in DYNAMIC_BLACKLIST: DYNAMIC_BLACKLIST.append(command)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_to_winning_patterns_ci(commande)
+#=======================================
+
+def add_to_winning_patterns_ci(commande):
+    """Ajoute une commande aux patterns gagnants, en Ã©vitant les doublons et en analysant les similaritÃ©s."""
+    winning_file = EVOLUT_HOME / "winning_patterns.log"
+
+    if not is_valuable_command_ci(commande):
+        return
+
+    ligne_a_ecrire = f"{commande.strip()}\n"
+    if ecrire_ligne_unique(winning_file, ligne_a_ecrire):
+        log(f"[LOCAL_CI] ðŸŽ¯ NOUVELLE COMMANDE GAGNANTE DÃ‰COUVERTE: {commande.strip()}")
+
+
+
+
+
+
+
+
+#=======================================
+# def add_to_winning_patterns(cmd, context)
+#=======================================
+
+def add_to_winning_patterns(cmd, context):
+    """Ajoute aux patterns gagnants"""
+    log(f"Pattern gagnant enregistré: {cmd}", level="debug")
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def add_to_winning_patterns(commande)
+#=======================================
+
+
+def add_to_winning_patterns(commande):
+    """Ajoute une commande aux patterns gagnants, en évitant les doublons."""
+    winning_file = EVOLUT_HOME / "winning_patterns.log"
+
+    if not is_valuable_command(commande):
+        return
+
+    ligne_a_ecrire = f"{commande.strip()}\n"
+    if ecrire_ligne_unique(winning_file, ligne_a_ecrire):
+        log(f"🎯 NOUVELLE COMMANDE GAGNANTE DÉCOUVERTE: {commande.strip()}")
+
+
+
+def add_to_winning_patterns(commande):
+    """Ajoute une commande aux patterns gagnants, en Ã©vitant les doublons et en analysant les similaritÃ©s."""
+    winning_file = EVOLUT_HOME / "winning_patterns.log"
+
+    if not is_valuable_command(commande):
+        return
+
+    ligne_a_ecrire = f"{commande.strip()}\n"
+    if ecrire_ligne_unique(winning_file, ligne_a_ecrire):
+        log(f"ðŸŽ¯ NOUVELLE COMMANDE GAGNANTE DÃ‰COUVERTE: {commande.strip()}")
+
+
+
+    def add_to_winning_patterns(commande):
+        log(f"STUB: add_to_winning_patterns('{commande}')")
+
+
+
+def add_to_winning_patterns(commande):
+    """Ajoute une commande aux patterns gagnants, en évitant les doublons et en analysant les similarités."""
+    winning_file = EVOLUT_HOME / "winning_patterns.log"
+
+    if not is_valuable_command(commande):
+        return
+
+    ligne_a_ecrire = f"{commande.strip()}\n"
+    if ecrire_ligne_unique(winning_file, ligne_a_ecrire):
+        log(f"🎯 NOUVELLE COMMANDE GAGNANTE DÉCOUVERTE: {commande.strip()}")
+
+
+
+        # Analyse de similarité avec DBSCAN pour regrouper les patterns gagnants
+        # Ceci est un exemple conceptuel, nécessiterait un embedding des commandes
+        # commands_df = pd.read_csv(winning_file, header=None, names=['command'])
+        # embeddings = sentence_transformer_model.encode(commands_df['command'].tolist())
+        # clustering = DBSCAN(eps=0.5, min_samples=5).fit(embeddings)
+        # commands_df['cluster'] = clustering.labels_
+        # log(f"Patterns gagnants regroupés en {commands_df['cluster'].nunique()} clusters.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def ajouter_probleme(self, fichier, type_probleme, details, severite)
+#=======================================
+
+    def ajouter_probleme(self, fichier, type_probleme, details, severite):
+        """Ajoute un problème au rapport"""
+        probleme = {
+            'fichier': fichier,
+            'type': type_probleme,
+            'details': details,
+            'severite': severite,
+            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
+
+        self.rapport_complet.append(probleme)
+
+        if fichier not in self.fichiers_problemes:
+            self.fichiers_problemes[fichier] = []
+        self.fichiers_problemes[fichier].append(probleme)
+
+
+
+
+
+
+
+#=======================================
+# def analyser_applications(self)
+#=======================================
+
+
+    def analyser_applications(self):
+        """Analyse les applications"""
+        resultat = "📱 APPLICATIONS\n\n"
+        apps_crash = execute_commande_securisee("logcat -d | grep -i 'fatal\\|crash' | tail -5")
+        if apps_crash:
+            resultat += f"Crashs récents:\n{apps_crash}\n"
+            self.problemes_critiques.append("📱 Applications qui plantent")
+            self.suggestions_amélioration.append("🔄 Mettre à jour les applications problématiques")
+        return resultat
+
+
+
+    def analyser_applications(self):
+        """Analyse les applications"""
+        log("📱 Analyse des applications...")
+
+        resultat = "📱 APPLICATIONS\n\n"
+
+        # Applications récentes
+        apps_recentes = execute_commande_securisee("ps -A --sort=-pcpu | head -10")
+        if apps_recentes:
+            resultat += f"Applications récentes (CPU):\n{apps_recentes}\n"
+
+        # Applications crashées
+        apps_crash = execute_commande_securisee("logcat -d | grep -i 'fatal\\|crash' | tail -5")
+        if apps_crash:
+            resultat += f"Crashs récents:\n{apps_crash}\n"
+            self.problemes_critiques.append("📱 Applications qui plantent")
+            self.suggestions_amélioration.append("🔄 Mettre à jour les applications problématiques")
+
+        return resultat
+
+
+
+    def analyser_applications(self):
+        """Analyse les applications en utilisant psutil et re."""
+        log("ðŸ“± Analyse des applications...")
+        resultat = "ðŸ“± APPLICATIONS\n\n"
+
+        processes = sorted(psutil.process_iter(['pid', 'name', 'cpu_percent']), key=lambda p: p.info['cpu_percent'], reverse=True)
+        resultat += "Applications rÃ©centes (CPU):\n"
+        for p in processes[:10]:
+            resultat += f"  - PID: {p.info['pid']}, Name: {p.info['name']}, CPU: {p.info['cpu_percent']}%\n"
+
+        apps_crash_cmd = "logcat -d | grep -i 'fatal\\|crash' | tail -5"
+        apps_crash_output = execute_commande_securisee(apps_crash_cmd)
+        if apps_crash_output:
+            resultat += f"Crashs rÃ©cents:\n{apps_crash_output}\n"
+            self.problemes_critiques.append("ðŸ“± Applications qui plantent")
+            self.suggestions_amÃ©lioration.append("ðŸ”„ Mettre Ã  jour les applications problÃ©matiques")
+
+        # Simulation d'analyse de performance graphique d'une application avec scikit-image
+        try:
+            # CrÃ©er une image de performance simulÃ©e (ex: un graphique)
+            simulated_image_path = RAPPORTS_DIR / "simulated_app_performance.png"
+            # CrÃ©er une image noire pour la simulation
+            simulated_image = np.zeros((100, 100), dtype=np.uint8)
+            ski_io.imsave(str(simulated_image_path), simulated_image)
+
+            image = ski_io.imread(str(simulated_image_path))
+            edges = ski_feature.canny(image)
+            log(f"Skimage: Simulation d'analyse de performance graphique pour {simulated_image_path} (edges: {edges.sum()})", level="debug")
+            # os.remove(simulated_image_path) # Nettoyer l'image simulÃ©e
+        except Exception as e:
+            log(f"Skimage simulation error: {e}", level="warning")
+
+        return resultat
+
+
+
+    def analyser_applications(self):
+        """Analyse les applications en utilisant psutil et re."""
+        log("ðŸ“± Analyse des applications...")
+        resultat = "ðŸ“± APPLICATIONS\n\n"
+
+        processes = sorted(psutil.process_iter(['pid', 'name', 'cpu_percent']), key=lambda p: p.info['cpu_percent'], reverse=True)
+        resultat += "Applications récentes (CPU):\n"
+        for p in processes[:10]:
+            resultat += f"  - PID: {p.info['pid']}, Name: {p.info['name']}, CPU: {p.info['cpu_percent']}%\n"
+
+        apps_crash_cmd = "logcat -d | grep -i 'fatal\\|crash' | tail -5"
+        apps_crash_output = execute_commande_securisee(apps_crash_cmd)
+        if apps_crash_output:
+            resultat += f"Crashs récents:\n{apps_crash_output}\n"
+            self.problemes_critiques.append("ðŸ“± Applications qui plantent")
+            self.suggestions_amélioration.append("🔄 Mettre à jour les applications problématiques")
+
+        # Simulation d'analyse de performance graphique d'une application avec scikit-image
+        try:
+            # Créer une image de performance simulée (ex: un graphique)
+            simulated_image_path = RAPPORTS_DIR / "simulated_app_performance.png"
+            # Créer une image noire pour la simulation
+            simulated_image = np.zeros((100, 100), dtype=np.uint8)
+            ski_io.imsave(str(simulated_image_path), simulated_image)
+
+            image = ski_io.imread(str(simulated_image_path))
+            edges = ski_feature.canny(image)
+            log(f"Skimage: Simulation d'analyse de performance graphique pour {simulated_image_path} (edges: {edges.sum()})", level="debug")
+            # os.remove(simulated_image_path) # Nettoyer l'image simulée
+        except Exception as e:
+            log(f"Skimage simulation error: {e}", level="warning")
+
+        return resultat
+
+
+
+    def analyser_applications(self):
+        """Analyse les applications en utilisant psutil et re."""
+        log("📱 Analyse des applications...")
+        resultat = "📱 APPLICATIONS\n\n"
+
+        processes = sorted(psutil.process_iter(['pid', 'name', 'cpu_percent']), key=lambda p: p.info['cpu_percent'], reverse=True)
+        resultat += "Applications récentes (CPU):\n"
+        for p in processes[:10]:
+            resultat += f"  - PID: {p.info['pid']}, Name: {p.info['name']}, CPU: {p.info['cpu_percent']}%\n"
+
+        apps_crash_cmd = "logcat -d | grep -i 'fatal\\|crash' | tail -5"
+        apps_crash_output = execute_commande_securisee(apps_crash_cmd)
+        if apps_crash_output:
+            resultat += f"Crashs récents:\n{apps_crash_output}\n"
+            self.problemes_critiques.append("📱 Applications qui plantent")
+            self.suggestions_amélioration.append("🔄 Mettre à jour les applications problématiques")
+
+        # Simulation d'analyse de performance graphique d'une application avec scikit-image
+        try:
+            # Créer une image de performance simulée (ex: un graphique)
+            simulated_image_path = RAPPORTS_DIR / "simulated_app_performance.png"
+            # Créer une image noire pour la simulation
+            simulated_image = np.zeros((100, 100), dtype=np.uint8)
+            ski_io.imsave(str(simulated_image_path), simulated_image)
+
+            image = ski_io.imread(str(simulated_image_path))
+            edges = ski_feature.canny(image)
+            log(f"Skimage: Simulation d'analyse de performance graphique pour {simulated_image_path} (edges: {edges.sum()})", level="debug")
+            # os.remove(simulated_image_path) # Nettoyer l'image simulée
+        except Exception as e:
+            log(f"Skimage simulation error: {e}", level="warning")
+
+        return resultat
+
+
+
+    def analyser_applications(self):
+        """Analyse les applications en utilisant psutil et re."""
+        log("📱 Analyse des applications...")
+        resultat = "📱 APPLICATIONS\n\n"
+
+        # Applications récentes (par utilisation CPU)
+        processes = sorted(psutil.process_iter(['pid', 'name', 'cpu_percent']), key=lambda p: p.info['cpu_percent'], reverse=True)
+        resultat += "Applications récentes (CPU):\n"
+        for p in processes[:10]:
+            resultat += f"  - PID: {p.info['pid']}, Name: {p.info['name']}, CPU: {p.info['cpu_percent']}%\n"
+
+        # Applications crashées (via logcat)
+        apps_crash_cmd = "logcat -d | grep -i 'fatal\\|crash' | tail -5"
+        apps_crash_output = execute_commande_securisee(apps_crash_cmd)
+        if apps_crash_output:
+            resultat += f"Crashs récents:\n{apps_crash_output}\n"
+            self.problemes_critiques.append("📱 Applications qui plantent")
+            self.suggestions_amélioration.append("🔄 Mettre à jour les applications problématiques")
+
+        return resultat
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_batterie(self)
+#=======================================
+
+
+    def analyser_batterie(self):
+        """Analyse l'état de la batterie"""
+        resultat = "🔋 BATTERIE\n\n"
+        batterie = execute_commande_securisee("dumpsys battery 2>/dev/null | grep -E 'level|scale|status|temperature'")
+        if batterie:
+            resultat += f"État batterie:\n{batterie}\n"
+            for line in batterie.split('\n'):
+                if "level" in line and "scale" not in line:
+                    try:
+                        niveau = int(''.join(filter(str.isdigit, line.split(':')[1])))
+                        if niveau <= self.alertes_seuil['batterie']:
+                            self.problemes_critiques.append(f"🔋 Batterie critique (< {self.alertes_seuil['batterie']}%)")
+                            self.suggestions_amélioration.append("🔌 Brancher le chargeur rapidement")
+                    except:
+                        pass
+        return resultat
+
+
+
+    def analyser_batterie(self):
+        """Analyse l'état de la batterie"""
+        log("🔋 Analyse de la batterie...")
+
+        resultat = "🔋 BATTERIE\n\n"
+
+        # Niveau de batterie
+        batterie = execute_commande_securisee("dumpsys battery 2>/dev/null | grep -E 'level|scale|status|temperature'")
+        if batterie:
+            resultat += f"État batterie:\n{batterie}\n"
+        else:
+            # Alternative
+            batterie_alt = execute_commande_securisee("cat /sys/class/power_supply/battery/capacity 2>/dev/null")
+            if batterie_alt:
+                resultat += f"Niveau batterie: {batterie_alt.strip()}%\n"
+
+        # Santé batterie
+        batterie_sante = execute_commande_securisee("cat /sys/class/power_supply/battery/health 2>/dev/null")
+        if batterie_sante:
+            resultat += f"Santé batterie: {batterie_sante}\n"
+
+        # Détection problèmes
+        if batterie:
+            for line in batterie.split('\n'):
+                if "level" in line and "scale" not in line:
+                    try:
+                        niveau = int(''.join(filter(str.isdigit, line.split(':')[1])))
+                        if niveau < 20:
+                            self.problemes_critiques.append("🔋 Batterie très faible (<20%)")
+                            self.suggestions_amélioration.append("🔌 Brancher le chargeur rapidement")
+                        elif niveau < 10:
+                            self.problemes_critiques.append("📛 Batterie critique (<10%)")
+                    except:
+                        pass
+
+        return resultat
+
+
+
+    def analyser_batterie(self):
+        """Analyse l'Ã©tat de la batterie en utilisant psutil et numpy."""
+        log("ðŸ”‹ Analyse de la batterie...")
+        resultat = "ðŸ”‹ BATTERIE\n\n"
+
+        battery = psutil.sensors_battery()
+        if battery:
+            resultat += f"Niveau: {battery.percent}%\n"
+            resultat += f"Ã‰tat: {'Chargement' if battery.power_plugged else 'DÃ©chargement'}\n"
+            resultat += f"Temps restant: {str(datetime.timedelta(seconds=battery.secsleft)) if battery.secsleft != psutil.POWER_TIME_UNLIMITED else 'IllimitÃ©'}\n"
+
+            batt_temp_cmd = "cat /sys/class/power_supply/battery/temp 2>/dev/null"
+            batt_temp_output = execute_commande_securisee(batt_temp_cmd)
+            if batt_temp_output and batt_temp_output.strip().isdigit():
+                temp_c = int(batt_temp_output.strip()) / 10.0
+                resultat += f"TempÃ©rature: {temp_c:.1f}Â°C\n"
+                if temp_c > 45:
+                    self.problemes_critiques.append("ðŸŒ¡ï¸ Surchauffe batterie dÃ©tectÃ©e (>45Â°C)")
+                    self.suggestions_amÃ©lioration.append("â„ï¸ Laisser refroidir le tÃ©lÃ©phone")
+                elif temp_c > 40:
+                    self.problemes_critiques.append("âš ï¸ Batterie chaude (>40Â°C)")
+
+            if battery.percent < 20:
+                self.problemes_critiques.append("ðŸ”‹ Batterie trÃ¨s faible (<20%)")
+                self.suggestions_amÃ©lioration.append("ðŸ”Œ Brancher le chargeur rapidement")
+            elif battery.percent < 10:
+                self.problemes_critiques.append("ðŸ“› Batterie critique (<10%)")
+        else:
+            resultat += "Informations batterie non disponibles.\n"
+
+        return resultat
+
+
+
+    def analyser_batterie(self):
+        """Analyse l'état de la batterie en utilisant psutil et numpy."""
+        log("ðŸ”‹ Analyse de la batterie...")
+        resultat = "ðŸ”‹ BATTERIE\n\n"
+
+        battery = psutil.sensors_battery()
+        if battery:
+            resultat += f"Niveau: {battery.percent}%\n"
+            resultat += f"État: {'Chargement' if battery.power_plugged else 'Déchargement'}\n"
+            resultat += f"Temps restant: {str(datetime.timedelta(seconds=battery.secsleft)) if battery.secsleft != psutil.POWER_TIME_UNLIMITED else 'Illimité'}\n"
+
+            batt_temp_cmd = "cat /sys/class/power_supply/battery/temp 2>/dev/null"
+            batt_temp_output = execute_commande_securisee(batt_temp_cmd)
+            if batt_temp_output and batt_temp_output.strip().isdigit():
+                temp_c = int(batt_temp_output.strip()) / 10.0
+                resultat += f"Température: {temp_c:.1f}Â°C\n"
+                if temp_c > 45:
+                    self.problemes_critiques.append("ðŸŒ¡ï¸ Surchauffe batterie détectée (>45Â°C)")
+                    self.suggestions_amélioration.append("â„ï¸ Laisser refroidir le téléphone")
+                elif temp_c > 40:
+                    self.problemes_critiques.append("⚠️ Batterie chaude (>40Â°C)")
+
+            if battery.percent < 20:
+                self.problemes_critiques.append("ðŸ”‹ Batterie très faible (<20%)")
+                self.suggestions_amélioration.append("ðŸ”Œ Brancher le chargeur rapidement")
+            elif battery.percent < 10:
+                self.problemes_critiques.append("ðŸ“› Batterie critique (<10%)")
+        else:
+            resultat += "Informations batterie non disponibles.\n"
+
+        return resultat
+
+
+
+    def analyser_batterie(self):
+        """Analyse l'état de la batterie en utilisant psutil et numpy."""
+        log("🔋 Analyse de la batterie...")
+        resultat = "🔋 BATTERIE\n\n"
+
+        battery = psutil.sensors_battery()
+        if battery:
+            resultat += f"Niveau: {battery.percent}%\n"
+            resultat += f"État: {'Chargement' if battery.power_plugged else 'Déchargement'}\n"
+            resultat += f"Temps restant: {str(datetime.timedelta(seconds=battery.secsleft)) if battery.secsleft != psutil.POWER_TIME_UNLIMITED else 'Illimité'}\n"
+
+            batt_temp_cmd = "cat /sys/class/power_supply/battery/temp 2>/dev/null"
+            batt_temp_output = execute_commande_securisee(batt_temp_cmd)
+            if batt_temp_output and batt_temp_output.strip().isdigit():
+                temp_c = int(batt_temp_output.strip()) / 10.0
+                resultat += f"Température: {temp_c:.1f}°C\n"
+                if temp_c > 45:
+                    self.problemes_critiques.append("🌡️ Surchauffe batterie détectée (>45°C)")
+                    self.suggestions_amélioration.append("❄️ Laisser refroidir le téléphone")
+                elif temp_c > 40:
+                    self.problemes_critiques.append("⚠️ Batterie chaude (>40°C)")
+
+            if battery.percent < 20:
+                self.problemes_critiques.append("🔋 Batterie très faible (<20%)")
+                self.suggestions_amélioration.append("🔌 Brancher le chargeur rapidement")
+            elif battery.percent < 10:
+                self.problemes_critiques.append("📛 Batterie critique (<10%)")
+        else:
+            resultat += "Informations batterie non disponibles.\n"
+
+        return resultat
+
+
+
+    def analyser_batterie(self):
+        """Analyse l'état de la batterie en utilisant psutil et numpy."""
+        log("🔋 Analyse de la batterie...")
+        resultat = "🔋 BATTERIE\n\n"
+
+        battery = psutil.sensors_battery()
+        if battery:
+            resultat += f"Niveau: {battery.percent}%\n"
+            resultat += f"État: {'Chargement' if battery.power_plugged else 'Déchargement'}\n"
+            resultat += f"Temps restant: {str(datetime.timedelta(seconds=battery.secsleft)) if battery.secsleft != psutil.POWER_TIME_UNLIMITED else 'Illimité'}\n"
+
+            # La température de la batterie n'est pas toujours disponible via psutil
+            # batt_temp_cmd = "cat /sys/class/power_supply/battery/temp 2>/dev/null"
+            # batt_temp_output = execute_commande_securisee(batt_temp_cmd)
+            # if batt_temp_output and batt_temp_output.strip().isdigit():
+            #     temp_c = int(batt_temp_output.strip()) / 10.0
+            #     resultat += f"Température: {temp_c:.1f}°C\n"
+
+            if battery.percent < 20:
+                self.problemes_critiques.append("🔋 Batterie très faible (<20%)")
+                self.suggestions_amélioration.append("🔌 Brancher le chargeur rapidement")
+            elif battery.percent < 10:
+                self.problemes_critiques.append("📛 Batterie critique (<10%)")
+        else:
+            resultat += "Informations batterie non disponibles.\n"
+
+        return resultat
+
+
+
+    def analyser_batterie(self):
+        """Analyse l'état de la batterie en utilisant psutil et numpy."""
+        log("🔍‹ Analyse de la batterie...")
+        resultat = "🔍‹ BATTERIE\n\n"
+
+        battery = psutil.sensors_battery()
+        if battery:
+            resultat += f"Niveau: {battery.percent}%\n"
+            resultat += f"État: {'Chargement' if battery.power_plugged else 'Déchargement'}\n"
+            resultat += f"Temps restant: {str(datetime.timedelta(seconds=battery.secsleft)) if battery.secsleft != psutil.POWER_TIME_UNLIMITED else 'Illimité'}\n"
+
+            batt_temp_cmd = "cat /sys/class/power_supply/battery/temp 2>/dev/null"
+            batt_temp_output = execute_commande_securisee(batt_temp_cmd)
+            if batt_temp_output and batt_temp_output.strip().isdigit():
+                temp_c = int(batt_temp_output.strip()) / 10.0
+                resultat += f"Température: {temp_c:.1f}Â°C\n"
+                if temp_c > 45:
+                    self.problemes_critiques.append("🌡️ Surchauffe batterie détectée (>45Â°C)")
+                    self.suggestions_amélioration.append("â„ï¸ Laisser refroidir le téléphone")
+                elif temp_c > 40:
+                    self.problemes_critiques.append("⚠️ Batterie chaude (>40Â°C)")
+
+            if battery.percent < 20:
+                self.problemes_critiques.append("🔍‹ Batterie très faible (<20%)")
+                self.suggestions_amélioration.append("🔍Œ Brancher le chargeur rapidement")
+            elif battery.percent < 10:
+                self.problemes_critiques.append("📙 Batterie critique (<10%)")
+        else:
+            resultat += "Informations batterie non disponibles.\n"
+
+        return resultat
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_contexte_systeme()
+#=======================================
+
+def analyser_contexte_systeme():
+    """Analyse et retourne le contexte actuel du système."""
+    try:
+        load_avg = os.getloadavg()
+        return {
+            "load_1m": load_avg[0],
+            "heure": datetime.now().hour,
+            "jour": datetime.now().weekday()
+        }
+    except Exception:
+        return {"load_1m": 0.5, "heure": 12, "jour": 3}
+
+
+
+def analyser_contexte_systeme():
+    """Analyse et retourne le contexte actuel du systÃ¨me."""
+    try:
+        load_avg = os.getloadavg()
+        return {
+            "load_1m": load_avg[0],
+            "heure": datetime.now().hour,
+            "jour": datetime.now().weekday()
+        }
+    except Exception as e:
+        log(f"Erreur lors de l'analyse du contexte systÃ¨me: {e}", level="error")
+        return {"load_1m": 0.5, "heure": 12, "jour": 3}
+
+
+
+def analyser_contexte_systeme():
+    """Analyse et retourne le contexte actuel du système."""
+    try:
+        load_avg = os.getloadavg()
+        return {
+            "load_1m": load_avg[0],
+            "heure": datetime.now().hour,
+            "jour": datetime.now().weekday()
+        }
+    except Exception as e:
+        log(f"Erreur lors de l'analyse du contexte système: {e}", level="error")
+        return {"load_1m": 0.5, "heure": 12, "jour": 3}
+
+
+
+def analyser_contexte_systeme():
+    """Analyse et retourne le contexte actuel du systÃ¨me."""
+    try:
+        load_avg = os.getloadavg()
+        return {
+            "load_1m": load_avg[0],
+            "heure": datetime.now().hour,
+            "jour": datetime.now().weekday()
+        }
+    except Exception as e:
+        log(f"Erreur lors de l'analyse du contexte systÃ¨me: {e}", level="error")
+        return {"load_1m": 0.5, "heure": 12, "jour": 3}
+with open('base_functions.py', 'r') as f:
+    lines = f.readlines()
+
+# Trouver où insérer la définition de log
+insert_pos = 0
+for i, line in enumerate(lines):
+    if line.startswith('import ') or line.startswith('from '):
+        insert_pos = i + 1
+    elif line.strip() and not line.startswith('#') and insert_pos > 0:
+        break
+
+# Définition de log
+log_def = '''
+
+
+
+def analyser_contexte_systeme():
+    return {"timestamp": time.time()}
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_contexte_systeme(self)
+#=======================================
+
+    def analyser_contexte_systeme(self):
+        return {"load_1m": 0.5, "heure": 12, "jour": 3} # Stub
+
+
+
+
+
+
+#=======================================
+# def analyser_correlation_commande_ci(self, commande, resultats_recentes)
+#=======================================
+
+def analyser_correlation_commande_ci(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans diffÃ©rents contextes en identifiant les diffÃ©rences.
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = CorrelationContexte(
+                commande=commande,
+                differences_contextuelles=differences,
+                taux_succes=len(succes) / len(resultats_recentes),
+                nombre_observations=len(resultats_recentes)
+            )
+            with self.lock:
+                self.correlations_decouvertes.append(correlation)
+                self._save_correlation_to_db(correlation)
+            log(f"[LOCAL_CI] ðŸ”— CORRÃ‰LATION DÃ‰TECTÃ‰E pour '{commande}': {differences}")
+            causal_reasoner.infer_causality(commande, differences)
+            return correlation
+        return None
+
+
+
+
+
+
+#=======================================
+# def analyser_correlation_commande(self, commande, historique)
+#=======================================
+
+
+
+
+
+
+
+#=======================================
+# def analyser_correlation_commande(self, commande, resultats_recentes)
+#=======================================
+
+def analyser_correlation_commande(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans différents contextes
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        # Analyser les différences de contexte
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = {
+                "commande": commande,
+                "differences_contextuelles": differences,
+                "taux_succes": len(succes) / len(resultats_recentes),
+                "nombre_observations": len(resultats_recentes),
+                "timestamp_decouverte": time.time()
+            }
+
+            self.correlations_decouvertes.append(correlation)
+            # self.sauvegarder_correlation(correlation) # A implémenter si persistance voulue
+
+            return correlation
+
+        return None
+
+
+
+def analyser_correlation_commande(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans diffÃ©rents contextes en identifiant les diffÃ©rences.
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = CorrelationContexte(
+                commande=commande,
+                differences_contextuelles=differences,
+                taux_succes=len(succes) / len(resultats_recentes),
+                nombre_observations=len(resultats_recentes)
+            )
+            with self.lock:
+                self.correlations_decouvertes.append(correlation)
+                self._save_correlation_to_db(correlation)
+            log(f"ðŸ”— CORRÃ‰LATION DÃ‰TECTÃ‰E pour '{commande}': {differences}")
+            causal_reasoner.infer_causality(commande, differences)
+            return correlation
+        return None
+
+
+
+def analyser_correlation_commande(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans différents contextes en identifiant les différences.
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = CorrelationContexte(
+                commande=commande,
+                differences_contextuelles=differences,
+                taux_succes=len(succes) / len(resultats_recentes),
+                nombre_observations=len(resultats_recentes)
+            )
+            with self.lock:
+                self.correlations_decouvertes.append(correlation)
+                self._save_correlation_to_db(correlation)
+            log(f"ðŸ”— CORRÉLATION DÉTECTÉE pour '{commande}': {differences}")
+            causal_reasoner.infer_causality(commande, differences)
+            return correlation
+        return None
+
+
+
+def analyser_correlation_commande(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans différents contextes en identifiant les différences.
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = CorrelationContexte(
+                commande=commande,
+                differences_contextuelles=differences,
+                taux_succes=len(succes) / len(resultats_recentes),
+                nombre_observations=len(resultats_recentes)
+            )
+            with self.lock:
+                self.correlations_decouvertes.append(correlation)
+                self._save_correlation_to_db(correlation)
+            log(f"🔗 CORRÉLATION DÉTECTÉE pour '{commande}': {differences}")
+            causal_reasoner.infer_causality(commande, differences)
+            return correlation
+        return None
+
+
+
+    def analyser_correlation_commande(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans différents contextes en identifiant les différences.
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = CorrelationContexte(
+                commande=commande,
+                differences_contextuelles=differences,
+                taux_succes=len(succes) / len(resultats_recentes),
+                nombre_observations=len(resultats_recentes)
+            )
+            with self.lock:
+                self.correlations_decouvertes.append(correlation)
+                self._save_correlation_to_db(correlation)
+            log(f"🔗 CORRÉLATION DÉTECTÉE pour '{commande}': {differences}")
+            return correlation
+        return None
+
+
+
+    def analyser_correlation_commande(self, commande, resultats_recentes):
+        """
+        Analyse comment une commande performe dans différents contextes en identifiant les différences.
+        """
+        if len(resultats_recentes) < 3:
+            return None
+
+        succes = [r for r in resultats_recentes if r["succes"]]
+        echecs = [r for r in resultats_recentes if not r["succes"]]
+
+        if not succes or not echecs:
+            return None
+
+        contexte_succes = [r["contexte_systeme"] for r in succes]
+        contexte_echecs = [r["contexte_systeme"] for r in echecs]
+
+        differences = self.trouver_differences_contextuelles(contexte_succes, contexte_echecs)
+
+        if differences:
+            correlation = CorrelationContexte(
+                commande=commande,
+                differences_contextuelles=differences,
+                taux_succes=len(succes) / len(resultats_recentes),
+                nombre_observations=len(resultats_recentes)
+            )
+            with self.lock:
+                self.correlations_decouvertes.append(correlation)
+                self._save_correlation_to_db(correlation)
+            log(f"🔍— CORRÉLATION DÉTECTÉE pour '{commande}': {differences}")
+            causal_reasoner.infer_causality(commande, differences)
+            return correlation
+        return None
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_dangers_et_blacklister(self, content)
+#=======================================
+
+
+    def analyser_dangers_et_blacklister(self, content):
+        """Ajoute à la blacklist dynamique les commandes qui échouent ou sont dangereuses"""
+        global DYNAMIC_BLACKLIST
+
+        # Exemple: Blacklister les commandes qui échouent systématiquement
+        echecs = re.findall(r"COMMANDE: (.*?)\n.*?CONCLUSION: ÉCHEC", content, re.DOTALL)
+        for cmd in echecs:
+            cmd_base = cmd.split()[0] + " " if cmd.split() else cmd
+            if cmd_base not in DYNAMIC_BLACKLIST and cmd_base not in IMMUTABLE_BLACKLIST:
+                DYNAMIC_BLACKLIST.append(cmd_base)
+                log(f"🛡️ AUTO-PROTECTION: '{cmd_base}' ajouté à la blacklist (échec répété)")
+
+
+
+
+
+
+#=======================================
+# def analyser_echecs_pour_patterns(self, content)
+#=======================================
+
+    def analyser_echecs_pour_patterns(self, content):
+        """Extrait des patterns qui mènent systématiquement à l'échec"""
+
+        echecs_complets = re.findall(r"=== APPRENTISSAGE.*?COMMANDE: (.*?)\n.*?ERREUR_EXACTE: (.*?)\n.*?CONCLUSION: ÉCHEC", content, re.DOTALL)
+
+        for commande, erreur in echecs_complets:
+            # Simple extraction du premier mot de la commande
+            mot_cle = commande.split()[0]
+            if mot_cle not in self.patterns_mortels and mot_cle not in IMMUTABLE_BLACKLIST:
+                # Logique simplifiée: si le mot-clé apparaît dans plus de 5 échecs, il devient un pattern mortel
+                if content.count(f"COMMANDE: {mot_cle}") > 5 and content.count(f"CONCLUSION: ÉCHEC") > 5:
+                    self.patterns_mortels.add(mot_cle)
+                    log(f"🚫 PATTERN MORTEL IDENTIFIÉ: {mot_cle}")
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_espace_stockage(self)
+#=======================================
+
+
+    def analyser_espace_stockage(self):
+        """Analyse l'espace de stockage"""
+        resultat = "💾 ESPACE DE STOCKAGE\n\n"
+        df_result = execute_commande_securisee("df -h /data /system /sdcard 2>/dev/null")
+        if df_result:
+            resultat += f"Utilisation disque:\n{df_result}\n"
+
+        # Détection problèmes
+        stockage_sdcard = execute_commande_securisee("df -h /sdcard 2>/dev/null | tail -1")
+        if stockage_sdcard:
+            parts = stockage_sdcard.split()
+            if len(parts) >= 5:
+                try:
+                    utilisation = int(parts[4].replace('%', ''))
+                    if utilisation >= self.alertes_seuil['stockage']:
+                        self.problemes_critiques.append(f"📛 Stockage critique (> {self.alertes_seuil['stockage']}%)")
+                        self.suggestions_amélioration.append("🗑️  Nettoyer le cache et les fichiers temporaires")
+                except:
+                    pass
+        return resultat
+
+
+
+    def analyser_espace_stockage(self):
+        """Analyse l'espace de stockage"""
+        log("💾 Analyse de l'espace de stockage...")
+
+        resultat = "💾 ESPACE DE STOCKAGE\n\n"
+
+        # Espace total
+        df_result = execute_commande_securisee("df -h /data /system /sdcard 2>/dev/null")
+        if df_result:
+            resultat += f"Utilisation disque:\n{df_result}\n"
+
+        # Analyse détaillée
+        stockage_data = execute_commande_securisee("du -sh /data/* 2>/dev/null | sort -hr | head -10")
+        if stockage_data:
+            resultat += f"\nPlus gros dossiers /data:\n{stockage_data}\n"
+
+        # Détection problèmes
+        stockage_sdcard = execute_commande_securisee("df -h /sdcard 2>/dev/null | tail -1")
+        if stockage_sdcard:
+            parts = stockage_sdcard.split()
+            if len(parts) >= 5:
+                try:
+                    utilisation = int(parts[4].replace('%', ''))
+                    if utilisation > 90:
+                        self.problemes_critiques.append("📛 Stockage presque plein (>90%)")
+                        self.suggestions_amélioration.append("🗑️  Nettoyer le cache et les fichiers temporaires")
+                    elif utilisation > 80:
+                        self.problemes_critiques.append("⚠️  Stockage critique (>80%)")
+                except:
+                    pass
+
+        return resultat
+
+
+
+    def analyser_espace_stockage(self):
+        """Analyse l'espace de stockage en utilisant psutil et pandas."""
+        log("ðŸ’¾ Analyse de l'espace de stockage...")
+        resultat = "ðŸ’¾ ESPACE DE STOCKAGE\n\n"
+
+        disk_usage_root = psutil.disk_usage('/')
+        disk_usage_data = psutil.disk_usage('/data')
+
+        df_disk = pd.DataFrame({
+            'Partition': ['/', '/data'],
+            'Total (GB)': [disk_usage_root.total / (1024**3), disk_usage_data.total / (1024**3)],
+            'Used (GB)': [disk_usage_root.used / (1024**3), disk_usage_data.used / (1024**3)],
+            'Free (GB)': [disk_usage_root.free / (1024**3), disk_usage_data.free / (1024**3)],
+            'Percent': [disk_usage_root.percent, disk_usage_data.percent]
+        })
+        resultat += f"Utilisation disque:\n{df_disk.to_string(index=False)}\n"
+
+        stockage_data_cmd = "du -sh /data/* 2>/dev/null | sort -hr | head -10"
+        stockage_data_output = execute_commande_securisee(stockage_data_cmd)
+        if stockage_data_output:
+            resultat += f"\nPlus gros dossiers /data:\n{stockage_data_output}\n"
+
+        if disk_usage_data.percent > 90:
+            self.problemes_critiques.append("ðŸ“› Stockage /data presque plein (>90%)")
+            self.suggestions_amÃ©lioration.append("ðŸ—‘ï¸ Nettoyer le cache et les fichiers temporaires")
+        elif disk_usage_data.percent > 80:
+            self.problemes_critiques.append("âš ï¸ Stockage /data critique (>80%)")
+
+        return resultat
+
+
+
+    def analyser_espace_stockage(self):
+        """Analyse l'espace de stockage en utilisant psutil et pandas."""
+        log("ðŸ’¾ Analyse de l'espace de stockage...")
+        resultat = "ðŸ’¾ ESPACE DE STOCKAGE\n\n"
+
+        disk_usage_root = psutil.disk_usage('/')
+        disk_usage_data = psutil.disk_usage('/data')
+
+        df_disk = pd.DataFrame({
+            'Partition': ['/', '/data'],
+            'Total (GB)': [disk_usage_root.total / (1024**3), disk_usage_data.total / (1024**3)],
+            'Used (GB)': [disk_usage_root.used / (1024**3), disk_usage_data.used / (1024**3)],
+            'Free (GB)': [disk_usage_root.free / (1024**3), disk_usage_data.free / (1024**3)],
+            'Percent': [disk_usage_root.percent, disk_usage_data.percent]
+        })
+        resultat += f"Utilisation disque:\n{df_disk.to_string(index=False)}\n"
+
+        stockage_data_cmd = "du -sh /data/* 2>/dev/null | sort -hr | head -10"
+        stockage_data_output = execute_commande_securisee(stockage_data_cmd)
+        if stockage_data_output:
+            resultat += f"\nPlus gros dossiers /data:\n{stockage_data_output}\n"
+
+        if disk_usage_data.percent > 90:
+            self.problemes_critiques.append("ðŸ“› Stockage /data presque plein (>90%)")
+            self.suggestions_amélioration.append("ðŸ—‘ï¸ Nettoyer le cache et les fichiers temporaires")
+        elif disk_usage_data.percent > 80:
+            self.problemes_critiques.append("⚠️ Stockage /data critique (>80%)")
+
+        return resultat
+
+
+
+    def analyser_espace_stockage(self):
+        """Analyse l'espace de stockage en utilisant psutil et pandas."""
+        log("💾 Analyse de l'espace de stockage...")
+        resultat = "💾 ESPACE DE STOCKAGE\n\n"
+
+        disk_usage_root = psutil.disk_usage('/')
+        disk_usage_data = psutil.disk_usage('/data')
+
+        df_disk = pd.DataFrame({
+            'Partition': ['/', '/data'],
+            'Total (GB)': [disk_usage_root.total / (1024**3), disk_usage_data.total / (1024**3)],
+            'Used (GB)': [disk_usage_root.used / (1024**3), disk_usage_data.used / (1024**3)],
+            'Free (GB)': [disk_usage_root.free / (1024**3), disk_usage_data.free / (1024**3)],
+            'Percent': [disk_usage_root.percent, disk_usage_data.percent]
+        })
+        resultat += f"Utilisation disque:\n{df_disk.to_string(index=False)}\n"
+
+        stockage_data_cmd = "du -sh /data/* 2>/dev/null | sort -hr | head -10"
+        stockage_data_output = execute_commande_securisee(stockage_data_cmd)
+        if stockage_data_output:
+            resultat += f"\nPlus gros dossiers /data:\n{stockage_data_output}\n"
+
+        if disk_usage_data.percent > 90:
+            self.problemes_critiques.append("📛 Stockage /data presque plein (>90%)")
+            self.suggestions_amélioration.append("🗑️ Nettoyer le cache et les fichiers temporaires")
+        elif disk_usage_data.percent > 80:
+            self.problemes_critiques.append("⚠️ Stockage /data critique (>80%)")
+
+        return resultat
+
+
+
+    def analyser_espace_stockage(self):
+        """Analyse l'espace de stockage en utilisant psutil et pandas."""
+        log("💾 Analyse de l'espace de stockage...")
+        resultat = "💾 ESPACE DE STOCKAGE\n\n"
+
+        disk_usage_root = psutil.disk_usage('/')
+        disk_usage_data = psutil.disk_usage('/data')
+
+        df_disk = pd.DataFrame({
+            'Partition': ['/', '/data'],
+            'Total (GB)': [disk_usage_root.total / (1024**3), disk_usage_data.total / (1024**3)],
+            'Used (GB)': [disk_usage_root.used / (1024**3), disk_usage_data.used / (1024**3)],
+            'Free (GB)': [disk_usage_root.free / (1024**3), disk_usage_data.free / (1024**3)],
+            'Percent': [disk_usage_root.percent, disk_usage_data.percent]
+        })
+        resultat += f"Utilisation disque:\n{df_disk.to_string(index=False)}\n"
+
+        stockage_data_cmd = "du -sh /data/* 2>/dev/null | sort -hr | head -10"
+        stockage_data_output = execute_commande_securisee(stockage_data_cmd)
+        if stockage_data_output:
+            resultat += f"\nPlus gros dossiers /data:\n{stockage_data_output}\n"
+
+        if disk_usage_data.percent > 90:
+            self.problemes_critiques.append("📙 Stockage /data presque plein (>90%)")
+            self.suggestions_amélioration.append("🗑️ Nettoyer le cache et les fichiers temporaires")
+        elif disk_usage_data.percent > 80:
+            self.problemes_critiques.append("⚠️ Stockage /data critique (>80%)")
+
+        return resultat
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_et_mettre_a_jour(self)
+#=======================================
+
+def analyser_et_mettre_a_jour(self):
+        """Relit LEARNING_FILE pour mettre à jour patterns, stratégies et blacklist dynamique"""
+        log("🧠 Analyse intensive de LEARNING_FILE...")
+
+        try:
+            with open(LEARNING_FILE, 'r', encoding='utf-8') as f:
+                content = f.read()
+
+            # 1. Mise à jour de la blacklist dynamique
+            self.analyser_dangers_et_blacklister(content)
+
+            # 2. Identification des solutions gagnantes
+            self.identifier_solutions_gagnantes(content)
+
+            # 3. Analyse des échecs pour patterns mortels
+            self.analyser_echecs_pour_patterns(content)
+
+            log(f"✅ Analyse terminée. Blacklist dynamique: {len(DYNAMIC_BLACKLIST)}, Solutions gagnantes: {len(self.solutions_gagnantes)}")
+
+        except Exception as e:
+            log(f"❌ Erreur analyse LEARNING_FILE: {e}")
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_logs_systeme(self)
+#=======================================
+
+    def analyser_logs_systeme(self):
+        """Analyse les logs système"""
+        resultat = "📋 LOGS SYSTÈME\n\n"
+        errors = execute_commande_securisee("logcat -d -s *:E | tail -10")
+        if errors:
+            resultat += f"Dernières erreurs:\n{errors}\n"
+        return resultat
+
+
+
+    def analyser_logs_systeme(self):
+        """Analyse les logs système"""
+        log("📋 Analyse des logs système...")
+
+        resultat = "📋 LOGS SYSTÈME\n\n"
+
+        # Dernières erreurs système
+        errors = execute_commande_securisee("logcat -d -s *:E | tail -10")
+        if errors:
+            resultat += f"Dernières erreurs:\n{errors}\n"
+
+        # Kernel messages
+        dmesg = execute_commande_securisee("dmesg | tail -10")
+        if dmesg:
+            resultat += f"Messages kernel:\n{dmesg}\n"
+
+        return resultat
+
+
+
+    def analyser_logs_systeme(self):
+        """Analyse les logs systÃ¨me en utilisant subprocess et re."""
+        log("ðŸ“‹ Analyse des logs systÃ¨me...")
+        resultat = "ðŸ“‹ LOGS SYSTÃˆME\n\n"
+
+        errors_cmd = "logcat -d -s *:E | tail -10"
+        errors_output = execute_commande_securisee(errors_cmd)
+        if errors_output:
+            resultat += f"DerniÃ¨res erreurs (logcat):\n{errors_output}\n"
+
+        dmesg_cmd = "dmesg | tail -10"
+        dmesg_output = execute_commande_securisee(dmesg_cmd)
+        if dmesg_output:
+            resultat += f"Messages kernel (dmesg):\n{dmesg_output}\n"
+
+        return resultat
+
+
+
+    def analyser_logs_systeme(self):
+        """Analyse les logs système en utilisant subprocess et re."""
+        log("ðŸ“‹ Analyse des logs système...")
+        resultat = "ðŸ“‹ LOGS SYSTÈME\n\n"
+
+        errors_cmd = "logcat -d -s *:E | tail -10"
+        errors_output = execute_commande_securisee(errors_cmd)
+        if errors_output:
+            resultat += f"Dernières erreurs (logcat):\n{errors_output}\n"
+
+        dmesg_cmd = "dmesg | tail -10"
+        dmesg_output = execute_commande_securisee(dmesg_cmd)
+        if dmesg_output:
+            resultat += f"Messages kernel (dmesg):\n{dmesg_output}\n"
+
+        return resultat
+
+
+
+    def analyser_logs_systeme(self):
+        """Analyse les logs système en utilisant subprocess et re."""
+        log("📋 Analyse des logs système...")
+        resultat = "📋 LOGS SYSTÈME\n\n"
+
+        errors_cmd = "logcat -d -s *:E | tail -10"
+        errors_output = execute_commande_securisee(errors_cmd)
+        if errors_output:
+            resultat += f"Dernières erreurs (logcat):\n{errors_output}\n"
+
+        dmesg_cmd = "dmesg | tail -10"
+        dmesg_output = execute_commande_securisee(dmesg_cmd)
+        if dmesg_output:
+            resultat += f"Messages kernel (dmesg):\n{dmesg_output}\n"
+
+        return resultat
+
+
+
+
+
+
+
+
+
+
+
+
+#=======================================
+# def analyser_memoire_ram(self)
+#=======================================
+
+
+def analyser_memoire_ram(self):
+        """Analyse la mémoire RAM"""
+        resultat = "🧠 MÉMOIRE RAM\n\n"
+        mem_info = execute_commande_securisee("cat /proc/meminfo")
+        if mem_info:
+            resultat += f"Info mémoire:\n{mem_info}\n"
+
+        # Détection problèmes mémoire
+        if "MemAvailable" in mem_info:
+            total, available = 0, 0
+            for line in mem_info.split('\n'):
+                if "MemTotal" in line:
+                    total = int(''.join(filter(str.isdigit, line.split(':')[1])))
+                elif "MemAvailable" in line:
+                    available = int(''.join(filter(str.isdigit, line.split(':')[1])))
+
+            if total > 0 and available > 0:
+                pourcentage_utilise = ((total - available) / total) * 100
+                if pourcentage_utilise >= self.alertes_seuil['memoire']:
+                    self.problemes_critiques.append(f"📛 Mémoire RAM saturée (> {self.alertes_seuil['memoire']}%)")
+                    self.suggestions_amélioration.append("🔧 Fermer les applications en arrière-plan")
+        return resultat
+
+
+
+    def analyser_memoire_ram(self):
+        """Analyse la mémoire RAM"""
+        log("🧠 Analyse de la mémoire RAM...")
+
+        resultat = "🧠 MÉMOIRE RAM\n\n"
+
+        # Mémoire totale et utilisée
+        mem_info = execute_commande_securisee("cat /proc/meminfo")
+        if mem_info:
+            resultat += f"Info mémoire:\n{mem_info}\n"
